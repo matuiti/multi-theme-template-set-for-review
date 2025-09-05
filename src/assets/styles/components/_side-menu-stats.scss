@@ -1,0 +1,81 @@
+.prj-side-menu-stats-component {
+  width: var(--side-menu-width);
+  background-color: white;
+  padding: 20px 16px;
+  .prj-side-menu-stats-container {
+    width: 218px;
+    gap: 48px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // エリア上部
+    .prj-side-menu-stats-head {
+      // 広告エリア（上）
+      .prj-side-menu-stats-ad-top {
+        a {
+          display: block;
+          overflow: hidden;
+          width: fit-content;
+          img {
+            transition: transform 0.3s ease;
+            aspect-ratio: 1/1;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+    // エリア下部
+    .prj-side-menu-stats-foot {
+      // 広告エリア（下）
+      .prj-side-menu-stats-ad-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        a {
+          display: block;
+          overflow: hidden;
+          width: fit-content;
+          img {
+            transition: transform 0.3s ease;
+            aspect-ratio: 1/1;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+    // エリア中部（リストメニュー群）
+    .prj-side-menu-stats-body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      .prj-side-menu-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        .prj-side-menu-stats-list-container {
+          .prj-side-menu-stats-list-head {
+            border-bottom: 1px solid var(--text-primary);
+            .prj-side-menu-stats-list-title {
+              font-size: 16px;
+              line-height: 1.5;
+              font-weight: 700;
+              padding: 10px 0px;
+              display: flex;
+              align-items: center;
+              gap: 2px;
+              span {
+                transform: translateY(2px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

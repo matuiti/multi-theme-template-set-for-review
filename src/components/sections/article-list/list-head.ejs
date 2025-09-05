@@ -1,0 +1,1146 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ============ SEO向けのメタタグ ============ -->
+  <!-- タイトルタグ: ブラウザのタブやブックマーク、検索結果に表示される重要要素
+       テーマ名と簡潔な説明を含め、60文字以内が推奨 -->
+  <title>記事一覧ページ | テーマ名</title>
+  <!-- 説明文: 検索結果に表示される説明文で150〜160文字程度が推奨
+       ユーザーの興味を引く魅力的な説明を入力 -->
+  <meta name="description" content="テーマ名の記事一覧ページです。最新の記事やコラムをまとめてご紹介します。新着情報やカテゴリ別の記事へのアクセスも可能です。" />
+  <!-- キーワード: 現在のSEOでの重要性は低下しているが、関連キーワードをカンマ区切りで記述 -->
+  <meta name="keywords" content="テーマ名, 記事一覧, コラム, 新着情報, カテゴリ" />
+  <!-- サイト運営者情報: サイトの著者や運営会社名を記述 -->
+  <meta name="author" content="運営会社名" />
+
+  <!-- canonicalリンク: 同一コンテンツが複数URLで閲覧可能な場合に正規URLを指定
+       重複コンテンツの問題を防ぎ、SEOを最適化する重要な要素 -->
+  <link rel="canonical" href="https://example.com/article-list.html" />
+
+  <!-- ============ ファビコン設定 ============ -->
+  <!-- 標準ファビコン: ブラウザのタブやブックマークに表示される16×16pxの小さなアイコン
+       通常は.ico形式を使用（32×32pxなど複数サイズを含む.icoファイルが理想的） -->
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <!-- Apple Touch Icon: iOSデバイスでサイトをホーム画面に追加した時のアイコン
+       推奨サイズは180×180px、PNG形式 -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- ============ OGP (Open Graph Protocol) 設定 ============ -->
+  <!-- FacebookなどのSNSでURLシェア時の表示を制御する重要な要素 -->
+  <!-- og:title: シェア時に表示されるタイトル、40文字程度が推奨 -->
+  <meta property="og:title" content="記事一覧ページ | テーマ名" />
+  <!-- og:description: シェア時の説明文、80〜90文字程度が推奨 -->
+  <meta property="og:description" content="テーマ名の記事一覧ページです。最新の記事やコラムをまとめてご紹介します。新着情報やカテゴリ別の記事へのアクセスも可能です。" />
+  <!-- og:type: コンテンツタイプを指定（website, article, productなど） -->
+  <meta property="og:type" content="website" />
+  <!-- og:url: シェアされるページの正規URLを指定（canonicalと一致させる） -->
+  <meta property="og:url" content="https://example.com/article-list.html" />
+  <!-- og:image: シェア時に表示される画像のURL
+       推奨サイズは1200×630px、最小でも600×315pxが必要 -->
+  <meta property="og:image" content="https://example.com/images/article-list/ogp.jpg" />
+  <!-- og:site_name: ウェブサイト全体の名前を指定 -->
+  <meta property="og:site_name" content="テーマ名公式サイト" />
+  <!-- og:locale: コンテンツの言語と地域を指定（日本語の場合は通常ja_JP） -->
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ============ Twitterカード設定 ============ -->
+  <!-- TwitterでのURLシェア表示を制御（OGPと似た役割だがTwitter専用） -->
+  <!-- twitter:card: カードの種類を指定
+       summary: 小さな画像付きカード、summary_large_image: 大きな画像付きカード -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- twitter:site: 関連するTwitterアカウントを@ユーザー名で指定 -->
+  <meta name="twitter:site" content="@theme-aname" />
+  <!-- twitter:title: Twitterカードのタイトル -->
+  <meta name="twitter:title" content="記事一覧ページ | テーマ名" />
+  <!-- twitter:description: Twitterカードの説明文 -->
+  <meta name="twitter:description" content="テーマ名の記事一覧ページです。最新の記事やコラムをまとめてご紹介します。新着情報やカテゴリ別の記事へのアクセスも可能です。" />
+  <!-- twitter:image: カードに表示される画像のURL
+       summary_large_imageの場合、最小サイズは300×157px、
+       最適な比率は2:1（例: 1200×600px）-->
+  <meta name="twitter:image" content="https://example.com/images/article-list/ogp.jpg" />
+
+  <!-- ============ フォント読み込み ============ -->
+  <!-- GoogleフォントなどWebフォントの読み込み設定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" />
+  </noscript>
+
+  <!-- ============ マテリアルアイコン ============ -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- ============ 構造化データ（JSON-LD） ============ -->
+  <!-- 検索エンジンがウェブページの内容を理解しやすくするための標準化されたデータ形式 -->
+
+  <!-- WebSiteスキーマ: サイト全体の情報とサイト内検索機能の実装
+    検索エンジンの結果にサイト内検索ボックスが表示される可能性がある
+
+    注意点:
+    1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+    2. 実際のサイト名とURLを必ず設定すること
+    3. 検索機能が実際に動作することを確認すること
+    -->
+  <script type="application/ld+json">
+      {
+        /* Schema.orgの名前空間を指定（必須）
+       すべての構造化データに必要な基本プロパティ */
+        "@context": "https://schema.org",
+
+        /* このエンティティがWebサイトであることを示す（必須）
+       WebSiteタイプはサイト全体の情報を表現する際に使用 */
+        "@type": "WebSite",
+
+        /* サイト名 - 実際のテーマ名に置き換えること
+       サイトのタイトルと一致させることが望ましい */
+        "name": "テーマ名公式サイト",
+
+        /* サイトのURL - canonicalタグのURLと一致させること
+       絶対URLを使用し、実際のドメインをここに設定 */
+        "url": "https://example.com/theme-a.html",
+
+        /* potentialActionはサイトで可能なアクションを定義
+       ここではサイト内検索機能を実装している */
+        "potentialAction": {
+          /* 検索アクションであることを示す
+         これにより検索エンジンが検索機能を理解できる */
+          "@type": "SearchAction",
+
+          /* 検索結果ページのURL形式 - 実際の検索URLパターンと一致させること
+         {search_term_string}はプレースホルダーで、実際の検索語に置き換えられる
+         必ず動作確認を行うこと */
+          "target": "https://example.com/search?q={search_term_string}",
+
+          /* 検索クエリパラメータ名の指定
+         search_term_stringは上記targetのプレースホルダーと一致させる必要がある */
+          "query-input": "required name=search_term_string"
+        }
+
+        /* 改善提案: 以下のプロパティを追加するとより効果的
+     ,
+     "description": "サイトの簡潔な説明文を記載",
+     "inLanguage": "ja",
+     "publisher": {
+       "@type": "Organization",
+       "name": "運営会社名",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "https://example.com/images/theme-a/theme-a-logo.png"
+       }
+     }
+    */
+      }
+    </script>
+
+  <!-- Organizationスキーマ: 運営会社に関する情報
+    Googleナレッジパネルなどに表示される可能性がある
+
+    注意点:
+    1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+    2. 会社名、URL、ロゴは正確に設定すること
+    3. SNSアカウントは実際に存在し、正式なアカウントであることを確認すること
+    4. 電話番号は国際形式で記述すること
+    -->
+  <script type="application/ld+json">
+      {
+        /* Schema.orgの名前空間を指定（必須）
+       すべての構造化データで最初に定義する必要がある */
+        "@context": "https://schema.org",
+
+        /* このエンティティが組織であることを示す（必須）
+       企業情報を表すための基本タイプ */
+        "@type": "Organization",
+
+        /* 会社名 - 正確な法人名称を使用すること
+       公式な会社名をそのまま記載する */
+        "name": "運営会社名",
+
+        /* 会社またはTheme-aの公式サイトURL - 実際のURLに置き換えること
+       会社のホームページのURLを絶対URL形式で指定 */
+        "url": "https://example.com",
+
+        /* 会社ロゴのURL - 絶対URLを使用し、推奨サイズ(112x112px以上、512x512px未満)に適合させること
+       SVGよりもPNG/JPG形式が推奨される
+       GoogleのロゴガイドラインにはSquare format logoが推奨されている */
+        "logo": "https://example.com/images/theme-a/theme-a-logo.png",
+
+        /* 関連するソーシャルメディアアカウント - すべて実際のアカウントURLに置き換えること
+       sameAsプロパティは企業の公式アカウントであることを検索エンジンに伝える重要な要素
+       実際に存在する公式アカウントのみを記載すること */
+        "sameAs": [
+          /* FacebookページのURL - 完全なURLを記載 */
+          "https://www.facebook.com/theme-aname",
+
+          /* TwitterアカウントのURL - 完全なURLを記載 */
+          "https://twitter.com/theme-aname",
+
+          /* InstagramアカウントのURL - 完全なURLを記載 */
+          "https://www.instagram.com/theme-aname"
+
+          /* 他のSNSプロフィールがあれば追加（LinkedInなど）
+         最後の要素にはカンマを付けない（JSON構文エラーの原因になる） */
+        ],
+
+        /* 問い合わせ先情報
+       顧客サポート窓口の詳細情報を提供する */
+        "contactPoint": {
+          /* 連絡先情報であることを示す
+         ContactPointタイプで問い合わせ先の詳細を構造化 */
+          "@type": "ContactPoint",
+
+          /* 国際形式の電話番号 - 実際の電話番号に置き換えること（日本の場合は+81から始まる）
+         国コード付きの形式で記載（半角数字、ハイフン区切り） */
+          "telephone": "+81-03-1234-5678",
+
+          /* 連絡先の種類 - 適切な種類を選択
+         一般的な種類: "customer service"（顧客サービス）, "technical support"（技術サポート）,
+         "sales"（営業）, "billing support"（請求サポート）, "reservation"（予約）など */
+          "contactType": "customer service",
+
+          /* 対応言語 - 実際に対応可能な言語のみを記載すること
+         ISO 639-1言語コードではなく、言語の完全名を使用 */
+          "availableLanguage": ["Japanese", "English"]
+        },
+
+        /* 住所情報 - 実際の所在地情報を追加することで地域SEOの強化につながる
+       特に実店舗や来客対応をする企業には重要な情報 */
+        "address": {
+          /* 住所であることを示す
+         PostalAddressタイプで住所情報を構造化 */
+          "@type": "PostalAddress",
+
+          /* 番地・建物名など - 実際の住所に合わせて記載 */
+          "streetAddress": "〇〇町1-2-3",
+
+          /* 市区町村 - 実際の住所に合わせて記載 */
+          "addressLocality": "〇〇市",
+
+          /* 都道府県 - 実際の住所に合わせて記載 */
+          "addressRegion": "〇〇県",
+
+          /* 郵便番号 - ハイフン付きで記載 */
+          "postalCode": "123-4567",
+
+          /* 国コード - 日本の場合は"JP"
+         ISO 3166-1 alpha-2国コードを使用 */
+          "addressCountry": "JP"
+        }
+
+        /* 改善提案: 以下のプロパティを追加するとより効果的
+     ,
+     "foundingDate": "1995-01-01",
+     "numberOfEmployees": "50-250",
+     "email": "contact@example.com",
+     "faxNumber": "+81-03-1234-5679",
+     "openingHours": "Mo-Fr 09:00-18:00",
+     "areaServed": {
+       "@type": "Country",
+       "name": "Japan"
+     }
+    */
+      }
+    </script>
+
+  <!-- Schema.org マークアップ - 記事一覧セクション
+目的: このマークアップは記事リストの構造を検索エンジンに伝えるためのものです。
+記事タイトル、著者情報、公開日、画像などの詳細情報を含む構造化データにより、
+検索結果での表示品質向上やリッチリザルトの可能性を高めます。
+
+構造の説明:
+- ItemList: 複数の記事をリスト化
+- ListItem: 各記事の位置情報
+- Article: 個々の記事の詳細情報（タイトル、著者、公開日、画像など）
+- Person: 著者情報
+
+注意点:
+1. 実際の記事が更新された場合は、こちらの構造化データも同時に更新してください
+2. 記事数が変更された場合は、ListItemの数およびposition値を適切に調整してください
+3. 画像URLは相対パスではなく絶対URLに変更するのが望ましいです
+4. 各記事の実際のURLを設定する際は、必ず有効な絶対URLを指定してください
+5. 日付情報は検索結果に表示される可能性があるため、実際の公開日と一致させてください
+-->
+  <script type="application/ld+json">
+      {
+        /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+     すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+        "@context": "https://schema.org",
+
+        /* @typeでこのJSONデータの主要な型を定義。
+     ItemListタイプは複数の記事を順序付きリストとして表現するのに適している。
+     Googleのリッチリザルトでカルーセル表示の候補となる可能性がある（必須） */
+        "@type": "ItemList",
+
+        /* nameはリスト全体のタイトルを示すプロパティ。
+     検索結果での表示に使用される可能性がある */
+        "name": "記事一覧",
+
+        /* descriptionはリストの簡潔な説明を示すプロパティ。
+     検索結果のスニペットとして表示される可能性がある */
+        "description": "Theme-aに関する最新の記事コレクション",
+
+        /* itemListElementは複数のリスト項目を配列として格納するプロパティ。
+     ItemListタイプでは必須のプロパティで、少なくとも1つのアイテムを含む必要がある（必須） */
+        "itemListElement": [
+          {
+            /* ListItemタイプはリスト内の各項目を表す標準的なタイプ。
+         ItemListの子要素としては必ずこのタイプを使用する必要がある */
+            "@type": "ListItem",
+
+            /* positionはリスト内での順序を示す必須プロパティ。
+         必ず1から始まる整数値を使い、連番で設定する必要がある（必須） */
+            "position": 1,
+
+            /* itemプロパティにはリスト項目の実際のコンテンツを格納する。
+         前のシンプルなリストとは異なり、ここではnameとurlだけでなく
+         詳細な記事情報を提供するためにArticleタイプのオブジェクトを使用（必須） */
+            "item": {
+              /* Articleタイプは記事コンテンツを表す。
+           ブログ記事や一般的な記事であることを示す標準的なタイプ */
+              "@type": "Article",
+
+              /* headlineは記事のタイトルを示す重要なプロパティ。
+           検索結果に表示される可能性が高いため、実際のタイトルと一致させる必要がある。
+           最適な長さは110文字以内（それ以上は切り詰められる可能性あり）
+           Articleタイプでは必須のプロパティ（必須） */
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+
+              /* authorは記事の著者情報を示すプロパティ。
+           著者情報は検索エンジンによるコンテンツの信頼性評価に
+           影響を与える可能性がある重要な要素 */
+              "author": {
+                /* Personタイプで著者が個人であることを示す。
+             組織全体が著者の場合はOrganizationタイプを使用する */
+                "@type": "Person",
+
+                /* nameプロパティに著者名を設定。
+             実際の著者名と一致させることが重要で、
+             可能であれば著者ページへのリンク（url属性）も追加すると良い */
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+
+              /* datePublishedは記事の公開日を示すプロパティ。
+           必ずISO 8601形式（YYYY-MM-DD）で指定する必要がある。
+           検索結果に日付として表示される可能性が高いため、
+           実際の公開日と一致させることが重要 */
+              "datePublished": "2025-05-05",
+
+              /* imageは記事のメイン画像情報を示すプロパティ。
+           リッチリザルト表示に画像が含まれる可能性がある場合に重要。
+           また、検索エンジンがコンテンツを理解する手がかりにもなる */
+              "image": {
+                /* ImageObjectタイプで画像の詳細情報を構造化して提供 */
+                "@type": "ImageObject",
+
+                /* 画像のURLは絶対パスで指定。存在する実際の画像を参照する必要がある */
+                "url": "https://example.com/images/theme-a/theme-a-19.jpg",
+
+                /* 画像の幅と高さをピクセル単位で指定。
+             Googleリッチリザルト用の推奨サイズは最低1200px×630px */
+                "width": "250",
+                "height": "250"
+              },
+
+              /* urlは記事のURL。実際に存在する絶対URLを指定する必要がある。
+           検索エンジンはこのURLを使って構造化データと実際のコンテンツを関連付ける */
+              "url": "https://example.com/articles/article1",
+
+              /* articleSectionは記事のカテゴリを示すプロパティ。
+           検索エンジンがコンテンツの分類を理解するのに役立つ */
+              "articleSection": "記事カテゴリメイン",
+
+              /* publisherは記事の発行者（サイト運営組織）情報を示すプロパティ。
+           Googleのナレッジグラフ連携やTheme-a表示に重要な役割を果たす。
+           Articleタイプでは推奨される重要プロパティ */
+              "publisher": {
+                /* Organizationタイプで発行者が組織であることを示す。
+             通常、サイト運営主体（企業・団体など）を指定する */
+                "@type": "Organization",
+
+                /* nameプロパティにサイト名または組織名を設定。
+             サイト全体で一貫した名称を使用することが重要 */
+                "name": "テーマ名",
+
+                /* logoは発行者のロゴ情報。Google検索結果での表示に必要な要素 */
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            /* 2番目のリスト項目。各ListItemの構造は一貫している必要がある */
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-20.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article2",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-18.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article3",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-21.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article4",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-4.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article5",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-22.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article6",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-23.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article7",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-24.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article8",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-17.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article9",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-25.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article10",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-26.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article11",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-2.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article12",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-21.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article13",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-4.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article14",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-22.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article15",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 16,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-23.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article16",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 17,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-24.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article17",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-17.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article18",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 19,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-25.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article19",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-26.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article20",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "item": {
+              "@type": "Article",
+              "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入..."
+              },
+              "datePublished": "2025-05-05",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-a/theme-a-2.jpg",
+                "width": "250",
+                "height": "250"
+              },
+              "url": "https://example.com/articles/article21",
+              "articleSection": "記事カテゴリメイン",
+              "publisher": {
+                "@type": "Organization",
+                "name": "テーマ名",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://example.com/images/theme-a/logo.png",
+                  "width": "600",
+                  "height": "60"
+                }
+              }
+            }
+          }
+        ],
+
+        /* numberOfItemsはリスト内の総アイテム数を示すプロパティ。
+     リスト内のListItemの数と一致させる必要がある。
+     検索エンジンがリストの全体的な構造を理解するのに役立つ */
+        "numberOfItems": 21,
+
+        /* itemListOrderはリストの順序タイプを示すプロパティ。
+     一般的な値は"Ascending"（昇順）、"Descending"（降順）
+     デフォルトはUnorderedListで、特に指定がない場合は昇順と見なされる */
+        "itemListOrder": "Descending"
+      }
+    </script>
+
+  <!-- Schema.org マークアップ - FOOTER セクション
+    目的: このマークアップはWebサイトを運営している組織の基本情報を検索エンジンに伝えるためのものです。
+    サイト名、ロゴ、URLとソーシャルメディアアカウントの関連付けを行い、
+    検索エンジンでのTheme-a認識を強化します。
+
+    注意点:
+    1. ロゴは相対パスではなく絶対URLを使用してください
+    2. 実際のサイト名、URL、ソーシャルメディアアカウントに置き換えてください
+    3. 可能であれば連絡先情報も追加するとよいでしょう
+    -->
+  <script type="application/ld+json">
+      {
+        /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+                       すべてのSchema.org構造化データで最初に定義する必要がある。
+                       これにより検索エンジンがこのJSONデータをSchema.orgの
+                       語彙を使用した構造化データとして認識できる（必須） */
+        "@context": "https://schema.org",
+
+        /* @typeでこのJSONデータの主要な型を定義。
+                       Organizationタイプは企業、団体、Theme-aなどの組織を表現するのに適している。
+                       より具体的な事業内容に応じてLocalBusiness、Corporation、EducationalOrganization
+                       などのサブタイプの使用も検討できる（必須） */
+        "@type": "Organization",
+
+        /* nameは組織の正式名称を示す必須プロパティ。
+                       サイト名やテーマ名と一致させることで、検索エンジンが
+                       サイトとTheme-aの関連性を正確に理解できる（必須） */
+        "name": "サイト名",
+
+        /* logoは組織のロゴ画像URLを示すプロパティ。
+                       Googleのナレッジパネル表示やリッチリザルトでのTheme-a表示に使用される。
+                       注意: ここでは相対パスが使用されているが、絶対URLに変更することを強く推奨。
+                       相対パスは検索エンジンが正しく解釈できない可能性がある */
+        "logo": "assets/images/theme-a/theme-a-logo.png",
+
+        /* urlは組織の公式ウェブサイトURLを示す必須プロパティ。
+                       必ず有効な絶対URLを指定する必要がある。
+                       通常はサイトのホームページURLを設定する（必須） */
+        "url": "https://example.com",
+
+        /* sameAsは組織の他のウェブプレゼンス（主にソーシャルメディアアカウント）を
+                       配列形式で列挙するプロパティ。
+                       これによりGoogleのナレッジグラフ内でTheme-aの各種アカウントが
+                       正しく関連付けられ、検索結果に表示される可能性が高まる */
+        "sameAs": [
+          /* InstagramアカウントのURL。
+                         実際のアカウントURLに置き換える必要がある。
+                         プロフィールページの完全URLを指定する */
+          "https://www.instagram.com/example",
+
+          /* FacebookアカウントのURL。
+                         ページIDではなく、完全なURLを指定する */
+          "https://www.facebook.com/example",
+
+          /* X（旧Twitter）アカウントのURL。
+                         現在はx.comドメインを使用することが推奨されている */
+          "https://x.com/example"
+
+          /* 他のプラットフォームも追加可能：
+                         - LinkedIn: https://www.linkedin.com/company/example
+                         - YouTube: https://www.youtube.com/c/example
+                         - Pinterest: https://www.pinterest.com/example
+                         など、実際に運用しているアカウントのみを追加する */
+        ]
+        /* 改善提案: 以下のように連絡先情報を追加するとよいでしょう
+                    ,
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "住所",
+                      "addressLocality": "市区町村",
+                      "addressRegion": "都道府県",
+                      "postalCode": "郵便番号",
+                      "addressCountry": "JP"
+                    },
+                    "telephone": "電話番号",
+                    "email": "contact@example.com"
+                    */
+
+        /* 改善提案: logoはImageObjectとして定義するとより良いでしょう
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://example.com/images/theme-a/theme-a-logo.png",
+                      "width": "600",
+                      "height": "60"
+                    }
+                    */
+
+        /* さらなる改善案: 以下のプロパティも追加するとより効果的
+                       - description: 組織の簡潔な説明文（150-160文字程度）
+                       - foundingDate: 設立日（ISO 8601形式：YYYY-MM-DD）
+                       - numberOfEmployees: 従業員数（数値）
+                       - slogan: 企業スローガンやキャッチフレーズ
+                       - theme-a: 複数のTheme-aを持つ場合はBrandタイプで各Theme-a情報を定義
+
+                       以下は実店舗を持つ場合に特に有効なプロパティ：
+                       - openingHours: 営業時間（例: "Mo-Fr 09:00-18:00"）
+                       - geo: 地理座標情報（GeoCoordinatesタイプで緯度・経度を指定）
+                       - hasMap: 地図URL（GoogleマップなどのURL）
+
+                       以下は企業サイトの場合に追加すると良いプロパティ：
+                       - potentialAction: 検索、予約、ダミーテキストです。などのアクション定義
+                       - memberOf: 所属団体や協会情報
+                       - award: 受賞歴
+                       - review: 第三者によるレビュー情報
+                    */
+      }
+    </script>
+  <script>
+    // ページロード時にURLパラメータからテーマを取得
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const theme = (urlParams.get('theme') || 'theme-a-theme').toLocaleLowerCase();
+      // appの最初のdivにテーマクラスを追加
+      const appDiv = document.getElementById('app');
+      const mainDiv = appDiv.querySelector('div');
+      if (mainDiv) {
+        // 既存のクラスをすべて削除
+        mainDiv.className = '';
+        // 新しいテーマクラスを追加
+        mainDiv.classList.add(theme + '-theme');
+      }
+
+      console.log('テーマ: ' + theme);
+    });
+  </script>
+  <script type="module" src="./assets/js/main.js"></script>
+  <script type="module" src="./assets/js/theme-a-list.js"></script>
+  <script type="module" src="./assets/js/theme-b-list.js"></script>
+  <script type="module" src="./assets/js/theme-c-list.js"></script>
+  <script type="module" src="./assets/js/theme-d-list.js"></script>
+</head>

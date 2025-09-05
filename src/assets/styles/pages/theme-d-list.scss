@@ -1,0 +1,718 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "./_theme-theme-d";
+
+.theme-d-theme {
+  // セクションパディング（縦）
+  --theme-section-padding-y-xs: 40px;
+  --theme-section-padding-y-sm: 64px;
+  --theme-section-padding-y-md: 64px;
+  --theme-section-padding-y-lg: 64px;
+  --theme-section-padding-y-xl: 64px;
+  // セクションパディング（横）
+  --theme-section-padding-x-xs: 20px;
+  --theme-section-padding-x-sm: 64px;
+  --theme-section-padding-x-md: 64px;
+  --theme-section-padding-x-lg: 64px;
+  --theme-section-padding-x-xl: 64px;
+
+  // コンテンツ幅
+  --theme-content-width-xs: 100%;
+  --theme-content-width-sm: 896px;
+  --theme-content-width-md: 896px;
+  --theme-content-width-lg: 1062px;
+  --theme-content-width-xl: 1542px;
+
+  // コンテンツパディング(横)
+  --theme-content-padding-x-xs: 0px;
+  --theme-content-padding-x-sm: 0px;
+  --theme-content-padding-x-md: 0px;
+  --theme-content-padding-x-lg: 0px;
+  --theme-content-padding-x-xl: 0px;
+
+  // タイトル
+  --theme-title-font-size: 24px;
+  --theme-title-line-height: 1.33; // 24/32
+  --theme-title-font-weight: 600;
+  --theme-title-color: var(--text-primary);
+
+  .prj-section-component {
+    &.article-list {
+      @include sm {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      @include md {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      @include lg {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include xl {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+      .prj-section-container {
+        @include sm {
+          max-width: 944px;
+        }
+        @include md {
+          max-width: 944px;
+        }
+        @include lg {
+          max-width: 900px;
+        }
+        @include xl {
+          max-width: 1244px;
+        }
+      }
+    }
+  }
+
+  .prj-card-component {
+    border-radius: 6px;
+    padding: 10px 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px 0px #00000040;
+    @include sm {
+      padding: 0px;
+      border-radius: var(--theme-border-radius-card);
+      box-shadow: 0px 0px 30px 10px #0000000d;
+    }
+    @include md {
+      padding: 0px;
+      border-radius: var(--theme-border-radius-card);
+      box-shadow: 0px 0px 30px 10px #0000000d;
+    }
+    @include lg {
+      padding: 0px;
+      border-radius: var(--theme-border-radius-card);
+      box-shadow: 0px 0px 30px 10px #0000000d;
+    }
+    @include xl {
+      padding: 0px;
+      border-radius: var(--theme-border-radius-card);
+      box-shadow: 0px 0px 30px 10px #0000000d;
+    }
+    .prj-card-flex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @include sm {
+        flex-direction: column;
+        gap: 10px;
+      }
+      @include md {
+        flex-direction: column;
+        gap: 10px;
+      }
+      @include lg {
+        flex-direction: column;
+        gap: 15px;
+      }
+      @include xl {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .prj-card-head {
+        // min-width: 36%;
+        min-width: 120px;
+        overflow: hidden;
+        @include sm {
+          width: 100%;
+          max-width: 100%;
+        }
+        @include md {
+          width: 100%;
+          max-width: 100%;
+        }
+        @include lg {
+          width: 100%;
+          max-width: 100%;
+        }
+        @include xl {
+          width: 100%;
+          max-width: 100%;
+        }
+        .prj-card-thumbnail {
+          border-radius: 6px;
+          @include sm {
+            border-radius: var(--theme-border-radius-card)
+              var(--theme-border-radius-card) 0 0;
+          }
+          @include md {
+            border-radius: var(--theme-border-radius-card)
+              var(--theme-border-radius-card) 0 0;
+          }
+          @include lg {
+            border-radius: var(--theme-border-radius-card)
+              var(--theme-border-radius-card) 0 0;
+          }
+          @include xl {
+            border-radius: var(--theme-border-radius-card)
+              var(--theme-border-radius-card) 0 0;
+          }
+        }
+
+        .prj-card-image-link {
+          .prj-card-image {
+            img {
+              aspect-ratio: 1/1;
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              @include sm {
+                aspect-ratio: 290/196;
+              }
+              @include md {
+                aspect-ratio: 290/196;
+              }
+              @include lg {
+                aspect-ratio: 290/196;
+              }
+              @include xl {
+                aspect-ratio: 290/196;
+              }
+            }
+          }
+        }
+        .prj-card-category {
+          position: absolute;
+          top: -10px;
+          right: 0;
+          z-index: 10;
+          padding: 7px 4px 6px;
+          font-size: 10px;
+          line-height: 1.2;
+          font-weight: 600;
+          border-radius: 0 0 0 4.79px;
+          background: #9ba3af; // テーマUI確認用（本来はHTML要素に直接スタイリング）
+          color: white; // テーマUI確認用（本来はHTML要素に直接スタイリング）
+          @include sm {
+            position: static;
+            margin-top: 20px;
+            margin-left: 14px;
+            padding: 6px 16px;
+            font-size: 14px;
+            line-height: 1.43; // 20/14
+            font-weight: 500;
+            border-radius: var(--theme-border-radius-card);
+            background: #737373; // テーマUI確認用（本来はHTML要素に直接スタイリング）
+          }
+          @include md {
+            position: static;
+            margin-top: 20px;
+            margin-left: 14px;
+            padding: 6px 16px;
+            font-size: 14px;
+            line-height: 1.43; // 20/14
+            font-weight: 500;
+            border-radius: var(--theme-border-radius-card);
+            background: #737373; // テーマUI確認用（本来はHTML要素に直接スタイリング）
+          }
+          @include lg {
+            position: static;
+            margin-top: 20px;
+            margin-left: 14px;
+            padding: 6px 16px;
+            font-size: 14px;
+            line-height: 1.43; // 20/14
+            font-weight: 500;
+            border-radius: var(--theme-border-radius-card);
+            background: #737373; // テーマUI確認用（本来はHTML要素に直接スタイリング）
+          }
+          @include xl {
+            position: static;
+            margin-top: 20px;
+            margin-left: 14px;
+            padding: 6px 16px;
+            font-size: 14px;
+            line-height: 1.43; // 20/14
+            font-weight: 500;
+            border-radius: var(--theme-border-radius-card);
+            background: #737373; // テーマUI確認用（本来はHTML要素に直接スタイリング）
+          }
+          span {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+          @include sm {
+            width: 20.71px;
+            height: 20.71px;
+          }
+          @include md {
+            width: 20.71px;
+            height: 20.71px;
+          }
+          @include lg {
+            width: 20.71px;
+            height: 20.71px;
+          }
+          @include xl {
+            width: 20.71px;
+            height: 20.71px;
+          }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+          .icon-chevron-lg {
+            font-size: 22px;
+          }
+        }
+      }
+      .prj-card-body {
+        @include sm {
+          margin: 0 14px;
+        }
+        @include md {
+          margin: 0 14px;
+        }
+        @include lg {
+          margin: 0 14px;
+        }
+        @include xl {
+          margin: 0 14px;
+        }
+        .prj-card-title {
+          margin: 0 0 1px;
+          font-size: 14px;
+          line-height: 1.4;
+          font-weight: 900;
+          @include sm {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5; // 24/16
+            font-weight: 700;
+          }
+          @include md {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5; // 24/16
+            font-weight: 700;
+          }
+          @include lg {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5; // 24/16
+            font-weight: 700;
+          }
+          @include xl {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5; // 24/16
+            font-weight: 700;
+          }
+        }
+        .prj-card-author-info {
+          @include sm {
+            margin-bottom: 14px;
+          }
+          @include md {
+            margin-bottom: 14px;
+          }
+          @include lg {
+            margin-bottom: 14px;
+          }
+          @include xl {
+            margin-bottom: 14px;
+          }
+          .prj-card-author-name {
+            font-size: 12px;
+            line-height: 1.33; // 16/12
+            font-weight: 500;
+            color: var(--text-primary);
+          }
+        }
+        .prj-card-follow {
+          margin-right: auto !important;
+          margin-top: 5px !important;
+          display: flex;
+          .material-symbols-outlined {
+            font-size: 20px;
+          }
+          .prj-card-follow-text {
+            .prj-card-follow-count {
+              display: inline-block;
+            }
+          }
+        }
+        .prj-card-actions {
+          @include sm {
+            gap: 8px;
+          }
+          @include md {
+            gap: 8px;
+          }
+          @include lg {
+            gap: 8px;
+          }
+          @include xl {
+            gap: 8px;
+          }
+          .prj-card-like-button,
+          .prj-card-bookmark-button {
+            @include sm {
+              color: #9ba3af;
+              border: 1px solid #9ba3af;
+              border-radius: 50%;
+            }
+            @include md {
+              color: #9ba3af;
+              border: 1px solid #9ba3af;
+              border-radius: 50%;
+            }
+            @include lg {
+              color: #9ba3af;
+              border: 1px solid #9ba3af;
+              border-radius: 50%;
+            }
+            @include xl {
+              color: #9ba3af;
+              border: 1px solid #9ba3af;
+              border-radius: 50%;
+            }
+            .material-symbols-outlined {
+              @include sm {
+                color: #9ba3af;
+              }
+              @include md {
+                color: #9ba3af;
+              }
+              @include lg {
+                color: #9ba3af;
+              }
+              @include xl {
+                color: #9ba3af;
+              }
+            }
+          }
+        }
+      }
+    }
+    .prj-card-foot {
+      padding: 10px 0px;
+      @include sm {
+        border-top: 0.5px solid #7c7c7c;
+        padding: 15px 0px 20px;
+        margin: 0 14px;
+      }
+      @include md {
+        border-top: 0.5px solid #7c7c7c;
+        padding: 15px 0px 20px;
+        margin: 0 14px;
+      }
+      @include lg {
+        border-top: 0.5px solid #7c7c7c;
+        padding: 15px 0px 20px;
+        margin: 0 14px;
+      }
+      @include xl {
+        border-top: 0.5px solid #7c7c7c;
+        padding: 15px 0px 20px;
+        margin: 0 14px;
+      }
+      .prj-card-date {
+        font-size: 14px;
+        line-height: 1.43; // 20/14
+        font-weight: 500;
+        color: var(--text-primary);
+        @include sm {
+          font-size: 12px;
+        }
+        @include md {
+          font-size: 12px;
+        }
+        @include lg {
+          font-size: 12px;
+        }
+        @include xl {
+          font-size: 12px;
+        }
+        .material-symbols-outlined {
+          transform: translateY(2.4px) !important;
+        }
+      }
+      .prj-card-stats {
+        font-size: 14px;
+        line-height: 1.43; // 20/14
+        font-weight: 500;
+        color: var(--text-primary);
+        @include sm {
+          font-size: 12px;
+        }
+        @include md {
+          font-size: 12px;
+        }
+        @include lg {
+          font-size: 12px;
+        }
+        @include xl {
+          font-size: 12px;
+        }
+        .icon-visibility-sm {
+          transform: translate(1px, 2px) !important;
+        }
+        .icon-favorite-sm {
+          transform: translateY(2px) !important;
+        }
+        .icon-comment-sm {
+          transform: translateY(2px) !important;
+        }
+      }
+    }
+  }
+
+  .article-list {
+    .prj-section-head-sp {
+      .prj-title-component {
+        &::after {
+          content: none;
+        }
+      }
+      .prj-button-category-component {
+        font-size: 12px;
+        line-height: 1.33; // 16/12
+        font-weight: 800;
+        color: #333333;
+        background-color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 14px 14px;
+        box-shadow: 2px 2px 2px 0px #00000033;
+      }
+      .prj-content-sort-switch-button-4col-component {
+        margin-top: 24px;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 2px 2px 2px 0px #00000040;
+        .prj-content-sort-switch-button-4col-item {
+          padding: 12px 5px;
+          box-shadow: 2px 2px 2px 0px #00000040;
+        }
+      }
+      .prj-time-filter-switch-button-tab-component {
+        margin-top: 20px;
+      }
+    }
+    .prj-section-head-pc {
+      .prj-content-sort-switch-button-4col-icon-component {
+        max-height: 36px;
+        background-color: white;
+        border-radius: 4px;
+        border: none;
+        box-shadow: 2px 2px 2px 0px #00000040;
+        .prj-content-sort-switch-button-4col-item {
+          box-shadow: 2px 2px 2px 0px #00000040;
+          padding: 8px 14px;
+        }
+        .prj-content-sort-switch-button-4col-item:first-child {
+          width: 120px;
+        }
+      }
+      .prj-time-filter-switch-button-component {
+        max-height: 36px;
+        border-radius: 4px;
+        background-color: white;
+        border: none;
+        box-shadow: 2px 2px 2px 0px #00000040;
+        // transform: translateY(4px);
+        .prj-time-filter-switch-button-item {
+          padding: 8px 14px;
+        }
+      }
+      .prj-button-category-component {
+        max-height: 36px;
+        font-size: 12px;
+        line-height: 1.33; // 16/12
+        font-weight: 800;
+        color: var(--text-primary);
+        padding: 10px 14px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 2px 2px 2px 0px #00000040;
+      }
+    }
+    .prj-section-body {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+      gap: 20px;
+      justify-items: center;
+      @include sm {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        row-gap: 30px;
+        column-gap: 5%;
+      }
+      @include md {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 30px;
+        column-gap: 5%;
+      }
+      @include lg {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 30px;
+        column-gap: 4%;
+      }
+      @include xl {
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        row-gap: 30px;
+        column-gap: 3%;
+      }
+    }
+    .prj-section-foot {
+      .prj-pagination-component {
+        .prj-pagination-item {
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .page-body {
+    @include lg {
+      margin-bottom: 80px;
+    }
+    @include xl {
+      margin-bottom: 80px;
+    }
+  }
+  .page-footer {
+    @include xl {
+      margin-top: auto;
+    }
+  }
+  main {
+    @include xl {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .ad-2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include xs {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @include sm {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @include md {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @include lg {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @include xl {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .prj-section-body {
+      @include xs {
+        grid-template-columns: repeat(1, 1fr) !important;
+        width: 100% !important;
+        a {
+          max-width: 370px !important;
+          max-height: 100% !important;
+          width: 100% !important;
+          aspect-ratio: auto;
+          img {
+            width: 100% !important;
+            aspect-ratio: 370/104;
+          }
+        }
+      }
+    }
+  }
+  .special-thanks {
+    @include xs {
+      padding-left: 10.5px;
+      padding-right: 10.5px;
+    }
+    @include sm {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @include md {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @include lg {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @include xl {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .prj-section-head {
+      display: block !important;
+      text-align: center;
+      margin-bottom: 32px;
+      @include sm {
+        margin-bottom: 40px;
+      }
+      @include md {
+        margin-bottom: 40px;
+      }
+      @include lg {
+        margin-bottom: 40px;
+      }
+      @include xl {
+        margin-bottom: 40px;
+      }
+    }
+    .prj-section-body {
+      gap: 15px;
+      @include md {
+        gap: 28px;
+      }
+      @include lg {
+        gap: 28px;
+      }
+      @include xl {
+        gap: 28px;
+        justify-content: flex-start;
+      }
+      img {
+        display: block;
+        width: 168px;
+        height: 49.41px;
+        @include md {
+          width: 250px;
+          height: 75px;
+        }
+      }
+    }
+  }
+  .footer-theme-d {
+    display: block;
+  }
+  .prj-side-menu-main-component {
+    padding: 20px;
+    .prj-side-menu-main-tag {
+      .prj-side-menu-main-item {
+        a {
+          box-shadow: 0px 4px 2px 0px #0000000d !important;
+          border: none !important;
+        }
+      }
+    }
+    .prj-side-menu-main-tag-name {
+      &::before {
+        color: var(--theme-primary) !important;
+      }
+    }
+  }
+}

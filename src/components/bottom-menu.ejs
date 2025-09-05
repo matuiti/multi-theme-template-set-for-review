@@ -1,0 +1,1690 @@
+<div class="prj-bottom-menu-component">
+  <div class="prj-bottom-menu-container">
+    <div class="prj-bottom-menu-content">
+      <div class="prj-bottom-menu-body">
+        <ul class="prj-bottom-menu-body-list">
+          <li class="prj-bottom-menu-body-item">
+            <!-- 探す -->
+            <section class="prj-bottom-menu-filter-section prj-bottom-menu-section">
+              <div class="prj-bottom-menu-section-body">
+                <!-- フィルターメニュー -->
+                <div class="prj-filter-menu-component">
+                  <div class="prj-filter-menu-container">
+                    <!-- カテゴリから探す -->
+                    <section class="category-search-section prj-filter-menu-section">
+                      <div class="prj-filter-menu-section-head">
+                        <h2 class="prj-title-component">カテゴリから探す</h2>
+                      </div>
+                      <div class="prj-filter-menu-section-body">
+                        <ul class="prj-filter-menu-section-list">
+                          <li class="prj-filter-menu-section-item">
+                            <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="main": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                            <div class="prj-filter-menu-accordion-header" data-toggle="main">
+                              <h3 class="prj-filter-menu-accordion-header-title">メイン</h3>
+                              <div class="icon-box">
+                                <span class="material-symbols-outlined" data-icon>expand_more</span>
+                              </div>
+                            </div>
+                            <!-- data-content="main": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                            <!-- フィルターカテゴリーコンポーネント -->
+                            <div class="prj-filter-menu-accordion-body prj-filter-category-component"
+                              data-content="main">
+                              <!--
+                                        SP向けカテゴリフィルターカテゴリ
+                                        - prj-filter-category-sp-component: SPサイズでのみ表示される要素
+                                        SP版の構造:
+                                        1. 親カテゴリは縦に一列で並ぶ（グリッドではなくスタック配置）
+                                        2. 親カテゴリをクリックすると子カテゴリが展開
+                                        3. 子カテゴリをクリックすると孫カテゴリが展開
+                                        4. PCとは異なり、複数の親カテゴリを同時に開くことが可能
+                                      -->
+                              <div class="prj-filter-category-sp-component">
+                                <!--
+                                          親カテゴリA（SP用）
+                                          - prj-filter-category-sp-parent-item: SP用の親カテゴリコンテナ
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <!--
+                                            親カテゴリヘッダー
+                                            - data-sp-toggle="parent-A": このカテゴリの識別子
+                                            - data-sp-icon: SP用アイコンのマーカー
+                                          -->
+                                  <div class="prj-filter-category-sp-parent-header" data-sp-toggle="parent-A">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリA</span>
+                                    </div>
+                                    <!-- SP用開閉アイコン -->
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+
+                                  <!--
+                                            親カテゴリAの子カテゴリコンテンツ
+                                            - hidden: 初期状態では非表示
+                                            - data-sp-content="parent-A": 親カテゴリAと関連付け
+                                            -: 表示/非表示のアニメーション効果
+                                          -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-A">
+                                    <!-- 子カテゴリタイトル -->
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリAの子カテゴリ一覧</span>
+                                      <span class="icon-box"></span>
+                                    </a>
+                                    <!-- 子カテゴリリスト -->
+                                    <!--
+                                              子カテゴリA-1
+                                              - data-sp-toggle="child-A1": この子カテゴリの識別子
+                                              - プレフィックスにparent-ではなくchild-を使用している点に注意
+                                            -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A1">
+                                        <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!--
+                                                孫カテゴリのコンテナ
+                                                - hidden: 初期状態では非表示
+                                                - data-sp-content="child-A1": 子カテゴリA1と関連付け
+                                                - bg-gray-100: 階層を視覚的に表現するための背景色
+                                              -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-A1">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!--
+                                              子カテゴリA-2
+                                              - 構造は子カテゴリA-1と同様
+                                            -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A2">
+                                        <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!-- 孫カテゴリのコンテナ -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-A2">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--
+                                          親カテゴリB（SP用）
+                                          - 構造は親カテゴリAと同様
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <div
+                                    class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                                    data-sp-toggle="parent-B">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリB</span>
+                                    </div>
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+
+                                  <!-- 親カテゴリBの子カテゴリコンテンツ -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-B">
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリBの子カテゴリ一覧</span>
+                                    </a>
+                                    <!-- 子カテゴリリスト -->
+                                    <!-- 子カテゴリB-1 -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-B1">
+                                        <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!-- 孫カテゴリのコンテナ -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-B1">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリB-1-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリB-1-2</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--
+                                          親カテゴリC（SP用）
+                                          - 構造は他の親カテゴリと同様だが、孫カテゴリはなく子カテゴリのみを表示
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <div
+                                    class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                                    data-sp-toggle="parent-C">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリC</span>
+                                    </div>
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+                                  <!--
+                                            親カテゴリCの子カテゴリコンテンツ
+                                            - 孫カテゴリなしのシンプルな構造
+                                          -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-C">
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリCの子カテゴリ一覧</span>
+                                    </a>
+                                    <a href="#">
+                                      <span class="prj-filter-category-text">子カテゴリC-1</span>
+                                    </a>
+                                    <a href="#">
+                                      <span class="prj-filter-category-text">子カテゴリC-2</span>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="sub1": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                            <div class="prj-filter-menu-accordion-header" data-toggle="sub1">
+                              <h3 class="prj-filter-menu-accordion-header-title">サブ1</h3>
+                              <div class="icon-box">
+                                <span class="material-symbols-outlined" data-icon>expand_more</span>
+                              </div>
+                            </div>
+                            <!-- data-content="sub1": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                            <!-- フィルターカテゴリーコンポーネント -->
+                            <div class="prj-filter-menu-accordion-body prj-filter-category-component"
+                              data-content="sub1">
+                              <!--
+                                        SP向けカテゴリフィルターカテゴリ
+                                        - prj-filter-category-sp-component: SPサイズでのみ表示される要素
+                                        SP版の構造:
+                                        1. 親カテゴリは縦に一列で並ぶ（グリッドではなくスタック配置）
+                                        2. 親カテゴリをクリックすると子カテゴリが展開
+                                        3. 子カテゴリをクリックすると孫カテゴリが展開
+                                        4. PCとは異なり、複数の親カテゴリを同時に開くことが可能
+                                      -->
+                              <div class="prj-filter-category-sp-component">
+                                <!--
+                                          親カテゴリA（SP用）
+                                          - prj-filter-category-sp-parent-item: SP用の親カテゴリコンテナ
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <!--
+                                            親カテゴリヘッダー
+                                            - data-sp-toggle="parent-A": このカテゴリの識別子
+                                            - data-sp-icon: SP用アイコンのマーカー
+                                          -->
+                                  <div class="prj-filter-category-sp-parent-header" data-sp-toggle="parent-A">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリA</span>
+                                    </div>
+                                    <!-- SP用開閉アイコン -->
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+
+                                  <!--
+                                            親カテゴリAの子カテゴリコンテンツ
+                                            - hidden: 初期状態では非表示
+                                            - data-sp-content="parent-A": 親カテゴリAと関連付け
+                                            -: 表示/非表示のアニメーション効果
+                                          -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-A">
+                                    <!-- 子カテゴリタイトル -->
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリAの子カテゴリ一覧</span>
+                                      <span class="icon-box"></span>
+                                    </a>
+                                    <!-- 子カテゴリリスト -->
+                                    <!--
+                                              子カテゴリA-1
+                                              - data-sp-toggle="child-A1": この子カテゴリの識別子
+                                              - プレフィックスにparent-ではなくchild-を使用している点に注意
+                                            -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A1">
+                                        <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!--
+                                                孫カテゴリのコンテナ
+                                                - hidden: 初期状態では非表示
+                                                - data-sp-content="child-A1": 子カテゴリA1と関連付け
+                                                - bg-gray-100: 階層を視覚的に表現するための背景色
+                                              -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-A1">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!--
+                                              子カテゴリA-2
+                                              - 構造は子カテゴリA-1と同様
+                                            -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A2">
+                                        <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!-- 孫カテゴリのコンテナ -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-A2">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--
+                                          親カテゴリB（SP用）
+                                          - 構造は親カテゴリAと同様
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <div
+                                    class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                                    data-sp-toggle="parent-B">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリB</span>
+                                    </div>
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+
+                                  <!-- 親カテゴリBの子カテゴリコンテンツ -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-B">
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリBの子カテゴリ一覧</span>
+                                    </a>
+                                    <!-- 子カテゴリリスト -->
+                                    <!-- 子カテゴリB-1 -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-B1">
+                                        <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!-- 孫カテゴリのコンテナ -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-B1">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリB-1-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリB-1-2</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--
+                                          親カテゴリC（SP用）
+                                          - 構造は他の親カテゴリと同様だが、孫カテゴリはなく子カテゴリのみを表示
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <div
+                                    class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                                    data-sp-toggle="parent-C">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリC</span>
+                                    </div>
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+                                  <!--
+                                            親カテゴリCの子カテゴリコンテンツ
+                                            - 孫カテゴリなしのシンプルな構造
+                                          -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-C">
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリCの子カテゴリ一覧</span>
+                                    </a>
+                                    <a href="#">
+                                      <span class="prj-filter-category-text">子カテゴリC-1</span>
+                                    </a>
+                                    <a href="#">
+                                      <span class="prj-filter-category-text">子カテゴリC-2</span>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="sub2": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                            <div class="prj-filter-menu-accordion-header" data-toggle="sub2">
+                              <h3 class="prj-filter-menu-accordion-header-title">サブ2</h3>
+                              <div class="icon-box">
+                                <span class="material-symbols-outlined" data-icon>expand_more</span>
+                              </div>
+                            </div>
+                            <!-- data-content="sub2": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                            <!-- フィルターカテゴリーコンポーネント -->
+                            <div class="prj-filter-menu-accordion-body prj-filter-category-component"
+                              data-content="sub2">
+                              <!--
+                                        SP向けカテゴリフィルターカテゴリ
+                                        - prj-filter-category-sp-component: SPサイズでのみ表示される要素
+                                        SP版の構造:
+                                        1. 親カテゴリは縦に一列で並ぶ（グリッドではなくスタック配置）
+                                        2. 親カテゴリをクリックすると子カテゴリが展開
+                                        3. 子カテゴリをクリックすると孫カテゴリが展開
+                                        4. PCとは異なり、複数の親カテゴリを同時に開くことが可能
+                                      -->
+                              <div class="prj-filter-category-sp-component">
+                                <!--
+                                          親カテゴリA（SP用）
+                                          - prj-filter-category-sp-parent-item: SP用の親カテゴリコンテナ
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <!--
+                                            親カテゴリヘッダー
+                                            - data-sp-toggle="parent-A": このカテゴリの識別子
+                                            - data-sp-icon: SP用アイコンのマーカー
+                                          -->
+                                  <div class="prj-filter-category-sp-parent-header" data-sp-toggle="parent-A">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリA</span>
+                                    </div>
+                                    <!-- SP用開閉アイコン -->
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+
+                                  <!--
+                                            親カテゴリAの子カテゴリコンテンツ
+                                            - hidden: 初期状態では非表示
+                                            - data-sp-content="parent-A": 親カテゴリAと関連付け
+                                            -: 表示/非表示のアニメーション効果
+                                          -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-A">
+                                    <!-- 子カテゴリタイトル -->
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリAの子カテゴリ一覧</span>
+                                      <span class="icon-box"></span>
+                                    </a>
+                                    <!-- 子カテゴリリスト -->
+                                    <!--
+                                              子カテゴリA-1
+                                              - data-sp-toggle="child-A1": この子カテゴリの識別子
+                                              - プレフィックスにparent-ではなくchild-を使用している点に注意
+                                            -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A1">
+                                        <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!--
+                                                孫カテゴリのコンテナ
+                                                - hidden: 初期状態では非表示
+                                                - data-sp-content="child-A1": 子カテゴリA1と関連付け
+                                                - bg-gray-100: 階層を視覚的に表現するための背景色
+                                              -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-A1">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!--
+                                              子カテゴリA-2
+                                              - 構造は子カテゴリA-1と同様
+                                            -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A2">
+                                        <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!-- 孫カテゴリのコンテナ -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-A2">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--
+                                          親カテゴリB（SP用）
+                                          - 構造は親カテゴリAと同様
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <div
+                                    class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                                    data-sp-toggle="parent-B">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリB</span>
+                                    </div>
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+
+                                  <!-- 親カテゴリBの子カテゴリコンテンツ -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-B">
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリBの子カテゴリ一覧</span>
+                                    </a>
+                                    <!-- 子カテゴリリスト -->
+                                    <!-- 子カテゴリB-1 -->
+                                    <div class="prj-filter-category-sp-child-item">
+                                      <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-B1">
+                                        <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                        <div class="icon-box">
+                                          <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                        </div>
+                                      </div>
+
+                                      <!-- 孫カテゴリのコンテナ -->
+                                      <div class="prj-filter-category-sp-grandchild-content hidden"
+                                        data-sp-content="child-B1">
+                                        <div class="prj-filter-category-sp-grandchild-flex">
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリB-1-1</span>
+                                          </a>
+                                          <a href="#">
+                                            <span class="prj-filter-category-text">孫カテゴリB-1-2</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--
+                                          親カテゴリC（SP用）
+                                          - 構造は他の親カテゴリと同様だが、孫カテゴリはなく子カテゴリのみを表示
+                                        -->
+                                <div class="prj-filter-category-sp-parent-item">
+                                  <div
+                                    class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                                    data-sp-toggle="parent-C">
+                                    <div class="prj-filter-category-centerr">
+                                      <div class="prj-filter-category-thumbnail">
+                                        <span></span>
+                                      </div>
+                                      <span class="prj-filter-category-text">親カテゴリC</span>
+                                    </div>
+                                    <div class="icon-box">
+                                      <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                    </div>
+                                  </div>
+                                  <!--
+                                            親カテゴリCの子カテゴリコンテンツ
+                                            - 孫カテゴリなしのシンプルな構造
+                                          -->
+                                  <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-C">
+                                    <a href="#" class="prj-filter-category-sp-child-content-title">
+                                      <span class="prj-filter-category-text">親カテゴリCの子カテゴリ一覧</span>
+                                    </a>
+                                    <a href="#">
+                                      <span class="prj-filter-category-text">子カテゴリC-1</span>
+                                    </a>
+                                    <a href="#">
+                                      <span class="prj-filter-category-text">子カテゴリC-2</span>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                    <!-- カテゴリから探す〆 -->
+                    <!-- アイキャッチから探す -->
+                    <section class="eyecatch-search-section prj-filter-menu-section">
+                      <div class="prj-filter-menu-section-head">
+                        <h2 class="prj-title-component">アイキャッチから探す</h2>
+                      </div>
+                      <div class="prj-filter-menu-section-body">
+                        <ul class="prj-filter-menu-section-list">
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#">
+                              <div class="prj-filter-menu-thumbnail">
+                                <span class="material-symbols-outlined"> image </span>
+                              </div>
+                              <span class="prj-filter-menu-text">単一画像</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#">
+                              <div class="prj-filter-menu-thumbnail">
+                                <span class="material-symbols-outlined">
+                                  switch_right
+                                </span>
+                              </div>
+                              <span class="prj-filter-menu-text">スライドショー</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#">
+                              <div class="prj-filter-menu-thumbnail">
+                                <img src="assets/images/common/youtube.png" alt="動画" width="24" height="24" />
+                              </div>
+                              <span class="prj-filter-menu-text">動画</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                    <!-- アイキャッチから探す〆 -->
+                    <!-- アカウントから探す -->
+                    <section class="account-search-section prj-filter-menu-section">
+                      <div class="prj-filter-menu-section-head">
+                        <h2 class="prj-title-component">アカウントから探す</h2>
+                      </div>
+                      <div class="prj-filter-menu-section-body">
+                        <ul class="prj-filter-menu-section-list">
+                          <li class="prj-filter-menu-section-item">
+                            <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="main": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                            <div class="prj-filter-menu-accordion-header" data-toggle="main">
+                              <h3 class="prj-filter-menu-accordion-header-title">メイン</h3>
+                              <div class="icon-box">
+                                <span class="material-symbols-outlined" data-icon>expand_more</span>
+                              </div>
+                            </div>
+                            <!-- data-content="main": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                            <div class="prj-filter-menu-accordion-body hidden" data-content="main">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="sub1": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                            <div class="prj-filter-menu-accordion-header" data-toggle="sub1">
+                              <h3 class="prj-filter-menu-accordion-header-title">サブ1</h3>
+                              <div class="icon-box">
+                                <span class="material-symbols-outlined" data-icon>expand_more</span>
+                              </div>
+                            </div>
+                            <!-- data-content="sub1": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                            <div class="prj-filter-menu-accordion-body hidden" data-content="sub1">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="sub2": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                            <div class="prj-filter-menu-accordion-header" data-toggle="sub2">
+                              <h3 class="prj-filter-menu-accordion-header-title">サブ2</h3>
+                              <div class="icon-box">
+                                <span class="material-symbols-outlined" data-icon>expand_more</span>
+                              </div>
+                            </div>
+                            <!-- data-content="main": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                            <div class="prj-filter-menu-accordion-body hidden" data-content="sub2">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span class="prj-filter-menu-text">アカウント</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                    <!-- アカウントから探す〆 -->
+                    <!-- タグから探す -->
+                    <section class="tag-search-section prj-filter-menu-section">
+                      <div class="prj-filter-menu-section-head">
+                        <h2 class="prj-title-component">タグから探す</h2>
+                      </div>
+                      <div class="prj-filter-menu-section-body">
+                        <ul class="prj-filter-menu-section-list">
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item prj-tag-component">
+                            <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                                class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="prj-filter-menu-section-foot">
+                        <a href="#" class="prj-text-link-more-component" aria-label="コミュニティの一覧ページへ">
+                          もっと見る
+                          <span class="material-symbols-outlined icon-expand-circle-right-md" aria-hidden="true">
+                            expand_circle_right
+                          </span>
+                        </a>
+                      </div>
+                    </section>
+                    <!-- タグから探す〆 -->
+                    <!-- コミュニティから探す -->
+                    <section class="community-search-section prj-filter-menu-section">
+                      <div class="prj-filter-menu-section-head">
+                        <h2 class="prj-title-component">コミュニティから探す</h2>
+                      </div>
+                      <div class="prj-filter-menu-section-body">
+                        <ul class="prj-filter-menu-section-list">
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#">
+                              <div class="prj-filter-menu-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-menu-text">コミュニティ一覧</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                    <!-- コミュニティから探す〆 -->
+                    <!-- フッター（フィルターメニュー） -->
+                    <section class="footer-filter-menu-section prj-filter-menu-section">
+                      <div class="prj-filter-menu-section-body">
+                        <!-- リストボックス1 -->
+                        <ul class="prj-filter-menu-section-list">
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです">
+                              ダミーリストです
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです">
+                              ダミーリストです
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです">
+                              ダミーリストです
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです">
+                              ダミーリストです
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです">
+                              ダミーリストです
+                            </a>
+                          </li>
+                        </ul>
+                        <ul class="prj-filter-menu-section-list">
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです">
+                              ダミーリストです
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです"> ダミーリストです </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです">
+                              ダミーリストです
+                            </a>
+                          </li>
+                          <li class="prj-filter-menu-section-item">
+                            <a href="#" aria-label="ダミーリストです">
+                              ダミーリストです
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="prj-filter-menu-section-foot">
+                        <!-- sns -->
+                        <nav aria-label="SNSリンク">
+                          <ul class="flex gap-5">
+                            <li class="w-[44px] h-[44px] flex justify-center items-center">
+                              <a href="#" aria-label="Instagramページへ">
+                                <img class="w-[26.43px] h-[26.43px]" src="assets/images/common/sns-menu-instagram.png"
+                                  alt="" aria-hidden="true" width="26.43" height="26.43" loading="lazy" />
+                                <span class="sr-only">Instagram</span>
+                              </a>
+                            </li>
+                            <li class="w-[44px] h-[44px] flex justify-center items-center">
+                              <a href="#" aria-label="Facebookページへ">
+                                <img class="w-[26.43px] h-[26.43px]" src="assets/images/common/sns-menu-facebook.png"
+                                  alt="" aria-hidden="true" width="26.43" height="26.43" loading="lazy" />
+                                <span class="sr-only">Facebook</span>
+                              </a>
+                            </li>
+                            <li class="w-[44px] h-[44px] flex justify-center items-center">
+                              <a href="#" aria-label="Xページへ">
+                                <img class="w-[26.43px] h-[23.87px]" src="assets/images/common/sns-menu-x.png" alt=""
+                                  aria-hidden="true" width="26.43" height="23.87" loading="lazy" />
+                                <span class="sr-only">X</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </section>
+                    <!-- フッター（フィルターメニュー）〆 -->
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="prj-bottom-menu-body-item">
+            <!-- 人気記事 -->
+            <section class="prj-bottom-menu-stats-section prj-bottom-menu-section">
+              <div class="prj-bottom-menu-section-body">
+                <div class="prj-bottom-menu-stats" aria-labelledby="stats-title">
+                  <!-- リスト（ビューの多い記事） -->
+                  <div class="prj-bottom-menu-stats-list-container">
+                    <div class="prj-bottom-menu-stats-list-head">
+                      <h3 id="stats-title" class="prj-bottom-menu-stats-list-title">
+                        <span class="material-symbols-outlined icon-visibility-md">
+                          visibility
+                        </span>
+                        ビューの多い記事
+                      </h3>
+                    </div>
+                    <div class="prj-bottom-menu-stats-list-body">
+                      <ul class="prj-bottom-menu-stats-list">
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-21.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-visibility-sm">
+                                visibility
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-22.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-visibility-sm">
+                                visibility
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-23.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-visibility-sm">
+                                visibility
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-24.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-visibility-sm">
+                                visibility
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-25.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-visibility-sm">
+                                visibility
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- リスト（いいねの多い記事） -->
+                  <div class="prj-bottom-menu-stats-list-container">
+                    <div class="prj-bottom-menu-stats-list-head">
+                      <h3 id="stats-title" class="prj-bottom-menu-stats-list-title">
+                        <span class="material-symbols-outlined icon-favorite-md">
+                          favorite
+                        </span>
+                        いいねの多い記事
+                      </h3>
+                    </div>
+                    <div class="prj-bottom-menu-stats-list-body">
+                      <ul class="prj-bottom-menu-stats-list">
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-26.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-favorite-sm">
+                                favorite
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-25.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-favorite-sm">
+                                favorite
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-21.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-favorite-sm">
+                                favorite
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-22.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-favorite-sm">
+                                favorite
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-23.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-favorite-sm">
+                                favorite
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- リスト（コメントの多い記事） -->
+                  <div class="prj-bottom-menu-stats-list-container">
+                    <div class="prj-bottom-menu-stats-list-head">
+                      <h3 id="stats-title" class="prj-bottom-menu-stats-list-title">
+                        <span class="material-symbols-outlined icon-comment-md">
+                          comment
+                        </span>
+                        コメントの多い記事
+                      </h3>
+                    </div>
+                    <div class="prj-bottom-menu-stats-list-body">
+                      <ul class="prj-bottom-menu-stats-list">
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-23.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-comment-sm">
+                                comment
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-22.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-comment-sm">
+                                comment
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-21.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-comment-sm">
+                                comment
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-26.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-comment-sm">
+                                comment
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="prj-card-stats-component">
+                          <a href="#" class="prj-card-stats-thumbnail">
+                            <img src="assets/images/theme-a/theme-a-side-24.jpg" alt="ニュースカテゴリー" loading="lazy"
+                              width="70" height="70" />
+                          </a>
+                          <div class="prj-card-stats-text-box">
+                            <a href="#" class="prj-card-stats-title">
+                              <h4>
+                                記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。
+                              </h4>
+                            </a>
+                            <a href="#" class="prj-card-stats-text">
+                              <p>
+                                ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                              </p>
+                            </a>
+                            <div class="prj-card-stats-views">
+                              <span class="prj-card-stats-icon material-symbols-outlined icon-comment-sm">
+                                comment
+                              </span>
+                              <span class="prj-card-stats-count" aria-label="閲覧数 99.9k">99.9k</span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="prj-bottom-menu-body-item">
+            <!-- アカウント -->
+            <section class="prj-bottom-menu-account-section prj-bottom-menu-section">
+              <div class="prj-bottom-menu-section-head">
+                <a href="#"><span class="material-symbols-outlined"> edit_note </span>記事を投稿する</a>
+              </div>
+              <div class="prj-bottom-menu-section-body">
+                <ul class="prj-bottom-menu-account-list">
+                  <li class="prj-bottom-menu-account-item">
+                    <a href="#">
+                      <span class="material-symbols-outlined"> badge </span>
+                      <span class="prj-bottom-menu-account-text">プロフィール</span>
+                    </a>
+                  </li>
+                  <li class="prj-bottom-menu-account-item">
+                    <a href="#">
+                      <span class="material-symbols-outlined"> account_circle </span>
+                      <span class="prj-bottom-menu-account-text">マイページ</span>
+                    </a>
+                  </li>
+                  <li class="prj-bottom-menu-account-item">
+                    <a href="#">
+                      <span class="material-symbols-outlined"> groups </span>
+                      <span class="prj-bottom-menu-account-text">コミュニティ</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="prj-bottom-menu-section-foot">
+                <ul class="prj-bottom-menu-account-list">
+                  <li class="prj-bottom-menu-account-item">
+                    <a href="#">
+                      <span class="material-symbols-outlined"> settings </span>
+                      <span class="prj-bottom-menu-account-text">アカウント設定</span>
+                    </a>
+                  </li>
+                  <li class="prj-bottom-menu-account-item">
+                    <a href="#">
+                      <span class="material-symbols-outlined"> logout </span>
+                      <span class="prj-bottom-menu-account-text">ログアウト</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </li>
+        </ul>
+      </div>
+      <div class="prj-bottom-menu-footer">
+        <ul class="prj-bottom-menu-footer-list">
+          <li class="prj-bottom-menu-footer-item">
+            <a class="prj-bottom-menu-footer-button" href="theme-a.html">
+              <span class="prj-bottom-menu-footer-icon">
+                <span class="material-symbols-outlined"> home </span>
+              </span>
+              <span class="prj-bottom-menu-footer-text">ホーム</span>
+            </a>
+          </li>
+          <li class="prj-bottom-menu-footer-item">
+            <button class="prj-bottom-menu-footer-button prj-bottom-menu-footer-button-filter">
+              <span class="prj-bottom-menu-footer-icon">
+                <span class="material-symbols-outlined open"> manage_search </span>
+                <span class="material-symbols-outlined close"> close </span>
+              </span>
+              <span class="prj-bottom-menu-footer-text">探す</span>
+            </button>
+          </li>
+          <li class="prj-bottom-menu-footer-item">
+            <button class="prj-bottom-menu-footer-button prj-bottom-menu-footer-button-stats">
+              <span class="prj-bottom-menu-footer-icon">
+                <span class="material-symbols-outlined open"> crown </span>
+                <span class="material-symbols-outlined close"> close </span>
+              </span>
+              <span class="prj-bottom-menu-footer-text">人気記事</span>
+            </button>
+          </li>
+          <li class="prj-bottom-menu-footer-item">
+            <button class="prj-bottom-menu-footer-button prj-bottom-menu-footer-button-account">
+              <span class="prj-bottom-menu-footer-icon">
+                <span class="material-symbols-outlined open"> person </span>
+                <span class="material-symbols-outlined close"> close </span>
+              </span>
+              <span class="prj-bottom-menu-footer-text">アカウント</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="prj-bottom-menu-overlay"></div>
+  </div>
+</div>

@@ -1,0 +1,167 @@
+/* 共通変数のインポート */
+@use "variables" as *;
+
+/* コンポーネントのインポート */
+@use "components/header";
+@use "components/bottom-menu";
+@use "components/section";
+@use "components/title";
+@use "components/buttons";
+@use "components/cards";
+@use "components/icons";
+@use "components/swiper";
+@use "components/cta-registration";
+@use "components/breadcrumb";
+@use "components/pagination";
+@use "components/side-menu-main";
+@use "components/side-menu-stats";
+@use "components/article-content";
+@use "components/tag";
+@use "components/comment";
+@use "components/comment-form";
+@use "components/modal-menu";
+@use "components/filter-menu";
+@use "components/filter-category";
+@use "components/modal-category";
+@use "components/more-option";
+
+/* TailwindCSSのディレクティブ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 基本スタイル */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+
+.theme-a-theme,
+.theme-b-theme,
+.theme-c-theme,
+.theme-d-theme {
+  color: var(--text-primary);
+
+  @media (hover: hover) {
+    // ホバー機能をサポートするデバイスのみに適用
+    button:hover,
+    a:hover,
+    input:hover,
+    textarea:hover,
+    select:hover,
+    .card-hover:hover {
+      opacity: var(--hover-opacity);
+    }
+    .prj-pagination-component a:not(.current):hover {
+      opacity: 1 !important;
+      background-color: var(--hover-bg-color);
+      transition: background-color 0.3s;
+    }
+    .prj-card-like-button:hover,
+    .prj-card-bookmark-button:hover {
+      opacity: 1 !important;
+      cursor: default !important;
+    }
+  }
+
+  .card {
+    // カードのホバーアクション（ホバー時にカードが浮く）
+    // cursor: pointer;
+    overflow: hidden;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-shadow: 0 2px 30px 5px rgba(123, 123, 123, 0.1);
+    --tw-shadow-colored: 0 2px 30px 5px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.3s;
+  }
+
+  .card-hover:hover {
+    --tw-translate-y: -0.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+      0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .modal-open {
+    // モーダル表示中はスクロール無効化
+    overflow-y: hidden !important;
+  }
+
+  img,
+  video {
+    object-fit: cover;
+    height: inherit;
+  }
+
+  :focus {
+    // 基本的なフォーカススタイルを削除
+    outline: none;
+  }
+
+  :focus-visible {
+    // キーボード操作時のみフォーカスを視覚的に表示
+    outline: 2px solid var(--theme-primary);
+    // outline-offset: 2px;
+  }
+
+  .is-blur {
+    filter: blur(4px);
+  }
+
+  .sr-only {
+    // スクリーンリーダー用のスタイル（表示はせずスクリーンリーダーに認識される）
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .ranking {
+    .prj-card-component {
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .ad-2 {
+    a {
+      display: block;
+      overflow: hidden;
+      width: fit-content;
+      img {
+        transition: transform 0.3s ease;
+        aspect-ratio: 1/1;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

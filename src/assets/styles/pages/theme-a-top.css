@@ -1,0 +1,506 @@
+@charset "UTF-8";
+/* Regular (400) ウェイト */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Noto Sans JP Regular"), url("/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+/* Medium (500) ウェイト */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Noto Sans JP Medium"), url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2");
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+/* SemiBold (600) ウェイト */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Noto Sans JP SemiBold"), url("/assets/fonts/NotoSansJP-SemiBold.woff2") format("woff2");
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+/* Bold (700) ウェイト */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Noto Sans JP Bold"), url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2");
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+.theme-a-theme,
+.theme-b-theme,
+.theme-c-theme,
+.theme-d-theme {
+  /* 全テーマ共通のデフォルト値 */
+  /* これらはテーマファイルで必要に応じて上書きする */
+  --text-primary: #262626;
+  --text-secondary: #333333;
+  --title-font-size: 24px;
+  --title-line-height: 1.33;
+  --title-font-weight: 600;
+  --title-min-height: 40px;
+  --title-color: var(--text-primary);
+  --letter-spacing-sm: 0.03em;
+  --letter-spacing-md: 0.05em;
+  --letter-spacing-lg: 0.1em;
+  --bg-white: #fafafa;
+  --box-shadow-header: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  /* 共通フォント変数 */
+  --font-family-base: "Noto Sans JP", sans-serif;
+  --font-family-article-detail: "Yu Gothic", YuGothic, "Noto Sans JP",
+    sans-serif;
+  /* ベースフォント設定 */
+  font-family: var(--font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --hover-opacity: 0.8;
+  --hover-scale: 1.1;
+  --hover-bg-color: rgba(217, 217, 217, 0.2);
+  --header-height: 64px;
+  --header-height-md: 80px;
+  --bottom-menu-height: 60px;
+  --footer-padding-bottom-add: 64px;
+  --side-menu-width: 250px;
+}
+
+/* ==========================================================================
+   レスポンシブ対応ミックスイン
+   ========================================================================== */
+/**
+ * プロジェクト定義のブレイクポイントに準拠したメディアクエリミックスイン
+ * 
+ * ブレイクポイント:
+ * - xs: ~599px - スマホ向け
+ * - sm: 600px~1023px - スマホ〜小型タブレット向け
+ * - md: 1024px~1439px - 小型タブレット〜小型デスクトップ向け
+ * - lg: 1440px~1919px - 小型デスクトップ〜標準デスクトップ向け
+ * - xl: 1920px~ - 大型ディスプレイ向け
+ * 
+ * 使用例:
+ * .my-element {
+ *   width: 100%;
+ *   
+ *   @include md {
+ *     width: 50%;
+ *   }
+ *   
+ *   @include lg {
+ *     width: 33.333%;
+ *   }
+ * }
+ */
+/**
+ * スマホ向けスタイル (最大599px)
+ * モバイルファーストの場合は標準スタイルとして定義し、このミックスインは使用不要
+ */
+/**
+ * タブレット (600px〜1023px)
+ */
+/**
+ * PC1 (1024px〜1439px)
+ */
+/**
+ * PC2 (1440px〜1919px)
+ */
+/**
+ * PC3 (1920px以上)
+ */
+/* ==========================================================================
+   ユーティリティミックスイン
+   ========================================================================== */
+/**
+ * デバッグミックスイン
+ * 
+ * 開発時に要素の範囲を可視化するための一時的なスタイルを適用
+ * 本番環境では使用しないでください
+ * 
+ * @param {Color} $color - デバッグ用の背景色
+ * 
+ * 使用例:
+ * .problematic-element {
+ *   @include debug;
+ * }
+ * 
+ * .container {
+ *   @include debug(rgba(0, 0, 255, 0.1)); // 青色の背景で可視化
+ * }
+ */
+/* Theme-aテーマ固有の変数 （ CSS変数で定義 ） */
+/* Theme-aテーマ固有のスタイル */
+.theme-a-theme {
+  --theme-primary: #ec4111;
+  --theme-primary-visited: rgba(236, 65, 17, 0.6);
+  --theme-bg-primary: var(--theme-primary);
+  --theme-bg-1: #f4f4f5;
+  --theme-category-1: #e5e2e2;
+  --theme-category-2: #014a74;
+  --theme-category-3: #726f63;
+  --theme-category-4: #6a7d8c;
+  --theme-category-5: #c13333;
+  --theme-category-6: #737373;
+  --theme-ranking-1: #bea870;
+  --theme-ranking-2: #aeaeaa;
+  --theme-ranking-3: #997a5c;
+  --theme-ranking-4: #ffffff;
+  --theme-ranking-5: #ffffff;
+  --theme-ranking-6: #ffffff;
+  --theme-ranking-7: #ffffff;
+  --theme-ranking-8: #ffffff;
+  --theme-ranking-9: #ffffff;
+  --theme-ranking-10: #ffffff;
+  --theme-border-radius-header: 100px;
+  --theme-border-radius-card: 16px;
+}
+.theme-a-theme .prj-title-component {
+  position: relative;
+  padding-left: 27px;
+}
+.theme-a-theme .prj-title-component::before {
+  content: "";
+  left: 0;
+  top: 50%;
+  transform: translateY(-42%);
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--theme-primary);
+}
+.theme-a-theme .prj-tag-component .prj-tag-link {
+  box-shadow: none !important;
+  border-radius: 9999px !important;
+  background-color: #e4e4e7 !important;
+  padding: 6px 10px !important;
+  border: 1px solid transparent;
+}
+.theme-a-theme .prj-tag-component .prj-tag-link:hover {
+  border: 1px solid var(--theme-primary);
+  color: var(--theme-primary);
+  background-color: #ffffff !important;
+  transition: all 0.3s;
+}
+.theme-a-theme .prj-tag-component .prj-tag-link:hover .prj-tag-name::before {
+  transition: all 0.3s;
+  color: var(--theme-primary) !important;
+}
+.theme-a-theme .prj-tag-component .prj-tag-link .prj-tag-name::before {
+  content: "#" !important;
+  color: var(--text-primary) !important;
+  margin-right: 0px !important;
+}
+.theme-a-theme .prj-tag-component .prj-tag-link .prj-tag-count {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .theme-a-theme .footer.prj-section-component {
+    padding-bottom: calc(var(--footer-padding-bottom-add) + 64px);
+  }
+}
+
+/* トップページ（theme-a）専用スタイル */
+.theme-a-theme {
+  --theme-section-padding-y-xs: 40px;
+  --theme-section-padding-y-sm: 64px;
+  --theme-section-padding-y-md: 64px;
+  --theme-section-padding-y-lg: 64px;
+  --theme-section-padding-y-xl: 64px;
+  --theme-content-width-xs: 100%;
+  --theme-content-width-sm: 896px;
+  --theme-content-width-md: 1180px;
+  --theme-content-width-lg: 1180px;
+  --theme-content-width-xl: 1180px;
+  --theme-content-padding-x-xs: 20px;
+  --theme-content-padding-x-sm: 64px;
+  --theme-content-padding-x-md: 64px;
+  --theme-content-padding-x-lg: 64px;
+  --theme-content-padding-x-xl: 64px;
+  --theme-title-font-size: 24px;
+  --theme-title-line-height: 1.33;
+  --theme-title-font-weight: 600;
+  --theme-title-color: var(--text-primary);
+}
+.theme-a-theme .prj-section-component .prj-section-head {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .theme-a-theme .prj-section-component .prj-section-head {
+    margin-bottom: 36px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .theme-a-theme .prj-section-component .prj-section-head {
+    margin-bottom: 36px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .theme-a-theme .prj-section-component .prj-section-head {
+    margin-bottom: 36px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .theme-a-theme .prj-section-component .prj-section-head {
+    margin-bottom: 36px;
+  }
+}
+.theme-a-theme .theme-a-mv-swiper.swiper-horizontal .swiper-slide {
+  flex-basis: 0 !important;
+}
+.theme-a-theme .ranking .swiper-slide {
+  flex-basis: fit-content !important;
+}
+.theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+  top: auto;
+  bottom: -100px;
+  width: 46px;
+  height: 46px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+    display: flex;
+  }
+}
+.theme-a-theme .ranking .section-swiper-button-prev:hover, .theme-a-theme .ranking .section-swiper-button-next:hover {
+  background-color: #fff;
+}
+.theme-a-theme .ranking .section-swiper-button-prev > img, .theme-a-theme .ranking .section-swiper-button-next > img {
+  width: 8.4px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.theme-a-theme .ranking .section-swiper-button-prev::after, .theme-a-theme .ranking .section-swiper-button-next::after {
+  content: "";
+}
+.theme-a-theme .ranking .section-swiper-button-prev {
+  left: 0;
+}
+.theme-a-theme .ranking .section-swiper-button-next {
+  left: 74px;
+}
+.theme-a-theme .ranking .ranking-number {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 600;
+  color: #fff;
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-1::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-2::before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-3::before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-4::before {
+  content: "4";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  color: #333;
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-5::before {
+  content: "5";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  color: #333;
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-6::before {
+  content: "6";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  color: #333;
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-7::before {
+  content: "7";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  color: #333;
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-8::before {
+  content: "8";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  color: #333;
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-9::before {
+  content: "9";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  color: #333;
+}
+.theme-a-theme .ranking .ranking-number.bg-ranking-10::before {
+  content: "10";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  color: #333;
+}
+.theme-a-theme .ranking .prj-card-component {
+  width: 250px;
+  border-radius: var(--theme-border-radius-card);
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-head .prj-card-thumbnail {
+  border-radius: 0;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image {
+  width: 250px;
+  height: 250px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-body {
+  padding: 12px 16px 0px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-body .prj-card-title {
+  margin-top: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .theme-a-theme .ranking .prj-card-component .prj-card-body .prj-card-title {
+    line-height: 27px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .theme-a-theme .ranking .prj-card-component .prj-card-body .prj-card-title {
+    line-height: 27px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .theme-a-theme .ranking .prj-card-component .prj-card-body .prj-card-title {
+    line-height: 27px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .theme-a-theme .ranking .prj-card-component .prj-card-body .prj-card-title {
+    line-height: 27px;
+  }
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions {
+  display: none;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot {
+  padding: 8px 16px 16px;
+  overflow: hidden;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-date {
+  display: none;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats {
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views .prj-card-views-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views .prj-card-views-icon img {
+  margin-bottom: -2px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes .prj-card-likes-icon {
+  display: flex;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments .prj-card-comments-icon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments img {
+  margin-bottom: -3px;
+}/*# sourceMappingURL=theme-a-top.css.map */

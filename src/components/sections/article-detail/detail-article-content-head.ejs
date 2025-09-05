@@ -1,0 +1,99 @@
+<div class="prj-article-content-head">
+  <div class="prj-card-article-head-component">
+    <div class="prj-card-article-head-flex">
+      <div class="prj-card-article-head-head">
+        <!-- アイキャッチ画像 -->
+        <div class="prj-card-article-head-image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+          <picture>
+            <!-- スマホ画面サイズ用の画像 (599px以下の場合にのみロードされる) -->
+            <source media="(max-width: 599px)" srcset="assets/images/theme-a/theme-a-detail-1-sp.jpg" />
+            <!-- タブレットサイズ以上の画面用画像 (600px以上の場合にのみロードされる) -->
+            <source media="(min-width: 600px)" srcset="assets/images/theme-a/theme-a-detail-1.jpg" />
+            <!-- フォールバック用の画像 (picture要素をサポートしない古いブラウザ用) -->
+            <img src="assets/images/theme-a/theme-a-detail-1.jpg" alt="記事のアイキャッチ画像" width="680" height="424"
+              loading="lazy" itemprop="url" />
+          </picture>
+          <meta itemprop="width" content="680" />
+          <meta itemprop="height" content="424" />
+        </div>
+        <!-- youtube動画（予定） -->
+      </div>
+      <div class="prj-card-article-head-body">
+        <!-- 記事のタイトル -->
+        <h1 class="prj-card-article-head-title" itemprop="headline">
+          タイトルはこのサイズです。(h1)タイトルはこのサイズです。(h1)タイトルはこのサイズです。(h1)
+        </h1>
+        <!-- 記事のメインカテゴリ -->
+        <div class="prj-card-article-head-category">
+          <span class="prj-card-article-head-category-label">カテゴリ：</span><span
+            class="prj-card-article-head-category-value" itemprop="articleSection">記事カテゴリメインが入ります</span>
+        </div>
+        <div class="prj-card-article-head-flex">
+          <!-- 記事の著者 -->
+          <div class="prj-card-article-head-author">
+            <!-- 著者のサムネイル画像 -->
+            <div class="prj-card-article-head-author-image">
+              <img src="assets/images/theme-a/theme-a-detail-author-1.jpg" alt="著者「四国・九州ドライブクラブ – 大人のドライブ旅」のプロフィール画像"
+                width="42" height="42" loading="lazy" />
+            </div>
+            <!-- 著者の名前 -->
+            <a href="#" class="prj-card-article-head-author-name" aria-label="著者プロフィールを見る" itemprop="author" itemscope
+              itemtype="http://schema.org/Person">
+              <span itemprop="name">四国・九州ドライブクラブ – 大人のドライブ旅</span>
+            </a>
+          </div>
+          <!-- 記事のアクションボタン -->
+          <div class="prj-card-article-head-actions" role="group" aria-label="記事のアクション">
+            <button class="prj-card-article-head-like-button" aria-label="いいねする" type="button">
+              <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                favorite
+              </span>
+              <span class="sr-only">いいね</span>
+            </button>
+            <button class="prj-card-article-head-bookmark-button" aria-label="ブックマークする" type="button">
+              <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                bookmark
+              </span>
+              <span class="sr-only">ブックマーク</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prj-card-article-head-foot">
+      <time class="prj-card-article-head-date" datetime="2024-12-01" itemprop="datePublished">
+        <!-- 時計アイコン -->
+        <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+          schedule
+        </span>
+        <!-- 投稿日 -->
+        <span>2024.12.01</span>
+        <!-- 最終更新日 -->
+        <span class="prj-card-article-head-date-updated" itemprop="dateModified"
+          content="2024-12-23">（最終更新：2024.12.23）</span>
+      </time>
+      <div class="prj-card-article-head-stats">
+        <div class="prj-card-article-head-views">
+          <span class="prj-card-article-head-views-icon" aria-hidden="true"><span
+              class="material-symbols-outlined icon-visibility-sm"> visibility </span></span>
+          <span aria-label="閲覧数 99.9k">99.9k</span>
+        </div>
+        <div class="prj-card-article-head-likes">
+          <span class="prj-card-article-head-likes-icon" aria-hidden="true"><span
+              class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+              favorite
+            </span>
+          </span>
+          <span aria-label="いいね数 999k">999k</span>
+        </div>
+        <div class="prj-card-article-head-comments">
+          <span class="prj-card-article-head-comments-icon" aria-hidden="true"><span
+              class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+              chat
+            </span></span>
+          <span aria-label="コメント数 345">345</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

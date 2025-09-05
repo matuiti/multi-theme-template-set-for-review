@@ -1,0 +1,257 @@
+@use "../mixins" as *;
+// カテゴリーをフィルターするコンポーネント
+.prj-filter-category-component {
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+  // トグル式アイコンの回転
+  [data-pc-icon] {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  [data-pc-icon].rotate-180 {
+    transform: rotate(180deg);
+  }
+  [data-pc-child-icon] {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  [data-pc-child-icon].rotate-180 {
+    transform: rotate(180deg);
+  }
+  [data-sp-icon] {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  [data-sp-icon].rotate-180 {
+    transform: rotate(180deg);
+  }
+  .prj-filter-category-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    // アニメーション後にテキストがにじむのを防ぐ
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  .prj-filter-category-center {
+    display: flex;
+    align-items: center;
+    .prj-filter-category-thumbnail {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #d9d9d9;
+      margin-right: 10px;
+    }
+  }
+  // transiton
+  .prj-filter-category-sp-child-content,
+  .prj-filter-category-sp-grandchild-content {
+    transition: all 0.3s ease;
+  }
+
+  // ~1023px: SPモード、1024px~: PCモード
+  // PCモード
+  .prj-filter-category-pc-component {
+    display: none;
+    @include md {
+      display: block;
+    }
+    @include lg {
+      display: block;
+    }
+    @include xl {
+      display: block;
+    }
+    .prj-filter-category-pc-parent-row {
+      .prj-filter-category-pc-parent-row-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+        .prj-filter-category-pc-parent-group {
+          .prj-filter-category-pc-parent-header {
+            &.active {
+              background-color: #f7f7f7;
+              position: relative;
+              &::after {
+                // 底辺の長さ18px,高さ13pxの三角形を下の左右中央に配置
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #fafafa transparent;
+                border-width: 0px 9px 14px 9px;
+                position: absolute;
+                bottom: -1px;
+                left: 50%;
+                transform: translateX(-50%);
+                filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
+                z-index: 1;
+              }
+
+              // 下辺のシャドウを隠すための要素
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 18px;
+                height: 2px;
+                background-color: #fafafa;
+                z-index: 2;
+              }
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0 10px 10px;
+            cursor: pointer;
+            border-bottom: 0.5px solid #aeaeae;
+          }
+        }
+      }
+    }
+    .prj-filter-category-pc-expanded-area {
+      padding: 16px 10px;
+      background-color: #fafafa;
+      box-shadow: 0px 0px 8px 0px #00000033;
+      border-radius: 4px;
+      .child-row {
+        // 2行目の子カテゴリ行にはマージンを追加（1,2行両方が表示される場合に狭くなるのを解消）
+        &[data-pc-child-row="2"] {
+          margin-top: 10px;
+        }
+        .child-row-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          & > * {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0 5px 10px;
+            cursor: pointer;
+            &.active {
+              background-color: #fff;
+              position: relative;
+              &::after {
+                // 底辺の長さ18px,高さ13pxの三角形を下の左右中央に配置
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #fafafa transparent;
+                border-width: 0px 9px 14px 9px;
+                position: absolute;
+                bottom: -1px;
+                left: 50%;
+                transform: translate(-50%, 13px);
+                filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
+                z-index: 1;
+              }
+
+              // 下辺のシャドウを隠すための要素
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 18px;
+                height: 2px;
+                background-color: #fafafa;
+                z-index: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+    .prj-filter-category-pc-grandchild-area {
+      background-color: #fff;
+      box-shadow: 0px 0px 8px 0px #00000033;
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-top: 13px;
+      .grandchild-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        & > * {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 0 10px 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // SPモード
+  .prj-filter-category-sp-component {
+    display: block;
+    @include md {
+      display: none;
+    }
+    @include lg {
+      display: none;
+    }
+    @include xl {
+      display: none;
+    }
+    // アイテムの高さを統一する
+    /* 親・子・孫カテゴリ + タイトルをすべて同じ高さに */
+    .prj-filter-category-sp-parent-header,
+    .prj-filter-category-sp-child-header,
+    .prj-filter-category-sp-child-content-title,
+    .prj-filter-category-sp-grandchild-flex a,
+    .prj-filter-category-sp-child-content > a {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+    }
+
+    .prj-filter-category-sp-parent-item {
+      border-bottom: 0.5px solid #aeaeae;
+      .prj-filter-category-sp-parent-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0 10px 10px;
+        cursor: pointer;
+      }
+    }
+    .prj-filter-category-sp-child-content {
+      & > a,
+      .prj-filter-category-sp-child-header,
+      .prj-filter-category-sp-child-content-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background-color: #fafafa;
+        padding: 10px 0 10px 10px;
+      }
+      .prj-filter-category-sp-child-header,
+      .prj-filter-category-sp-child-content-title {
+        padding: 5px 10px;
+      }
+    }
+    .prj-filter-category-sp-grandchild-content {
+      .prj-filter-category-sp-grandchild-flex {
+        display: flex;
+        flex-direction: column;
+        & > a {
+          padding: 10px 0 10px 10px;
+        }
+      }
+    }
+  }
+}

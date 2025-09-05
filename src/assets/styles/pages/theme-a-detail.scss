@@ -1,0 +1,230 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "./_theme-theme-a";
+
+.theme-a-theme {
+  // セクションパディング（縦）
+  --theme-section-padding-y-xs: 40px;
+  --theme-section-padding-y-sm: 64px;
+  --theme-section-padding-y-md: 64px;
+  --theme-section-padding-y-lg: 64px;
+  --theme-section-padding-y-xl: 64px;
+  // セクションパディング（横）
+  --theme-section-padding-x-xs: 20px;
+  --theme-section-padding-x-sm: 64px;
+  --theme-section-padding-x-md: 64px;
+  --theme-section-padding-x-lg: 64px;
+  --theme-section-padding-x-xl: 64px;
+
+  // コンテンツ幅
+  --theme-content-width-xs: 100%;
+  --theme-content-width-sm: 896px;
+  --theme-content-width-md: 896px;
+  --theme-content-width-lg: 1180px;
+  --theme-content-width-xl: 1180px;
+
+  // コンテンツパディング(横)
+  --theme-content-padding-x-xs: 0px;
+  --theme-content-padding-x-sm: 0px;
+  --theme-content-padding-x-md: 0px;
+  --theme-content-padding-x-lg: 0px;
+  --theme-content-padding-x-xl: 0px;
+
+  // タイトル
+  --theme-title-font-size: 24px;
+  --theme-title-line-height: 1.33; // 24/32
+  --theme-title-font-weight: 600;
+  --theme-title-color: var(--text-primary);
+
+  .prj-section-component {
+    .prj-section-head {
+      margin-bottom: 32px;
+      @include sm {
+        margin-bottom: 36px;
+      }
+      @include md {
+        margin-bottom: 36px;
+      }
+      @include lg {
+        margin-bottom: 36px;
+      }
+      @include xl {
+        margin-bottom: 36px;
+      }
+    }
+  }
+  .swiper-slide {
+    //カード同士が自動で広がるのを防ぐ
+    flex-basis: fit-content;
+  }
+  .prj-card-component {
+    .prj-card-category {
+      margin-top: 14px !important;
+      @include sm {
+        padding: 6px 12px;
+      }
+      @include md {
+        padding: 6px 12px;
+      }
+      @include lg {
+        padding: 6px 12px;
+      }
+      @include xl {
+        padding: 6px 12px;
+      }
+    }
+    .prj-card-title {
+      margin-top: 14px !important;
+      margin-bottom: 14px !important;
+    }
+    .prj-card-author-info {
+      margin-bottom: 14px !important;
+    }
+    .prj-card-foot {
+      border-top: 0.5px solid #7c7c7c;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+    .prj-card-date {
+      color: var(--text-primary) !important;
+      .material-symbols-outlined {
+        display: none !important;
+      }
+    }
+    .prj-card-stats {
+      .icon-visibility-sm {
+        transform: translate(1px, 1px) !important;
+      }
+    }
+  }
+  .recommend {
+    .prj-section-container {
+      @include sm {
+        max-width: 780px !important;
+      }
+      @include md {
+        max-width: 870px !important;
+      }
+      @include lg {
+        max-width: 899px !important;
+      }
+      @include xl {
+        max-width: 899px !important;
+      }
+    }
+  }
+  .special-thanks {
+    .prj-section-body {
+      gap: 14px;
+      @include md {
+        gap: 28px;
+      }
+      @include lg {
+        gap: 28px;
+      }
+      @include xl {
+        gap: 28px;
+        justify-content: flex-start;
+      }
+      img {
+        display: block;
+        width: 168px;
+        height: 49.41px;
+        @include md {
+          width: 255px;
+          height: 75px;
+        }
+      }
+    }
+  }
+  .footer-theme-a {
+    display: block;
+  }
+  .prj-side-menu-main-component {
+    .prj-side-menu-main-account {
+      .prj-side-menu-main-item {
+        a {
+          box-shadow: none !important;
+          border: 1px solid #aeaeae !important;
+        }
+      }
+    }
+    .prj-side-menu-main-tag {
+      .prj-side-menu-main-item {
+        a {
+          box-shadow: none !important;
+          border-radius: 9999px !important;
+          background-color: #e4e4e7 !important;
+          padding: 6px 10px !important;
+        }
+      }
+    }
+    .prj-side-menu-main-tag-name {
+      &::before {
+        color: var(--text-primary) !important;
+      }
+    }
+  }
+  // レコメンドスライダー
+  .article-detail-recommend-swiper {
+    // 左右見きれないようにボーダーで隠す
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    .prj-card-component {
+      &.swiper-slide {
+        width: 250px;
+        max-width: 250px;
+        min-width: 212.5px;
+        transform: scale(0.85) !important;
+        transition: width 0.2s, height 0.2s, transform 0.2s ease;
+
+        .prj-card-body,
+        .prj-card-foot {
+          background-color: transparent !important;
+        }
+        .prj-card-title {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .prj-card-author-name {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .prj-card-date {
+          padding-right: 0px;
+        }
+        .prj-card-stats {
+          flex: 1;
+        }
+        &.swiper-slide-active {
+          width: 250px;
+          max-width: 250px;
+          transform: scale(1) !important;
+          .prj-card-title {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          .prj-card-author-name {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          .prj-card-date {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}

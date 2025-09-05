@@ -1,0 +1,669 @@
+@use "../mixins" as *;
+
+.prj-header-component {
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 64px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  @include sm {
+    position: fixed;
+    height: 80px;
+    gap: 0;
+  }
+  @include md {
+    position: fixed;
+    height: 80px;
+    gap: 0;
+  }
+  @include lg {
+    position: fixed;
+    height: 80px;
+    gap: 0;
+  }
+  @include xl {
+    position: fixed;
+    height: 80px;
+    gap: 0;
+  }
+  .prj-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    @include sm {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include md {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include lg {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include xl {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  .prj-header-logo {
+    width: 50%;
+    height: 100%;
+    @include sm {
+      max-width: 200px;
+    }
+    @include md {
+      max-width: 200px;
+    }
+    @include lg {
+      max-width: 200px;
+    }
+    @include xl {
+      max-width: 200px;
+    }
+    .prj-header-logo-link {
+      display: inline-block;
+      height: 100%;
+      @include sm {
+        margin-right: auto;
+      }
+      @include md {
+        margin-right: auto;
+      }
+      @include lg {
+        margin-right: auto;
+      }
+      @include xl {
+        margin-right: auto;
+      }
+      img {
+        width: 96px;
+        height: 44px;
+        object-fit: contain;
+        @include sm {
+          width: 136px;
+          height: 62px;
+        }
+        @include md {
+          width: 136px;
+          height: 62px;
+        }
+        @include lg {
+          width: 136px;
+          height: 62px;
+        }
+        @include xl {
+          width: 136px;
+          height: 62px;
+        }
+      }
+    }
+  }
+
+  .prj-header-nav {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 44px;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include sm {
+      position: relative;
+    }
+    @include md {
+      position: relative;
+    }
+    @include lg {
+      position: relative;
+    }
+    @include xl {
+      position: relative;
+    }
+    .prj-header-search-box {
+      position: static;
+      width: 100%;
+      height: fit-content;
+      @include sm {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+      }
+      @include md {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+      }
+      @include lg {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+      }
+      @include xl {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+      }
+    }
+
+    .prj-header-search {
+      display: none;
+      position: relative;
+      .prj-header-search-input {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 4px;
+        cursor: pointer;
+        max-width: 350px;
+        min-width: 160px;
+        width: 26vw;
+        height: 39px;
+        border: 1px solid var(--text-primary);
+        border-radius: var(--theme-border-radius-header);
+        &::placeholder {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 17px;
+          letter-spacing: 0.05em;
+          color: #7c7c7c;
+        }
+        &::-webkit-search-cancel-button {
+          // デフォルトのキャンセルボタンを非表示
+          -webkit-appearance: none;
+        }
+      }
+
+      .prj-header-search-icon {
+        position: absolute;
+        cursor: pointer;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 39px;
+        height: 39px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      //モバイル以外は表示
+      @include sm {
+        display: block;
+      }
+      @include md {
+        display: block;
+      }
+      @include lg {
+        display: block;
+      }
+      @include xl {
+        display: block;
+      }
+    }
+    // 拡張パネル
+    .prj-header-search-extended {
+      // ふわっと登場
+      opacity: 0;
+      transition: all 0.3s ease;
+      visibility: hidden;
+      // display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      width: 100%;
+      &.active {
+        // display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+      @include sm {
+        right: 50%;
+        width: auto;
+        transform: translateX(50%);
+        top: calc(100% + 10px);
+      }
+      @include md {
+        right: 50%;
+        width: auto;
+        transform: translateX(50%);
+        top: calc(100% + 10px);
+      }
+      @include lg {
+        right: 50%;
+        width: auto;
+        transform: translateX(50%);
+        top: calc(100% + 10px);
+      }
+      @include xl {
+        right: 50%;
+        width: auto;
+        transform: translateX(50%);
+        top: calc(100% + 10px);
+      }
+
+      .prj-header-search-extended-container {
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px #00000026;
+        width: 100%;
+        @include sm {
+          border-radius: 8px;
+        }
+        @include md {
+          border-radius: 8px;
+        }
+        @include lg {
+          border-radius: 8px;
+        }
+        @include xl {
+          border-radius: 8px;
+        }
+
+        .prj-header-search-extended-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+
+          .prj-header-search-extended-button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+          }
+          .prj-header-search-extended-search-box {
+            display: none;
+            @include xs {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              position: sticky;
+              background: white;
+              top: 0;
+              z-index: 1000;
+              width: 100%;
+              height: 100%;
+              padding: 10px;
+            }
+            .prj-header-search {
+              display: block;
+              flex: 1;
+              .prj-header-search-input {
+                max-width: 100%;
+                min-width: auto;
+                width: 100%;
+              }
+              .prj-header-search-icon {
+                span {
+                  font-size: 22px;
+                }
+              }
+            }
+            .prj-header-search-extended-close {
+              width: 44px;
+              height: 44px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              span {
+                color: #aeaeae;
+              }
+            }
+          }
+          .prj-header-search-extended-button-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+          }
+          .prj-header-search-extended-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 44px;
+            padding: 12.5px 10px 12.5px 16px;
+            flex: 1;
+            .prj-header-search-extended-text {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              flex: 1;
+              gap: 10px;
+              width: 100%;
+              font-size: 1rem;
+              letter-spacing: 0.05em;
+              color: #333333;
+              .prj-header-search-extended-text-first {
+                font-weight: 600;
+              }
+              .prj-header-search-extended-text-last {
+                font-weight: 500;
+              }
+            }
+          }
+          .prj-header-search-extended-body {
+            width: 100%;
+            overflow-y: scroll;
+            @include xs {
+              height: 100vh;
+            }
+            .prj-header-search-extended-section-box {
+              width: 100%;
+              @include xs {
+                height: 716px;
+              }
+              @include sm {
+                width: 384px;
+                max-height: 544px;
+              }
+              @include md {
+                width: 384px;
+                max-height: 544px;
+              }
+              @include lg {
+                width: 384px;
+                max-height: 544px;
+              }
+              @include xl {
+                width: 384px;
+                max-height: 544px;
+              }
+              a:hover {
+                background-color: var(--hover-bg-color);
+                transition: all 0.3s ease;
+              }
+            }
+
+            .prj-header-search-extended-section {
+              border-top: 1px solid #e4e4e7;
+              padding: 20px 0px;
+              &:last-child {
+                @include xs {
+                  padding-bottom: 170px;
+                }
+              }
+              .prj-header-search-extended-section-title {
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--text-primary);
+                font-weight: 700;
+                padding: 10px 20px;
+              }
+              .prj-header-search-extended-section-list {
+                .prj-header-search-extended-section-item {
+                  .prj-header-search-extended-section-link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 10px;
+                    padding: 8px 20px;
+                    .prj-header-search-extended-section-thumbnail {
+                      width: 32px;
+                      height: 32px;
+                      background-color: #aeaeae;
+                      border-radius: 50%;
+                    }
+                    .prj-header-search-extended-section-icon {
+                      width: 32px;
+                      height: 32px;
+                      border-radius: 50%;
+                      border: 0.73px solid #e4e4e7;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      span {
+                        color: #aeaeae;
+                        font-size: 17.45px;
+                      }
+                    }
+                    .prj-header-search-extended-section-text {
+                      flex: 1;
+                      font-size: 12px;
+                      line-height: 1.5;
+                      color: var(--text-primary);
+                      font-weight: 500;
+                      // 1行を超えたら省略する
+                      display: -webkit-box;
+                      line-clamp: 1;
+                      -webkit-line-clamp: 1;
+                      -webkit-box-orient: vertical;
+                      overflow: hidden;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .prj-header-buttons {
+      display: none;
+      //ログインボタン
+      .prj-header-login-button {
+        width: 100px;
+        height: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--theme-primary);
+        border: 1px solid var(--theme-primary);
+        border-radius: var(--theme-border-radius-header);
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 600;
+      }
+      //会員登録ボタン
+      .prj-header-register-button {
+        width: 100px;
+        height: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--theme-primary);
+        color: #fff;
+        border-radius: var(--theme-border-radius-header);
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 600;
+      }
+      @include sm {
+        display: none;
+      }
+      @include md {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      @include lg {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      @include xl {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+    .prj-header-icons {
+      display: flex;
+      align-items: center;
+      [class^="material-symbols-"] {
+        color: #333333; //チャットアイコンのxs時のみ異なる色を使っています
+      }
+      //サーチアイコン
+      .prj-header-search-button {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        @include sm {
+          display: none;
+        }
+        @include md {
+          display: none;
+        }
+        @include lg {
+          display: none;
+        }
+        @include xl {
+          display: none;
+        }
+      }
+      //チャットアイコン
+      .prj-header-chat-icon {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        [class^="material-symbols-"] {
+          color: #000000;
+          @include sm {
+            color: var(--text-primary);
+          }
+          @include md {
+            color: var(--text-primary);
+          }
+          @include lg {
+            color: var(--text-primary);
+          }
+          @include xl {
+            color: var(--text-primary);
+          }
+        }
+        //チャットアイコンに付くバッヂ
+        .prj-header-chat-icon-badge {
+          position: relative;
+          &::after {
+            content: "4";
+            position: absolute;
+            top: -20px;
+            right: -15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background-color: #6e7f8d;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+        @include md {
+          display: none;
+        }
+        @include lg {
+          display: none;
+        }
+        @include xl {
+          display: none;
+        }
+      }
+      //通知アイコン
+      .prj-header-notification-icon {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        @include md {
+          display: none;
+        }
+        @include lg {
+          display: none;
+        }
+        @include xl {
+          display: none;
+        }
+      }
+      //アカウントアイコン
+      .prj-header-account-icon {
+        display: none;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        @include sm {
+          display: flex;
+        }
+        img {
+          width: 33px;
+          height: 33px;
+          object-fit: contain;
+        }
+      }
+      //言語選択アイコン
+      .prj-header-language-select-icon {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        @include md {
+          margin-left: -10px;
+          margin-right: -10px;
+        }
+        @include lg {
+          margin-left: -10px;
+          margin-right: -10px;
+        }
+        @include xl {
+          margin-left: -10px;
+          margin-right: -10px;
+        }
+      }
+    }
+    //ハンバーガーボタン
+    .prj-header-hamburger-button {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 44px;
+      height: 44px;
+      padding: 12px 8.5px;
+      @include sm {
+        display: flex;
+      }
+      @include md {
+        display: flex;
+      }
+      @include lg {
+        display: flex;
+      }
+      @include xl {
+        display: flex;
+      }
+      .prj-header-hamburger-button-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #71717a;
+      }
+    }
+  }
+}

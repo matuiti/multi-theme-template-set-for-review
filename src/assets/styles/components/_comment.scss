@@ -1,0 +1,243 @@
+@use "../mixins" as *;
+.prj-comment-component {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  .prj-comment-author {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    .prj-comment-image {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+    }
+    .prj-comment-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .prj-comment-info-flex {
+        padding-left: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .prj-comment-info-name-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 4px;
+          .prj-comment-name {
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: 500 !important;
+            letter-spacing: 0.03em;
+            @include md {
+              font-family: var(--font-family-article-detail);
+            }
+            @include lg {
+              font-family: var(--font-family-article-detail);
+            }
+            @include xl {
+              font-family: var(--font-family-article-detail);
+            }
+          }
+          .prj-comment-time {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            span {
+              color: #333333;
+              transform: none;
+            }
+            .prj-comment-date {
+              font-size: 12px;
+              font-weight: 500;
+              @include md {
+                font-size: 14px;
+              }
+              @include lg {
+                font-size: 14px;
+              }
+              @include xl {
+                font-size: 14px;
+              }
+            }
+            .prj-comment-edited {
+              display: none;
+              position: relative;
+              cursor: help;
+              font-family: var(--font-family-article-detail);
+              font-size: 14px;
+              line-height: 1.5;
+              letter-spacing: 0.03em;
+              font-weight: 500 !important;
+              &.is-edited {
+                display: block;
+              }
+
+              &::after {
+                content: attr(data-edit-time);
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #dddddd;
+                color: #333333;
+                padding: 6px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                line-height: 15px;
+                font-weight: 500;
+                white-space: nowrap;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s;
+                z-index: 1000;
+                margin-bottom: 5px; // 三角形との間隔を調整
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translate(-50%, 57%);
+                border: 10px solid transparent;
+                border-top-color: #dddddd; // ツールチップの背景色と合わせる
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s;
+                z-index: 1001; // ツールチップより前面に
+              }
+
+              &:hover::after,
+              &:hover::before {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
+        .prj-comment-more {
+          .more-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            span {
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .prj-comment-text-box {
+        display: flex;
+        flex-direction: column;
+        &.active {
+          .prj-comment-text {
+            display: block;
+            overflow: visible;
+          }
+          .prj-comment-reply-button {
+            display: none;
+          }
+          .prj-comment-form-component {
+            display: block;
+          }
+          .prj-comment-more-button {
+            display: none;
+          }
+          .prj-comment-close-button {
+            display: block;
+          }
+          & + .prj-comment-accordion {
+            margin-top: 20px;
+          }
+        }
+        .prj-comment-text {
+          font-family: var(--font-family-article-detail);
+          margin-top: 8px;
+          padding-left: 8px;
+          padding-right: 8px;
+          font-size: 14px;
+          line-height: 1.6;
+          letter-spacing: 0.03em;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          font-weight: 500 !important;
+        }
+        .prj-comment-reply-button {
+          margin-top: 8px;
+          margin-left: auto;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 10px 0;
+          align-self: flex-end;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          span {
+            color: #333333;
+          }
+        }
+        .prj-comment-form-component {
+          display: none;
+        }
+        .prj-comment-more-text-button {
+          margin-top: 8px;
+          margin-left: auto;
+          font-size: 14px;
+          font-weight: 500;
+          align-self: flex-end;
+          border-bottom: 1px solid #333333;
+        }
+        .prj-comment-more-button {
+          display: block;
+        }
+        .prj-comment-close-button {
+          display: none;
+        }
+      }
+      .prj-comment-accordion {
+        margin-top: 8px;
+        .prj-comment-accordion-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          padding: 4px 12px;
+          border: 1px solid #bcbcbc;
+          border-radius: 4px;
+          box-shadow: 0px 0px 10px 0px #0000001a;
+
+          .prj-comment-accordion-text {
+            font-size: 12px;
+            font-weight: 600;
+          }
+          .material-symbols-outlined {
+            color: black;
+          }
+        }
+        &.active {
+          margin-bottom: 20px;
+          .prj-comment-responses {
+            transform: translateY(20px);
+          }
+        }
+      }
+    }
+  }
+  &.has-responses + .prj-comment-component {
+    z-index: 0;
+  }
+}

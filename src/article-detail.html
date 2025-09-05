@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- HEAD -->
+<%- include('./components/sections/article-detail/detail-head.ejs') %>
+
+  <body>
+    <div id="app">
+      <!-- class値にテーマ名を設定し各テーマスタイルを適応させる -->
+      <div class="theme-a-theme">
+        <!-- HEADER -->
+        <%- include ('./components/header.ejs') %>
+          <!-- ボトムメニュー -->
+          <%- include ('./components/bottom-menu.ejs') %>
+            <!-- モーダルメニュー -->
+            <%- include ('./components/modal-menu.ejs') %>
+              <!-- ページ上部（ 記事本体、サイドメニュー（ メイン、統計 ）） -->
+              <div
+                class="page-head lg:flex lg:justify-between xl:justify-center xl:gap-[274px] sm:pt-[var(--header-height-md)] mt-10 sm:mt-8">
+                <!-- アクセシビリティのためのmain要素 -->
+                <main class="prj-section-component !pt-0 sm:!pb-[96px]">
+                  <div class="prj-section-container sm:!max-w-[680px]">
+                    <!-- パンくずリスト -->
+                    <%- include('./components/sections/article-detail/detail-breadcrumb-list.ejs') %>
+                      <!-- 記事本体 -->
+                      <article class="prj-article-content-component" itemscope itemtype="https://schema.org/Article">
+                        <!-- 記事のヘッダー（アイキャッチ、タイトル、著者情報） -->
+                        <%- include('./components/sections/article-detail/detail-article-content-head.ejs') %>
+                          <!-- 記事の内容 -->
+                          <%- include('./components/sections/article-detail/detail-article-content-body.ejs') %>
+                            <!-- 記事のフッター（著者へのフォロー、関連リンク、コメントなど記事閲覧者がアクションできるエリア） -->
+                            <%- include('./components/sections/article-detail/detail-article-content-foot.ejs') %>
+                      </article>
+                  </div>
+                </main>
+                <!-- サイドメニュー（ メイン ） -->
+                <%- include('./components/sections/article-detail/detail-sidemenu-main.ejs') %>
+                  <!-- サイドメニュー（ 統計 ） -->
+                  <%- include('./components/sections/article-detail/detail-sidemenu-stats.ejs') %>
+              </div>
+              <!-- ページ下部（ レコメンド、AD-2、SPECIAL THANKS、FOOTER ） -->
+              <div class="page-foot">
+                <!-- レコメンド -->
+                <%- include('./components/sections/article-detail/detail-recommend.ejs') %>
+                  <!-- AD-2 -->
+                  <%- include('./components/sections/article-detail/detail-ad-2.ejs') %>
+                    <!-- SPECIAL THANKS -->
+                    <%- include('./components/sections/article-detail/detail-special-thanks.ejs') %>
+                      <!-- FOOTERS （ 全テーマ分のフッター ） -->
+                      <%- include('./components/sections/article-detail/detail-footers.ejs') %>
+              </div>
+      </div>
+    </div>
+  </body>
+
+</html>

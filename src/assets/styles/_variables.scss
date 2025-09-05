@@ -1,0 +1,107 @@
+// 共通変数設定
+// すべてCSS変数として定義
+// 別プロジェクトとの干渉を考慮して、スコープをテーマ内に収めています（rootに指定しない）
+// 1rem = 16px基準
+
+/* Regular (400) ウェイト */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Noto Sans JP Regular"),
+    url("/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+/* Medium (500) ウェイト */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Noto Sans JP Medium"),
+    url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2");
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+/* SemiBold (600) ウェイト */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Noto Sans JP SemiBold"),
+    url("/assets/fonts/NotoSansJP-SemiBold.woff2") format("woff2");
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+/* Bold (700) ウェイト */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Noto Sans JP Bold"),
+    url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2");
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+
+.theme-a-theme,
+.theme-b-theme,
+.theme-c-theme,
+.theme-d-theme {
+  /* 全テーマ共通のデフォルト値 */
+  /* これらはテーマファイルで必要に応じて上書きする */
+
+  // テキストカラー
+  --text-primary: #262626;
+  --text-secondary: #333333;
+
+  // セクションタイトル（トップページ共通）
+  --title-font-size: 24px;
+  --title-line-height: 1.33; // 24/32
+  --title-font-weight: 600;
+  --title-min-height: 40px;
+  --title-color: var(--text-primary);
+
+  // レタースペーシング
+  --letter-spacing-sm: 0.03em; // New セクション「もっと見る」ボタン、コミュニティー「一覧を見る」、フッターの「登録はこちら」
+  --letter-spacing-md: 0.05em; // 検索バー内のテキスト
+  --letter-spacing-lg: 0.1em; // SP のボトムメニューアイコン下テキスト
+
+  // 背景カラー
+  --bg-white: #fafafa;
+
+  // シャドー
+  --box-shadow-header: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+
+  /* 共通フォント変数 */
+  // 全テーマの基本フォント
+  --font-family-base: "Noto Sans JP", sans-serif;
+
+  // 記事詳細ページの基本フォント
+  --font-family-article-detail: "Yu Gothic", YuGothic, "Noto Sans JP",
+    sans-serif;
+  /* ベースフォント設定 */
+  font-family: var(--font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // hover
+  --hover-opacity: 0.8;
+  // ホバー時のスケール
+  --hover-scale: 1.1;
+  // ホバー時の背景色
+  --hover-bg-color: rgba(217, 217, 217, 0.2);
+
+  // ヘッダーの高さ
+  --header-height: 64px;
+  --header-height-md: 80px;
+
+  // ボトムメニュー下部の高さ
+  --bottom-menu-height: 60px;
+
+  // ボトムメニューを考慮したフッターpadding-bottomへの追加値設定
+  --footer-padding-bottom-add: 64px;
+
+  // サイドメニューの幅
+  --side-menu-width: 250px;
+}

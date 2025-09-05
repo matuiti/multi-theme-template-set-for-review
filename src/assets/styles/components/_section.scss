@@ -1,0 +1,66 @@
+@use "../mixins" as *;
+.prj-section-component {
+  padding-top: var(--theme-section-padding-y-xs);
+  padding-bottom: var(--theme-section-padding-y-xs);
+  padding-left: var(--theme-section-padding-x-xs);
+  padding-right: var(--theme-section-padding-x-xs);
+  @include sm {
+    padding-top: var(--theme-section-padding-y-sm);
+    padding-bottom: var(--theme-section-padding-y-sm);
+    padding-left: var(--theme-section-padding-x-sm);
+    padding-right: var(--theme-section-padding-x-sm);
+  }
+  @include md {
+    padding-top: var(--theme-section-padding-y-md);
+    padding-bottom: var(--theme-section-padding-y-md);
+    padding-left: var(--theme-section-padding-x-md);
+    padding-right: var(--theme-section-padding-x-md);
+  }
+  @include lg {
+    padding-top: var(--theme-section-padding-y-lg);
+    padding-bottom: var(--theme-section-padding-y-lg);
+    padding-left: var(--theme-section-padding-x-lg);
+    padding-right: var(--theme-section-padding-x-lg);
+  }
+  @include xl {
+    padding-top: var(--theme-section-padding-y-xl);
+    padding-bottom: var(--theme-section-padding-y-xl);
+    padding-left: var(--theme-section-padding-x-xl);
+    padding-right: var(--theme-section-padding-x-xl);
+  }
+  .prj-section-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--theme-content-width-xs);
+    padding-left: var(--theme-content-padding-x-xs);
+    padding-right: var(--theme-content-padding-x-xs);
+    @include sm {
+      max-width: var(--theme-content-width-sm);
+      padding-left: var(--theme-content-padding-x-sm);
+      padding-right: var(--theme-content-padding-x-sm);
+    }
+    @include md {
+      max-width: var(--theme-content-width-md);
+      padding-left: var(--theme-content-padding-x-md);
+      padding-right: var(--theme-content-padding-x-md);
+    }
+
+    @include lg {
+      max-width: var(--theme-content-width-lg);
+      padding-left: var(--theme-content-padding-x-lg);
+      padding-right: var(--theme-content-padding-x-lg);
+    }
+
+    @include xl {
+      max-width: var(--theme-content-width-xl);
+      padding-left: var(--theme-content-padding-x-xl);
+      padding-right: var(--theme-content-padding-x-xl);
+    }
+    .prj-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 40px;
+    }
+  }
+}

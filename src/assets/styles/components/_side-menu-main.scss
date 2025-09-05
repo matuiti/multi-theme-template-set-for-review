@@ -1,0 +1,247 @@
+.prj-side-menu-main-component {
+  height: 100%;
+  width: var(--side-menu-width);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 3px 0px 0px 0px #0000000d;
+  .prj-side-menu-main-item,
+  .prj-tag-component {
+    & > a:hover {
+      background-color: var(--hover-bg-color);
+      opacity: 1 !important;
+      transition: all 0.3s ease;
+    }
+  }
+  .prj-side-menu-main-container {
+    width: 210px;
+    gap: 48px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // エリア上部
+    .prj-side-menu-main-head {
+      // 広告エリア（上）
+      .prj-side-menu-main-ad-top {
+        a {
+          display: block;
+          overflow: hidden;
+          width: fit-content;
+          img {
+            transition: transform 0.3s ease;
+            aspect-ratio: 1/1;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      // コミュニティ一覧へ
+      .prj-side-menu-main-item-community {
+        margin-top: 48px;
+        border-top: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0px 10px 8px;
+        &:hover {
+          background-color: var(--hover-bg-color);
+          opacity: 1 !important;
+          transition: all 0.3s ease;
+        }
+        .prj-side-menu-main-item-thumbnail {
+          border: none;
+          aspect-ratio: 1/1;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            aspect-ratio: 1/1;
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .prj-side-menu-main-item-text {
+          flex: 1;
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--text-primary);
+          a {
+            display: -webkit-box;
+            line-clamp: 2;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+    // エリア下部
+    .prj-side-menu-main-foot {
+      // 広告エリア（下）
+      .prj-side-menu-main-ad-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        justify-self: center;
+        a {
+          display: block;
+          overflow: hidden;
+          width: fit-content;
+          img {
+            transition: transform 0.3s ease;
+            aspect-ratio: 1/1;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      // powered by
+      .prj-side-menu-main-powered-by {
+        margin-top: 48px;
+        p {
+          text-align: center;
+          font-size: 12px;
+          line-height: 1.33;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    // エリア中部（リストメニュー群）
+    .prj-side-menu-main-body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      .prj-side-menu-main-list-container {
+        // リスト共通のヘッダー
+        .prj-side-menu-main-list-head {
+          .prj-side-menu-main-list-title {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 700;
+            padding: 10px 0px;
+          }
+        }
+        // リスト共通のフッター
+        .prj-side-menu-main-list-foot {
+          // マークアップ上は、この配下にmoreテキストリンクが入る
+          a {
+            border: none;
+            color: var(--text-primary);
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            padding: 12px 0px;
+            &:hover {
+              color: var(--theme-primary);
+              span {
+                color: var(--theme-primary);
+              }
+            }
+          }
+        }
+      }
+      // リスト（カテゴリ）,（このサイトについて）のボディ部分
+      .prj-side-menu-main-category,
+      .prj-side-menu-main-about {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .prj-side-menu-main-list-body {
+          .prj-side-menu-main-list {
+            border-top: 1px solid var(--text-primary);
+            .prj-side-menu-main-item {
+              // display: flex;
+              // align-items: center;
+              // gap: 10px;
+              // padding: 14px 0px 14px 8px;
+              .prj-side-menu-main-item-link {
+                border-bottom: 0.5px solid #aeaeae;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 14px 0px 14px 8px;
+              }
+              .prj-side-menu-main-item-thumbnail {
+                aspect-ratio: 1/1;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                  aspect-ratio: 1/1;
+                  width: 40px;
+                  height: 40px;
+                }
+              }
+              .prj-side-menu-main-item-text {
+                flex: 1;
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--text-primary);
+                display: -webkit-box;
+                line-clamp: 2;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+      // リスト（アカウント）のボディ部分
+      .prj-side-menu-main-account {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .prj-side-menu-main-list-body {
+          .prj-side-menu-main-list {
+            border-top: 1px solid var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 0px;
+            .prj-side-menu-main-item {
+              width: 100%;
+              a {
+                display: block;
+                font-size: 14px;
+                line-height: 20px;
+                border-radius: 4px;
+                padding: 8px;
+                box-shadow: 0px 0px 10px 0px #0000001a;
+                span {
+                  display: -webkit-box;
+                  line-clamp: 2;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+      }
+      // リスト（タグ）のボディ部分
+      .prj-side-menu-main-tag {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .prj-side-menu-main-list-body {
+          .prj-side-menu-main-list {
+            border-top: 1px solid var(--text-primary);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 12px 0px;
+          }
+        }
+      }
+    }
+  }
+}

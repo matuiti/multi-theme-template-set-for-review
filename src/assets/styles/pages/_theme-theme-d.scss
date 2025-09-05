@@ -1,0 +1,95 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+/* theme-dテーマ固有の変数 （ CSS変数で定義 ） */
+/* theme-dテーマ固有のスタイル */
+
+.theme-d-theme {
+  // テーマカラー
+  --theme-primary: #81b278;
+  // テーマカラー（訪問済み）
+  --theme-primary-visited: rgba(129, 178, 120, 0.6);
+
+  // テキストカラー
+  --theme-text-primary: #333333;
+
+  // 背景カラー
+  --theme-bg-primary: var(--theme-primary);
+  --theme-bg-1: #f2f2f2; //community, news
+
+  // カテゴリータグカラー
+  --theme-category-1: #e5e2e2;
+  --theme-category-2: #014a74;
+  --theme-category-3: #726f63;
+  --theme-category-4: #6a7d8c;
+  --theme-category-5: #c13333;
+  --theme-category-6: #737373;
+
+  // ランキングカラー
+  --theme-ranking-1: #bea870;
+  --theme-ranking-2: #aeaeaa;
+  --theme-ranking-3: #997a5c;
+  --theme-ranking-4: #ffffff;
+  --theme-ranking-5: #ffffff;
+  --theme-ranking-6: #ffffff;
+  --theme-ranking-7: #ffffff;
+  --theme-ranking-8: #ffffff;
+  --theme-ranking-9: #ffffff;
+  --theme-ranking-10: #ffffff;
+
+  // 角丸
+  --theme-border-radius-header: 100px;
+  --theme-border-radius-card: 16px;
+
+  // カードタイトルの最小高さ
+  .prj-card-title {
+    min-height: 54px !important;
+  }
+
+  // セクションタイトルの装飾(短い下線)
+  .follow,
+  .new,
+  .ranking,
+  .pickup,
+  .prj-filter-menu-component {
+    .prj-title-component {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 0.5em;
+      &::after {
+        content: "";
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        position: absolute;
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--theme-primary);
+        border-radius: 16px;
+      }
+    }
+  }
+  .ad-2 {
+    .prj-section-body {
+      @include xs {
+        gap: 30px;
+      }
+    }
+    picture {
+      img {
+        @include xs {
+          aspect-ratio: auto;
+        }
+      }
+    }
+  }
+  // フッター
+  .footer.prj-section-component {
+    @include xs {
+      padding-bottom: calc(var(--footer-padding-bottom-add) + 30px + 34px);
+    }
+  }
+}

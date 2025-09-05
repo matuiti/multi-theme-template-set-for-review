@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- HEAD -->
+<%- include('./components/sections/article-list/list-head.ejs') %>
+
+  <body>
+    <div id="app">
+      <!-- class値にテーマ名を設定し各テーマスタイルを適応させる -->
+      <div class="theme-a-theme">
+        <!-- HEADER -->
+        <%- include ('./components/header.ejs') %>
+          <!-- ボトムメニュー -->
+          <%- include ('./components/bottom-menu.ejs') %>
+            <!-- モーダルメニュー -->
+            <%- include ('./components/modal-menu.ejs') %>
+              <!-- メイン + サイドメニュー（ メイン ） -->
+              <div
+                class="flex flex-col justify-self-center lg:flex-row-reverse w-full lg:w-auto sm:pt-[var(--header-height-md)]">
+                <!-- アクセシビリティのためのmain要素 -->
+                <main class="flex flex-col justify-between w-full">
+                  <!-- ページボディ（ 記事一覧 + サイドメニュー（ 統計 ）） -->
+                  <div class="page-body lg:flex lg:flex-row">
+                    <!-- 記事一覧 -->
+                    <section class="article-list prj-section-component flex-1"
+                      aria-labelledby="article-list-section-title">
+                      <div class="prj-section-container">
+                        <!-- 記事一覧ヘッダー （ パンくずリスト、ページタイトル、ソートボタン、カテゴリ選択ボタン ） -->
+                        <%- include('./components/sections/article-list/list-article-list-head.ejs') %>
+                          <!-- 記事一覧コンテンツ （ 記事カード ） -->
+                          <%- include('./components/sections/article-list/list-article-list-body.ejs') %>
+                            <!-- 記事一覧フッター （ ページネーション ） -->
+                            <%- include('./components/sections/article-list/list-article-list-foot.ejs') %>
+                      </div>
+                    </section>
+                    <!-- サイドメニュー（ 統計 ） -->
+                    <%- include('./components/sections/article-list/list-sidemenu-stats.ejs') %>
+                  </div>
+                  <!-- ページフッター -->
+                  <div class="page-footer">
+                    <!-- AD-2 -->
+                    <%- include('./components/sections/article-list/list-ad-2.ejs') %>
+                      <!-- SPECIAL THANKS -->
+                      <%- include('./components/sections/article-list/list-special-thanks.ejs') %>
+                        <!-- FOOTERS （ 全テーマ分のフッター ） -->
+                        <%- include('./components/sections/article-list/list-footers.ejs') %>
+                  </div>
+                </main>
+                <!-- サイドメニュー（ メイン ） -->
+                <%- include('./components/sections/article-list/list-sidemenu-main.ejs') %>
+              </div>
+      </div>
+    </div>
+  </body>
+
+</html>

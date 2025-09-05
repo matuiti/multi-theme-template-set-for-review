@@ -1,0 +1,393 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+/* Theme-bテーマ固有の変数 （ CSS変数で定義 ） */
+/* Theme-bテーマ固有のスタイル */
+
+.theme-b-theme {
+  // フォント（英字タイトルのうちの一部で利用）
+  --font-family-en: "Montserrat", sans-serif;
+
+  // テーマカラー
+  --theme-primary: #084e77;
+  // テーマカラー（訪問済み）
+  --theme-primary-visited: rgba(8, 78, 119, 0.6);
+
+  // 背景カラー
+  --theme-bg-primary: #f1e3d1;
+  --theme-bg-1: #f5f5f5;
+
+  // ランキングカラー
+  --theme-ranking-1: #eadfc3;
+  --theme-ranking-2: #c8c8cc;
+  --theme-ranking-3: #bfa58d;
+  --theme-ranking-4: #f4f4f5;
+  --theme-ranking-5: #f4f4f5;
+  --theme-ranking-6: #f4f4f5;
+  --theme-ranking-7: #f4f4f5;
+  --theme-ranking-8: #f4f4f5;
+  --theme-ranking-9: #f4f4f5;
+  --theme-ranking-10: #f4f4f5;
+
+  // 角丸
+  --theme-border-radius-header: 100px;
+  --theme-border-radius-card-sm: 2px;
+  --theme-border-radius-card: 4px;
+
+  // 英字タイトル用のフォントを適用(.news配下と.community配下は英字フォントを適用しない)
+  .prj-title-component {
+    font-family: var(--font-family-en);
+  }
+  .news .prj-title-component,
+  .community .prj-title-component {
+    font-family: var(--font-family-base);
+  }
+  .prj-header-component {
+    border-bottom: 1px solid #333333;
+    box-shadow: none;
+  }
+  // 画像フレーム
+  .image-frame {
+    border: 1px solid var(--text-primary);
+    background-color: white;
+    padding: 3px;
+  }
+  .ad-2 .image-frame {
+    max-width: 160px;
+    max-height: 160px;
+    @include sm {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    @include md {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    @include lg {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    @include xl {
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+  .prj-side-menu-main-component .image-frame,
+  .prj-side-menu-stats-component .image-frame {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .swiper {
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 32.56px;
+      height: 32.56px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(2px);
+      @include sm {
+        width: 33.8px;
+        height: 33.8px;
+      }
+      @include md {
+        width: 33.8px;
+        height: 33.8px;
+      }
+      @include lg {
+        width: 33.8px;
+        height: 33.8px;
+      }
+      @include xl {
+        width: 33.8px;
+        height: 33.8px;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "wght" 300, "GRAD" 0, "opsz" 48;
+        font-size: 24px;
+        color: var(--text-primary);
+      }
+    }
+    .swiper-button-prev {
+      transform: translate(-40%, -50%);
+      .material-symbols-outlined {
+        transform: translateX(20%);
+      }
+    }
+    .swiper-button-next {
+      transform: translate(40%, -50%);
+      .material-symbols-outlined {
+        transform: translateX(-20%);
+      }
+    }
+  }
+  .ranking {
+    .prj-card-component {
+      .prj-card-head {
+        .prj-card-image {
+          border: none;
+        }
+      }
+    }
+  }
+  .special-thanks {
+    background-color: white;
+    .prj-section-container {
+      // prj-section-container md:!max-w-[912px] lg:!max-w-[998px] xl:!max-w-[1478px]
+      @include md {
+        max-width: 912px;
+      }
+      @include lg {
+        max-width: 998px;
+      }
+      @include xl {
+        max-width: 1478px;
+      }
+    }
+    .prj-section-body {
+      gap: 14px;
+      @include md {
+        column-gap: 28px;
+        row-gap: 40px;
+      }
+      @include lg {
+        column-gap: 32px;
+        row-gap: 40px;
+      }
+      @include xl {
+        column-gap: 32px;
+        row-gap: 40px;
+      }
+      a {
+        border: 1px solid black;
+        width: 43%;
+        @include sm {
+          width: 22%;
+        }
+        @include md {
+          width: 22%;
+        }
+        @include lg {
+          width: 22%;
+        }
+        @include xl {
+          width: 22%;
+        }
+      }
+      img {
+        display: block;
+        // width: 168px;
+        // height: 49.41px;
+        aspect-ratio: 168/49.41;
+        @include md {
+          // width: 245px;
+          // height: 75px;
+          aspect-ratio: 245/75;
+        }
+        @include lg {
+          // width: 245px;
+          // height: 75px;
+          aspect-ratio: 245/75;
+        }
+        @include xl {
+          // width: 245px;
+          // height: 75px;
+          aspect-ratio: 245/75;
+        }
+      }
+    }
+  }
+
+  .prj-card-component {
+    .prj-card-head {
+      .prj-card-thumbnail {
+        border: 1px solid var(--text-primary);
+      }
+      .prj-card-image {
+        img {
+          aspect-ratio: 1.6836734694;
+        }
+      }
+      .prj-card-share {
+        display: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 10;
+        @include sm {
+          display: block;
+          top: 60%;
+          left: 85%;
+        }
+        @include md {
+          display: block;
+          top: 60%;
+          left: 85%;
+        }
+        @include lg {
+          display: block;
+          top: 60%;
+          left: 85%;
+        }
+        @include xl {
+          display: block;
+          top: 60%;
+          left: 85%;
+        }
+      }
+      .prj-card-category {
+        border: 1px solid var(--text-primary);
+        border-radius: 87.5px;
+        font-weight: 400;
+        margin-top: 16px;
+        background-color: white;
+      }
+    }
+    .prj-card-body {
+      .prj-card-title {
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        min-height: 52px;
+        @include xs {
+          min-height: 42px;
+        }
+      }
+    }
+  }
+  // フッター
+  .footer.prj-section-component {
+    @include xs {
+      padding-bottom: calc(var(--footer-padding-bottom-add) + 64px);
+    }
+  }
+
+  // サイドメニュー（メイン）
+  .prj-side-menu-main-component {
+    padding: 20px 0 175px;
+    .prj-side-menu-main-container {
+      width: 210px;
+      margin: 0 auto;
+      gap: 60px;
+      // エリア上部
+      .prj-side-menu-main-head {
+        width: 100%;
+        .prj-side-menu-main-ad-top {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      // コミュニティ一覧
+      .prj-side-menu-main-item-community {
+        border: 1px solid var(--text-primary);
+        border-radius: var(--theme-border-radius-card);
+        padding: 14px 10px;
+        cursor: pointer;
+        .prj-side-menu-main-item-thumbnail {
+          border: 1px solid var(--text-primary);
+        }
+      }
+      // エリア下部
+      // パワードバイ
+      .prj-side-menu-main-powered-by {
+        a {
+          box-sizing: content-box;
+          border: 1px solid var(--text-primary);
+        }
+      }
+      // エリア中部（リストメニュー群）
+      .prj-side-menu-main-body {
+        .prj-side-menu-main-list-container {
+          border: 1px solid var(--text-primary);
+          border-radius: var(--theme-border-radius-card);
+          // リスト共通のヘッダー
+          .prj-side-menu-main-list-head {
+            .prj-side-menu-main-list-title {
+              padding: 10px 16px;
+            }
+          }
+          // リスト共通のフッター
+          .prj-side-menu-main-list-foot {
+            border-top: 1px dashed var(--text-primary);
+            // マークアップ上は、このa要素の直下にmoreテキストリンクが入る
+            a {
+              padding: 12px 16px;
+            }
+          }
+        }
+        // リスト（カテゴリ）,（このサイトについて）のボディ部分
+        .prj-side-menu-main-category,
+        .prj-side-menu-main-about {
+          .prj-side-menu-main-list-body {
+            .prj-side-menu-main-list {
+              border-top: none;
+              .prj-side-menu-main-item {
+                border-bottom: none;
+                border-top: 1px dashed var(--text-primary);
+                // padding: 14px 16px;
+                .prj-side-menu-main-item-link {
+                  border-bottom: none;
+                  padding: 14px 16px;
+                }
+                .prj-side-menu-main-item-thumbnail {
+                  border: 1px solid var(--text-primary);
+                }
+              }
+            }
+          }
+        }
+        // リスト（アカウント）のボディ部分
+        .prj-side-menu-main-account {
+          .prj-side-menu-main-list-body {
+            .prj-side-menu-main-list {
+              border-top: 1px dashed var(--text-primary);
+              padding: 1rem;
+              .prj-side-menu-main-item {
+                a {
+                  border: 1px solid var(--text-primary);
+                  border-radius: 300px;
+                  padding: 8px 10px;
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+        }
+        // リスト（タグ）のボディ部分
+        .prj-side-menu-main-tag {
+          .prj-side-menu-main-list-body {
+            .prj-side-menu-main-list {
+              border-top: 1px dashed var(--text-primary);
+              padding: 12px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // カードコンポーネント（統計）
+  .prj-card-stats-component {
+    .prj-card-stats-thumbnail {
+      border: 1px solid var(--text-primary);
+      border-radius: 4px;
+    }
+  }
+  // タグコンポーネント
+  .prj-tag-component {
+    .prj-tag-link {
+      gap: 4px;
+      border: 1px solid var(--text-primary);
+      border-radius: 100px;
+      padding: 8px 10px;
+      box-shadow: none;
+      background-color: white;
+      .prj-tag-name {
+        &::before {
+          content: "#";
+          color: var(--text-primary);
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}

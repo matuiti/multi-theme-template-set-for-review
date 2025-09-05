@@ -1,0 +1,488 @@
+@use "../mixins" as *;
+// article-detail（記事詳細ページ）の基本スタイル
+.theme-a-theme,
+.theme-b-theme,
+.theme-c-theme,
+.theme-d-theme {
+  .prj-article-content-component {
+    // font-family: var(--font-family-article-detail);
+    color: var(--text-secondary);
+    // 記事のヘッダー
+    .prj-article-content-head {
+      font-family: var(--font-family-article-detail);
+      margin-bottom: 24px;
+      @include md {
+        margin-bottom: 40px;
+      }
+      @include lg {
+        margin-bottom: 40px;
+      }
+      @include xl {
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 700;
+        @include md {
+          font-size: 28px;
+          letter-spacing: 0.05em;
+        }
+        @include lg {
+          font-size: 28px;
+          letter-spacing: 0.05em;
+        }
+        @include xl {
+          font-size: 28px;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+    // 記事のボディ
+    .prj-article-content-body {
+      font-family: var(--font-family-article-detail);
+      font-size: 14px;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+      > * + * {
+        margin-top: 40px;
+      }
+      h2 + *,
+      h3 + *,
+      h4 + *,
+      h5 + *,
+      h6 + * {
+        margin-top: 20px;
+      }
+      @include md {
+        margin-bottom: 40px;
+      }
+      @include lg {
+        margin-bottom: 40px;
+      }
+      @include xl {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 600;
+        @include md {
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+        @include lg {
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+        @include xl {
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+      }
+      h3 {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 600;
+        @include md {
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+        @include lg {
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+        @include xl {
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+      }
+      p {
+        line-height: 2;
+        font-weight: 400;
+        // テキスト入力の改行を反映させる（コーディング時はソートが崩れるためコメントアウト）
+        // white-space: pre-line;
+        @include md {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+        }
+        @include lg {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+        }
+        @include xl {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+        }
+      }
+      // 強調表現
+      .emphasis,
+      strong {
+        font-weight: bold;
+      }
+      // 下線
+      .underline,
+      u {
+        text-decoration: underline;
+      }
+      // 取り消し線
+      .strike,
+      del {
+        text-decoration: line-through;
+      }
+      // 引用ブロック
+      blockquote {
+        background: #f3f3f3;
+        padding: 10px;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        color: #737373;
+        word-break: break-word;
+        span {
+          color: #737373;
+        }
+        p {
+          font-style: oblique; // 斜体
+          white-space: normal;
+        }
+      }
+      // イタリック
+      .italic,
+      i {
+        font-style: italic;
+        word-break: break-word;
+        font-family: var(--font-family-article-detail);
+      }
+      // リスト
+      ol {
+        list-style-type: decimal;
+        margin-left: 1.5rem;
+        margin-top: 16px !important;
+        margin-bottom: 16px !important;
+      }
+      ul {
+        list-style-type: disc;
+        margin-left: 1.5rem;
+        margin-top: 16px !important;
+        margin-bottom: 16px !important;
+        li::marker {
+          font-size: 0.5em !important;
+        }
+      }
+      // テキストリンク
+      a {
+        // color: #0033cc;
+        color: var(--theme-primary);
+        text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
+        // テキストリンク（訪問済み）
+        &.visited-style {
+          // color: #551a8b;
+          color: var(--theme-primary-visited);
+          text-decoration: underline;
+        }
+        // テキストリンク（未訪問時のスタイルを適応させる）
+        &.no-visited-style {
+          // color: #0033cc;
+          color: var(--theme-primary);
+        }
+      }
+      // 画像
+      img {
+        &:hover {
+          transform: scale(1); // デフォルトのスケールアニメーションを無効化
+        }
+      }
+    }
+    // 記事のフッター
+    .prj-article-content-foot {
+      // タグリスト
+      .prj-article-content-tags {
+        display: none;
+        margin-top: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include md {
+          display: block;
+        }
+        @include lg {
+          display: block;
+        }
+        @include xl {
+          display: block;
+        }
+        .prj-article-content-tags-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+      // 記事へのアクション
+      .prj-article-content-actions {
+        display: flex;
+        gap: 20px;
+        @include md {
+          margin-top: 40px;
+        }
+        @include lg {
+          margin-top: 40px;
+        }
+        @include xl {
+          margin-top: 40px;
+        }
+        .prj-article-content-action-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 44px;
+          height: 44px;
+          span {
+            color: #666666;
+          }
+        }
+        .prj-article-content-favorite {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          .prj-article-content-action-button {
+            border: 2px solid #eb0a1e;
+            border-radius: 50%;
+            &.active {
+              border-color: #e092c5 !important;
+              .material-symbols-outlined {
+                font-variation-settings: "FILL" 1;
+                animation: scaleUp 0.2s ease;
+                color: #e092c5 !important;
+              }
+            }
+            span {
+              color: #eb0a1e;
+            }
+          }
+          .prj-article-content-favorite-count {
+            color: #7f7f7f;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+          }
+        }
+        .prj-article-content-bookmark {
+          .prj-article-content-action-button {
+            &.active {
+              border-color: var(--theme-primary) !important;
+              .material-symbols-outlined {
+                font-variation-settings: "FILL" 1;
+                animation: scaleUp 0.2s ease;
+                color: var(--theme-primary) !important;
+              }
+            }
+          }
+        }
+      }
+      // 著者情報
+      .prj-article-content-author {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .prj-article-content-author-info {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .prj-article-content-author-info-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            .prj-article-content-author-name-box {
+              display: flex;
+              align-items: center;
+              flex: 1;
+              gap: 8px;
+              .prj-article-content-author-image {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                overflow: hidden;
+                aspect-ratio: 1/1;
+              }
+              .prj-article-content-author-name {
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: 500;
+                letter-spacing: 0.03em;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                color: black;
+              }
+            }
+            .prj-article-content-author-follow {
+              display: none;
+              @include md {
+                display: flex;
+              }
+              @include lg {
+                display: flex;
+              }
+              @include xl {
+                display: flex;
+              }
+              .prj-article-content-follow-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: fit-content;
+                border-radius: 4px;
+                background-color: var(--theme-primary);
+                padding: 8px 20px;
+                span {
+                  color: white;
+                }
+                .prj-article-content-author-follow-text {
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+          .prj-article-content-author-description {
+            font-size: 12px;
+            line-height: 2;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            color: black;
+          }
+          .prj-article-content-author-sns {
+            display: flex;
+            .prj-article-content-author-sns-link {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 44px;
+              height: 44px;
+              img {
+                width: 24px;
+                height: 24px;
+              }
+              span {
+                color: #777777;
+              }
+            }
+          }
+        }
+      }
+      // 関連記事
+      .prj-article-content-related {
+        margin-top: 20px;
+        display: flex;
+        border-top: 1px solid #bcbcbc;
+        border-bottom: 1px solid #bcbcbc;
+        .prj-article-content-related-prev-box,
+        .prj-article-content-related-next-box {
+          padding: 12px 0;
+          &:hover {
+            background-color: var(--hover-bg-color);
+            opacity: 1 !important;
+            transition: all 0.3s ease;
+          }
+        }
+        .prj-article-content-related-prev {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 12px;
+          padding-right: 20px;
+          border-right: 1px solid #bcbcbc;
+        }
+        .prj-article-content-related-next {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+          gap: 12px;
+          padding-left: 20px;
+          .prj-article-content-related-text-box {
+            text-align: right;
+          }
+        }
+        .prj-article-content-related-text-box {
+          display: flex;
+          flex-direction: column;
+        }
+        .prj-article-content-related-text {
+          font-size: 12px;
+          line-height: 1.5;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          color: var(--text-secondary);
+        }
+        .prj-article-content-related-title {
+          font-size: 14px;
+          line-height: 1.5;
+          font-weight: 600;
+          letter-spacing: 0.03em;
+          color: var(--text-secondary);
+          @include md {
+            font-size: 16px;
+            font-weight: 700;
+          }
+          @include lg {
+            font-size: 16px;
+            font-weight: 700;
+          }
+          @include xl {
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+        .icon-chevron-lg {
+          color: #000;
+        }
+      }
+      // 記事へのコメント
+      .prj-article-content-comments {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .prj-comment-component + .prj-comment-component {
+          margin-top: 40px;
+        }
+        .prj-article-content-comments-title {
+          font-size: 16px;
+          line-height: 1.5;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          color: black;
+          @include md {
+            font-family: var(--font-family-article-detail);
+          }
+          @include lg {
+            font-family: var(--font-family-article-detail);
+          }
+          @include xl {
+            font-family: var(--font-family-article-detail);
+          }
+        }
+        .prj-article-content-comments-list {
+          margin-top: 8px;
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

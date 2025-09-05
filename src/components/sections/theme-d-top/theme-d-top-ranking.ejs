@@ -1,0 +1,1494 @@
+<section class="ranking prj-section-component relative overflow-hidden" aria-labelledby="ranking-title">
+  <!-- ブラー背景レイヤー -->
+  <div class="absolute is-blur inset-0 bg-cover bg-center bg-no-repeat"
+    style="filter: blur(4px); background-image: url('/assets/images/theme-d/theme-d-ranking-bg.jpg')" aria-hidden="true">
+  </div>
+  <div class="absolute top-0 left-0 w-full z-10 bg-white/50 h-full" aria-hidden="true"></div>
+  <!-- ブラー背景レイヤー〆 -->
+  <div class="prj-section-container relative z-10">
+    <div
+      class="prj-section-head flex flex-col gap-10 !mb-[36px] sm:!mb-[56px] md:!mb-[56px] lg:!mb-[56px] xl:!mb-[64px]">
+      <h2 id="ranking-title" class="prj-title-component">RANKING</h2>
+      <div
+        class="prj-content-sort-switch-button-component prj-content-sort-switch-button-3col-icon-component bg-white rounded self-start !overflow-visible"
+        role="tablist" aria-label="ランキング表示切り替え">
+        <button id="tab-view"
+          class="prj-content-sort-switch-button-item is-active !rounded-[4px_0px_0px_4px] shadow-[2px_2px_2px_0px_#00000040] !flex-[1_0_0]"
+          role="tab" aria-selected="true" aria-controls="ranking-by-view">
+          <span class="prj-content-sort-switch-button-icon mb-[-1px] material-symbols-outlined icon-visibility-md"
+            aria-hidden="true">
+            visibility
+          </span>
+          ビュー
+        </button>
+        <button id="tab-like"
+          class="prj-content-sort-switch-button-item !rounded-none shadow-[2px_2px_2px_0px_#00000040] !flex-[1_0_0]"
+          role="tab" aria-selected="false" aria-controls="ranking-by-like">
+          <span class="prj-content-sort-switch-button-icon mb-[-1px] material-symbols-outlined icon-favorite-md"
+            aria-hidden="true">
+            favorite
+          </span>
+          いいね
+        </button>
+        <button id="tab-comment"
+          class="prj-content-sort-switch-button-item !rounded-[0px_4px_4px_0px] shadow-[2px_2px_2px_0px_#00000040] !flex-[1_0_0]"
+          role="tab" aria-selected="false" aria-controls="ranking-by-comment">
+          <span class="prj-content-sort-switch-button-icon mb-[-2px] material-symbols-outlined icon-comment-md"
+            aria-hidden="true">
+            chat
+          </span>
+          コメント
+        </button>
+      </div>
+    </div>
+    <div class="prj-section-body">
+      <div role="region" aria-roledescription="メディア型カード" aria-label="人気コンテンツランキング">
+        <div id="ranking-by-view" role="tabpanel" aria-labelledby="tab-view">
+          <ol
+            class="grid grid-auto-rows-fr grid-cols-[repeat(auto-fit,minmax(min(100%,350px),1fr))] sm:grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] md:grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-[10px] sm:gap-x-[3%] sm:gap-y-[21.43px] md:gap-x-[2%] md:gap-y-[21.43px] lg:gap-x-[2%] lg:gap-y-[36px] xl:gap-x-[2%] xl:gap-y-[36PX]">
+            <!-- カードコンポーネント1 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-1">
+                        <span class="sr-only">ランキング1位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#726F63]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-1">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-1" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント2 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-2.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-2">
+                        <span class="sr-only">ランキング2位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#C13333]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-2">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-2" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント3 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-3.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-3">
+                        <span class="sr-only">ランキング3位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#737373]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-3">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-3" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント4 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-4.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-4">
+                        <span class="sr-only">ランキング4位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#C13333]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-4">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-4" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント5 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-5.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-5">
+                        <span class="sr-only">ランキング5位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#014A74]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-5">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-5" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント6 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-6.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-6">
+                        <span class="sr-only">ランキング6位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#737373]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-6">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-6" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント7 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-7.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-7">
+                        <span class="sr-only">ランキング7位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#014A74]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-7">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-7" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント8 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-8.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-8">
+                        <span class="sr-only">ランキング8位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#C13333]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-8">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-8" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント9 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-9.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-9">
+                        <span class="sr-only">ランキング9位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#726F63]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-9">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-9" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント4 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-4.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-4">
+                        <span class="sr-only">ランキング4位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#C13333]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-4">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-4" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント5 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-5.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-5">
+                        <span class="sr-only">ランキング5位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#014A74]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-5">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-5" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- カードコンポーネント6 -->
+            <li>
+              <article class="prj-card-component card card-hover">
+                <div class="prj-card-flex">
+                  <div class="prj-card-head">
+                    <!-- サムネイル複数枚のとき（スライダー） -->
+                    <div class="prj-card-thumbnail swiper card-swiper" aria-roledescription="carousel"
+                      aria-label="記事画像スライダー">
+                      <div class="swiper-wrapper">
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-ranking-6.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像1" />
+                          </div>
+                        </a>
+                        <a class="prj-card-image-link swiper-slide" href="" aria-roledescription="slide">
+                          <div class="prj-card-image">
+                            <img src="assets/images/theme-d/theme-d-1.jpg" width="172" height="115" loading="lazy"
+                              alt="記事のサムネイル画像2" />
+                          </div>
+                        </a>
+                      </div>
+                      <!-- ナビゲーションボタン -->
+                      <div class="swiper-button-prev">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_left
+                        </span>
+                        <span class="sr-only">前の画像へ</span>
+                      </div>
+                      <div class="swiper-button-next">
+                        <span class="material-symbols-rounded icon-chevron-lg" aria-hidden="true">
+                          chevron_right
+                        </span>
+                        <span class="sr-only">次の画像へ</span>
+                      </div>
+                      <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+                      <div class="ranking-number bg-ranking-6">
+                        <span class="sr-only">ランキング6位</span>
+                      </div>
+                      <!-- カテゴリ -->
+                      <a href="#" class="prj-card-category !bg-[#737373]">
+                        <span>あいうえおかきくけこあいうえおかきくけこ</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="prj-card-body">
+                    <a href="#" aria-describedby="card-desc-6">
+                      <h3 class="prj-card-title">
+                        ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。
+                      </h3>
+                    </a>
+                    <div id="card-desc-6" class="sr-only">この記事の詳細を見る</div>
+                    <p class="prj-card-text">
+                      <span>記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます</span>
+                    </p>
+                    <div class="prj-card-author-info">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name">
+                          ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。ここにアカウント名が入ります。
+                        </a>
+                        <div class="prj-card-follow">
+                          <span class="material-symbols-outlined icon-add-circle-md">
+                            add_circle
+                          </span>
+                          <span class="prj-card-follow-text">フォロワー</span>
+                          <span class="prj-card-follow-count">999k</span>
+                        </div>
+                      </div>
+                      <div class="prj-card-actions">
+                        <button class="prj-card-like-button" aria-label="いいねする">
+                          <span class="material-symbols-outlined icon-favorite-lg" aria-hidden="true">
+                            favorite
+                          </span>
+                          <span class="sr-only">いいね</span>
+                        </button>
+                        <button class="prj-card-bookmark-button" aria-label="ブックマークする">
+                          <span class="material-symbols-outlined icon-bookmark-md" aria-hidden="true">
+                            bookmark
+                          </span>
+                          <span class="sr-only">ブックマーク</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot">
+                  <time class="prj-card-date" datetime="2025-05-05">
+                    <!-- 時計アイコン -->
+                    <span class="material-symbols-outlined icon-schedule-sm" aria-hidden="true">
+                      schedule
+                    </span>
+                    2025.05.05</time>
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span></span>
+                      <span aria-label="閲覧数 99.9k">99.9k</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 999k">999k</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true"><span
+                          class="material-symbols-outlined icon-comment-sm" aria-hidden="true">
+                          chat
+                        </span></span>
+                      <span aria-label="コメント数 456">456</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

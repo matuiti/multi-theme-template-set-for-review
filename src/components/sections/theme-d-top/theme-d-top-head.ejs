@@ -1,0 +1,1923 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO向けのメタタグ ============ -->
+  <!-- タイトルタグ: ブラウザのタブやブックマーク、検索結果に表示される重要要素
+       テーマ名と簡潔な説明を含め、60文字以内が推奨 -->
+  <title>トップページ | ThemeDテーマ</title>
+  <!-- 説明文: 検索結果に表示される説明文で150〜160文字程度が推奨
+       ユーザーの興味を引く魅力的な説明を入力 -->
+  <meta name="description" content="ThemeDテーマの公式サイトです。コミュニティづくりをサポートする機能やサービス、最新のソーシャル機能などをご紹介します。" />
+  <!-- キーワード: 現在のSEOでの重要性は低下しているが、関連キーワードをカンマ区切りで記述 -->
+  <meta name="keywords" content="ThemeDテーマ, コミュニティ, ソーシャルメディア, コネクト" />
+  <!-- サイト運営者情報: サイトの著者や運営会社名を記述 -->
+  <meta name="author" content="運営会社名" />
+
+  <!-- canonicalリンク: 同一コンテンツが複数URLで閲覧可能な場合に正規URLを指定
+       重複コンテンツの問題を防ぎ、SEOを最適化する重要な要素 -->
+  <link rel="canonical" href="https://example.com/theme-d.html" />
+
+  <!-- ============ ファビコン設定 ============ -->
+  <!-- 標準ファビコン: ブラウザのタブやブックマークに表示される16×16pxの小さなアイコン
+       通常は.ico形式を使用（32×32pxなど複数サイズを含む.icoファイルが理想的） -->
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <!-- Apple Touch Icon: iOSデバイスでサイトをホーム画面に追加した時のアイコン
+       推奨サイズは180×180px、PNG形式 -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- ============ OGP (Open Graph Protocol) 設定 ============ -->
+  <!-- FacebookなどのSNSでURLシェア時の表示を制御する重要な要素 -->
+  <!-- og:title: シェア時に表示されるタイトル、40文字程度が推奨 -->
+  <meta property="og:title" content="ThemeDテーマ | コミュニティビルディングの公式サイト" />
+  <!-- og:description: シェア時の説明文、80〜90文字程度が推奨 -->
+  <meta property="og:description" content="ThemeDテーマの公式サイトです。コミュニティづくりをサポートする機能やサービス、最新のソーシャル機能などをご紹介します。" />
+  <!-- og:type: コンテンツタイプを指定（website, article, productなど） -->
+  <meta property="og:type" content="website" />
+  <!-- og:url: シェアされるページの正規URLを指定（canonicalと一致させる） -->
+  <meta property="og:url" content="https://example.com/theme-d.html" />
+  <!-- og:image: シェア時に表示される画像のURL
+       推奨サイズは1200×630px、最小でも600×315pxが必要 -->
+  <meta property="og:image" content="https://example.com/images/theme-d/theme-d-ogp.jpg" />
+  <!-- og:site_name: ウェブサイト全体の名前を指定 -->
+  <meta property="og:site_name" content="ThemeDテーマ公式サイト" />
+  <!-- og:locale: コンテンツの言語と地域を指定（日本語の場合は通常ja_JP） -->
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ============ Twitterカード設定 ============ -->
+  <!-- TwitterでのURLシェア表示を制御（OGPと似た役割だがTwitter専用） -->
+  <!-- twitter:card: カードの種類を指定
+       summary: 小さな画像付きカード、summary_large_image: 大きな画像付きカード -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- twitter:site: 関連するTwitterアカウントを@ユーザー名で指定 -->
+  <meta name="twitter:site" content="@theme-dtheme" />
+  <!-- twitter:title: Twitterカードのタイトル -->
+  <meta name="twitter:title" content="ThemeDテーマ | コミュニティビルディングの公式サイト" />
+  <!-- twitter:description: Twitterカードの説明文 -->
+  <meta name="twitter:description" content="ThemeDテーマの公式サイトです。コミュニティづくりをサポートする機能やサービス、最新のソーシャル機能などをご紹介します。" />
+  <!-- twitter:image: カードに表示される画像のURL
+       summary_large_imageの場合、最小サイズは300×157px、
+       最適な比率は2:1（例: 1200×600px）-->
+  <meta name="twitter:image" content="https://example.com/images/theme-d/theme-d-ogp.jpg" />
+
+  <!-- ============ フォント読み込み ============ -->
+  <!-- GoogleフォントなどWebフォントの読み込み設定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" />
+  </noscript>
+  <!-- ============ マテリアルアイコン ============ -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- ============ Font Awesome ============ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- ============ 構造化データ（JSON-LD） ============ -->
+  <!-- 検索エンジンがウェブページの内容を理解しやすくするための標準化されたデータ形式 -->
+
+  <!-- WebSiteスキーマ: サイト全体の情報とサイト内検索機能の実装
+検索エンジンの結果にサイト内検索ボックスが表示される可能性がある
+
+注意点:
+1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+2. 実際のサイト名とURLを必ず設定すること
+3. 検索機能が実際に動作することを確認すること
+-->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+       すべての構造化データに必要な基本プロパティ */
+      "@context": "https://schema.org",
+
+      /* このエンティティがWebサイトであることを示す（必須）
+       WebSiteタイプはサイト全体の情報を表現する際に使用 */
+      "@type": "WebSite",
+
+      /* サイト名 - 実際のテーマ名に置き換えること
+       サイトのタイトルと一致させることが望ましい */
+      "name": "ThemeDテーマ公式サイト",
+
+      /* サイトのURL - canonicalタグのURLと一致させること
+       絶対URLを使用し、実際のドメインをここに設定 */
+      "url": "https://example.com/theme-d.html",
+
+      /* potentialActionはサイトで可能なアクションを定義
+       ここではサイト内検索機能を実装している */
+      "potentialAction": {
+        /* 検索アクションであることを示す
+         これにより検索エンジンが検索機能を理解できる */
+        "@type": "SearchAction",
+
+        /* 検索結果ページのURL形式 - 実際の検索URLパターンと一致させること
+         {search_term_string}はプレースホルダーで、実際の検索語に置き換えられる
+         必ず動作確認を行うこと */
+        "target": "https://example.com/search?q={search_term_string}",
+
+        /* 検索クエリパラメータ名の指定
+         search_term_stringは上記targetのプレースホルダーと一致させる必要がある */
+        "query-input": "required name=search_term_string"
+      },
+
+      /* サイトの簡潔な説明文
+       検索エンジンがコンテンツを理解するための追加情報として有用 */
+      "description": "コミュニティづくりをサポートするThemeDテーマの公式サイト",
+
+      /* サイトの言語を ISO 639-1 言語コードで指定
+       多言語サイトの場合は対応する言語に変更すること */
+      "inLanguage": "ja",
+
+      /* サイトの発行者（運営者）情報
+       Google検索結果でのTheme-a表示に影響する重要な要素 */
+      "publisher": {
+        /* 発行者が組織であることを示す
+         個人サイトの場合はPersonタイプも使用可能 */
+        "@type": "Organization",
+
+        /* 運営会社やTheme-aの正式名称
+         実際の法人名やサービス提供者名を使用すること */
+        "name": "運営会社名",
+
+        /* ロゴ情報は検索結果やナレッジパネルでの表示に使用される
+         高品質な画像を使用することが重要 */
+        "logo": {
+          /* 画像オブジェクトとしてロゴを定義
+           単純なURL文字列よりも詳細な情報を提供できる */
+          "@type": "ImageObject",
+
+          /* ロゴ画像のURL - 絶対URLを使用すること
+           実際に存在するリソースへのリンクであることを確認 */
+          "url": "https://example.com/images/theme-d/theme-d-logo.png"
+
+          /* 改善提案: 以下のプロパティを追加するとより効果的
+           ,
+           "width": "600",
+           "height": "60",
+           "caption": "ThemeDテーマのロゴ"
+          */
+        }
+      }
+
+      /* 改善提案: 以下のプロパティを追加するとより効果的
+       ,
+       "alternateName": "Theme D Theme",
+       "sameAs": "https://theme-dtheme.example.com",
+       "copyrightYear": "2020",
+       "award": "ベストコミュニティプラットフォーム賞2024"
+      */
+    }
+  </script>
+
+  <!-- Organizationスキーマ: 運営会社に関する情報
+Googleナレッジパネルなどに表示される可能性がある
+
+注意点:
+1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+2. 会社名、URL、ロゴは正確に設定すること
+3. SNSアカウントは実際に存在し、正式なアカウントであることを確認すること
+4. 電話番号は国際形式で記述すること
+-->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+       すべての構造化データで最初に定義する必要がある */
+      "@context": "https://schema.org",
+
+      /* このエンティティが組織であることを示す（必須）
+       企業情報を表すための基本タイプ */
+      "@type": "Organization",
+
+      /* 会社名 - 正確な法人名称を使用すること
+       公式な会社名をそのまま記載する */
+      "name": "運営会社名",
+
+      /* 会社またはTheme-aの公式サイトURL - 実際のURLに置き換えること
+       会社のホームページのURLを絶対URL形式で指定 */
+      "url": "https://example.com",
+
+      /* 会社ロゴのURL - 絶対URLを使用し、推奨サイズ(112x112px以上、512x512px未満)に適合させること
+       SVGよりもPNG/JPG形式が推奨される
+       GoogleのロゴガイドラインにはSquare format logoが推奨されている */
+      "logo": "https://example.com/images/theme-d/theme-d-logo.png",
+
+      /* 関連するソーシャルメディアアカウント - すべて実際のアカウントURLに置き換えること
+       sameAsプロパティは企業の公式アカウントであることを検索エンジンに伝える重要な要素
+       実際に存在する公式アカウントのみを記載すること */
+      "sameAs": [
+        /* FacebookページのURL - 完全なURLを記載 */
+        "https://www.facebook.com/theme-dtheme",
+
+        /* TwitterアカウントのURL - 完全なURLを記載 */
+        "https://twitter.com/theme-dtheme",
+
+        /* InstagramアカウントのURL - 完全なURLを記載 */
+        "https://www.instagram.com/theme-dtheme"
+
+        /* 他のSNSプロフィールがあれば追加（LinkedInなど）
+         最後の要素にはカンマを付けない（JSON構文エラーの原因になる） */
+      ],
+
+      /* 問い合わせ先情報
+       顧客サポート窓口の詳細情報を提供する */
+      "contactPoint": {
+        /* 連絡先情報であることを示す
+         ContactPointタイプで問い合わせ先の詳細を構造化 */
+        "@type": "ContactPoint",
+
+        /* 国際形式の電話番号 - 実際の電話番号に置き換えること（日本の場合は+81から始まる）
+         国コード付きの形式で記載（半角数字、ハイフン区切り） */
+        "telephone": "+81-03-1234-5678",
+
+        /* 連絡先の種類 - 適切な種類を選択
+         一般的な種類: "customer service"（顧客サービス）, "technical support"（技術サポート）,
+         "sales"（営業）, "billing support"（請求サポート）, "reservation"（予約）など */
+        "contactType": "customer service",
+
+        /* 対応言語 - 実際に対応可能な言語のみを記載すること
+         ISO 639-1言語コードではなく、言語の完全名を使用 */
+        "availableLanguage": ["Japanese", "English"]
+      },
+
+      /* 住所情報 - 実際の所在地情報を追加することで地域SEOの強化につながる
+       特に実店舗や来客対応をする企業には重要な情報 */
+      "address": {
+        /* 住所であることを示す
+         PostalAddressタイプで住所情報を構造化 */
+        "@type": "PostalAddress",
+
+        /* 番地・建物名など - 実際の住所に合わせて記載 */
+        "streetAddress": "〇〇町1-2-3",
+
+        /* 市区町村 - 実際の住所に合わせて記載 */
+        "addressLocality": "〇〇市",
+
+        /* 都道府県 - 実際の住所に合わせて記載 */
+        "addressRegion": "〇〇県",
+
+        /* 郵便番号 - ハイフン付きで記載 */
+        "postalCode": "123-4567",
+
+        /* 国コード - 日本の場合は"JP"
+         ISO 3166-1 alpha-2国コードを使用 */
+        "addressCountry": "JP"
+      },
+
+      /* 会社設立日 - ISO 8601形式（YYYY-MM-DD）で指定
+       実際の設立日を正確に記載することが望ましい */
+      "foundingDate": "2020-01-01",
+
+      /* 従業員数 - 概算の範囲で記載可能
+       "1-10", "11-50", "51-200", "201-500", "501-1000", "1001+"などの形式が一般的 */
+      "numberOfEmployees": "10-50",
+
+      /* 問い合わせ用メールアドレス - 実際に使用しているアドレスを記載
+       スパム対策として表示上はエンコードしても構いませんが、
+       構造化データ内では生のメールアドレスを記載する必要がある */
+      "email": "contact@example.com"
+
+      /* 改善提案: 以下のプロパティを追加するとより効果的
+       ,
+       "description": "コミュニティプラットフォームを提供する企業",
+       "faxNumber": "+81-03-1234-5679",
+       "openingHours": "Mo-Fr 09:00-18:00",
+       "areaServed": {
+         "@type": "Country",
+         "name": "Japan"
+       },
+       "member": {
+         "@type": "Person",
+         "name": "代表取締役 山田太郎",
+         "jobTitle": "CEO"
+       },
+       "foundingLocation": {
+         "@type": "Place",
+         "address": {
+           "@type": "PostalAddress",
+           "addressRegion": "東京都",
+           "addressCountry": "JP"
+         }
+       },
+       "theme-a": {
+         "@type": "Brand",
+         "name": "ThemeDテーマ",
+         "logo": "https://example.com/images/theme-d/theme-d-theme-a-logo.png"
+       }
+      */
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - メインコンテンツとプロモーション
+目的: このマークアップはトップページのメインコンテンツ情報を検索エンジンに伝えるためのものです。
+WebPageタイプを使用して、ページの主要情報、画像、および関連する製品情報を構造化しています。
+-->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+       すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+       WebPageタイプはウェブページの基本情報を表現する（必須） */
+      "@type": "WebPage",
+
+      /* nameはページのタイトルを示す。
+       実際のページタイトルと一致させることが望ましい */
+      "name": "春の新作特集 - [テーマ名]",
+
+      /* descriptionはページの概要を示す。
+       メタディスクリプションと同様の内容を設定することが推奨される */
+      "description": "2025年の春に向けた新作コレクションをご紹介します。トレンドを先取りした商品ラインナップをチェックしてください。",
+
+      /* isPartOfはこのページが属するウェブサイト全体を示す。
+       WebSiteタイプでサイト全体の情報を関連付ける */
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "[テーマ名] オフィシャルサイト",
+        "url": "https://www.example.com/"
+      },
+
+      /* primaryImageOfPageはページのメイン画像を示す。
+       ファーストビューの主要画像を設定することが一般的 */
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "contentUrl": "assets/images/theme-d/theme-d-mv-bg-1.jpg"
+      },
+
+      /* mainEntityはページの主要コンテンツを示す。
+       ItemListタイプでプロモーション内容をリスト化している */
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Product",
+              "name": "春の新作特集",
+              "description": "2025年の春に向けた新作コレクションをご紹介します。トレンドを先取りした商品ラインナップをチェックしてください。"
+            }
+          }
+        ]
+      },
+
+      /* offersはページで提供される商品・サービスの情報を示す。
+       AggregateOfferタイプで複数の商品をまとめて表現 */
+      "offers": {
+        "@type": "AggregateOffer",
+        "offerCount": "8",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+
+      /* potentialActionはユーザーが取れるアクションを定義する。
+       ViewActionタイプでキャンペーンページへの遷移を示している */
+      "potentialAction": {
+        "@type": "ViewAction",
+        "target": "https://www.example.com/campaign/"
+      }
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - コミュニティセクション
+目的: このマークアップはコミュニティグループのリストを検索エンジンに伝えるためのものです。
+組織情報とメンバーの役割を構造化することで、コミュニティ検索結果の向上に役立ちます。
+-->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+       すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+       ItemListタイプは複数のコミュニティを順序付きリストとして表現している（必須） */
+      "@type": "ItemList",
+
+      /* nameはリスト全体のタイトルを示す。
+       セクション見出しと一致させることが望ましい */
+      "name": "コミュニティ",
+
+      /* descriptionはリストの概要を示す。
+       リストの目的や内容を簡潔に説明する */
+      "description": "参加可能なコミュニティグループの一覧",
+
+      /* numberOfItemsはリスト項目の総数を示す。
+       実際のリスト項目数と一致させる必要がある */
+      "numberOfItems": 11,
+
+      /* itemListElementはリスト内の各項目を配列として格納する（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の各項目を表す。
+           ItemListの子要素としては必ずこのタイプを使用する（必須） */
+          "@type": "ListItem",
+
+          /* positionはリスト内での順序を示す（必須） */
+          "position": 1,
+
+          /* itemプロパティにリスト項目の実際のコンテンツを格納（必須） */
+          "item": {
+            /* Organizationタイプはコミュニティグループを表現する */
+            "@type": "Organization",
+            "name": "九州キャンプ&九州キャンパーの集い",
+            "description": "キャンプ愛好家向けのコミュニティグループ",
+
+            /* memberはコミュニティのメンバー情報を示す */
+            "member": {
+              /* OrganizationRoleタイプで組織内の役割を表現 */
+              "@type": "OrganizationRole",
+
+              /* memberOfは所属組織を示す */
+              "memberOf": {
+                "@type": "Organization",
+                "name": "九州キャンプ&九州キャンパーの集い"
+              },
+
+              /* roleNameは組織内での役割を示す */
+              "roleName": "メンバー",
+
+              /* numbersOfMembersは同じ役割を持つメンバーの数を示す */
+              "numbersOfMembers": 10
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Organization",
+            "name": "九州キャンプ&九州キャンパーの集い",
+            "description": "キャンプ愛好家向けのコミュニティグループ",
+            "member": {
+              "@type": "OrganizationRole",
+              "memberOf": {
+                "@type": "Organization",
+                "name": "九州キャンプ&九州キャンパーの集い"
+              },
+              "roleName": "メンバー",
+              "numbersOfMembers": 10
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Organization",
+            "name": "九州キャンプ&九州キャンパーの集い",
+            "description": "キャンプ愛好家向けのコミュニティグループ",
+            "member": {
+              "@type": "OrganizationRole",
+              "memberOf": {
+                "@type": "Organization",
+                "name": "九州キャンプ&九州キャンパーの集い"
+              },
+              "roleName": "メンバー",
+              "numbersOfMembers": 10
+            }
+          }
+        }
+      ],
+
+      /* potentialActionはユーザーが取れるアクションを定義する。
+       ViewActionタイプでコミュニティ一覧ページへの遷移を示している */
+      "potentialAction": {
+        "@type": "ViewAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.example.com/communities/"
+        },
+        "name": "すべてのコミュニティをみる"
+      }
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - ニュースセクション
+目的: このマークアップはニュース記事の情報を検索エンジンに伝えるためのものです。
+NewsArticleタイプを使用して、記事のタイトル、概要、公開日などの情報を構造化しています。
+-->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+       NewsArticleタイプはニュース記事を表現する（必須） */
+      "@type": "NewsArticle",
+
+      /* headlineは記事のタイトルを示す（必須） */
+      "headline": "お知らせのタイトルが入ります",
+
+      /* descriptionは記事の概要を示す */
+      "description": "ここにお知らせが入ります。ここにお知らせが入ります。ここにお知らせが入ります。ここにお知らせが入ります。ここにお知らせが入ります。",
+
+      /* datePublishedは記事の公開日時を示す（必須） */
+      "datePublished": "2024-01-01T00:00:00+09:00",
+
+      /* articleSectionは記事のカテゴリを示す */
+      "articleSection": "お知らせ",
+
+      /* mainEntityOfPageは記事が主要コンテンツであるページを示す */
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.example.com/news/"
+      },
+
+      /* publisherは記事の発行者を示す（必須） */
+      "publisher": {
+        "@type": "Organization",
+        "name": "[テーマ名]",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.example.com/images/logo.png"
+        }
+      },
+
+      /* isAccessibleForFreeは記事が無料で閲覧可能かを示す */
+      "isAccessibleForFree": true,
+
+      /* potentialActionはユーザーが取れるアクションを定義する。
+       ReadActionタイプで記事詳細ページへの遷移を示している */
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.example.com/news/article-detail/"
+        }
+      }
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - フォローセクション（ブログ記事一覧）
+目的: このマークアップはフォロー中のクリエイターによる記事コレクションを検索エンジンに伝えるためのものです。
+CollectionPageタイプとItemListタイプを組み合わせて、複数の記事情報と統計データを構造化しています。
+-->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+       CollectionPageタイプはコレクションページを表現する（必須） */
+      "@type": "CollectionPage",
+
+      /* nameはコレクションのタイトルを示す */
+      "name": "フォロー中",
+
+      /* descriptionはコレクションの概要を示す */
+      "description": "フォローしているクリエイターの最新記事コレクション",
+
+      /* mainEntityはページの主要コンテンツを示す */
+      "mainEntity": {
+        /* ItemListタイプで複数の記事をリスト化 */
+        "@type": "ItemList",
+
+        /* numberOfItemsはリスト項目の総数を示す */
+        "numberOfItems": 6,
+
+        /* itemListElementはリスト内の各項目を配列として格納する（必須） */
+        "itemListElement": [
+          {
+            /* ListItemタイプはリスト内の各項目を表す（必須） */
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              /* BlogPostingタイプはブログ記事を表現する */
+              "@type": "BlogPosting",
+              "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+              "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+              "datePublished": "2025-05-05T00:00:00+09:00",
+              "image": {
+                "@type": "ImageObject",
+                "url": "assets/images/theme-d/theme-d-1.jpg"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります",
+                "follows": "999000"
+              },
+              /* interactionStatisticは記事の統計情報を示す */
+              "interactionStatistic": [
+                {
+                  /* InteractionCounterタイプで特定の統計データを表現 */
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/ViewAction",
+                  "userInteractionCount": "99900"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/LikeAction",
+                  "userInteractionCount": "999000"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/CommentAction",
+                  "userInteractionCount": "456"
+                }
+              ],
+              "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "BlogPosting",
+              "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+              "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+              "datePublished": "2025-05-05T00:00:00+09:00",
+              "image": {
+                "@type": "ImageObject",
+                "url": "assets/images/theme-d/theme-d-2.jpg"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります",
+                "follows": "999000"
+              },
+              "interactionStatistic": [
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/ViewAction",
+                  "userInteractionCount": "99900"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/LikeAction",
+                  "userInteractionCount": "999000"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/CommentAction",
+                  "userInteractionCount": "456"
+                }
+              ],
+              "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "BlogPosting",
+              "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+              "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+              "datePublished": "2025-05-05T00:00:00+09:00",
+              "image": {
+                "@type": "ImageObject",
+                "url": "assets/images/theme-d/theme-d-3.jpg"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります",
+                "follows": "999000"
+              },
+              "interactionStatistic": [
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/ViewAction",
+                  "userInteractionCount": "99900"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/LikeAction",
+                  "userInteractionCount": "999000"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/CommentAction",
+                  "userInteractionCount": "456"
+                }
+              ],
+              "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+            }
+          }
+        ]
+      }
+    }
+  </script>
+  <!-- Schema.org マークアップ - 新着記事セクション
+目的: このマークアップは新着記事のコレクションを検索エンジンに伝えるためのものです。
+CollectionPageタイプを使用して記事のコレクションであることを示し、閲覧数やいいね数などの
+インタラクション情報も含めることで、より豊かなリッチリザルト表示の可能性を高めます。
+
+構造の説明:
+- CollectionPage: 記事コレクションページを表現
+- ItemList: コレクション内の記事リストを構造化
+- BlogPosting: 各ブログ記事の詳細情報
+- InteractionCounter: 記事の閲覧数・いいね数などの統計情報
+
+注意点:
+1. 画像URLは相対パスではなく絶対パスを使用してください
+2. 日付はISO 8601形式（YYYY-MM-DDThh:mm:ss+TZ）で正確に指定してください
+3. インタラクション統計は実際の数値を反映するよう定期的に更新することが望ましいです
+4. 「もっと見る」リンクのURLは実際に存在するページを指定してください
+-->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+       すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+       CollectionPageタイプはブログ記事やニュース記事などの
+       コレクションページを表現するのに適している（必須） */
+      "@type": "CollectionPage",
+
+      /* nameはコレクションページのタイトルを示すプロパティ。
+       実際のページ見出しと一致させることが望ましい */
+      "name": "新着記事",
+
+      /* descriptionはコレクションの簡潔な説明。
+       検索結果のスニペットとして表示される可能性がある */
+      "description": "最新の投稿記事コレクション",
+
+      /* mainEntityはコレクションページの主要コンテンツを示すプロパティ。
+       ここではItemListタイプを使用して記事リストを構造化（必須） */
+      "mainEntity": {
+        /* ItemListタイプは複数の記事を順序付きリストとして表現するのに適している。
+         Googleのリッチリザルトでカルーセル表示の候補となる可能性がある */
+        "@type": "ItemList",
+
+        /* numberOfItemsはリスト内のアイテム総数を示すプロパティ。
+         実際の記事数と一致させることが重要 */
+        "numberOfItems": 6,
+
+        /* itemListElementは複数のリスト項目を配列として格納するプロパティ。
+         ItemListタイプでは必須のプロパティ（必須） */
+        "itemListElement": [
+          {
+            /* ListItemタイプはリスト内の各項目を表す標準的なタイプ。
+             ItemListの子要素としては必ずこのタイプを使用する必要がある（必須） */
+            "@type": "ListItem",
+
+            /* positionはリスト内での順序を示す必須プロパティ。
+             必ず1から始まる整数値を使い、連番で設定する必要がある（必須） */
+            "position": 1,
+
+            /* itemプロパティにはリスト項目の実際のコンテンツを格納する。
+             ここではBlogPostingタイプを使用してブログ記事情報を構造化（必須） */
+            "item": {
+              /* BlogPostingタイプはブログ記事に特化したArticleのサブタイプ。
+               ブログコンテンツの場合はこのタイプを使用するのが最適 */
+              "@type": "BlogPosting",
+
+              /* headlineは記事のタイトルを示す必須プロパティ。
+               最適な長さは110文字以内（それ以上は切り詰められる可能性あり）（必須） */
+              "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+
+              /* descriptionは記事の概要を示すプロパティ。
+               検索結果のスニペットとして表示される可能性が高い */
+              "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+
+              /* datePublishedは記事の公開日時を示すプロパティ。
+               ISO 8601形式（YYYY-MM-DDThh:mm:ss+TZ）で指定する必要がある */
+              "datePublished": "2025-05-05T00:00:00+09:00",
+
+              /* imageは記事のメイン画像情報を示すプロパティ。
+               リッチリザルト表示に使用される可能性が高い */
+              "image": {
+                /* ImageObjectタイプで画像の詳細情報を構造化 */
+                "@type": "ImageObject",
+
+                /* 画像のURLは絶対パスで指定することが強く推奨される。
+                 相対パスは検索エンジンが正しく解釈できない可能性がある */
+                "url": "https://example.com/images/theme-d/theme-d-7.jpg"
+              },
+
+              /* authorは記事の著者情報を示すプロパティ。
+               コンテンツの信頼性評価に影響を与える重要な要素 */
+              "author": {
+                /* Personタイプで著者が個人であることを示す */
+                "@type": "Person",
+
+                /* 著者名は実際のユーザー名と一致させる */
+                "name": "ここにアカウント名が入ります"
+              },
+
+              /* interactionStatisticは記事のエンゲージメント統計情報を示すプロパティ。
+               ユーザーインタラクションの種類ごとに配列で指定する */
+              "interactionStatistic": [
+                {
+                  /* InteractionCounterタイプでインタラクションの種類と数を構造化 */
+                  "@type": "InteractionCounter",
+
+                  /* インタラクションの種類。ViewActionは閲覧数を示す */
+                  "interactionType": "https://schema.org/ViewAction",
+
+                  /* 実際のカウント数。文字列として指定する点に注意 */
+                  "userInteractionCount": "99900"
+                },
+                {
+                  "@type": "InteractionCounter",
+
+                  /* LikeActionはいいね数やお気に入り登録数を示す */
+                  "interactionType": "https://schema.org/LikeAction",
+                  "userInteractionCount": "999000"
+                },
+                {
+                  "@type": "InteractionCounter",
+
+                  /* CommentActionはコメント数を示す */
+                  "interactionType": "https://schema.org/CommentAction",
+                  "userInteractionCount": "456"
+                }
+              ],
+
+              /* articleSectionは記事のカテゴリを示すプロパティ。
+               検索エンジンがコンテンツの分類を理解するのに役立つ */
+              "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+            }
+          },
+          {
+            /* 2番目のリスト項目。各ListItemの構造は一貫して統一する */
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "BlogPosting",
+              "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+              "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+              "datePublished": "2025-05-05T00:00:00+09:00",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-d/theme-d-8.jpg"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります"
+              },
+              "interactionStatistic": [
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/ViewAction",
+                  "userInteractionCount": "99900"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/LikeAction",
+                  "userInteractionCount": "999000"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/CommentAction",
+                  "userInteractionCount": "456"
+                }
+              ],
+              "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+            }
+          },
+          {
+            /* 3番目のリスト項目。positionの連番を維持することが重要 */
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "BlogPosting",
+              "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+              "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+              "datePublished": "2025-05-05T00:00:00+09:00",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-d/theme-d-9.jpg"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "ここにアカウント名が入ります"
+              },
+              "interactionStatistic": [
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/ViewAction",
+                  "userInteractionCount": "99900"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/LikeAction",
+                  "userInteractionCount": "999000"
+                },
+                {
+                  "@type": "InteractionCounter",
+                  "interactionType": "https://schema.org/CommentAction",
+                  "userInteractionCount": "456"
+                }
+              ],
+              "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+            }
+          }
+        ]
+      },
+
+      /* potentialActionはユーザーが取れるアクションを定義するプロパティ。
+       ここでは「もっと見る」ボタンのリンク先を指定している */
+      "potentialAction": {
+        /* ViewActionはコンテンツを閲覧するためのアクション */
+        "@type": "ViewAction",
+
+        /* targetは実際のアクションが実行される対象を定義 */
+        "target": {
+          /* EntryPointはアクションの開始点を表すタイプ */
+          "@type": "EntryPoint",
+
+          /* urlTemplateはアクションのURLを指定するプロパティ。
+           実際に存在するページのURLを設定する必要がある */
+          "urlTemplate": "https://www.example.com/new-articles/"
+        },
+
+        /* nameはアクションの名前。ボタンテキストなどとして表示される可能性がある */
+        "name": "もっと見る"
+      },
+
+      /* offersはコレクションで提供されているオファーの集計情報を示す */
+      "offers": {
+        /* AggregateOfferタイプで複数のオファーを集約して表現 */
+        "@type": "AggregateOffer",
+
+        /* offerCountはオファーの総数。記事数と一致させるのが一般的 */
+        "offerCount": "6"
+      }
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - ランキングセクション
+目的: このマークアップは人気記事のランキングリストを検索エンジンに伝えるためのものです。
+閲覧数、いいね数、コメント数などのインタラクション統計に基づいた記事ランキングであることを
+明示し、検索結果でのリッチリザルト表示の可能性を高めます。
+
+構造の説明:
+- ItemList: ランキング記事のリストを構造化
+- ListItem: 各ランキング記事の位置情報（順位）
+- Article: 個々の記事の詳細情報
+- InteractionCounter: 記事の統計情報（閲覧数、いいね数、コメント数）
+
+注意点:
+1. 画像URLは相対パスではなく絶対パスを使用してください
+2. 順位を示すpositionプロパティは必ず連番で設定してください
+3. itemListOrderプロパティを使用してランキングの順序（降順）を明示しています
+4. インタラクション統計は実際の数値を反映するよう定期的に更新することをお勧めします
+-->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+       すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+       ItemListタイプはランキングや順序付きリストの表現に適している（必須） */
+      "@type": "ItemList",
+
+      /* nameはリスト全体のタイトルを示すプロパティ。
+       実際のページ見出しと一致させることが望ましい */
+      "name": "人気記事ランキング",
+
+      /* descriptionはリストの簡潔な説明。
+       検索結果のスニペットとして表示される可能性がある */
+      "description": "閲覧数、いいね数、コメント数に基づく人気記事ランキング",
+
+      /* numberOfItemsはリスト内のアイテム総数を示すプロパティ。
+       実際の記事数と一致させることが重要 */
+      "numberOfItems": 9,
+
+      /* itemListElementは複数のリスト項目を配列として格納するプロパティ。
+       ItemListタイプでは必須のプロパティ（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の各項目を表す標準的なタイプ。
+           ItemListの子要素としては必ずこのタイプを使用する必要がある（必須） */
+          "@type": "ListItem",
+
+          /* positionはリスト内での順序（ランキング順位）を示す必須プロパティ。
+           必ず1から始まる整数値を使い、連番で設定する必要がある（必須） */
+          "position": 1,
+
+          /* itemプロパティにはリスト項目の実際のコンテンツを格納する。
+           ここではArticleタイプを使用して記事情報を構造化（必須） */
+          "item": {
+            /* Articleタイプは一般的な記事コンテンツを表現するのに適している。
+             ブログ記事ならBlogPosting、ニュース記事ならNewsArticleなど
+             より具体的なサブタイプの使用も検討できる */
+            "@type": "Article",
+
+            /* nameは記事のタイトルを示すプロパティ。
+             Articleタイプではheadlineの代わりにnameを使用する場合もある。
+             実際のタイトルと一致させることが重要 */
+            "name": "ここにタイトルが入ります。ここにタイトルが入ります。",
+
+            /* descriptionは記事の概要を示すプロパティ。
+             検索結果のスニペットとして表示される可能性が高い */
+            "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+
+            /* datePublishedは記事の公開日時を示すプロパティ。
+             ISO 8601形式（YYYY-MM-DDThh:mm:ss+TZ）で指定する必要がある */
+            "datePublished": "2025-05-05T00:00:00+09:00",
+
+            /* imageは記事のメイン画像情報を示すプロパティ。
+             リッチリザルト表示に使用される可能性が高い */
+            "image": {
+              /* ImageObjectタイプで画像の詳細情報を構造化 */
+              "@type": "ImageObject",
+
+              /* 画像のURLは絶対パスで指定することが強く推奨される。
+               相対パスは検索エンジンが正しく解釈できない可能性がある */
+              "url": "https://example.com/images/theme-d/theme-d-ranking-1.jpg"
+            },
+
+            /* authorは記事の著者情報を示すプロパティ。
+             コンテンツの信頼性評価に影響を与える重要な要素 */
+            "author": {
+              /* Personタイプで著者が個人であることを示す */
+              "@type": "Person",
+
+              /* 著者名は実際のユーザー名と一致させる */
+              "name": "ここにアカウント名が入ります"
+            },
+
+            /* interactionStatisticは記事のエンゲージメント統計情報を示すプロパティ。
+             ランキングの根拠となる重要な指標 */
+            "interactionStatistic": [
+              {
+                /* InteractionCounterタイプでインタラクションの種類と数を構造化 */
+                "@type": "InteractionCounter",
+
+                /* インタラクションの種類。ViewActionは閲覧数を示す */
+                "interactionType": "https://schema.org/ViewAction",
+
+                /* 実際のカウント数。文字列として指定する点に注意 */
+                "userInteractionCount": "99900"
+              },
+              {
+                "@type": "InteractionCounter",
+
+                /* LikeActionはいいね数やお気に入り登録数を示す */
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": "999000"
+              },
+              {
+                "@type": "InteractionCounter",
+
+                /* CommentActionはコメント数を示す */
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": "456"
+              }
+            ],
+
+            /* articleSectionは記事のカテゴリを示すプロパティ。
+             検索エンジンがコンテンツの分類を理解するのに役立つ */
+            "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+          }
+        },
+        {
+          /* 2番目のリスト項目（2位の記事）。各ListItemの構造は一貫して統一する */
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "name": "ここにタイトルが入ります。ここにタイトルが入ります。",
+            "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+            "datePublished": "2025-05-05T00:00:00+09:00",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/theme-d/theme-d-ranking-2.jpg"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります"
+            },
+            "interactionStatistic": [
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/ViewAction",
+                "userInteractionCount": "99900"
+              },
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": "999000"
+              },
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": "456"
+              }
+            ],
+            "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+          }
+        },
+        {
+          /* 3番目のリスト項目（3位の記事）。positionの連番を維持することが重要 */
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "name": "ここにタイトルが入ります。ここにタイトルが入ります。",
+            "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+            "datePublished": "2025-05-05T00:00:00+09:00",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/theme-d/theme-d-ranking-3.jpg"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります"
+            },
+            "interactionStatistic": [
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/ViewAction",
+                "userInteractionCount": "99900"
+              },
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": "999000"
+              },
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": "456"
+              }
+            ],
+            "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+          }
+        }
+      ],
+
+      /* itemListOrderはリストの順序タイプを示すプロパティ。
+       ItemListOrderDescendingは降順（1位が最上位）であることを示す。
+       ランキングでは降順が一般的 */
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+
+      /* isPartOfはこのリストが属する上位ページを示すプロパティ。
+       サイト構造の理解に役立つ追加情報 */
+      "isPartOf": {
+        /* WebPageタイプで親ページ情報を構造化 */
+        "@type": "WebPage",
+
+        /* 親ページの名称。実際のページタイトルと一致させるべき */
+        "name": "人気コンテンツ一覧"
+      }
+    }
+  </script>
+  <!-- Schema.org マークアップ - PICK UP セクション
+目的: このマークアップはエディターが選んだおすすめ記事コレクションを検索エンジンに伝えるためのものです。
+記事タイトル、説明、日付、著者情報に加え、閲覧数・いいね数・コメント数などの
+インタラクション統計情報も含む詳細な構造化データとなっています。
+
+構造の説明:
+- ItemList: 複数の記事をリスト化
+- ListItem: 各記事の位置情報
+- Article: 個々の記事の詳細情報
+- Person: 著者情報
+- InteractionCounter: ユーザーインタラクション統計情報
+
+注意点:
+1. 画像パスは絶対URLに変換してください
+2. 実際の記事内容に合わせて各フィールドを更新してください
+3. InteractionCounterの値は実際のデータを反映してください
+4. articleSectionは適切なカテゴリを設定してください
+-->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+                   すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+                   ItemListタイプは複数の記事を順序付きリストとして表現するのに適している。
+                   Googleのリッチリザルトでカルーセル表示の候補となる可能性がある（必須） */
+      "@type": "ItemList",
+
+      /* nameはリスト全体のタイトルを示すプロパティ。
+                   検索エンジンがこのリストの目的を理解するのに役立つ */
+      "name": "ピックアップ記事",
+
+      /* descriptionはリスト全体の説明を示すプロパティ。
+                   リストの性質や目的を簡潔に説明することで検索エンジンの理解を助ける */
+      "description": "エディターが選んだおすすめ記事コレクション",
+
+      /* numberOfItemsはリスト内のアイテム総数を示すプロパティ。
+                   itemListElementの配列長と一致させる必要がある */
+      "numberOfItems": 6,
+
+      /* itemListElementは複数のリスト項目を配列として格納するプロパティ。
+                   ItemListタイプでは必須のプロパティで、少なくとも1つのアイテムを含む必要がある（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の各項目を表す標準的なタイプ。
+                       ItemListの子要素としては必ずこのタイプを使用する必要がある */
+          "@type": "ListItem",
+
+          /* positionはリスト内での順序を示す必須プロパティ。
+                       必ず1から始まる整数値を使い、連番で設定する必要がある（必須） */
+          "position": 1,
+
+          /* itemプロパティにはリスト項目の実際のコンテンツを格納する。
+                       ここではArticleタイプを使用して詳細な記事情報を構造化（必須） */
+          "item": {
+            /* Articleタイプはブログ記事や一般的な記事を表す。
+                           より具体的なサブタイプ（BlogPostingなど）も状況に応じて検討可能 */
+            "@type": "Article",
+
+            /* headlineは記事のタイトルを示す重要なプロパティ。
+                           検索結果に表示される可能性が高いため、実際のタイトルと一致させる必要がある。
+                           最適な長さは110文字以内（それ以上は切り詰められる可能性あり）（必須） */
+            "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+
+            /* descriptionは記事の概要を示すプロパティ。
+                           検索結果のスニペットとして使用される可能性が高い。
+                           150-160文字程度の簡潔で内容を的確に表現する文章が理想的 */
+            "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+
+            /* datePublishedは記事の公開日時を示すプロパティ。
+                           ISO 8601形式（YYYY-MM-DDThh:mm:ss+TZ）で完全な日時情報を提供することが望ましい。
+                           タイムゾーン情報も含めることで、記事の公開タイミングが正確に伝わる */
+            "datePublished": "2025-05-05T00:00:00+09:00",
+
+            /* imageは記事のメイン画像情報を示すプロパティ。
+                           検索結果やリッチリザルトでの表示に使用される可能性が高い */
+            "image": {
+              /* ImageObjectタイプで画像の詳細情報を構造化 */
+              "@type": "ImageObject",
+
+              /* 画像のURLは絶対パスで指定することが強く推奨される。
+                               相対パスは検索エンジンが正しく解釈できない可能性がある。
+                               実装時には「assets/images/theme-d/theme-d-13.jpg」を
+                               「https://example.com/images/theme-d/theme-d-13.jpg」のような
+                               絶対URLに変換することが望ましい */
+              "url": "assets/images/theme-d/theme-d-13.jpg"
+
+              /* 改善案: 以下のプロパティを追加するとより効果的
+                               - width: 画像の幅（ピクセル単位の文字列）
+                               - height: 画像の高さ（ピクセル単位の文字列）
+                               - contentUrl: コンテンツURLがurlと異なる場合に指定
+                               - caption: 画像のキャプション
+                            */
+            },
+
+            /* authorは記事の著者情報を示すプロパティ。
+                           著者情報は検索エンジンによるコンテンツの信頼性評価に影響を与える可能性がある */
+            "author": {
+              /* Personタイプで著者が個人であることを示す。
+                               組織全体が著者の場合はOrganizationタイプを使用する */
+              "@type": "Person",
+
+              /* nameプロパティに著者名を設定。
+                               実際の著者名と一致させることが重要 */
+              "name": "ここにアカウント名が入ります"
+
+              /* 改善案: 以下のプロパティを追加するとより効果的
+                               - url: 著者のプロフィールページURL
+                               - image: 著者のプロフィール画像URL
+                               - jobTitle: 著者の役職
+                               - sameAs: 著者のSNSプロフィールなど
+                            */
+            },
+
+            /* interactionStatisticはユーザーインタラクション統計情報を示すプロパティ。
+                           閲覧数・いいね数・コメント数などの指標を構造化することで、
+                           検索エンジンがコンテンツの人気度や関与度を理解するのに役立つ */
+            "interactionStatistic": [
+              {
+                /* InteractionCounterタイプでインタラクション統計情報を構造化 */
+                "@type": "InteractionCounter",
+
+                /* interactionTypeはインタラクションの種類を示すプロパティ。
+                                   Schema.orgの定義済みインタラクションタイプのURIを使用する。
+                                   ViewActionは閲覧・表示アクションを表す */
+                "interactionType": "https://schema.org/ViewAction",
+
+                /* userInteractionCountはそのインタラクションが発生した回数。
+                                   文字列形式で数値を指定する。実際の統計値と一致させることが重要 */
+                "userInteractionCount": "99900"
+              },
+              {
+                /* 2つ目のインタラクションカウンター。LikeActionはいいね・評価のアクションを表す */
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": "999000"
+              },
+              {
+                /* 3つ目のインタラクションカウンター。CommentActionはコメント・返信のアクションを表す */
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": "456"
+              }
+            ],
+
+            /* articleSectionは記事のカテゴリを示すプロパティ。
+                           検索エンジンがコンテンツの分類を理解するのに役立つ追加情報 */
+            "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+
+            /* 改善案: 以下のプロパティを追加するとより効果的
+                           - url: 記事の個別ページURL（絶対パス）
+                           - dateModified: 記事の最終更新日時
+                           - publisher: 発行者情報（Organizationタイプで指定）
+                           - keywords: 記事のキーワード（カンマ区切りの文字列）
+                           - wordCount: 記事の単語数
+                           - articleBody: 記事の本文（短い抜粋）
+                        */
+          }
+        },
+        {
+          /* 2番目のリスト項目。各ListItemの構造は一貫しており、同じプロパティセットを持つべき */
+          "@type": "ListItem",
+
+          /* positionプロパティは必ず前の項目から連続した値を設定する。
+                       ここでは2番目なので2を指定。欠番や重複はエラーの原因となる */
+          "position": 2,
+
+          "item": {
+            "@type": "Article",
+            "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+            "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+            "datePublished": "2025-05-05T00:00:00+09:00",
+            "image": {
+              "@type": "ImageObject",
+              "url": "assets/images/theme-d/theme-d-14.jpg"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります"
+            },
+            "interactionStatistic": [
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/ViewAction",
+                "userInteractionCount": "99900"
+              },
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": "999000"
+              },
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": "456"
+              }
+            ],
+            "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+          }
+        },
+        {
+          /* 3番目のリスト項目。positionの連番を維持することが重要 */
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "headline": "ここにタイトルが入ります。ここにタイトルが入ります。",
+            "description": "記事の本文が表示されます。記事の本文が表示されます。記事の本文が表示されます。",
+            "datePublished": "2025-05-05T00:00:00+09:00",
+            "image": {
+              "@type": "ImageObject",
+              "url": "assets/images/theme-d/theme-d-15.jpg"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります"
+            },
+            "interactionStatistic": [
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/ViewAction",
+                "userInteractionCount": "99900"
+              },
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": "999000"
+              },
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": "456"
+              }
+            ],
+            "articleSection": "あいうえおかきくけこあいうえおかきくけこ"
+          }
+        }
+
+        /* 注意: numberOfItemsプロパティでは6アイテムと宣言されていますが、
+                     現在のitemListElementには3つしかアイテムがありません。
+                     実際のアイテム数と一致するよう、numberOfItemsを3に変更するか、
+                     残りの3アイテムを追加する必要があります。 */
+      ],
+
+      /* itemListOrderはリストの順序タイプを示すプロパティ。
+                   ItemListUnorderedは順不同リストであることを示す。
+                   他にItemListOrderedAscending（昇順）やItemListOrderedDescending（降順）も使用可能 */
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+
+      /* isPartOfはこのリストが所属するより大きな構造を示すプロパティ。
+                   このケースではリストが特定のWebページの一部であることを示している */
+      "isPartOf": {
+        /* WebPageタイプはウェブページを表す。
+                     このリストを含むページの情報を提供することで、
+                     検索エンジンがコンテンツの関係性を理解しやすくなる */
+        "@type": "WebPage",
+
+        /* ページ名を指定。実際のページタイトルと一致させることが望ましい */
+        "name": "おすすめコンテンツページ"
+
+        /* 改善案: 以下のプロパティを追加するとより効果的
+                     - url: ページのURL（絶対パス）
+                     - description: ページの説明文
+                     - breadcrumb: パンくずリスト情報（BreadcrumbListタイプで指定）
+                  */
+      }
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - MEMBERSHIP セクション
+目的: このマークアップはメンバーシップの種類と特典情報を検索エンジンに伝えるためのものです。
+会員種別、特典内容、料金情報などを構造化することで、検索エンジンが
+提供サービスの内容を正確に理解し、適切な検索結果表示につながります。
+
+構造の説明:
+- ItemList: 複数のメンバーシップ種別をリスト化
+- ListItem: 各メンバーシップの位置情報
+- Offer: 会員種別ごとの提供内容と条件
+- Service: 各メンバーシップで提供されるサービス詳細
+
+注意点:
+1. 料金情報は正確に設定し、無料の場合は明示的に0を指定してください
+2. リンク先URLは実在する絶対URLに設定してください
+3. 特典内容は正確かつ簡潔に記述してください
+4. position属性は必ず1から始まる連番で設定してください
+-->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定する必須プロパティ。
+       すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+       ItemListタイプは複数のメンバーシップオプションを順序付きリストとして
+       表現するのに適している（必須） */
+      "@type": "ItemList",
+
+      /* nameはリスト全体のタイトルを示すプロパティ。
+       ユーザーインターフェース上の見出しと一致させるのが理想的 */
+      "name": "メンバーシップ",
+
+      /* descriptionはリストの説明を示すプロパティ。
+       検索エンジンがコンテンツの目的を理解するのに役立つ */
+      "description": "さまざまな参加方法のご案内",
+
+      /* numberOfItemsはリスト内のアイテム総数を示すプロパティ。
+       itemListElementの配列長と一致させる必要がある */
+      "numberOfItems": 3,
+
+      /* itemListElementは複数のリスト項目を配列として格納するプロパティ。
+       ItemListタイプでは必須のプロパティで、少なくとも1つのアイテムを含む必要がある（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の各項目を表す標準的なタイプ。
+           ItemListの子要素としては必ずこのタイプを使用する必要がある */
+          "@type": "ListItem",
+
+          /* positionはリスト内での順序を示す必須プロパティ。
+           必ず1から始まる整数値を使い、連番で設定する必要がある（必須） */
+          "position": 1,
+
+          /* itemプロパティにはリスト項目の実際のコンテンツを格納する。
+           ここではOfferタイプを使用してメンバーシップ情報を構造化（必須） */
+          "item": {
+            /* Offerタイプは製品やサービスの提供内容を表現するのに適している。
+             価格、利用条件などの詳細情報を含められる */
+            "@type": "Offer",
+
+            /* nameはメンバーシップの名称を示すプロパティ。
+             ユーザーに表示される実際の名称と一致させるべき */
+            "name": "閲覧者になる",
+
+            /* descriptionはメンバーシップの説明を示すプロパティ。
+             特典や対象者などの情報を簡潔に説明する */
+            "description": "記事は投稿せず閲覧を楽しみたい方に！便利で役立つ機能を使いながらみんなと交流ができます",
+
+            /* categoryはメンバーシップのカテゴリを示すプロパティ。
+             サイト全体での分類やグループ化に役立つ */
+            "category": "メンバーシップ",
+
+            /* offersはメンバーシップの価格情報などを詳細に定義するプロパティ。
+             ネスト構造になっていることに注意 */
+            "offers": {
+              /* 内部でもOfferタイプを使用して価格情報を構造化 */
+              "@type": "Offer",
+
+              /* priceは価格を示すプロパティ。数値または文字列として指定可能。
+               無料の場合は明示的に"0"を設定 */
+              "price": "0",
+
+              /* priceCurrencyは通貨コードをISO 4217形式で指定するプロパティ。
+               日本円の場合は"JPY"を使用 */
+              "priceCurrency": "JPY",
+
+              /* availabilityは利用可能状態を示すプロパティ。
+               Schema.orgの定義済み値を使用（InStock, OutOfStock, PreOrderなど） */
+              "availability": "https://schema.org/InStock"
+            },
+
+            /* itemOfferedはメンバーシップで提供されるサービス内容を詳細に定義するプロパティ。
+             Serviceタイプを使用することで、機能や特典を詳細に構造化できる */
+            "itemOffered": {
+              /* Serviceタイプはサービス情報を表す。
+               提供するサービスの詳細や特徴を構造化するのに適している */
+              "@type": "Service",
+
+              /* nameはサービスの名称を示すプロパティ。
+               短く簡潔な名称が望ましい */
+              "name": "閲覧者メンバーシップ",
+
+              /* descriptionはサービスの説明を示すプロパティ。
+               利用できる機能などを具体的に説明する */
+              "description": "いいね、コメント、DMなどの機能が利用可能",
+
+              /* serviceOutputはサービスによって得られる結果や機能を示すプロパティ。
+               配列形式で複数の機能を列挙できる */
+              "serviceOutput": ["いいね", "コメント", "DM"]
+            },
+
+            /* urlはメンバーシップの申込ページURLを示すプロパティ。
+             必ず有効な絶対URLを指定する必要がある */
+            "url": "https://www.example.com/membership/viewer/"
+          }
+        },
+        {
+          /* 2番目のリスト項目。
+           投稿者向けメンバーシップ情報 */
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Offer",
+            "name": "投稿者になる",
+            "description": "記事投稿による情報発信やファンを増やしたい方に！マイページをもてます！記事の投稿ができます！",
+            "category": "メンバーシップ",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "JPY",
+              "availability": "https://schema.org/InStock"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "投稿者メンバーシップ",
+              "description": "マイページ作成、記事投稿などの機能が利用可能",
+              "serviceOutput": ["マイページ", "記事投稿"]
+            },
+            "url": "https://www.example.com/membership/contributor/"
+          }
+        },
+        {
+          /* 3番目のリスト項目。
+           スポンサー向けメンバーシップ情報 */
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Offer",
+            "name": "スポンサーになる",
+            "description": "ポータルサイトの支援活動として広告を出稿したい方に！マイページをもてます！記事の投稿ができます！バナー広告を掲載できます！",
+            "category": "メンバーシップ",
+            "offers": {
+              "@type": "Offer",
+              /* スポンサープランでは価格が記載されていないため、
+               priceプロパティは省略されている */
+              "availability": "https://schema.org/InStock"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "スポンサーメンバーシップ",
+              "description": "マイページ作成、記事投稿、バナー広告掲載などの機能が利用可能",
+              "serviceOutput": ["マイページ", "記事投稿", "バナー広告"]
+            },
+            "url": "https://www.example.com/membership/sponsor/"
+          }
+        }
+      ],
+
+      /* mainEntityOfPageはこのコンテンツが主要コンテンツとなるページを示すプロパティ。
+       このメンバーシップ情報が掲載されているメインページのURLを指定 */
+      "mainEntityOfPage": {
+        /* WebPageタイプでページ情報を構造化 */
+        "@type": "WebPage",
+
+        /* nameはページのタイトルを示すプロパティ。
+         実際のページタイトルと一致させるべき */
+        "name": "メンバーシップ登録ページ",
+
+        /* urlはページのURLを示すプロパティ。
+         必ず有効な絶対URLを指定する必要がある */
+        "url": "https://www.example.com/membership/"
+      }
+
+      /* 改善案: 以下のプロパティを追加するとさらに効果的
+       - provider: メンバーシップ提供元の組織情報（Organizationタイプ）
+       - validFrom: メンバーシップ提供開始日（ISO 8601形式：YYYY-MM-DD）
+       - eligibleRegion: 利用可能地域（国コードや地域情報）
+       - potentialAction: 登録などのアクション定義（RegisterActionタイプ）
+       
+       また、有料プランがある場合は以下のプロパティも追加すると有用：
+       - eligibleDuration: 会員期間（P1M = 1ヶ月、P1Y = 1年など）
+       - hasMerchantReturnPolicy: 返金ポリシー情報
+       - termsOfService: ダミーテキストです。へのリンク
+    */
+    }
+  </script>
+  <!-- Schema.org マークアップ - FOOTERセクション
+目的: このマークアップはフッターセクションの構造を検索エンジンに伝えるためのものです。
+組織情報、ナビゲーション要素、SNSリンク、著作権情報を含む包括的な構造化データとなっています。
+これによりウェブサイトの構造理解が促進され、検索結果の品質向上が期待できます。
+
+構造の説明:
+- WPFooter: フッターセクション全体を表現
+- Organization: サイト運営組織の基本情報
+- SiteNavigationElement: フッターメニューとSNSリンク
+- ViewAction/FollowAction: 各リンクの動作を明示
+
+注意点:
+1. ロゴ画像はハッシュ化される場合がありますが、CDNなど固定URLが使える環境では絶対URLを使用してください
+2. SNSアカウントは実際に存在する正規のアカウントURLを指定してください
+3. メニュー項目が変更された場合は、このマークアップも同期して更新してください
+4. すべてのURLは実際に存在するページを指している必要があります
+5. 画像サイズは実際の画像のサイズに合わせて正確に記載してください
+
+参考: https://schema.org/, https://developers.google.com/search/docs/appearance/structured-data/search-gallery
+-->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+     すべてのSchema.org構造化データで最初に定義する必要がある。
+     これにより検索エンジンがこのJSONデータをSchema.orgの
+     語彙を使用した構造化データとして認識できる（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+     WPFooterタイプはウェブページのフッター部分を表すタイプで、
+     ページのフッター構造を明示的に検索エンジンに伝えることができる。
+     これによりページ構造の理解が促進される */
+      "@type": "WPFooter",
+
+      /* mainEntityはフッターの主要コンテンツ（通常は組織情報）を示すプロパティ。
+     検索エンジンはこのプロパティにより、フッターの中核となる情報を特定できる */
+      "mainEntity": {
+        /* Organizationタイプは企業、団体、Theme-aなどの組織を表現するのに適している。
+       サイト運営主体の情報をここで定義することで、フッターが組織情報を
+       掲載していることを明確に示す（必須） */
+        "@type": "Organization",
+
+        /* nameは組織の正式名称を示す必須プロパティ。
+       サイト名やテーマ名と一致させることが重要（必須） */
+        "name": "サイト名",
+
+        /* logo情報はGoogleのナレッジパネルやリッチリザルトで表示される
+       可能性がある重要なプロパティ。ImageObjectタイプで画像の詳細情報を提供 */
+        "logo": {
+          /* ImageObjectタイプで画像情報を構造化して提供することで、
+         単純なURLよりも詳細な情報を検索エンジンに伝えられる */
+          "@type": "ImageObject",
+
+          /* 画像のURL。
+         注意: 相対パスではなく絶対URLを使用することが強く推奨される。
+         特に構造化データではクローラーが正確に解釈できるように
+         絶対URLを使用すべき */
+          "url": "https://example.com/images/theme-d/theme-d-logo.png",
+
+          /* 画像の幅をピクセル単位で指定。
+         実際のロゴ画像の正確なサイズを指定することが重要 */
+          "width": "284",
+
+          /* 画像の高さをピクセル単位で指定。
+         Googleのロゴ表示要件に適合するサイズが望ましい */
+          "height": "123"
+        },
+
+        /* descriptionは組織の簡潔な説明文。
+       検索エンジンがコンテンツを理解するための重要な手がかりとなる。
+       150-160文字程度の長さが最適 */
+        "description": "ディスクリプションが入ります。ディスクリプションが入ります。ディスクリプションが入ります。",
+
+        /* sameAsは組織の他のウェブプレゼンス（主にソーシャルメディアアカウント）を
+       配列形式で列挙するプロパティ。これによりGoogleのナレッジグラフ内で
+       Theme-aの各種アカウントが正しく関連付けられる */
+        "sameAs": [
+          /* InstagramアカウントのURL。
+         実際のアカウントURLに置き換える必要がある。
+         プロフィールページの完全URLを指定する */
+          "https://www.instagram.com/example/",
+
+          /* FacebookアカウントのURL。
+         ページIDではなく、完全なURLを指定する */
+          "https://www.facebook.com/example/",
+
+          /* X（旧Twitter）アカウントのURL。
+         現在はx.comドメインを使用することが推奨されている */
+          "https://x.com/example/"
+
+          /* 他のプラットフォームも追加可能：
+         - LinkedIn: https://www.linkedin.com/company/example
+         - YouTube: https://www.youtube.com/c/example
+         - Pinterest: https://www.pinterest.com/example
+         など、実際に運用しているアカウントのみを追加する */
+        ],
+
+        /* contactPointは問い合わせ先情報を示すプロパティ。
+       ダミーテキストです。ページがある場合はここで定義することで、
+       ユーザーの接点情報を検索エンジンに伝えられる */
+        "contactPoint": {
+          /* ContactPointタイプで連絡先情報を構造化して提供 */
+          "@type": "ContactPoint",
+
+          /* 連絡先の種類 - 適切な種類を選択
+         一般的な種類: "customer service"（顧客サービス）, "technical support"（技術サポート）,
+         "sales"（営業）, "billing support"（請求サポート）, "reservation"（予約）など */
+          "contactType": "customer service",
+
+          /* ダミーテキストです。ページのURL。
+         実際に存在するURLを絶対パスで指定する必要がある */
+          "url": "https://www.example.com/contact/"
+
+          /* 改善案: 以下のプロパティも追加するとより効果的
+         - telephone: 問い合わせ電話番号（国際形式で記載、例: "+81-03-1234-5678"）
+         - email: 問い合わせメールアドレス
+         - availableLanguage: 対応言語（配列形式、例: ["Japanese", "English"]）
+         - hoursAvailable: 対応可能時間（OpeningHoursSpecificationタイプで指定）
+      */
+        }
+      },
+
+      /* hasPartはフッター内の構成要素を配列形式で列挙するプロパティ。
+     フッターナビゲーション、SNSリンクなど、フッター内の
+     個別コンポーネントを構造化して表現できる */
+      "hasPart": [
+        {
+          /* SiteNavigationElementタイプはナビゲーションメニューを表現するのに
+         適している。Googleはこのタイプを使って主要ナビゲーションを
+         認識しやすくなる */
+          "@type": "SiteNavigationElement",
+
+          /* nameはナビゲーション全体の名称を示す。
+         内部的な識別のためのもので、ユーザーには通常表示されない */
+          "name": "フッターナビゲーション",
+
+          /* descriptionはナビゲーションの目的や内容を説明するプロパティ。
+         検索エンジンがナビゲーションの役割を理解するのに役立つ */
+          "description": "サイト内の主要ページへのリンク",
+
+          /* potentialActionは各ナビゲーション項目のリンク情報を
+         配列形式で列挙するプロパティ。各項目に対してViewActionタイプを
+         使用することで、リンクの目的を明示的に示せる */
+          "potentialAction": [
+            {
+              /* ViewActionタイプはコンテンツを表示するためのアクション。
+             ナビゲーションリンクの標準的な動作を表現するのに適している */
+              "@type": "ViewAction",
+
+              /* targetは実際のリンク先URLを示すプロパティ。
+             必ず有効な絶対URLを指定する必要がある */
+              "target": "https://www.example.com/menu1/",
+
+              /* nameはリンクテキストを示すプロパティ。
+             実際のHTMLに表示されるリンクテキストと一致させるのが望ましい */
+              "name": "MENU"
+            },
+            {
+              /* 2番目のナビゲーション項目。
+             各項目の構造は一貫して統一するのが望ましい */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu2/",
+              "name": "MENU"
+            },
+            {
+              /* 3番目のナビゲーション項目 */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu3/",
+              "name": "MENU"
+            },
+            {
+              /* 4番目のナビゲーション項目 */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu4/",
+              "name": "MENU"
+            },
+            {
+              /* 5番目のナビゲーション項目
+             実装時にはこのような繰り返し構造はテンプレート化して
+             動的生成することが保守性の観点から望ましい */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu5/",
+              "name": "MENU"
+            },
+            {
+              /* 6番目のナビゲーション項目 */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu6/",
+              "name": "MENU"
+            },
+            {
+              /* 7番目のナビゲーション項目 */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu7/",
+              "name": "MENU"
+            },
+            {
+              /* 8番目のナビゲーション項目 */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu8/",
+              "name": "MENU"
+            },
+            {
+              /* 9番目のナビゲーション項目 */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu9/",
+              "name": "MENU"
+            },
+            {
+              /* 10番目のナビゲーション項目
+             メニュー項目が多数ある場合でも、すべての項目に対して
+             構造化データを提供することが望ましい */
+              "@type": "ViewAction",
+              "target": "https://www.example.com/menu10/",
+              "name": "MENU"
+            }
+          ]
+        },
+        {
+          /* 2番目のhasPart要素。こちらはSNSリンク用の
+         SiteNavigationElementを定義している */
+          "@type": "SiteNavigationElement",
+
+          /* nameはこのナビゲーショングループの名称 */
+          "name": "SNSリンク",
+
+          /* potentialActionはSNSリンク情報を配列形式で列挙。
+         通常のページリンクとは異なりFollowActionタイプを使用することで、
+         SNSフォローのためのリンクであることを明示的に示している */
+          "potentialAction": [
+            {
+              /* FollowActionタイプはSNSでのフォロー行為を表現するのに適している。
+             ViewActionではなくFollowActionを使用することで、
+             リンクの目的が明確になる */
+              "@type": "FollowAction",
+
+              /* targetは実際のSNSアカウントURLを示すプロパティ。
+             sameAsプロパティで指定したURLと一致させるのが望ましい */
+              "target": "https://www.instagram.com/example/",
+
+              /* nameはリンクテキストまたはSNSの種類を示すプロパティ */
+              "name": "Instagram"
+            },
+            {
+              /* Facebookへのフォローリンク */
+              "@type": "FollowAction",
+              "target": "https://www.facebook.com/example/",
+              "name": "Facebook"
+            },
+            {
+              /* X（旧Twitter）へのフォローリンク */
+              "@type": "FollowAction",
+              "target": "https://x.com/example/",
+              "name": "X"
+            }
+
+            /* 改善案: 他のSNSプラットフォームがある場合は同様の構造で追加
+           各SNSはユーザーが実際にアクセスできるURLである必要があり、
+           架空のURLや存在しないアカウントを指定するべきではない */
+          ]
+        }
+      ],
+
+      /* copyrightYearは著作権表示の年を示すプロパティ。
+     現在の年または著作権の有効期間を指定する。
+     複数年にまたがる場合は範囲も指定可能（例: "2020-2024"） */
+      "copyrightYear": "2024",
+
+      /* copyrightHolderは著作権保有者情報を示すプロパティ。
+     通常は組織名が入るが、個人の場合はPersonタイプを使用する */
+      "copyrightHolder": {
+        /* 著作権保有者が組織の場合はOrganizationタイプを使用 */
+        "@type": "Organization",
+
+        /* 著作権表示に表示される組織名。
+       実際のHTMLに表示される著作権表記と一致させるのが望ましい */
+        "name": "コピーライト"
+      }
+
+      /* 改善案: 以下のプロパティも追加すると有用
+     - license: 利用条件やライセンス情報（URL）
+     - isPartOf: フッターが属するWebPageやWebSiteの情報
+     - publisher: 発行者情報（mainEntityと異なる場合）
+     - datePublished: フッターの最初の公開日
+     - dateModified: フッターの最終更新日
+  */
+    }
+  </script>
+
+  <script type="module" src="./assets/js/main.js"></script>
+  <script type="module" src="./assets/js/theme-d-top.js"></script>
+</head>

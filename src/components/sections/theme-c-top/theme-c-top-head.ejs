@@ -1,0 +1,1138 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO向けのメタタグ ============ -->
+  <!-- タイトルタグ: ブラウザのタブやブックマーク、検索結果に表示される重要要素
+       テーマ名と簡潔な説明を含め、60文字以内が推奨 -->
+  <title>トップページ | Curationテーマ</title>
+  <!-- 説明文: 検索結果に表示される説明文で150〜160文字程度が推奨
+       ユーザーの興味を引く魅力的な説明を入力 -->
+  <meta name="description" content="Curationテーマの公式サイトです。最新の製品情報、サービス内容、キャンペーン情報などをご紹介します。" />
+  <!-- キーワード: 現在のSEOでの重要性は低下しているが、関連キーワードをカンマ区切りで記述 -->
+  <meta name="keywords" content="Curationテーマ, 製品, サービス, キャンペーン" />
+  <!-- サイト運営者情報: サイトの著者や運営会社名を記述 -->
+  <meta name="author" content="運営会社名" />
+
+  <!-- canonicalリンク: 同一コンテンツが複数URLで閲覧可能な場合に正規URLを指定
+       重複コンテンツの問題を防ぎ、SEOを最適化する重要な要素 -->
+  <link rel="canonical" href="https://example.com/theme-c.html" />
+
+  <!-- ============ ファビコン設定 ============ -->
+  <!-- 標準ファビコン: ブラウザのタブやブックマークに表示される16×16pxの小さなアイコン
+       通常は.ico形式を使用（32×32pxなど複数サイズを含む.icoファイルが理想的） -->
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <!-- Apple Touch Icon: iOSデバイスでサイトをホーム画面に追加した時のアイコン
+       推奨サイズは180×180px、PNG形式 -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- ============ OGP (Open Graph Protocol) 設定 ============ -->
+  <!-- FacebookなどのSNSでURLシェア時の表示を制御する重要な要素 -->
+  <!-- og:title: シェア時に表示されるタイトル、40文字程度が推奨 -->
+  <meta property="og:title" content="Curationテーマ | 製品・サービスの公式サイト" />
+  <!-- og:description: シェア時の説明文、80〜90文字程度が推奨 -->
+  <meta property="og:description" content="Curationテーマの公式サイトです。最新の製品情報、サービス内容、キャンペーン情報などをご紹介します。" />
+  <!-- og:type: コンテンツタイプを指定（website, article, productなど） -->
+  <meta property="og:type" content="website" />
+  <!-- og:url: シェアされるページの正規URLを指定（canonicalと一致させる） -->
+  <meta property="og:url" content="https://example.com/theme-c.html" />
+  <!-- og:image: シェア時に表示される画像のURL
+       推奨サイズは1200×630px、最小でも600×315pxが必要 -->
+  <meta property="og:image" content="https://example.com/images/theme-c/theme-c-ogp.jpg" />
+  <!-- og:site_name: ウェブサイト全体の名前を指定 -->
+  <meta property="og:site_name" content="Curationテーマ公式サイト" />
+  <!-- og:locale: コンテンツの言語と地域を指定（日本語の場合は通常ja_JP） -->
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ============ Twitterカード設定 ============ -->
+  <!-- TwitterでのURLシェア表示を制御（OGPと似た役割だがTwitter専用） -->
+  <!-- twitter:card: カードの種類を指定
+       summary: 小さな画像付きカード、summary_large_image: 大きな画像付きカード -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- twitter:site: 関連するTwitterアカウントを@ユーザー名で指定 -->
+  <meta name="twitter:site" content="@theme-ctheme" />
+  <!-- twitter:title: Twitterカードのタイトル -->
+  <meta name="twitter:title" content="Curationテーマ | 製品・サービスの公式サイト" />
+  <!-- twitter:description: Twitterカードの説明文 -->
+  <meta name="twitter:description" content="Curationテーマの公式サイトです。最新の製品情報、サービス内容、キャンペーン情報などをご紹介します。" />
+  <!-- twitter:image: カードに表示される画像のURL
+       summary_large_imageの場合、最小サイズは300×157px、
+       最適な比率は2:1（例: 1200×600px）-->
+  <meta name="twitter:image" content="https://example.com/images/theme-c/theme-c-ogp.jpg" />
+
+  <!-- ============ フォント読み込み ============ -->
+  <!-- GoogleフォントなどWebフォントの読み込み設定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" />
+  </noscript>
+  <!-- ============ マテリアルアイコン ============ -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- ============ 構造化データ（JSON-LD） ============ -->
+  <!-- 検索エンジンがウェブページの内容を理解しやすくするための標準化されたデータ形式 -->
+
+  <!-- WebSiteスキーマ: サイト全体の情報とサイト内検索機能の実装
+    検索エンジンの結果にサイト内検索ボックスが表示される可能性がある
+
+    注意点:
+    1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+    2. 実際のサイト名とURLを必ず設定すること
+    3. 検索機能が実際に動作することを確認すること
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+           すべての構造化データに必要な基本プロパティ */
+      "@context": "https://schema.org",
+
+      /* このエンティティがWebサイトであることを示す（必須）
+           WebSiteタイプはサイト全体の情報を表現する際に使用 */
+      "@type": "WebSite",
+
+      /* サイト名 - 実際のテーマ名に置き換えること
+           サイトのタイトルと一致させることが望ましい */
+      "name": "Curationテーマ公式サイト",
+
+      /* サイトのURL - canonicalタグのURLと一致させること
+           絶対URLを使用し、実際のドメインをここに設定 */
+      "url": "https://example.com/",
+
+      /* サイトの簡潔な説明文 - メタディスクリプションと一致させると良い
+           検索エンジンがサイトの目的を理解するのに役立つ */
+      "description": "Curationテーマの公式サイトです。最新の製品情報、サービス内容、キャンペーン情報などをご紹介します。",
+
+      /* potentialActionはサイトで可能なアクションを定義
+           ここではサイト内検索機能を実装している */
+      "potentialAction": {
+        /* 検索アクションであることを示す
+             これにより検索エンジンが検索機能を理解できる */
+        "@type": "SearchAction",
+
+        /* 検索結果ページのURL形式 - 実際の検索URLパターンと一致させること
+             {search_term_string}はプレースホルダーで、実際の検索語に置き換えられる
+             必ず動作確認を行うこと */
+        "target": "https://example.com/search?q={search_term_string}",
+
+        /* 検索クエリパラメータ名の指定
+             search_term_stringは上記targetのプレースホルダーと一致させる必要がある */
+        "query-input": "required name=search_term_string"
+      }
+
+      /* 以下のプロパティを追加するとより効果的:
+           - inLanguage: "ja" (サイトの言語)
+           - copyrightYear: "2024" (著作権年)
+           - isFamilyFriendly: true (家族向けコンテンツかどうか)
+           - creator: 制作者情報（Organization型で指定）
+        */
+    }
+  </script>
+
+  <!-- Organizationスキーマ: 運営会社に関する情報
+    Googleナレッジパネルなどに表示される可能性がある
+
+    注意点:
+    1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+    2. 会社名、URL、ロゴは正確に設定すること
+    3. SNSアカウントは実際に存在し、正式なアカウントであることを確認すること
+    4. 電話番号は国際形式で記述すること
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+           すべての構造化データで最初に定義する必要がある */
+      "@context": "https://schema.org",
+
+      /* このエンティティが組織であることを示す（必須）
+           企業情報を表すための基本タイプ */
+      "@type": "Organization",
+
+      /* 会社名 - 正確な法人名称を使用すること
+           公式な会社名をそのまま記載する */
+      "name": "運営会社名",
+
+      /* 会社またはTheme-aの公式サイトURL - 実際のURLに置き換えること
+           会社のホームページのURLを絶対URL形式で指定 */
+      "url": "https://example.com/",
+
+      /* 会社ロゴのURL - 絶対URLを使用し、推奨サイズ(112x112px以上、512x512px未満)に適合させること
+           SVGよりもPNG/JPG形式が推奨される
+           GoogleのロゴガイドラインにはSquare format logoが推奨されている */
+      "logo": "https://example.com/images/logo.png",
+
+      /* 関連するソーシャルメディアアカウント - すべて実際のアカウントURLに置き換えること
+           sameAsプロパティは企業の公式アカウントであることを検索エンジンに伝える重要な要素
+           実際に存在する公式アカウントのみを記載すること */
+      "sameAs": [
+        /* InstagramアカウントのURL - 完全なURLを記載 */
+        "https://www.instagram.com/theme-ctheme/",
+
+        /* FacebookページのURL - 完全なURLを記載 */
+        "https://www.facebook.com/theme-ctheme/",
+
+        /* TwitterアカウントのURL - 完全なURLを記載
+             最新の方針に従い、X.comドメインを使用するのも検討 */
+        "https://twitter.com/theme-ctheme"
+
+        /* 他のSNSプロフィールがあれば追加（LinkedInなど）
+             最後の要素にはカンマを付けない（JSON構文エラーの原因になる） */
+      ],
+
+      /* 問い合わせ先情報
+           顧客サポート窓口の詳細情報を提供する */
+      "contactPoint": {
+        /* 連絡先情報であることを示す
+             ContactPointタイプで問い合わせ先の詳細を構造化 */
+        "@type": "ContactPoint",
+
+        /* 国際形式の電話番号 - 実際の電話番号に置き換えること（日本の場合は+81から始まる）
+             国コード付きの形式で記載（半角数字、ハイフン区切り）
+             プレースホルダーになっているので実際の番号に置き換えること */
+        "telephone": "+81-XX-XXXX-XXXX",
+
+        /* 連絡先の種類 - 適切な種類を選択
+             一般的な種類: "customer service"（顧客サービス）, "technical support"（技術サポート）,
+             "sales"（営業）, "billing support"（請求サポート）, "reservation"（予約）など */
+        "contactType": "customer service",
+
+        /* 対応言語 - 実際に対応可能な言語のみを記載すること
+             ISO 639-1言語コードではなく、言語の完全名を使用
+             複数言語対応の場合は配列で記述: ["Japanese", "English"] */
+        "availableLanguage": "Japanese"
+      }
+
+      /* 改善提案: 以下のプロパティを追加するとより効果的
+           ,
+           "foundingDate": "会社設立日をYYYY-MM-DD形式で",
+           "numberOfEmployees": "従業員数の範囲（例: '11-50'）",
+           "email": "問い合わせ用メールアドレス",
+           "address": {
+             "@type": "PostalAddress",
+             "streetAddress": "住所",
+             "addressLocality": "市区町村",
+             "addressRegion": "都道府県",
+             "postalCode": "郵便番号",
+             "addressCountry": "JP"
+           }
+        */
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - 注目記事セクション（カルーセル）
+    目的: カルーセルで表示される記事リストを検索エンジンに伝えるためのマークアップです。
+    これにより検索結果でカルーセルリッチリザルトとして表示される可能性があります。
+
+    注意点:
+    1. 各記事のpositionは必ず連番であること（1から始まり欠番がないこと）
+    2. 実際の記事タイトル、著者、日付と一致させること
+    3. 各記事のURLは実際に存在するページを指していること
+    4. 画像情報を追加すると表示品質が向上する
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+           すべての構造化データで最初に定義する必要がある */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプはカルーセルや一覧表示のコンテンツに適している
+           GoogleのカルーセルリッチリザルトとしてSERPに表示される可能性がある */
+      "@type": "ItemList",
+
+      /* リスト全体の名前 - ユーザーにわかりやすいセクション名を設定 */
+      "name": "注目記事",
+
+      /* itemListElementはリスト項目を配列として格納する
+           少なくとも1つの項目が必要（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプは各リスト項目を表す
+               position属性が必須 */
+          "@type": "ListItem",
+
+          /* 位置番号 - 必ず1から始まる連番（必須） */
+          "position": 1,
+
+          /* item属性に実際の記事情報を格納 */
+          "item": {
+            /* 一般的な記事の場合はArticleタイプを使用
+                 ブログ記事の場合はBlogPostingも検討できる */
+            "@type": "Article",
+
+            /* 記事のタイトル - 実際のタイトルと一致させる（必須） */
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。",
+
+            /* 著者情報 - 実際の著者名を使用 */
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。"
+            },
+
+            /* 公開日 - ISO 8601形式（YYYY-MM-DD）で指定 */
+            "datePublished": "2025-05-05",
+
+            /* 記事のURL - 実際に存在するURLを指定 */
+            "url": "https://example.com/article/1",
+
+            /* 記事の説明 - 検索結果のスニペットとして使用される可能性がある */
+            "description": "記事の概要文が入ります。80〜150文字程度が最適です。",
+
+            /* 記事の画像情報 - リッチリザルト表示に重要 */
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/article1.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* 発行者情報 - サイト運営組織を指定 */
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "headline": "2番目の記事タイトルが入ります。",
+            "author": {
+              "@type": "Person",
+              "name": "著者名"
+            },
+            "datePublished": "2025-05-04",
+            "url": "https://example.com/article/2",
+            "description": "2番目の記事の概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/article2.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "headline": "3番目の記事タイトルが入ります。",
+            "author": {
+              "@type": "Person",
+              "name": "別の著者名"
+            },
+            "datePublished": "2025-05-03",
+            "url": "https://example.com/article/3",
+            "description": "3番目の記事の概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/article3.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        }
+        /* 複数のスライドがある場合は同様の構造で追加
+             各スライドごとにposition値を1ずつ増やし、
+             実際のコンテンツに合わせて情報を更新する */
+      ]
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - FOLLOWセクション
+    目的: 記事リストの構造を検索エンジンに伝えるためのマークアップです。
+    記事タイトル、著者情報などの構造化により、検索結果での表示品質向上や
+    リッチリザルトの可能性を高めます。
+
+    注意点:
+    1. 各記事のpositionは必ず連番であること
+    2. FOLLOWセクションの記事が更新された場合は、こちらの構造化データも同時に更新する
+    3. 記事URLは実際に存在するページを指定する
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプで複数の記事をリスト化（必須） */
+      "@type": "ItemList",
+
+      /* リスト全体の名前 - セクション名と一致させる */
+      "name": "FOLLOW",
+
+      /* itemListElementはリスト項目の配列（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプで各リスト項目を表現（必須） */
+          "@type": "ListItem",
+
+          /* position値は1から始まる連番（必須） */
+          "position": 1,
+
+          /* item属性に記事情報を格納（必須） */
+          "item": {
+            /* 記事タイプの指定（必須） */
+            "@type": "Article",
+
+            /* 記事タイトル - 実際のタイトルと一致（必須） */
+            "headline": "ここにタイトルが入ります。",
+
+            /* 著者情報 */
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。"
+            },
+
+            /* 記事の公開日 - ISO 8601形式（YYYY-MM-DD） */
+            "datePublished": "2025-05-05",
+
+            /* 記事のURL - 実際に存在するURLを指定 */
+            "url": "https://example.com/article/follow/1",
+
+            /* 記事の説明 */
+            "description": "この記事の概要文が入ります。",
+
+            /* 記事の画像情報 */
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/follow/article1.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* 発行者情報 */
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "headline": "2番目の記事タイトルが入ります。",
+            "author": {
+              "@type": "Person",
+              "name": "著者名"
+            },
+            "datePublished": "2025-05-04",
+            "url": "https://example.com/article/follow/2",
+            "description": "2番目の記事の概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/follow/article2.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        }
+        /* 他の記事も同様の構造で追加
+             各記事ごとにposition値を1ずつ増やし、
+             実際のコンテンツに合わせて情報を更新する */
+      ]
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - NEWセクション
+    目的: 新着記事リストの構造を検索エンジンに伝えるためのマークアップです。
+    記事タイトル、公開日、著者情報などの構造化により、検索結果での表示品質向上や
+    リッチリザルトの可能性を高めます。
+
+    注意点:
+    1. 各記事のpositionは必ず連番であること
+    2. 新着記事が更新された場合は、構造化データも更新する
+    3. 新着記事は公開日時が新しいものから順に並べることが一般的
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプで複数の記事をリスト化（必須） */
+      "@type": "ItemList",
+
+      /* リスト全体の名前 - わかりやすい名称を設定 */
+      "name": "新着記事",
+
+      /* リストの順序タイプ - 新着記事は通常降順（新しい順） */
+      "itemListOrder": "Descending",
+
+      /* itemListElementはリスト項目の配列（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプで各リスト項目を表現（必須） */
+          "@type": "ListItem",
+
+          /* position値は1から始まる連番（必須） */
+          "position": 1,
+
+          /* item属性に記事情報を格納（必須） */
+          "item": {
+            /* 記事タイプの指定（必須） */
+            "@type": "Article",
+
+            /* 記事タイトル - 実際のタイトルと一致（必須） */
+            "headline": "ここにタイトルが入ります。",
+
+            /* 著者情報 */
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。"
+            },
+
+            /* 記事の公開日 - ISO 8601形式（YYYY-MM-DD） */
+            "datePublished": "2025-05-05",
+
+            /* 記事のURL - 実際に存在するURLを指定 */
+            "url": "https://example.com/article/new/1",
+
+            /* 記事の説明 */
+            "description": "新着記事の概要文が入ります。",
+
+            /* 記事の画像情報 */
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/new/article1.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* 発行者情報 */
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "headline": "2番目の新着記事タイトル",
+            "author": {
+              "@type": "Person",
+              "name": "著者名"
+            },
+            "datePublished": "2025-05-04",
+            "url": "https://example.com/article/new/2",
+            "description": "2番目の新着記事の概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/new/article2.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "headline": "3番目の新着記事タイトル",
+            "author": {
+              "@type": "Person",
+              "name": "別の著者名"
+            },
+            "datePublished": "2025-05-03",
+            "url": "https://example.com/article/new/3",
+            "description": "3番目の新着記事の概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/new/article3.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        }
+        /* 他の新着記事も同様の構造で追加
+             各記事ごとにposition値を1ずつ増やし、
+             実際のコンテンツに合わせて情報を更新する */
+      ]
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - RANKINGセクション
+    目的: 人気記事ランキングの構造を検索エンジンに伝えるためのマークアップです。
+    順位付けされた記事リストを構造化し、検索結果での表示品質向上や
+    リッチリザルトの可能性を高めます。
+
+    注意点:
+    1. 各記事のpositionは必ずランキング順位と一致させること
+    2. 順位が変動した場合は構造化データも更新する
+    3. 記事URLは実際に存在するページを指定する
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプで複数の記事をリスト化（必須） */
+      "@type": "ItemList",
+
+      /* リスト全体の名前 - セクション名と一致させる */
+      "name": "ランキング",
+
+      /* itemListElementはリスト項目の配列（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプで各リスト項目を表現（必須） */
+          "@type": "ListItem",
+
+          /* position値はランキング順位と一致させる（必須）
+               1位から始まる連番 */
+          "position": 1,
+
+          /* item属性に記事情報を格納（必須） */
+          "item": {
+            /* 記事タイプの指定（必須） */
+            "@type": "Article",
+
+            /* 記事タイトル - 実際のタイトルと一致（必須） */
+            "headline": "ここにタイトルが入ります。",
+
+            /* 著者情報 */
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。"
+            },
+
+            /* 記事の公開日 - ISO 8601形式（YYYY-MM-DD） */
+            "datePublished": "2025-05-05",
+
+            /* 記事のURL - 実際に存在するURLを指定 */
+            "url": "https://example.com/article/ranking/1",
+
+            /* 記事の説明 */
+            "description": "人気記事ランキング1位の記事概要文です。",
+
+            /* 記事の画像情報 */
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/ranking/article1.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* 発行者情報 */
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "headline": "ランキング2位の記事タイトル",
+            "author": {
+              "@type": "Person",
+              "name": "著者名"
+            },
+            "datePublished": "2025-04-28",
+            "url": "https://example.com/article/ranking/2",
+            "description": "人気記事ランキング2位の記事概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/ranking/article2.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "headline": "ランキング3位の記事タイトル",
+            "author": {
+              "@type": "Person",
+              "name": "別の著者名"
+            },
+            "datePublished": "2025-04-25",
+            "url": "https://example.com/article/ranking/3",
+            "description": "人気記事ランキング3位の記事概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/ranking/article3.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        }
+        /* 他のランキング記事も同様の構造で追加
+             各記事ごとにposition値をランキング順位と一致させ、
+             実際のコンテンツに合わせて情報を更新する */
+      ]
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - NEWSセクション
+    目的: ニュース記事リストを検索エンジンに伝えるためのマークアップです。
+    NewsArticleタイプを使用することで、通常の記事よりもニュース性の高いコンテンツとして
+    検索エンジンに認識させ、ニュース検索結果への表示可能性を高めます。
+
+    注意点:
+    1. ニュース記事には一般的な記事と区別するためNewsArticleタイプを使用する
+    2. 日付情報は正確に設定し、ISO 8601形式で記述する
+    3. ニュース記事は時間的価値が重要なため、最新のものから順に表示することが一般的
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプで複数のニュースをリスト化（必須） */
+      "@type": "ItemList",
+
+      /* リスト全体の名前 - セクション名と一致させる */
+      "name": "ニュース",
+
+      /* ニュースは通常新しい順（降順）で表示 */
+      "itemListOrder": "Descending",
+
+      /* itemListElementはリスト項目の配列（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプで各リスト項目を表現（必須） */
+          "@type": "ListItem",
+
+          /* position値は1から始まる連番（必須） */
+          "position": 1,
+
+          /* item属性にニュース記事情報を格納（必須） */
+          "item": {
+            /* NewsArticleタイプでニュース記事を表現
+                 これにより検索エンジンはニュース性の高いコンテンツとして認識（必須） */
+            "@type": "NewsArticle",
+
+            /* ニュースのタイトル - 実際のタイトルと一致（必須） */
+            "headline": "お知らせのタイトルが入ります",
+
+            /* ニュースの公開日 - ISO 8601形式（YYYY-MM-DD）
+                 より詳細なタイムスタンプ（YYYY-MM-DDThh:mm:ss+TZ）も可能 */
+            "datePublished": "2024-01-01",
+
+            /* ニュース記事が最終更新された日時 */
+            "dateModified": "2024-01-02",
+
+            /* ニュース記事のURL - 実際に存在するURLを指定 */
+            "url": "https://example.com/news/1",
+
+            /* ニュース記事の説明 */
+            "description": "このお知らせの概要文が入ります。",
+
+            /* ニュース記事の画像情報 */
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/news/1.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* 発行者情報 - NewsArticleでは特に重要 */
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            },
+
+            /* ニュースのカテゴリ */
+            "articleSection": "お知らせ"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "NewsArticle",
+            "headline": "2番目のお知らせタイトル",
+            "datePublished": "2023-12-25",
+            "dateModified": "2023-12-25",
+            "url": "https://example.com/news/2",
+            "description": "2番目のお知らせの概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/news/2.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            },
+            "articleSection": "お知らせ"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "NewsArticle",
+            "headline": "3番目のお知らせタイトル",
+            "datePublished": "2023-12-20",
+            "dateModified": "2023-12-21",
+            "url": "https://example.com/news/3",
+            "description": "3番目のお知らせの概要文です。",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/news/3.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Curationテーマ公式サイト",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            },
+            "articleSection": "イベント"
+          }
+        }
+        /* 他のニュースも同様の構造で追加
+             各ニュースごとにposition値を1ずつ増やし、
+             実際のコンテンツに合わせて情報を更新する */
+      ]
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - COMMUNITYセクション
+    目的: コミュニティ情報を検索エンジンに伝えるためのマークアップです。
+    各コミュニティの名称、メンバー情報、URLなどを構造化し、
+    検索結果での表示品質向上や関連情報の適切な関連付けを促進します。
+
+    注意点:
+    1. 実際のコミュニティ名と正確に一致させる
+    2. メンバー数は定期的に更新する
+    3. コミュニティのURLは実際に存在するページを指定する
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプで複数のコミュニティをリスト化（必須） */
+      "@type": "ItemList",
+
+      /* リスト全体の名前 - セクション名と一致させる */
+      "name": "コミュニティ",
+
+      /* itemListElementはリスト項目の配列（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプで各リスト項目を表現（必須） */
+          "@type": "ListItem",
+
+          /* position値は1から始まる連番（必須） */
+          "position": 1,
+
+          /* item属性にコミュニティ情報を格納（必須） */
+          "item": {
+            /* Organizationタイプでコミュニティを表現
+                 コミュニティやグループはOrganizationタイプが適切（必須） */
+            "@type": "Organization",
+
+            /* コミュニティ名 - 実際の名称と一致（必須） */
+            "name": "九州キャンプ&九州キャンパーの集い",
+
+            /* コミュニティの説明 */
+            "description": "九州地方のキャンプ愛好家のためのコミュニティです。",
+
+            /* コミュニティのURL - 実際に存在するURLを指定 */
+            "url": "https://example.com/community/1",
+
+            /* コミュニティのロゴや代表画像 */
+            "logo": "https://example.com/images/community/tohoku-camp-logo.png",
+
+            /* メンバー情報の構造化 */
+            "member": {
+              /* メンバー情報として個人を指定
+                   OrganizationRoleを使用すればより詳細な役割情報も表現可能 */
+              "@type": "Person",
+
+              /* メンバーの所属コミュニティを明示 - コミュニティ名と一致 */
+              "memberOf": "九州キャンプ&九州キャンパーの集い",
+
+              /* コミュニティの総メンバー数
+                   memberCountはSchema.orgの標準プロパティではなく、
+                   numberOfMembersまたはOrganizationRoleのnumberOfMembersを
+                   使用するのがより適切 */
+              "memberCount": "10"
+            },
+
+            /* コミュニティの活動地域 */
+            "location": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "九州地方",
+                "addressCountry": "JP"
+              }
+            },
+
+            /* コミュニティ代表者情報 - より正確な表現 */
+            "founder": {
+              "@type": "Person",
+              "name": "山田太郎"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Organization",
+            "name": "関東アウトドア愛好会",
+            "description": "関東地方を中心に活動するアウトドア愛好家の集まりです。",
+            "url": "https://example.com/community/2",
+            "logo": "https://example.com/images/community/kanto-outdoor-logo.png",
+            "member": {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "代表者名"
+              },
+              "roleName": "コミュニティ管理者",
+              "numberOfMembers": 25
+            },
+            "location": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "関東地方",
+                "addressCountry": "JP"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Organization",
+            "name": "西日本釣り愛好会",
+            "description": "西日本を中心に活動する釣り愛好家のコミュニティです。",
+            "url": "https://example.com/community/3",
+            "logo": "https://example.com/images/community/fishing-logo.png",
+            "member": {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "代表者名"
+              },
+              "roleName": "コミュニティリーダー",
+              "numberOfMembers": 30
+            },
+            "location": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "西日本",
+                "addressCountry": "JP"
+              }
+            },
+            "foundingDate": "2023-06-15"
+          }
+        }
+        /* 他のコミュニティも同様の構造で追加
+             各コミュニティごとにposition値を1ずつ増やし、
+             実際のコンテンツに合わせて情報を更新する */
+      ]
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - FOOTERセクション
+    目的: フッターセクションに表示される組織情報（サイト運営者情報）を
+    検索エンジンに伝えるためのマークアップです。
+    サイト名、ロゴ、URL、SNSアカウントなどの基本情報を構造化し、
+    Googleのナレッジグラフやリッチリザルトでの表示品質向上を図ります。
+
+    注意点:
+    1. ロゴには絶対URLを使用する
+    2. 実際の組織名、URL、SNSアカウントを正確に設定する
+    3. 可能であれば住所や連絡先情報も追加する
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* Organizationタイプで組織情報を表現（必須） */
+      "@type": "Organization",
+
+      /* 組織名 - サイト名と一致させる（必須） */
+      "name": "Curationテーマ公式サイト",
+
+      /* 組織のロゴ - 絶対URLを使用すること */
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://example.com/images/logo.png",
+        "width": "600",
+        "height": "60"
+      },
+
+      /* 組織の公式サイトURL - 絶対URLを使用（必須） */
+      "url": "https://example.com",
+
+      /* 組織の説明 */
+      "description": "Curationテーマの公式サイトです。最新の製品情報、サービス内容、キャンペーン情報などをご紹介します。",
+
+      /* 関連するソーシャルメディアアカウント - 実際のアカウントURLのみ記載 */
+      "sameAs": [
+        "https://www.instagram.com/theme-ctheme/",
+        "https://www.facebook.com/theme-ctheme/",
+        "https://twitter.com/theme-ctheme"
+      ],
+
+      /* 組織の住所情報 - 実店舗や事業所がある場合に追加 */
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "〇〇町1-2-3",
+        "addressLocality": "〇〇市",
+        "addressRegion": "〇〇県",
+        "postalCode": "123-4567",
+        "addressCountry": "JP"
+      },
+
+      /* 問い合わせ先情報 */
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+81-XX-XXXX-XXXX",
+        "contactType": "customer service",
+        "availableLanguage": ["Japanese", "English"],
+        "email": "contact@example.com"
+      },
+
+      /* 組織の設立日 - ISO 8601形式（YYYY-MM-DD）で指定 */
+      "foundingDate": "2020-01-01"
+    }
+  </script>
+
+  <script type="module" src="./assets/js/main.js"></script>
+  <script type="module" src="./assets/js/theme-c-top.js"></script>
+</head>

@@ -1,0 +1,84 @@
+// コメント投稿フォーム
+.prj-comment-form-component {
+  .prj-comment-form-cancel-button {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 500;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 0;
+    color: #333333;
+    span {
+      color: #333333;
+    }
+  }
+  .prj-comment-form {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid #bcbcbc;
+    border-bottom: 1px solid #bcbcbc;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .prj-comment-form-flex {
+      display: flex;
+      gap: 8px;
+      .prj-comment-form-image {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+      }
+      .prj-comment-form-input {
+        flex: 1;
+        &::placeholder {
+          color: #bcbcbc;
+        }
+        textarea {
+          font-size: 14px;
+          line-height: 1.5;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          color: #333333;
+          padding: 10.5px 8px;
+          width: 100%;
+        }
+      }
+    }
+    .prj-comment-form-submit-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11.5px 20px;
+      border-radius: 4px;
+      max-width: fit-content;
+      margin-left: auto;
+      border: 1px solid #dcdcdf;
+      color: #bcbcbc;
+      cursor: pointer;
+      &:hover {
+        cursor: none;
+        background-color: transparent;
+        opacity: 1;
+      }
+
+      &.active {
+        border: 1px solid #bcbcbc;
+        color: #333333;
+        box-shadow: 0px 0px 10px 0px #0000001a;
+        &:hover {
+          cursor: pointer;
+          background-color: var(--hover-bg-color);
+          opacity: var(--hover-opacity);
+        }
+      }
+    }
+  }
+}

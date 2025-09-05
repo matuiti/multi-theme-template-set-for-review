@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- HEAD -->
+<%- include ('./components/sections/theme-a-top/theme-a-top-head.ejs') %>
+
+  <body>
+    <div id="app">
+      <div class="theme-a-theme">
+        <!-- HEADER -->
+        <%- include ('./components/header.ejs') %>
+          <!-- ボトムメニュー -->
+          <%- include ('./components/bottom-menu.ejs') %>
+            <!-- モーダルメニュー -->
+            <%- include ('./components/modal-menu.ejs') %>
+              <!-- アクセシビリティのためのmain要素 -->
+              <main id="main-content">
+                <!-- FV -->
+                <%- include ('./components/sections/theme-a-top/theme-a-top-fv.ejs') %>
+                  <!-- FOLLOW -->
+                  <%- include ('./components/sections/theme-a-top/theme-a-top-follow.ejs') %>
+                    <!-- NEW -->
+                    <%- include ('./components/sections/theme-a-top/theme-a-top-new.ejs') %>
+                      <!-- RANKING -->
+                      <%- include ('./components/sections/theme-a-top/theme-a-top-ranking.ejs') %>
+                        <!-- PICK UP -->
+                        <%- include ('./components/sections/theme-a-top/theme-a-top-pickup.ejs') %>
+                          <!-- COMMUNITY -->
+                          <%- include ('./components/sections/theme-a-top/theme-a-top-community.ejs') %>
+                            <!-- AD-2 -->
+                            <%- include ('./components/sections/theme-a-top/theme-a-top-ad-2.ejs') %>
+                              <!-- NEWS -->
+                              <%- include ('./components/sections/theme-a-top/theme-a-top-news.ejs') %>
+                                <!-- SPECIAL THANKS -->
+                                <%- include ('./components/sections/theme-a-top/theme-a-top-special-thanks.ejs') %>
+              </main>
+              <!-- FOOTER -->
+              <%- include ('./components/sections/theme-a-top/theme-a-top-footer.ejs') %>
+      </div>
+    </div>
+  </body>
+
+</html>

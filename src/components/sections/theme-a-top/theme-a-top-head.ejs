@@ -1,0 +1,1940 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO向けのメタタグ ============ -->
+  <!-- タイトルタグ: ブラウザのタブやブックマーク、検索結果に表示される重要要素
+       テーマ名と簡潔な説明を含め、60文字以内が推奨 -->
+  <title>トップページ | Theme-aテーマ</title>
+  <!-- 説明文: 検索結果に表示される説明文で150〜160文字程度が推奨
+       ユーザーの興味を引く魅力的な説明を入力 -->
+  <meta name="description" content="テーマ名の公式サイトです。最新の製品情報、サービス内容、キャンペーン情報などをご紹介します。" />
+  <!-- キーワード: 現在のSEOでの重要性は低下しているが、関連キーワードをカンマ区切りで記述 -->
+  <meta name="keywords" content="テーマ名, 製品, サービス, キャンペーン" />
+  <!-- サイト運営者情報: サイトの著者や運営会社名を記述 -->
+  <meta name="author" content="運営会社名" />
+
+  <!-- canonicalリンク: 同一コンテンツが複数URLで閲覧可能な場合に正規URLを指定
+       重複コンテンツの問題を防ぎ、SEOを最適化する重要な要素 -->
+  <link rel="canonical" href="https://example.com/theme-a.html" />
+
+  <!-- ============ ファビコン設定 ============ -->
+  <!-- 標準ファビコン: ブラウザのタブやブックマークに表示される16×16pxの小さなアイコン
+       通常は.ico形式を使用（32×32pxなど複数サイズを含む.icoファイルが理想的） -->
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <!-- Apple Touch Icon: iOSデバイスでサイトをホーム画面に追加した時のアイコン
+       推奨サイズは180×180px、PNG形式 -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- ============ OGP (Open Graph Protocol) 設定 ============ -->
+  <!-- FacebookなどのSNSでURLシェア時の表示を制御する重要な要素 -->
+  <!-- og:title: シェア時に表示されるタイトル、40文字程度が推奨 -->
+  <meta property="og:title" content="テーマ名 | 製品・サービスの公式サイト" />
+  <!-- og:description: シェア時の説明文、80〜90文字程度が推奨 -->
+  <meta property="og:description" content="テーマ名の公式サイトです。最新の製品情報、サービス内容、キャンペーン情報などをご紹介します。" />
+  <!-- og:type: コンテンツタイプを指定（website, article, productなど） -->
+  <meta property="og:type" content="website" />
+  <!-- og:url: シェアされるページの正規URLを指定（canonicalと一致させる） -->
+  <meta property="og:url" content="https://example.com/theme-a.html" />
+  <!-- og:image: シェア時に表示される画像のURL
+       推奨サイズは1200×630px、最小でも600×315pxが必要 -->
+  <meta property="og:image" content="https://example.com/images/theme-a/theme-a-ogp.jpg" />
+  <!-- og:site_name: ウェブサイト全体の名前を指定 -->
+  <meta property="og:site_name" content="テーマ名公式サイト" />
+  <!-- og:locale: コンテンツの言語と地域を指定（日本語の場合は通常ja_JP） -->
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ============ Twitterカード設定 ============ -->
+  <!-- TwitterでのURLシェア表示を制御（OGPと似た役割だがTwitter専用） -->
+  <!-- twitter:card: カードの種類を指定
+       summary: 小さな画像付きカード、summary_large_image: 大きな画像付きカード -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- twitter:site: 関連するTwitterアカウントを@ユーザー名で指定 -->
+  <meta name="twitter:site" content="@theme-aname" />
+  <!-- twitter:title: Twitterカードのタイトル -->
+  <meta name="twitter:title" content="テーマ名 | 製品・サービスの公式サイト" />
+  <!-- twitter:description: Twitterカードの説明文 -->
+  <meta name="twitter:description" content="テーマ名の公式サイトです。最新の製品情報、サービス内容、キャンペーン情報などをご紹介します。" />
+  <!-- twitter:image: カードに表示される画像のURL
+       summary_large_imageの場合、最小サイズは300×157px、
+       最適な比率は2:1（例: 1200×600px）-->
+  <meta name="twitter:image" content="https://example.com/images/theme-a/theme-a-ogp.jpg" />
+
+  <!-- ============ フォント読み込み ============ -->
+  <!-- GoogleフォントなどWebフォントの読み込み設定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" />
+  </noscript>
+  <!-- ============ マテリアルアイコン ============ -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- ============ 構造化データ（JSON-LD） ============ -->
+  <!-- 検索エンジンがウェブページの内容を理解しやすくするための標準化されたデータ形式 -->
+
+  <!-- WebSiteスキーマ: サイト全体の情報とサイト内検索機能の実装
+    検索エンジンの結果にサイト内検索ボックスが表示される可能性がある
+
+    注意点:
+    1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+    2. 実際のサイト名とURLを必ず設定すること
+    3. 検索機能が実際に動作することを確認すること
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+       すべての構造化データに必要な基本プロパティ */
+      "@context": "https://schema.org",
+
+      /* このエンティティがWebサイトであることを示す（必須）
+       WebSiteタイプはサイト全体の情報を表現する際に使用 */
+      "@type": "WebSite",
+
+      /* サイト名 - 実際のテーマ名に置き換えること
+       サイトのタイトルと一致させることが望ましい */
+      "name": "テーマ名公式サイト",
+
+      /* サイトのURL - canonicalタグのURLと一致させること
+       絶対URLを使用し、実際のドメインをここに設定 */
+      "url": "https://example.com/theme-a.html",
+
+      /* potentialActionはサイトで可能なアクションを定義
+       ここではサイト内検索機能を実装している */
+      "potentialAction": {
+        /* 検索アクションであることを示す
+         これにより検索エンジンが検索機能を理解できる */
+        "@type": "SearchAction",
+
+        /* 検索結果ページのURL形式 - 実際の検索URLパターンと一致させること
+         {search_term_string}はプレースホルダーで、実際の検索語に置き換えられる
+         必ず動作確認を行うこと */
+        "target": "https://example.com/search?q={search_term_string}",
+
+        /* 検索クエリパラメータ名の指定
+         search_term_stringは上記targetのプレースホルダーと一致させる必要がある */
+        "query-input": "required name=search_term_string"
+      }
+
+      /* 改善提案: 以下のプロパティを追加するとより効果的
+     ,
+     "description": "サイトの簡潔な説明文を記載",
+     "inLanguage": "ja",
+     "publisher": {
+       "@type": "Organization",
+       "name": "運営会社名",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "https://example.com/images/theme-a/theme-a-logo.png"
+       }
+     }
+    */
+    }
+  </script>
+
+  <!-- Organizationスキーマ: 運営会社に関する情報
+    Googleナレッジパネルなどに表示される可能性がある
+
+    注意点:
+    1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+    2. 会社名、URL、ロゴは正確に設定すること
+    3. SNSアカウントは実際に存在し、正式なアカウントであることを確認すること
+    4. 電話番号は国際形式で記述すること
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+       すべての構造化データで最初に定義する必要がある */
+      "@context": "https://schema.org",
+
+      /* このエンティティが組織であることを示す（必須）
+       企業情報を表すための基本タイプ */
+      "@type": "Organization",
+
+      /* 会社名 - 正確な法人名称を使用すること
+       公式な会社名をそのまま記載する */
+      "name": "運営会社名",
+
+      /* 会社またはTheme-aの公式サイトURL - 実際のURLに置き換えること
+       会社のホームページのURLを絶対URL形式で指定 */
+      "url": "https://example.com",
+
+      /* 会社ロゴのURL - 絶対URLを使用し、推奨サイズ(112x112px以上、512x512px未満)に適合させること
+       SVGよりもPNG/JPG形式が推奨される
+       GoogleのロゴガイドラインにはSquare format logoが推奨されている */
+      "logo": "https://example.com/images/theme-a/theme-a-logo.png",
+
+      /* 関連するソーシャルメディアアカウント - すべて実際のアカウントURLに置き換えること
+       sameAsプロパティは企業の公式アカウントであることを検索エンジンに伝える重要な要素
+       実際に存在する公式アカウントのみを記載すること */
+      "sameAs": [
+        /* FacebookページのURL - 完全なURLを記載 */
+        "https://www.facebook.com/theme-aname",
+
+        /* TwitterアカウントのURL - 完全なURLを記載 */
+        "https://twitter.com/theme-aname",
+
+        /* InstagramアカウントのURL - 完全なURLを記載 */
+        "https://www.instagram.com/theme-aname"
+
+        /* 他のSNSプロフィールがあれば追加（LinkedInなど）
+         最後の要素にはカンマを付けない（JSON構文エラーの原因になる） */
+      ],
+
+      /* 問い合わせ先情報
+       顧客サポート窓口の詳細情報を提供する */
+      "contactPoint": {
+        /* 連絡先情報であることを示す
+         ContactPointタイプで問い合わせ先の詳細を構造化 */
+        "@type": "ContactPoint",
+
+        /* 国際形式の電話番号 - 実際の電話番号に置き換えること（日本の場合は+81から始まる）
+         国コード付きの形式で記載（半角数字、ハイフン区切り） */
+        "telephone": "+81-03-1234-5678",
+
+        /* 連絡先の種類 - 適切な種類を選択
+         一般的な種類: "customer service"（顧客サービス）, "technical support"（技術サポート）,
+         "sales"（営業）, "billing support"（請求サポート）, "reservation"（予約）など */
+        "contactType": "customer service",
+
+        /* 対応言語 - 実際に対応可能な言語のみを記載すること
+         ISO 639-1言語コードではなく、言語の完全名を使用 */
+        "availableLanguage": ["Japanese", "English"]
+      },
+
+      /* 住所情報 - 実際の所在地情報を追加することで地域SEOの強化につながる
+       特に実店舗や来客対応をする企業には重要な情報 */
+      "address": {
+        /* 住所であることを示す
+         PostalAddressタイプで住所情報を構造化 */
+        "@type": "PostalAddress",
+
+        /* 番地・建物名など - 実際の住所に合わせて記載 */
+        "streetAddress": "〇〇町1-2-3",
+
+        /* 市区町村 - 実際の住所に合わせて記載 */
+        "addressLocality": "〇〇市",
+
+        /* 都道府県 - 実際の住所に合わせて記載 */
+        "addressRegion": "〇〇県",
+
+        /* 郵便番号 - ハイフン付きで記載 */
+        "postalCode": "123-4567",
+
+        /* 国コード - 日本の場合は"JP"
+         ISO 3166-1 alpha-2国コードを使用 */
+        "addressCountry": "JP"
+      }
+
+      /* 改善提案: 以下のプロパティを追加するとより効果的
+     ,
+     "foundingDate": "1995-01-01",
+     "numberOfEmployees": "50-250",
+     "email": "contact@example.com",
+     "faxNumber": "+81-03-1234-5679",
+     "openingHours": "Mo-Fr 09:00-18:00",
+     "areaServed": {
+       "@type": "Country",
+       "name": "Japan"
+     }
+    */
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - FIRST VIEW セクション（ MV + AD-1 ）
+    目的: このマークアップは検索エンジン（主にGoogle）に対して、コンテンツの構造と意味を明確に伝えるためのものです。
+    リッチリザルト表示の可能性を高め、SEO効果の向上が期待できます。
+
+    構造の説明:
+    - WebPage: ページ全体を表現
+    - Organization: Theme-a情報を定義
+    - ItemList: カルーセルの各スライドをリスト化
+    - 各ListItem: コンテンツの種類に応じて適切なタイプを適用（Article/Offer/Service/FAQPage）
+    - ViewAction: プロモーションバナーへのリンクアクション
+
+    注意点:
+    1. 画像パスはビルド時にハッシュ化される場合がありますが、CDNなど固定URLが使える環境では上記のような絶対URLを使用してください
+    2. カルーセルの内容が変更された場合は、こちらのマークアップも同期して更新すること
+    3. 特定のキャンペーンに日付情報がある場合は、validFrom/validThroughプロパティに正確な日付を設定してください
+    4. 店舗情報を強化したい場合は、LocalBusinessタイプの使用を検討してください
+    5. ダミーテキストです。(FAQPage)は実際の質問と回答を追加することで、検索結果にFAQリッチリザルトとして表示される可能性があります
+    6. すべてのURLは実際に存在するページを指している必要があります
+    7. 画像サイズは実際の画像のサイズに合わせて正確に記載してください
+
+    参考: https://schema.org/, https://developers.google.com/search/docs/appearance/structured-data/search-gallery
+    -->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgのURLを指定する必須プロパティ。
+                         このプロパティによってJSON-LDがSchema.orgの語彙を使用することを宣言する（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeはこのJSON-LDデータの主要な型を定義する必須プロパティ。
+                         WebPageはウェブページ全体を表すタイプで、ページの基本情報を提供する（必須） */
+      "@type": "WebPage",
+
+      /* nameプロパティはページのタイトルを定義。
+                         SEO的にはHTML内のtitleタグと一致させるべき */
+      "name": "テーマ名のホームページ",
+
+      /* publisherはこのページの発行者情報を定義するプロパティ。
+                         組織情報はGoogleのナレッジグラフと連携する可能性がある重要な要素 */
+      "publisher": {
+        /* 発行者の型をOrganizationとして定義。
+                           会社やTheme-aの場合はOrganization、個人の場合はPersonを使用する */
+        "@type": "Organization",
+
+        /* 組織名を定義。実際のテーマ名と完全に一致させる必要がある */
+        "name": "テーマ名",
+
+        /* logo情報はGoogleのナレッジパネルやリッチリザルトで表示される可能性がある重要なプロパティ。
+                           特に企業のブランディングに重要 */
+        "logo": {
+          /* ImageObjectタイプで画像情報を構造化 */
+          "@type": "ImageObject",
+
+          /* 画像のURL。絶対URLを使用することが強く推奨される */
+          "url": "https://example.com/images/theme-a-logo.png",
+
+          /* 画像の幅をピクセル単位で指定。数値ではなく文字列として指定する点に注意 */
+          "width": "200",
+
+          /* 画像の高さをピクセル単位で指定。Google推奨のロゴサイズは幅112px以上 */
+          "height": "60"
+        }
+      },
+
+      /* mainEntityはページの主要コンテンツを示すプロパティ。
+                         検索エンジンがページの中心的なコンテンツを理解するのに役立つ */
+      "mainEntity": {
+        /* ItemListタイプはカルーセルや商品リストなど複数のアイテムをグループ化するのに適している。
+                           GoogleのカルーセルリッチリザルトとしてSERPに表示される可能性がある */
+        "@type": "ItemList",
+
+        /* itemListElementは実際のリスト項目を配列として格納するプロパティ。
+                           このプロパティはItemListタイプでは必須 */
+        "itemListElement": [
+          {
+            /* ListItemタイプはItemList内の個々の項目を表す。
+                               各ListItemには必ずposition属性が必要 */
+            "@type": "ListItem",
+
+            /* positionは配列内での位置を示す必須プロパティ。
+                               常に1から始まる連番であることが必須。0始まりや欠番があるとエラーになる */
+            "position": 1,
+
+            /* itemはリスト項目の実際のコンテンツを格納するプロパティ */
+            "item": {
+              /* Articleタイプは記事コンテンツを表す。
+                                 ブログ記事やニュース記事など編集コンテンツに適している */
+              "@type": "Article",
+
+              /* headlineは記事のタイトル。検索結果での表示に使用される重要なプロパティ。
+                                 110文字以内に収めることが推奨される */
+              "headline": "春の新作特集",
+
+              /* descriptionは記事の概要。検索結果のスニペットに表示される可能性がある。
+                                 適切な長さ（150-160文字程度）で記事内容を簡潔に説明するべき */
+              "description": "2025年の春に向けた新作コレクションをご紹介します。トレンドを先取りした商品ラインナップをチェックしてください。",
+
+              /* 画像情報はリッチリザルト表示に重要な要素。
+                                 指定がない場合はGoogleがページから自動選択するが、最適な画像を明示的に指定するべき */
+              "image": {
+                "@type": "ImageObject",
+
+                /* 画像のURLは絶対パスで指定。相対パスではGoogleが正しく認識できない場合がある */
+                "url": "https://example.com/images/spring-collection.jpg",
+
+                /* 幅と高さは実際の画像サイズと一致させる必要がある。
+                                   Googleリッチリザルト用には少なくとも幅1200px、16:9または4:3の比率が推奨される */
+                "width": "1200",
+                "height": "630"
+              },
+
+              /* urlは記事へのリンク。実際に存在するURLを絶対パスで指定することが必須。
+                                 ユーザーがクリックした際に適切なページに遷移する必要がある */
+              "url": "https://example.com/collections/spring2025"
+            }
+          },
+          {
+            /* 2番目のリスト項目。複数のListItemを持つ場合は配列内で定義する */
+            "@type": "ListItem",
+
+            /* positionは必ず連番にする。ここでは2番目なので「2」と設定。
+                               この番号はHTML上の順序と一致させることが理想的 */
+            "position": 2,
+
+            "item": {
+              /* 同じくArticleタイプ。コンテンツの性質に応じて適切なタイプを選択する */
+              "@type": "Article",
+              "headline": "限定コラボアイテム",
+              "description": "人気デザイナーとのコラボレーションによる限定アイテムが登場。オンラインストアでしか手に入らない特別なデザインをお見逃しなく。",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/collaboration-items.jpg",
+                "width": "1200",
+                "height": "630"
+              },
+              "url": "https://example.com/collections/collaboration"
+            }
+          },
+          {
+            "@type": "ListItem",
+            /* positionプロパティの値は必ず順番通りに増加させる。
+                               番号の重複や欠番があるとエラーとなる */
+            "position": 3,
+            "item": {
+              /* Offerタイプはプロモーションや商品提供情報を表す。
+                                 キャンペーンやセール情報、商品販売情報に適している */
+              "@type": "Offer",
+
+              /* Offerタイプのname属性は提供物の名称を示す */
+              "name": "ポイント2倍キャンペーン",
+              "description": "期間限定でオンラインショップでのお買い物がポイント2倍。登録がまだの方は、この機会にぜひご登録ください。",
+              "url": "https://example.com/campaigns/double-points",
+
+              /* validFromはキャンペーン開始日を示す重要なプロパティ。
+                                 ISO 8601形式（YYYY-MM-DD）で指定する必要がある */
+              "validFrom": "2025-01-15",
+
+              /* validThroughはキャンペーン終了日を示すプロパティ。
+                                 開始日と終了日を適切に設定することで、検索エンジンは期間限定情報を正確に理解できる */
+              "validThrough": "2025-02-15",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/point-campaign.jpg",
+                "width": "1200",
+                "height": "630"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              /* Serviceタイプはサービス情報を表す。
+                                 提供するサービスの詳細や特徴を構造化するのに適している */
+              "@type": "Service",
+              "name": "店舗検索",
+              "description": "お近くの店舗を簡単に検索できます。各店舗の営業時間や取り扱い商品も確認できるので、ご来店前にチェックしてみてください。",
+              "url": "https://example.com/store-locator",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/store-locator.jpg",
+                "width": "1200",
+                "height": "630"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Article",
+              "headline": "サステナブルな取り組み",
+              "description": "環境に配慮した製品づくりや社会貢献活動など、私たちのサステナビリティへの取り組みをご紹介します。",
+              "url": "https://example.com/sustainability",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/sustainability.jpg",
+                "width": "1200",
+                "height": "630"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Offer",
+              "name": "会員限定特典",
+              "description": "会員の方だけが受けられる特典やサービスをご紹介。新規登録で今だけ500ポイントプレゼント中です。",
+              "url": "https://example.com/member-benefits",
+              /* validFromとvalidThroughを併用することで、期間が明確な特典情報を示す。
+                                 1年間有効な特典の場合は年単位で設定するのが一般的 */
+              "validFrom": "2025-01-01",
+              "validThrough": "2025-12-31",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/member-benefits.jpg",
+                "width": "1200",
+                "height": "630"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              /* FAQPageタイプはダミーテキストです。とその回答を構造化するタイプ。
+                                 Googleの検索結果でFAQリッチリザルトとして表示される可能性が高い重要な要素 */
+              "@type": "FAQPage",
+              "name": "ダミーテキストです。",
+              "description": "商品やサービスに関するダミーテキストです。をまとめました。カスタマーサポートへのダミーテキストです。前にご確認ください。",
+              "url": "https://example.com/faq",
+
+              /* FAQPageタイプでは、mainEntityを使用して実際の質問と回答のセットを定義する。
+                                 このプロパティはFAQリッチリザルト表示には必須で、少なくとも1つの質問と回答のペアが必要 */
+              "mainEntity": [
+                {
+                  /* 個々の質問はQuestionタイプで表現する */
+                  "@type": "Question",
+
+                  /* nameプロパティに質問文を設定。
+                                     簡潔でユーザーが実際に検索しそうな質問文が理想的 */
+                  "name": "返品・交換はできますか？",
+
+                  /* acceptedAnswerプロパティには回答情報を設定。
+                                     Answerタイプのオブジェクトとして定義する必要がある（必須） */
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+
+                    /* textプロパティに回答文を設定。
+                                       明確で具体的な回答を提供するのが望ましい */
+                    "text": "はい、商品到着後14日以内であれば返品・交換が可能です。商品に不備がある場合は送料弊社負担で対応いたします。"
+                  }
+                },
+                {
+                  /* 2つ目の質問と回答のペア。
+                                     FAQリッチリザルトでは通常2〜3問がSERPに表示され、残りは「もっと見る」で展開される */
+                  "@type": "Question",
+                  "name": "登録のメリットは何ですか？",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "登録をすると、お買い物ごとにポイントが貯まるほか、会員限定セールや先行予約などの特典をご利用いただけます。"
+                  }
+                }
+              ],
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/faq.jpg",
+                "width": "1200",
+                "height": "630"
+              }
+            }
+          }
+        ]
+      },
+
+      /* potentialActionはユーザーが取れるアクションを定義するプロパティ。
+                         主にアクションリッチリザルトの表示に関連する */
+      "potentialAction": {
+        /* ViewActionはコンテンツを閲覧するためのアクション。
+                           ユーザーがそのURLを訪れることで何が見られるかを示す */
+        "@type": "ViewAction",
+
+        /* targetは実際のアクションが実行される対象を定義するプロパティ。
+                           通常はURLなどのエントリーポイントを指定する */
+        "target": {
+          /* EntryPointはアクションの開始点を表すタイプ。
+                             Webページならば通常はURL */
+          "@type": "EntryPoint",
+
+          /* urlTemplateはアクションのURLを指定するプロパティ。
+                             実際に存在するページのURLを設定する必要がある */
+          "urlTemplate": "https://example.com/campaigns/special"
+        },
+
+        /* nameはアクションの名前で、ボタンテキストなどとして表示される可能性がある */
+        "name": "キャンペーン詳細を見る"
+      }
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - FOLLOW セクション
+    目的: このマークアップは記事リストの構造を検索エンジンに伝えるためのものです。
+    記事タイトル、公開日、著者情報などの構造化により、検索結果での表示品質向上や
+    リッチリザルトの可能性を高めます。
+
+    構造の説明:
+    - ItemList: 複数の記事をリスト化
+    - ListItem: 各記事の位置情報
+    - Article: 個々の記事の詳細情報
+    - Person: 著者情報
+
+    注意点:
+    1. FOLLOWセクションの記事が更新された場合は、こちらの構造化データも同時に更新してください
+    2. 記事数が変更された場合は、ListItemを追加/削除し、positionプロパティの連番を必ず維持してください
+    3. ブログ記事の場合は、より詳細な情報（カテゴリ、タグなど）を追加することで、
+        検索エンジンがコンテンツをより正確に理解できるようになります
+    4. 日付情報は検索結果に表示される可能性があるため、実際の公開日と一致させてください
+    5. このマークアップと実際のHTML内容（記事タイトル、著者名など）に不一致がないよう注意してください
+    6. 上記の追加推奨項目（URL、画像情報、記事概要、発行者情報）は検索結果の品質向上に役立ちます
+    7. 画像URLは実際に存在する画像を指定し、できるだけ絶対URLを使用してください
+    8. 記事URLも必ず実際にアクセス可能なページを指定してください
+
+    参考:
+    - https://schema.org/ItemList
+    - https://schema.org/Article
+    - https://developers.google.com/search/docs/appearance/structured-data/article
+    -->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの語彙を使用することを宣言する必須プロパティ。
+                         すべてのSchema.orgマークアップで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+                         ItemListは複数のアイテムをリスト形式で表現するタイプで、
+                         カルーセル表示やリストビューのリッチリザルトに使用される（必須） */
+      "@type": "ItemList",
+
+      /* itemListElementはリスト内の各アイテムを格納する配列。
+                         ItemListタイプでは必須のプロパティで、少なくとも1つのアイテムを含む必要がある（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプは配列内の個々の項目を表す。
+                             ItemList構造では各要素をこのタイプでラップする必要がある */
+          "@type": "ListItem",
+
+          /* positionは配列内での順序を示す必須プロパティ。
+                             必ず1から始まる連番で、欠番や重複があるとエラーになる（必須） */
+          "position": 1,
+
+          /* itemプロパティにリスト項目の実際のコンテンツを格納。
+                             ListItemタイプでは必須のプロパティ（必須） */
+          "item": {
+            /* Articleタイプはブログ記事やニュース記事などのコンテンツを表す。
+                               NewsArticle（ニュース専用）やBlogPosting（ブログ専用）など
+                               より具体的なサブタイプも状況に応じて検討できる */
+            "@type": "Article",
+
+            /* headlineは記事のタイトルを示す重要なプロパティ。
+                               検索結果に表示される可能性が高いため、実際のタイトルと一致させる必要がある。
+                               Googleでは最適な長さは110文字以内とされている */
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+
+            /* datePublishedは記事の公開日時を示すプロパティ。
+                               必ずISO 8601形式（YYYY-MM-DD）で指定する。
+                               より詳細な日時（YYYY-MM-DDThh:mm:ss+TZ）も可能 */
+            "datePublished": "2025-05-05",
+
+            /* authorは記事の著者情報を示すプロパティ。
+                               Person（個人）またはOrganization（組織）のどちらかを指定できる */
+            "author": {
+              /* Personタイプは個人の著者を表す。
+                                 記名記事の場合は個別の著者名を、匿名記事の場合はサイト名などを設定する */
+              "@type": "Person",
+
+              /* nameは著者名を示すプロパティ。
+                                 著者のフルネームまたはペンネーム、ユーザー名などを設定する */
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+
+            /* urlは記事のURL。実際に存在する絶対URLを指定する必要がある。
+                               検索エンジンはこのURLを使って構造化データと実際のコンテンツを関連付ける */
+            "url": "https://example.com/articles/article1",
+
+            /* imageは記事の画像情報。リッチリザルト表示に画像が含まれる可能性がある場合に重要。
+                               また、検索エンジンがコンテンツを理解する手がかりにもなる */
+            "image": {
+              /* ImageObjectタイプで画像の詳細情報を構造化して提供 */
+              "@type": "ImageObject",
+
+              /* 画像のURLは絶対パスで指定。存在する実際の画像を参照する必要がある */
+              "url": "https://example.com/images/article1.jpg",
+
+              /* 画像の幅と高さをピクセル単位で指定。
+                                 Googleリッチリザルト用の推奨サイズは最低1200px×630px */
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* descriptionは記事の概要。検索結果のスニペット表示に使用される可能性がある。
+                               適切な長さ（150-160文字程度）で記事内容を簡潔に説明するのが理想的 */
+            "description": "記事の概要文が入ります。検索結果のスニペットとして表示される可能性があります。",
+
+            /* publisherは記事の発行者（通常はサイト運営組織）情報を示すプロパティ。
+                               Googleのナレッジグラフ連携やTheme-a表示に重要 */
+            "publisher": {
+              /* 発行者はほとんどの場合Organization（組織）タイプを使用する */
+              "@type": "Organization",
+
+              /* 発行元の組織名。Webサイト名やテーマ名と一致させる */
+              "name": "サイト名",
+
+              /* 発行元のロゴ情報。Googleニュースなどでの表示に使用される可能性がある重要な要素。
+                                 特にNewsArticleタイプを使う場合は必須とされる場合がある */
+              "logo": {
+                "@type": "ImageObject",
+
+                /* ロゴ画像のURL。絶対URLを使用することが強く推奨される */
+                "url": "https://example.com/images/logo.png",
+
+                /* ロゴのサイズを指定。Googleのロゴ要件に合わせるなら
+                                   幅が広く（推奨最低600px）、高さが60px程度が理想的 */
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          /* 2番目のリスト項目。同じ構造を維持しつつ、内容だけが異なる */
+          "@type": "ListItem",
+
+          /* positionは前の項目から連続した値を設定する。
+                             この連番がItemListの表示順序に影響するため正確に指定する必要がある */
+          "position": 2,
+
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "datePublished": "2025-05-05",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+
+            /* 各記事ごとに固有のURLを設定する。
+                               すべての記事が同じURLを指していると、検索エンジンが混乱する原因になる */
+            "url": "https://example.com/articles/article2",
+
+            /* 各記事に対応する画像も個別に設定するのが理想的。
+                               記事内容に関連する画像であるほど、ユーザーにとって有用性が高まる */
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/article2.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* 各記事ごとに固有の概要を設定することで、検索結果での差別化が可能になる */
+            "description": "2番目の記事の概要文が入ります。検索結果のスニペットとして表示される可能性があります。",
+
+            /* 発行者情報は通常すべての記事で同一だが、
+                               複数のTheme-aがある場合などは記事ごとに変えることも可能 */
+            "publisher": {
+              "@type": "Organization",
+              "name": "サイト名",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - NEW セクション
+    目的: このマークアップは記事リストの構造を検索エンジンに伝えるためのものです。
+    記事タイトル、公開日、著者情報などの構造化により、検索結果での表示品質向上や
+    リッチリザルトの可能性を高めます。
+
+    構造の説明:
+    - ItemList: 複数の記事をリスト化
+    - ListItem: 各記事の位置情報
+    - Article: 個々の記事の詳細情報
+    - Person: 著者情報
+    -->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定するための必須プロパティ
+                                 これによりGoogleなどの検索エンジンがこの構造化データを正しく解釈できる */
+      "@context": "https://schema.org",
+
+      /* @typeにはItemListを指定し、複数のコンテンツアイテム（この場合は記事）を
+                                 リストとして表現することを示す。これによりカルーセル表示などの
+                                 リッチリザルトの候補となる可能性がある */
+      "@type": "ItemList",
+
+      /* itemListElementプロパティには各リスト項目を配列として定義
+                                 この配列内の各オブジェクトが個別の記事情報を表現する
+                                 ItemListタイプでは必須のプロパティで、少なくとも1つの要素が必要（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプは各リスト項目を示す。
+                                     Schema.orgのItemListでは必須の構造
+                                     ListItemを使わずに直接Article等を配置するとエラーになるため注意 */
+          "@type": "ListItem",
+
+          /* position値はリスト内での順序を示す整数値（1から始まる）
+                                     必ず連番で設定し、欠番や重複があるとエラーの原因となる
+                                     この値はGoogle等の検索エンジンがリスト順序を理解するために重要（必須） */
+          "position": 1,
+
+          /* item属性に実際のコンテンツ（記事）の情報を入れる
+                                     ネスト構造になっていることに注意
+                                     ListItemタイプでは必須のプロパティ（必須） */
+          "item": {
+            /* Articleタイプを指定し、この項目がブログ記事や一般的な記事であることを示す
+                                       より具体的なNewsArticleなどのサブタイプも状況に応じて検討可能
+                                       ニュース記事はNewsArticle、ブログ記事はBlogPostingが適切 */
+            "@type": "Article",
+
+            /* headlineは記事のタイトルを示す重要な属性
+                                       実際のページ上の見出しと一致させることが重要
+                                       最適な長さは110文字以内（それ以上は切り詰められる可能性あり）
+                                       Articleタイプでは必須のプロパティ（必須） */
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+
+            /* datePublishedは記事の公開日をISO 8601形式で指定
+                                       YYYY-MM-DD形式を厳守すること
+                                       実際の公開日と一致させることが重要
+                                       検索結果に日付として表示される可能性が高い */
+            "datePublished": "2025-05-05",
+
+            /* author属性で記事の著者情報を定義
+                                       これにより検索エンジンは著者情報を理解できる
+                                       記事の著者情報は検索エンジンの信頼性評価に関わる重要な要素 */
+            "author": {
+              /* Personタイプで著者が個人であることを示す
+                                         組織の場合はOrganizationタイプを使用する
+                                         特定の人物が記事を書いた場合はPerson、組織全体の場合はOrganizationを選択 */
+              "@type": "Person",
+
+              /* 著者名を指定。実際のコンテンツと一致させることが重要
+                                         理想的には著者ページへのURLも追加することが望ましい（url属性を使用）
+                                         PersonタイプではnameプロパティはCore（中核）プロパティで非常に重要 */
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            }
+
+            /* 改善案: ここに以下の属性を追加するとさらに効果的
+                                       - url: 記事の絶対URL（必須ではないが強く推奨）
+                                       - image: 記事のメイン画像（ImageObjectタイプで指定）
+                                       - dateModified: 記事の最終更新日（検索エンジンはコンテンツの鮮度を重視）
+                                       - description: 記事の簡潔な説明（メタディスクリプションと一致させると良い）
+                                    */
+          }
+        },
+        {
+          /* 2番目のリスト項目。各ListItemの構造は基本的に同じ */
+          "@type": "ListItem",
+
+          /* positionは必ず前の項目から連続した値にする
+                                     ここでは2番目なので2を指定
+                                     欠番や重複はGoogleのStructured Data Testing Toolでエラーになる */
+          "position": 2,
+
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+
+            /* 日付形式はYYYY-MM-DDを厳守
+                                       実運用時には動的に正確な日付が入るように設定すべき
+                                       CMS連携の場合、記事データの公開日時から自動生成することが理想的 */
+            "datePublished": "2025-05-05",
+
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            }
+          }
+        },
+        {
+          /* 3番目のリスト項目
+                                     各ListItemの構造は一貫して統一すべき
+                                     一部の記事だけ構造が異なると、検索エンジンが混乱する原因になる */
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "datePublished": "2025-05-05",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            }
+          }
+        },
+        {
+          /* 4番目のリスト項目
+                                     実装時には、このようなリピート構造はテンプレート化して
+                                     動的に生成することが保守性の観点から望ましい */
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "datePublished": "2025-05-05",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            }
+          }
+        },
+        {
+          /* 5番目のリスト項目
+                                     多数の記事を扱う場合、最新の記事だけをマークアップするという
+                                     最適化のアプローチも検討できる（例：最新10件のみなど） */
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "datePublished": "2025-05-05",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            }
+          }
+        },
+        {
+          /* 6番目のリスト項目
+                                     実装時には各記事の実際のタイトル、日付、著者名などを
+                                     データベースやAPIから取得して動的に挿入することが望ましい */
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "datePublished": "2025-05-05",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            }
+          }
+        },
+        {
+          /* 7番目のリスト項目
+                                     もし記事がカテゴリ分けされている場合は、Articleタイプの中に
+                                     about属性で関連カテゴリ情報を追加すると効果的 */
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "datePublished": "2025-05-05",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            }
+          }
+        },
+        {
+          /* 8番目（最後）のリスト項目
+                                     リストの最後の項目でもpositionは適切に設定する必要がある
+                                     最後だからといって省略してはいけない */
+          "@type": "ListItem",
+
+          /* position値がリスト内のアイテム数と一致していることを確認
+                                     8番目のアイテムなので8を指定。欠番があるとエラーの原因になる
+                                     また、positionは必ず整数値を使用し、文字列として指定する場合でも
+                                     数値のみを含む文字列を使用する（例："8"は可、"第8位"などは不可） */
+          "position": 8,
+
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "datePublished": "2025-05-05",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            }
+          }
+        }
+
+        /* 改善案: 実際の記事数に応じてitemListElementの要素数を調整するべき
+                                   静的に8つを固定するよりも、動的に記事数に合わせて生成する実装が望ましい
+                                   また、表示する記事数が多い場合は、numberOfItems属性を追加して
+                                   全体の記事数を明示すると良い
+
+                                   さらに、各記事のitem内に以下のような属性を追加すれば
+                                   検索エンジンはより多くの情報を得ることができる：
+
+                                   - url: 記事の個別ページURL（絶対パス）
+                                   - image: 記事のサムネイル画像（ImageObjectタイプで指定）
+                                   - description: 記事の簡潔な説明
+                                   - keywords: 記事のキーワード（カンマ区切りの文字列）
+                                   - articleSection: 記事のカテゴリ
+                                   - wordCount: 記事の単語数
+                                   - publisher: 発行元情報（Organizationタイプで指定）
+                                */
+      ]
+
+      /* 改善案: ItemListに以下の属性を追加するとさらに効果的
+                                 - name: リスト全体を表すタイトル（例: "最新記事一覧"）
+                                 - description: リストの説明
+                                 - numberOfItems: リスト内の総アイテム数（8）
+                                 - url: このリストを表示しているページのURL
+
+                                 また、より高度なマークアップとして、このItemListが
+                                 ページの主要コンテンツであることを示すために、
+                                 WebPageタイプのmainEntityプロパティとして
+                                 このItemListを指定する構造も検討できる。
+                              */
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - RANKING セクション
+    目的: このマークアップは記事リンクのリストを検索エンジンに伝えるためのものです。
+    前のコードと異なり、こちらはArticleタイプではなくシンプルなリストアイテムとして
+    記事タイトルとURLのみを構造化しています。
+    -->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定するプロパティ。
+               すべてのSchema.org構造化データで必ず最初に設定する必須プロパティ（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+               ItemListは複数のアイテム（リンクや記事など）を順序付きリストとして
+               表現するためのタイプ。Googleのリッチリザルトでカルーセル表示の
+               候補となる可能性がある（必須） */
+      "@type": "ItemList",
+
+      /* itemListElementはリスト内の各アイテムを配列として格納するプロパティ。
+               ItemListタイプでは必須のプロパティで、少なくとも1つのアイテムを
+               含む必要がある（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはItemList内の各アイテムを表す標準的なタイプ。
+                   ItemListの子要素としては必ずこのタイプを使用する必要がある */
+          "@type": "ListItem",
+
+          /* positionはリスト内での順序を示す必須プロパティ。
+                   必ず1から始まる整数値を使い、連番で設定する。
+                   この値が正しくないとGoogle構造化データテストでエラーになる（必須） */
+          "position": 1,
+
+          /* urlはアイテムのリンク先URLを示すプロパティ。
+                   必ず有効なURLを指定する必要があり、テスト用の "#" は
+                   実運用時には実際のURLに置き換える必要がある。
+                   絶対URLを使用することが強く推奨される */
+          "url": "#",
+
+          /* nameはリスト項目のタイトルを示すプロパティ。
+                   ユーザーに表示される実際のリンクテキストと一致させることが重要。
+                   検索結果に表示される可能性がある重要な要素 */
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 2番目のリスト項目。リスト内の各アイテムは同じ構造を持つべき */
+          "@type": "ListItem",
+
+          /* 位置は必ず連番で設定する。ここでは2番目なので2を指定。
+                   欠番や重複はエラーの原因となるため、特に動的生成時には注意が必要 */
+          "position": 2,
+
+          /* プレースホルダーURLは実際のURLに必ず置き換える。
+                   無効なURLや存在しないページへのリンクは検索エンジンの評価に
+                   悪影響を与える可能性がある */
+          "url": "#",
+
+          /* タイトルは実際のコンテンツと一致させる。
+                   長すぎるタイトルは検索結果で切り詰められる可能性があるため、
+                   簡潔で分かりやすいタイトルが望ましい */
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 3番目のリスト項目 */
+          "@type": "ListItem",
+
+          /* positionは前の項目から連続した値を設定。
+                   この値はHTMLでの表示順序とも一致させるのが理想的 */
+          "position": 3,
+
+          /* シンプルなListItemタイプでは、urlとnameの2つのプロパティで
+                   必要最小限の情報を提供している。必要に応じてitemプロパティを使用して
+                   より詳細な情報（Articleタイプなど）を提供することも可能 */
+          "url": "#",
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 4番目のリスト項目
+                   各ListItemは独立したエンティティだが、位置の連続性が重要 */
+          "@type": "ListItem",
+          "position": 4,
+          "url": "#",
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 5番目のリスト項目
+                   実装時にはこのような繰り返し構造はテンプレート化して
+                   データベースやCMS連携で動的生成することが保守性の観点から望ましい */
+          "@type": "ListItem",
+          "position": 5,
+          "url": "#",
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 6番目のリスト項目
+                   リストが長くなる場合でも、すべての項目に対して構造化データを
+                   提供することでGoogleなどの検索エンジンはコンテンツをより正確に理解できる */
+          "@type": "ListItem",
+          "position": 6,
+          "url": "#",
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 7番目のリスト項目
+                   シンプルなListItemでもdescriptionプロパティを追加して
+                   各項目の簡単な説明を加えることも可能（オプショナル） */
+          "@type": "ListItem",
+          "position": 7,
+          "url": "#",
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 8番目のリスト項目
+                   大量のリスト項目がある場合は、すべてを構造化するのではなく
+                   重要な項目（上位10件など）だけを選択するという最適化も検討できる */
+          "@type": "ListItem",
+          "position": 8,
+          "url": "#",
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 9番目のリスト項目
+                   より高度な実装では、各項目に対してimage属性を追加して
+                   サムネイル画像情報を提供することも可能（オプショナル） */
+          "@type": "ListItem",
+          "position": 9,
+          "url": "#",
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        },
+        {
+          /* 10番目（最後）のリスト項目
+                   リストの最後であっても必ずpositionプロパティを正確に設定する */
+          "@type": "ListItem",
+
+          /* positionの最大値はリスト全体の長さと一致させる。
+                   ここでは10項目あるため、最後のpositionは10となる。
+                   実装時には動的に計算するのが望ましい */
+          "position": 10,
+          "url": "#",
+          "name": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入..."
+        }
+      ]
+
+      /* 改善案: ItemListに以下のプロパティを追加するとさらに効果的
+               - name: リスト全体のタイトル（例: "人気記事ランキング"）
+               - description: リスト全体の説明文
+               - numberOfItems: リスト内の総アイテム数（ここでは10）
+               - itemListOrder: リストの順序タイプ（例: "Ascending", "Descending"）
+               - url: このリストが表示されているページのURL
+            */
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - PICK UP セクション
+    目的: このマークアップは記事リストの構造を検索エンジンに伝えるためのものです。
+    記事タイトル、著者情報、公開日、そして発行者（サイト運営組織）の情報を含む
+    より詳細な構造化データとなっています。
+    -->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+             すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+             ItemListタイプは複数の記事を順序付きリストとして表現するのに適している。
+             Googleのリッチリザルトでカルーセル表示の候補となる可能性がある（必須） */
+      "@type": "ItemList",
+
+      /* itemListElementは複数のリスト項目を配列として格納するプロパティ。
+             ItemListタイプでは必須のプロパティで、少なくとも1つのアイテムを含む必要がある（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の各項目を表す標準的なタイプ。
+                   ItemListの子要素としては必ずこのタイプを使用する必要がある */
+          "@type": "ListItem",
+
+          /* positionはリスト内での順序を示す必須プロパティ。
+                   必ず1から始まる整数値を使い、連番で設定する必要がある（必須） */
+          "position": 1,
+
+          /* itemプロパティにはリスト項目の実際のコンテンツを格納する。
+                   前のシンプルなリストとは異なり、ここではnameとurlだけでなく
+                   詳細な記事情報を提供するためにArticleタイプのオブジェクトを使用（必須） */
+          "item": {
+            /* Articleタイプはブログ記事やニュース記事などのコンテンツを表す。
+                   より具体的なコンテンツタイプに応じてNewsArticle（ニュース記事）や
+                   BlogPosting（ブログ投稿）などのサブタイプも検討できる */
+            "@type": "Article",
+
+            /* headlineは記事のタイトルを示す重要なプロパティ。
+                   実際のページ上の見出しと一致させる必要がある。
+                   最適な長さは110文字以内（それ以上は切り詰められる可能性あり）
+                   Articleタイプでは必須のプロパティ（必須） */
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+
+            /* authorは記事の著者情報を示すプロパティ。
+                   著者情報は検索エンジンによるコンテンツの信頼性評価に
+                   影響を与える可能性がある重要な要素 */
+            "author": {
+              /* Personタイプで著者が個人であることを示す。
+                     組織全体が著者の場合はOrganizationタイプを使用する */
+              "@type": "Person",
+
+              /* nameプロパティに著者名を設定。
+                     実際の著者名と一致させることが重要で、
+                     可能であれば著者ページへのリンク（url属性）も追加すると良い */
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+
+            /* datePublishedは記事の公開日を示すプロパティ。
+                   必ずISO 8601形式（YYYY-MM-DD）で指定する必要がある。
+                   検索結果に日付として表示される可能性が高いため、
+                   実際の公開日と一致させることが重要 */
+            "datePublished": "2025-05-05",
+
+            /* publisherは記事の発行者（サイト運営組織）情報を示すプロパティ。
+                   Googleのナレッジグラフ連携やTheme-a表示に重要な役割を果たす。
+                   Articleタイプでは推奨される重要プロパティ */
+            "publisher": {
+              /* Organizationタイプで発行者が組織であることを示す。
+                     通常、サイト運営主体（企業・団体など）を指定する */
+              "@type": "Organization",
+
+              /* nameプロパティにサイト名または組織名を設定。
+                     サイト全体で一貫した名称を使用することが重要 */
+              "name": "サイト名"
+
+              /* 改善案: Organizationには以下のプロパティも追加するとより効果的
+                     - logo: 組織のロゴ情報（ImageObjectタイプで指定）
+                     - url: 組織の公式サイトURL
+                     - address: 組織の所在地情報（PostalAddressタイプで指定）
+                     - sameAs: ソーシャルメディアプロファイルURLなど（配列）
+                  */
+            }
+
+            /* 改善案: Articleには以下のプロパティも追加するとより効果的
+                   - url: 記事の個別ページURL（必須ではないが強く推奨）
+                   - image: 記事のメイン画像（ImageObjectタイプで指定）
+                   - dateModified: 記事の最終更新日（検索エンジンはコンテンツの鮮度を重視）
+                   - description: 記事の簡潔な説明（150-160文字程度が理想的）
+                   - articleBody: 記事の本文（短い抜粋でも可）
+                   - keywords: 記事のキーワード（カンマ区切りの文字列）
+                */
+          }
+        },
+        {
+          /* 2番目のリスト項目。
+                 各ListItemの構造は一貫しており、同じプロパティセットを持つべき */
+          "@type": "ListItem",
+
+          /* positionプロパティは必ず前の項目から連続した値を設定する。
+                 ここでは2番目なので2を指定。欠番や重複はエラーの原因となる */
+          "position": 2,
+
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+
+            /* 日付形式はYYYY-MM-DDを厳守する必要がある。
+                   実運用時には動的に各記事の実際の公開日が入るよう設定するべき */
+            "datePublished": "2025-05-05",
+
+            "publisher": {
+              /* Organizationタイプは会社、団体、サイト運営組織などに使用。
+                     すべての記事で同じpublisher情報を使用するのが一般的 */
+              "@type": "Organization",
+              "name": "サイト名"
+            }
+          }
+        },
+        {
+          /* 3番目のリスト項目。
+                 多数の記事がある場合、この構造を繰り返すことになる */
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+            "datePublished": "2025-05-05",
+            "publisher": {
+              "@type": "Organization",
+              "name": "サイト名"
+            }
+          }
+        },
+        {
+          /* 4番目のリスト項目。
+                 実装時にはこのような繰り返し構造はテンプレート化して
+                 データベースやCMS連携で動的生成することが保守性の観点から望ましい */
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+            "datePublished": "2025-05-05",
+            "publisher": {
+              "@type": "Organization",
+              "name": "サイト名"
+            }
+          }
+        },
+        {
+          /* 5番目のリスト項目。
+                 すべてのリスト項目で同じプロパティセットを使用することで
+                 検索エンジンによる理解が促進される */
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+            "datePublished": "2025-05-05",
+            "publisher": {
+              "@type": "Organization",
+              "name": "サイト名"
+            }
+          }
+        },
+        {
+          /* 6番目のリスト項目。
+                 複数著者の記事の場合は、author属性に配列を使用することも可能
+                 例: "author": [{"@type": "Person", "name": "著者1"}, {"@type": "Person", "name": "著者2"}] */
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+            "datePublished": "2025-05-05",
+            "publisher": {
+              "@type": "Organization",
+              "name": "サイト名"
+            }
+          }
+        },
+        {
+          /* 7番目のリスト項目。
+                 記事カテゴリを示すには、article内に
+                 "articleSection": "カテゴリ名" のようなプロパティを追加できる */
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+            "datePublished": "2025-05-05",
+            "publisher": {
+              "@type": "Organization",
+              "name": "サイト名"
+            }
+          }
+        },
+        {
+          /* 8番目（最後）のリスト項目。
+                 position値はリスト内での順序を正確に反映する必要があり、
+                 重複や欠番があるとエラーの原因になる */
+          "position": 8,
+
+          "@type": "ListItem",
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります。ここにアカウント名が..."
+            },
+            "datePublished": "2025-05-05",
+            "publisher": {
+              /* Googleなどの検索エンジンは、この情報を使ってサイトの信頼性評価に利用することがある。
+                     実装時には組織の正式名称を使用し、サイト全体で一貫性を保つことが重要 */
+              "@type": "Organization",
+              "name": "サイト名"
+            }
+          }
+        }
+      ]
+
+      /* 改善案: ItemListに以下のプロパティを追加するとさらに効果的
+             - name: リスト全体のタイトル（例: "最新記事一覧"）
+             - description: リストの説明文
+             - numberOfItems: リスト内の総アイテム数（ここでは8）
+             - itemListOrder: リストの順序タイプ（例: "Ascending", "Descending"）
+             - url: このリストが表示されているページのURL
+          */
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - COMMUNITY セクション
+    目的: このマークアップは九州のキャンプコミュニティと、その異なる役割グループを
+    構造化して検索エンジンに伝えるためのものです。
+    コミュニティ検索や地域活動の検索結果向上、および組織構造の明確化に役立ちます。
+    -->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+               すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+               ItemListタイプは複数の関連組織を順序付きリストとして表現するのに適している。
+               複数のコミュニティや役割グループをまとめて表現できる（必須） */
+      "@type": "ItemList",
+
+      /* itemListElementは複数のリスト項目を配列として格納するプロパティ。
+               ItemListタイプでは必須のプロパティで、少なくとも1つのアイテムを含む必要がある（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の各項目を表す標準的なタイプ。
+                   ItemListの子要素としては必ずこのタイプを使用する必要がある */
+          "@type": "ListItem",
+
+          /* positionはリスト内での順序を示す必須プロパティ。
+                   必ず1から始まる整数値を使い、連番で設定する必要がある（必須） */
+          "position": 1,
+
+          /* itemプロパティにはリスト項目の実際のコンテンツを格納する。
+                   ここではOrganizationタイプを使用してコミュニティ情報を構造化（必須） */
+          "item": {
+            /* Organizationタイプは組織、団体、クラブなどを表現するのに適している。
+                     LocalBusiness（地域ビジネス）やSportsOrganization（スポーツ団体）など
+                     より具体的なサブタイプの使用も検討できる */
+            "@type": "Organization",
+
+            /* nameは組織の正式名称を示す必須プロパティ。
+                     検索結果に表示される可能性が高い重要な要素（必須） */
+            "name": "九州キャンプ&九州キャンパーの集い",
+
+            /* descriptionは組織の簡潔な説明文。
+                     検索エンジンがコンテンツを理解するための重要な手がかりとなる */
+            "description": "九州地方のキャンプ愛好家のためのコミュニティ",
+
+            /* urlは組織の公式ウェブサイトやSNSページなどのURL。
+                     実在する有効なURLを絶対パスで指定することが重要 */
+            "url": "https://example.com/tohoku-camp",
+
+            /* logoは組織のロゴ画像のURL。
+                     Googleのナレッジパネルなどでの表示に使用される可能性がある */
+            "logo": "https://example.com/images/tohoku-camp-logo.png",
+
+            /* locationプロパティは組織の活動地域や所在地情報を示す。
+                     地域に根ざした活動には特に重要な要素 */
+            "location": {
+              /* Placeタイプは場所や地域を表現するのに適している */
+              "@type": "Place",
+
+              /* addressプロパティで住所情報を構造化。
+                       地域検索での発見可能性を高める重要な要素 */
+              "address": {
+                /* PostalAddressタイプで住所情報を標準化された形式で提供 */
+                "@type": "PostalAddress",
+
+                /* addressRegionは都道府県や地方名を示す。
+                         地域検索での適切なマッチングに重要 */
+                "addressRegion": "九州地方",
+
+                /* addressCountryは国コードをISO 3166-1 alpha-2形式で指定。
+                         日本の場合は"JP"を使用 */
+                "addressCountry": "JP"
+              }
+            },
+
+            /* memberプロパティは組織のメンバー情報を示す。
+                     OrganizationRoleタイプを使用することで、
+                     役割ごとのグループ分けが可能になる */
+            "member": {
+              /* OrganizationRoleタイプで組織内の役割を表現。
+                       単なるPersonタイプと異なり、役割名や人数などの
+                       追加情報を含められる利点がある */
+              "@type": "OrganizationRole",
+
+              /* memberプロパティに実際のメンバー情報を格納。
+                       個別の人物または代表的な人物を指定 */
+              "member": {
+                /* Personタイプは人物情報を表現する際に使用。
+                         ここでは特定の管理者情報を示している */
+                "@type": "Person",
+
+                /* nameプロパティに人物名を設定。
+                         プライバシーに配慮しつつ、実在する代表者名を使用することが望ましい */
+                "name": "山田太郎"
+              },
+
+              /* roleNameは組織内での役割や肩書きを示す。
+                       検索エンジンが組織構造を理解するのに役立つ */
+              "roleName": "コミュニティ管理者",
+
+              /* numberOfMembersは同じ役割を持つメンバーの総数。
+                       整数値で指定し、実際の人数と一致させることが望ましい */
+              "numberOfMembers": 3
+            }
+          }
+        },
+        {
+          /* 2番目のリスト項目。同じコミュニティの別の役割グループを表現 */
+          "@type": "ListItem",
+
+          /* positionは必ず前の項目から連続した値を設定。
+                   ここでは2番目なので2を指定 */
+          "position": 2,
+
+          "item": {
+            /* 同じコミュニティを示すため、同じOrganizationタイプと名称を使用。
+                     これにより検索エンジンは両者が同じ組織の異なる側面であることを理解できる */
+            "@type": "Organization",
+            "name": "九州キャンプ&九州キャンパーの集い",
+            "description": "九州地方のキャンプ愛好家のためのコミュニティ",
+            "url": "https://example.com/tohoku-camp",
+
+            /* 一般メンバーグループ情報。
+                     同じOrganizationでも異なるmember情報を持つことで
+                     組織内の異なる役割グループを表現できる */
+            "member": {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+
+                /* 具体的な個人名ではなく役割を表す一般的な名称。
+                         プライバシーに配慮しつつグループを表現する方法 */
+                "name": "一般メンバー"
+              },
+              "roleName": "一般メンバー",
+
+              /* 実際のメンバー数を正確に反映することで、
+                       コミュニティの規模を検索エンジンに伝えられる */
+              "numberOfMembers": 120
+            }
+          }
+        },
+        {
+          /* 3番目のリスト項目。異なるが関連性のある別のコミュニティを表現 */
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            /* 異なる組織の例。同じ趣味（アウトドア/キャンプ）の
+                     関連コミュニティとして構造化することで、
+                     検索エンジンが関連性を理解しやすくなる */
+            "@type": "Organization",
+
+            /* 組織名は完全に異なる名称を使用し、別の団体であることを明確に */
+            "name": "青森アウトドアクラブ",
+            "description": "青森県を中心に活動するアウトドア愛好家の集まり",
+            "url": "https://example.com/aomori-outdoor",
+            "logo": "https://example.com/images/aomori-logo.png",
+
+            /* locationプロパティで特定の県を指定することで、
+                     より具体的な地域情報を提供。地域検索での
+                     適切なマッチングに役立つ */
+            "location": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+
+                /* 前項目の「九州地方」よりも具体的な「青森県」を指定することで、
+                         より詳細な地域情報を提供 */
+                "addressRegion": "青森県",
+                "addressCountry": "JP"
+              }
+            },
+
+            /* 組織の代表者情報。小規模なコミュニティでは
+                     実在する代表者名を使用することで信頼性が向上する可能性がある */
+            "member": {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "佐藤次郎"
+              },
+
+              /* 「コミュニティ管理者」とは異なる肩書きを使用することで、
+                       組織ごとの違いを明確に表現 */
+              "roleName": "クラブ代表",
+
+              /* 組織全体のメンバー数。
+                       実際の人数と一致させることが望ましい */
+              "numberOfMembers": 45
+            }
+          }
+        }
+      ]
+
+      /* 改善案: ItemListに以下のプロパティを追加するとさらに効果的
+               - name: リスト全体のタイトル（例: "九州地方のキャンプコミュニティ"）
+               - description: リストの説明文（例: "九州地方で活動するキャンプ関連のコミュニティ一覧"）
+               - numberOfItems: リスト内の総アイテム数（ここでは3）
+
+               また、Organization情報には以下のプロパティも追加すると有用：
+               - foundingDate: 設立日（ISO 8601形式 YYYY-MM-DD）
+               - email: 問い合わせ用メールアドレス
+               - telephone: 連絡先電話番号
+               - sameAs: SNSアカウントURLなど（配列）
+               - event: 主催イベント情報（Eventタイプで指定）
+            */
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - NEWS セクション
+    目的: このマークアップはニュース記事のリストを検索エンジンに伝えるためのものです。
+    NewsArticleタイプを使用することで、通常の記事よりもニュース性の高いコンテンツとして
+    検索エンジンに認識させ、ニュース検索結果への表示可能性を高めます。
+    -->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+               すべてのSchema.org構造化データで最初に定義する必要がある（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+               ItemListタイプは複数のニュース記事を順序付きリストとして表現するのに適している。
+               Googleのリッチリザルトでカルーセル表示やニュースリスト表示の
+               候補となる可能性が高まる（必須） */
+      "@type": "ItemList",
+
+      /* itemListElementは複数のリスト項目を配列として格納するプロパティ。
+               ItemListタイプでは必須のプロパティで、少なくとも1つのアイテムを含む必要がある（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の各項目を表す標準的なタイプ。
+                   ItemListの子要素としては必ずこのタイプを使用する必要がある（必須） */
+          "@type": "ListItem",
+
+          /* positionはリスト内での順序を示す必須プロパティ。
+                   必ず1から始まる整数値を使い、連番で設定する必要がある。
+                   この値はGoogle構造化データテストでも厳密にチェックされる（必須） */
+          "position": 1,
+
+          /* itemプロパティにはリスト項目の実際のコンテンツを格納する。
+                   ここではNewsArticleタイプを使用して詳細なニュース記事情報を構造化（必須） */
+          "item": {
+            /* NewsArticleタイプはArticleタイプの特殊型で、ニュース記事に特化している。
+                     通常のArticleよりもニュース性が高いコンテンツに使用する。
+                     Google Newsへの掲載候補となる可能性を高める重要なタイプ（必須） */
+            "@type": "NewsArticle",
+
+            /* headlineは記事のタイトルを示す必須プロパティ。
+                     検索結果に表示される可能性が高いため、実際のタイトルと一致させる。
+                     最適な長さは110文字以内（それ以上は切り詰められる可能性がある）（必須） */
+            "headline": "テキストが入ります。",
+
+            /* datePublishedはニュース記事の公開日時を示すプロパティ。
+                     ニュース記事では完全なISO 8601形式（YYYY-MM-DDThh:mm:ss+TZ）を使用するのが理想的。
+                     タイムゾーン情報も含めることで、記事の公開タイミングが正確に伝わる */
+            "datePublished": "2024-10-08T14:30:00+09:00",
+
+            /* dateModifiedは記事の最終更新日時を示すプロパティ。
+                     ニュース記事では最新性が重要なため、記事が更新された場合は
+                     必ずこのプロパティも更新するべき */
+            "dateModified": "2024-10-08T16:45:00+09:00",
+
+            /* urlは記事の個別ページURLを示すプロパティ。
+                     必ず有効な絶対URLを指定する必要がある。
+                     検索エンジンはこのURLにアクセスして内容を確認することがある */
+            "url": "https://example.com/news/article1",
+
+            /* imageはニュース記事のメイン画像情報を示すプロパティ。
+                     Google Newsなどでの表示に使用される可能性が高いため、
+                     高品質な画像を設定することが望ましい */
+            "image": {
+              /* ImageObjectタイプで画像の詳細情報を構造化 */
+              "@type": "ImageObject",
+
+              /* 画像のURLは絶対パスで指定。存在する実際の画像を参照する必要がある */
+              "url": "https://example.com/images/article1.jpg",
+
+              /* 画像の幅と高さをピクセル単位で指定。
+                       Googleリッチリザルト用の推奨サイズは最低1200px×630px
+                       数値ではなく文字列として指定する点に注意 */
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* authorは記事の著者情報を示すプロパティ。
+                     ニュース記事では著者情報が信頼性の指標となるため重要 */
+            "author": {
+              /* Personタイプで著者が個人であることを示す。
+                       組織全体が著者の場合はOrganizationタイプを使用する */
+              "@type": "Person",
+
+              /* 著者名は実名を使用するのが望ましい。
+                       Theme-a価値向上や著者の知名度向上にも寄与する */
+              "name": "山田 太郎"
+            },
+
+            /* descriptionは記事の概要を示すプロパティ。
+                     検索結果のスニペットとして使用される可能性が高い。
+                     80〜150文字程度の簡潔で内容を的確に表現する文章が理想的 */
+            "description": "この記事の簡単な概要文が入ります。検索結果のスニペットとして表示される可能性があります。",
+
+            /* publisherはニュース記事の発行者（通常はメディア組織）情報を示すプロパティ。
+                     NewsArticleタイプでは必須とされる重要なプロパティ（必須） */
+            "publisher": {
+              /* Organizationタイプで発行者が組織であることを示す。
+                       ニュースメディアの場合、NewsMediaOrganizationなどの
+                       より具体的なサブタイプも検討できる */
+              "@type": "Organization",
+
+              /* 発行元の組織名。実際のサイト名やメディア名と
+                       一致させることが重要（必須） */
+              "name": "サイト名",
+
+              /* logoは発行者のロゴ情報。Google Newsでの表示に必要な要素で、
+                       NewsArticleタイプを使用する場合は設定することが強く推奨される */
+              "logo": {
+                "@type": "ImageObject",
+
+                /* ロゴ画像のURL。絶対URLを使用することが強く推奨される */
+                "url": "https://example.com/logo.png",
+
+                /* Googleのロゴ要件に合わせるなら幅が広く（推奨最低600px）、
+                         高さが60px程度が理想的。横長のロゴが望ましい */
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          /* 2番目のリスト項目。複数のニュース記事を順序付きで表現することで、
+                   新着順やトピック順などの関連性をGoogleに伝えることができる（必須） */
+          "@type": "ListItem",
+
+          /* positionは必ず前の項目から連続した値を設定する（必須） */
+          "position": 2,
+
+          "item": {
+            /* 2つ目以降の記事も同じNewsArticleタイプを使用。
+                     一貫した構造を保つことが重要（必須） */
+            "@type": "NewsArticle",
+
+            /* 各記事の実際のタイトルを設定（必須） */
+            "headline": "テキストが入ります。",
+
+            /* 日時情報は常に正確なものを設定。
+                     ニュース記事では公開時刻が新しいことが価値となるため、
+                     正確な日時情報が特に重要 */
+            "datePublished": "2024-10-08T12:15:00+09:00",
+            "dateModified": "2024-10-08T13:20:00+09:00",
+
+            /* 各記事の固有URLを設定 */
+            "url": "https://example.com/news/article2",
+
+            /* 各記事に対応する画像情報 */
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/article2.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+
+            /* 実際の著者情報。複数の著者がいる場合は配列を使用することも可能
+                     例: "author": [{"@type": "Person", "name": "著者1"}, {"@type": "Person", "name": "著者2"}] */
+            "author": {
+              "@type": "Person",
+              "name": "佐藤 花子"
+            },
+
+            /* 各記事ごとの固有の概要文。記事の内容を端的に表現する */
+            "description": "2番目の記事の概要文です。この文章は検索結果に表示される可能性があります。",
+
+            /* 発行者情報はすべての記事で同一にするのが一般的（必須） */
+            "publisher": {
+              "@type": "Organization",
+              "name": "サイト名",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            }
+          }
+        },
+        {
+          /* 3番目のリスト項目。positionの連番を維持することが重要（必須） */
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "NewsArticle",
+            "headline": "テキストが入ります。",
+
+            /* 公開日時は必須プロパティ。この日時は実際の記事公開日時と
+                     完全に一致させる必要がある（必須） */
+            "datePublished": "2024-10-08T09:45:00+09:00",
+            "dateModified": "2024-10-08T10:30:00+09:00",
+            "url": "https://example.com/news/article3",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://example.com/images/article3.jpg",
+              "width": "1200",
+              "height": "630"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "鈴木 一郎"
+            },
+
+            /* 概要文の長さに関する具体的な推奨事項。
+                     80〜150文字程度が検索結果での表示に最適 */
+            "description": "3番目の記事の概要文です。80〜150文字程度の長さが最適です。",
+
+            /* 発行者情報（必須） */
+            "publisher": {
+              "@type": "Organization",
+              "name": "サイト名",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/logo.png",
+                "width": "600",
+                "height": "60"
+              }
+            },
+
+            /* articleSectionプロパティはニュース記事のカテゴリを示す。
+                     検索エンジンがコンテンツの分類を理解するのに役立つ追加情報 */
+            "articleSection": "ビジネス",
+
+            /* keywordsプロパティは記事に関連するキーワードをカンマ区切りで列挙。
+                     検索エンジンがコンテンツの主題を理解するのに役立つ追加情報。
+                     3〜5個の関連性の高いキーワードを設定するのが効果的 */
+            "keywords": "キーワード1, キーワード2, キーワード3"
+          }
+        }
+      ]
+
+      /* 改善案: ItemListに以下のプロパティを追加するとさらに効果的
+               - name: リスト全体のタイトル（例: "最新ニュース一覧"）
+               - description: リストの説明（例: "当サイトの最新ニュース記事をお届けします"）
+               - numberOfItems: リスト内の総アイテム数（ここでは3）
+               - itemListOrder: リストの順序タイプ（例: "Descending"で新着順を示す）
+
+               また、NewsArticleには以下のプロパティも追加すると有用：
+               - wordCount: 記事の単語数（数値）
+               - isAccessibleForFree: 無料で閲覧可能かどうか（true/false）
+               - alternativeHeadline: 記事の副題
+               - mainEntityOfPage: 記事が主要コンテンツであるページのURL
+               - speakable: 音声アシスタント用の読み上げ可能セクション指定
+            */
+    }
+  </script>
+
+  <!-- Schema.org マークアップ - FOOTER セクション
+    目的: このマークアップはWebサイトを運営している組織の基本情報を検索エンジンに伝えるためのものです。
+    サイト名、ロゴ、URLとソーシャルメディアアカウントの関連付けを行い、
+    検索エンジンでのTheme-a認識を強化します。
+
+    注意点:
+    1. ロゴは相対パスではなく絶対URLを使用してください
+    2. 実際のサイト名、URL、ソーシャルメディアアカウントに置き換えてください
+    3. 可能であれば連絡先情報も追加するとよいでしょう
+    -->
+  <script type="application/ld+json">
+    {
+      /* @contextはSchema.orgの名前空間を指定する必須プロパティ。
+                       すべてのSchema.org構造化データで最初に定義する必要がある。
+                       これにより検索エンジンがこのJSONデータをSchema.orgの
+                       語彙を使用した構造化データとして認識できる（必須） */
+      "@context": "https://schema.org",
+
+      /* @typeでこのJSONデータの主要な型を定義。
+                       Organizationタイプは企業、団体、Theme-aなどの組織を表現するのに適している。
+                       より具体的な事業内容に応じてLocalBusiness、Corporation、EducationalOrganization
+                       などのサブタイプの使用も検討できる（必須） */
+      "@type": "Organization",
+
+      /* nameは組織の正式名称を示す必須プロパティ。
+                       サイト名やテーマ名と一致させることで、検索エンジンが
+                       サイトとTheme-aの関連性を正確に理解できる（必須） */
+      "name": "サイト名",
+
+      /* logoは組織のロゴ画像URLを示すプロパティ。
+                       Googleのナレッジパネル表示やリッチリザルトでのTheme-a表示に使用される。
+                       注意: ここでは相対パスが使用されているが、絶対URLに変更することを強く推奨。
+                       相対パスは検索エンジンが正しく解釈できない可能性がある */
+      "logo": "assets/images/theme-a/theme-a-logo.png",
+
+      /* urlは組織の公式ウェブサイトURLを示す必須プロパティ。
+                       必ず有効な絶対URLを指定する必要がある。
+                       通常はサイトのホームページURLを設定する（必須） */
+      "url": "https://example.com",
+
+      /* sameAsは組織の他のウェブプレゼンス（主にソーシャルメディアアカウント）を
+                       配列形式で列挙するプロパティ。
+                       これによりGoogleのナレッジグラフ内でTheme-aの各種アカウントが
+                       正しく関連付けられ、検索結果に表示される可能性が高まる */
+      "sameAs": [
+        /* InstagramアカウントのURL。
+                         実際のアカウントURLに置き換える必要がある。
+                         プロフィールページの完全URLを指定する */
+        "https://www.instagram.com/example",
+
+        /* FacebookアカウントのURL。
+                         ページIDではなく、完全なURLを指定する */
+        "https://www.facebook.com/example",
+
+        /* X（旧Twitter）アカウントのURL。
+                         現在はx.comドメインを使用することが推奨されている */
+        "https://x.com/example"
+
+        /* 他のプラットフォームも追加可能：
+                         - LinkedIn: https://www.linkedin.com/company/example
+                         - YouTube: https://www.youtube.com/c/example
+                         - Pinterest: https://www.pinterest.com/example
+                         など、実際に運用しているアカウントのみを追加する */
+      ]
+      /* 改善提案: 以下のように連絡先情報を追加するとよいでしょう
+                    ,
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "住所",
+                      "addressLocality": "市区町村",
+                      "addressRegion": "都道府県",
+                      "postalCode": "郵便番号",
+                      "addressCountry": "JP"
+                    },
+                    "telephone": "電話番号",
+                    "email": "contact@example.com"
+                    */
+
+      /* 改善提案: logoはImageObjectとして定義するとより良いでしょう
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://example.com/images/theme-a/theme-a-logo.png",
+                      "width": "600",
+                      "height": "60"
+                    }
+                    */
+
+      /* さらなる改善案: 以下のプロパティも追加するとより効果的
+                       - description: 組織の簡潔な説明文（150-160文字程度）
+                       - foundingDate: 設立日（ISO 8601形式：YYYY-MM-DD）
+                       - numberOfEmployees: 従業員数（数値）
+                       - slogan: 企業スローガンやキャッチフレーズ
+                       - theme-a: 複数のTheme-aを持つ場合はTheme-aタイプで各Theme-a情報を定義
+
+                       以下は実店舗を持つ場合に特に有効なプロパティ：
+                       - openingHours: 営業時間（例: "Mo-Fr 09:00-18:00"）
+                       - geo: 地理座標情報（GeoCoordinatesタイプで緯度・経度を指定）
+                       - hasMap: 地図URL（GoogleマップなどのURL）
+
+                       以下は企業サイトの場合に追加すると良いプロパティ：
+                       - potentialAction: 検索、予約、ダミーテキストです。などのアクション定義
+                       - memberOf: 所属団体や協会情報
+                       - award: 受賞歴
+                       - review: 第三者によるレビュー情報
+                    */
+    }
+  </script>
+
+  <script type="module" src="./assets/js/main.js"></script>
+  <script type="module" src="./assets/js/theme-a-top.js"></script>
+</head>

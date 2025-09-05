@@ -1,0 +1,112 @@
+/* 小（14~16px）,中（20px）,大（24px） */
+
+[class^='material-symbols-'] {
+  color: var(--text-primary);
+}
+// チャット（小）
+.icon-comment-sm {
+  font-size: 14px;
+  transform: translateY(1px);
+  margin-right: -1px;
+}
+// チャット（中）
+.icon-comment-md {
+  font-size: 20px;
+}
+// ハート(小)
+.icon-favorite-sm {
+  font-size: 14px;
+  margin-right: -1px;
+  transform: translateY(1px);
+}
+// ハート(中)
+.icon-favorite-md {
+  font-size: 20px;
+}
+// ハート(大)
+.icon-favorite-lg {
+  font-size: 24px;
+}
+// ビュー（小）
+.icon-visibility-sm {
+  font-size: 14px;
+  transform: translateY(1px);
+  margin-right: 4px;
+}
+// ビュー（中）
+.icon-visibility-md {
+  font-size: 20px;
+}
+
+// グループ（小）
+.icon-groups-sm {
+  font-size: 16px;
+  transform: translateY(3.5px);
+  margin-right: 2px;
+}
+// アロー（中）
+.icon-chevron-md {
+  font-size: 20px;
+}
+// アロー（大）
+.icon-chevron-lg {
+  font-size: 24px;
+}
+// アローサークル（中）
+.icon-expand-circle-right-md {
+  font-size: 20px;
+}
+// 一時停止（大）
+.icon-pause-lg {
+  font-variation-settings: 'FILL' 1;
+}
+// プラスマーク（小）
+.icon-add-circle-sm {
+  font-size: 14px;
+  transform: translateY(1px);
+  margin-right: -1px;
+}
+// プラスマーク（中）
+.icon-add-circle-md {
+  font-size: 20px;
+  transform: translateY(1px);
+  margin-right: -1px;
+}
+// アロー（大）
+.icon-arrow-lg {
+  font-size: 24px;
+}
+// 時計（小）
+.icon-schedule-sm {
+  font-size: 14px;
+  transform: translateY(1px);
+}
+// ダブルアロー（中）
+.icon-keyboard_double_arrow-md {
+  font-size: 20px;
+}
+// 引用マーク（大）
+.icon-quote-lg {
+  font-size: 24px;
+}
+// キーボードアロー（大）
+.icon-keyboard-arrow-lg {
+  font-size: 24px;
+}
+// アローバック、アローフォワード
+.icon-arrow-back-sm {
+  font-size: 14px;
+}
+.icon-arrow-forward-sm {
+  font-size: 14px;
+}
+.icon-arrow-back-md {
+  font-size: 20px;
+}
+.icon-arrow-forward-md {
+  font-size: 20px;
+}
+// 再生（大）
+.icon-play-lg {
+  font-variation-settings: 'FILL' 1;
+}

@@ -1,0 +1,61 @@
+@use "../mixins" as *;
+
+// ページネーション
+.prj-pagination-component {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  .prj-pagination-item {
+    width: 41px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.current {
+      opacity: 1 !important;
+    }
+  }
+  & a:not(.current) {
+    cursor: pointer;
+  }
+  .prj-pagination-button {
+    margin-top: 1.5px;
+    span {
+      color: var(--text-primary);
+      @include sm {
+        color: black;
+      }
+      @include md {
+        color: black;
+      }
+      @include lg {
+        color: black;
+      }
+      @include xl {
+        color: black;
+      }
+    }
+  }
+  .prj-pagination-number {
+    font-size: 12px;
+    line-height: 1.25; // 12/15
+    font-weight: 600;
+    color: var(--text-primary);
+    @include sm {
+      color: #333333;
+    }
+    @include md {
+      color: #333333;
+    }
+    @include lg {
+      color: #333333;
+    }
+    @include xl {
+      color: #333333;
+    }
+    &.current {
+      background-color: var(--theme-primary);
+      color: white;
+    }
+  }
+}

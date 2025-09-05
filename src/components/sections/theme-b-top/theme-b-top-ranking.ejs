@@ -1,0 +1,973 @@
+<section
+  class="ranking prj-section-component relative overflow-hidden py-[56px] md:py-[64px] lg:px-[84px] md:rounded-[var(--theme-border-radius-card)] border-t-[1px] lg:border-r-[1px] lg:border-l-[1px] lg:border-b-[1px] border-[#333333] sm:border-[var(--text-primary)]"
+  aria-labelledby="ranking-title">
+  <!-- ブラー背景レイヤー -->
+  <div class="absolute is-blur inset-0 bg-cover bg-center bg-no-repeat" style="
+      filter: blur(4px);
+      background-image: url('/assets/images/theme-b/theme-b-ranking-bg.jpg');
+    " aria-hidden="true"></div>
+  <div class="absolute top-0 left-0 w-full z-10 bg-white/50 h-full" aria-hidden="true"></div>
+  <!-- ブラー背景レイヤー〆 -->
+  <div
+    class="prj-section-container relative z-10 xs:!max-w-[var(--theme-content-width-xs)] sm:!max-w-[var(--theme-content-width-sm-3)] md:!max-w-[var(--theme-content-width-md)] lg:!max-w-[942px] xl:!max-w-[1414px]">
+    <div class="prj-section-head flex flex-col sm:flex-row sm:justify-between gap-5">
+      <h2 id="ranking-title" class="prj-title-component mr-auto">RANKING</h2>
+      <div class="prj-content-sort-switch-button-component prj-content-sort-switch-button-3col-icon-component"
+        role="tablist" aria-label="ランキング表示切り替え">
+        <button id="tab-view" class="prj-content-sort-switch-button-item is-active" role="tab" aria-selected="true"
+          aria-controls="ranking-by-view">
+          <span class="prj-content-sort-switch-button-icon mb-[-1px] material-symbols-outlined icon-visibility-md"
+            aria-hidden="true">
+            visibility
+          </span>
+          ビュー
+        </button>
+        <button id="tab-like" class="prj-content-sort-switch-button-item" role="tab" aria-selected="false"
+          aria-controls="ranking-by-like">
+          <span class="prj-content-sort-switch-button-icon mb-[-1px] material-symbols-outlined icon-favorite-md"
+            aria-hidden="true">
+            favorite
+          </span>
+          いいね
+        </button>
+        <button id="tab-comment" class="prj-content-sort-switch-button-item" role="tab" aria-selected="false"
+          aria-controls="ranking-by-comment">
+          <span class="prj-content-sort-switch-button-icon mb-[-2px] material-symbols-outlined icon-comment-md"
+            aria-hidden="true">
+            chat
+          </span>
+          コメント
+        </button>
+      </div>
+    </div>
+    <div class="prj-section-body">
+      <div role="region" aria-roledescription="メディア型カード" aria-label="人気コンテンツランキング">
+        <div id="ranking-by-view" role="tabpanel" aria-labelledby="tab-view">
+          <ol
+            class="grid grid-cols-1 sm:justify-items-center md:justify-items-start sm:grid-cols-[repeat(auto-fit,minmax(min(100%,350px),1fr))] md:grid-cols-[repeat(auto-fit,minmax(min(100%,470px),1fr))]">
+            <!-- カードコンポーネント1 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-1 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                01
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-1.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第1位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント2 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-2 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                02
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-2.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第2位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント3 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-3 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                03
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-3.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第3位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント4 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-4 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                04
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-4.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第4位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント5 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-5 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                05
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-5.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第5位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント6 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-6 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                06
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-6.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第6位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント7 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-7 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                07
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-7.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第7位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント8 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-8 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                08
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-8.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第8位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント9 -->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-9 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                09
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-9.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第9位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- カードコンポーネント10-->
+            <li
+              class="prj-card-component card card-hover bg-white outline outline-[1px] outline-[var(--text-primary)] flex m-[-0.5px]">
+              <!-- ランキング順位 -->
+              <!-- ランキング順位個別のスタイルは.bg-ranking-1 ~ .bg-ranking-10のクラスを指定する -->
+              <div
+                class="font-size-[14px] min-w-[30px] md:min-w-[40px] h-fll bg-ranking-10 flex items-center justify-center border-r-[0.5px] border-[var(--text-primary)]"
+                aria-hidden="true">
+                10
+              </div>
+              <div class="p-[14px]">
+                <div class="flex items-center gap-[2.9%]">
+                  <div class="prj-card-head max-w-[200px] w-[48%] sm:w-[40%] md:w-[44%] lg:w-[46%]">
+                    <div class="prj-card-thumbnail">
+                      <a class="prj-card-image-link" href="#" aria-hidden="true" tabindex="-1">
+                        <div class="prj-card-image">
+                          <img src="assets/images/theme-b/theme-b-ranking-10.jpg" class="aspect-[112/69]" alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="prj-card-body flex-1 bg-none self-start md:self-center">
+                    <a href="#">
+                      <span class="sr-only">第10位：</span>
+                      <h3 class="prj-card-title !mt-0 !mb-1 md:!mb-[10px]">
+                        記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入...
+                      </h3>
+                    </a>
+                    <div class="prj-card-author-info mb-1 md:mb-[10px]">
+                      <div class="prj-card-author">
+                        <a href="#" class="prj-card-author-name !line-clamp-1">
+                          <span class="sr-only">著者：</span>
+                          ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...ここにアカウント名が入ります。ここにアカウント名が...
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prj-card-foot !hidden md:!flex">
+                      <div class="prj-card-stats">
+                        <div class="prj-card-views">
+                          <span class="prj-card-views-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-visibility-sm">
+                              visibility
+                            </span>
+                          </span>
+                          <span aria-label="閲覧数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-likes">
+                          <span class="prj-card-likes-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                              favorite
+                            </span>
+                          </span>
+                          <span aria-label="いいね数 123,456件">123456</span>
+                        </div>
+                        <div class="prj-card-comments">
+                          <span class="prj-card-comments-icon" aria-hidden="true">
+                            <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                          </span>
+                          <span aria-label="コメント数 123,456件">123456</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prj-card-foot md:!hidden mt-1">
+                  <div class="prj-card-stats">
+                    <div class="prj-card-views">
+                      <span class="prj-card-views-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-visibility-sm">
+                          visibility
+                        </span>
+                      </span>
+                      <span aria-label="閲覧数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-likes">
+                      <span class="prj-card-likes-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-favorite-sm" aria-hidden="true">
+                          favorite
+                        </span>
+                      </span>
+                      <span aria-label="いいね数 123,456件">123456</span>
+                    </div>
+                    <div class="prj-card-comments">
+                      <span class="prj-card-comments-icon" aria-hidden="true">
+                        <span class="material-symbols-outlined icon-comment-sm"> chat </span>
+                      </span>
+                      <span aria-label="コメント数 123,456件">123456</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- HEAD -->
+<%- include ('./components/sections/theme-b-top/theme-b-top-head.ejs') %>
+
+  <body>
+    <div id="app">
+      <div class="theme-b-theme">
+        <!-- HEADER -->
+        <%- include ('./components/header.ejs') %>
+          <!-- ボトムメニュー -->
+          <%- include ('./components/bottom-menu.ejs') %>
+            <!-- モーダルメニュー -->
+            <%- include ('./components/modal-menu.ejs') %>
+              <!-- アクセシビリティのためのmain要素 -->
+              <main id="main-content">
+                <!-- FV -->
+                <%- include ('./components/sections/theme-b-top/theme-b-top-fv.ejs') %>
+                  <!-- コンテンツ + サイドメニュー（メイン） -->
+                  <div class="flex flex-col lg:flex-row-reverse justify-center">
+                    <!-- コンテンツ -->
+                    <div class="lg:px-10 lg:!max-w-[1190px] xl:!max-w-[1670px]">
+                      <!-- FOLLOW -->
+                      <%- include ('./components/sections/theme-b-top/theme-b-top-follow.ejs') %>
+                        <!-- NEW -->
+                        <%- include ('./components/sections/theme-b-top/theme-b-top-new.ejs') %>
+                          <!-- RANKING -->
+                          <%- include ('./components/sections/theme-b-top/theme-b-top-ranking.ejs') %>
+                            <!-- PICK UP -->
+                            <%- include ('./components/sections/theme-b-top/theme-b-top-pickup.ejs') %>
+                              <!-- COMMUNITY -->
+                              <%- include ('./components/sections/theme-b-top/theme-b-top-community.ejs') %>
+                                <!-- NEWS -->
+                                <%- include ('./components/sections/theme-b-top/theme-b-top-news.ejs') %>
+                                  <!-- AD-2 -->
+                                  <%- include ('./components/sections/theme-b-top/theme-b-top-ad-2.ejs') %>
+                                    <!-- SPECIAL THANKS -->
+                                    <%- include ('./components/sections/theme-b-top/theme-b-top-special-thanks.ejs') %>
+                                      <!-- FOOTER -->
+                                      <%- include ('./components/sections/theme-b-top/theme-b-top-footer.ejs') %>
+                    </div>
+                    <!-- サイドメニュー（メイン） -->
+                    <%- include ('./components/sections/theme-b-top/theme-b-top-sidemenu-main.ejs') %>
+                  </div>
+              </main>
+      </div>
+    </div>
+  </body>
+
+</html>

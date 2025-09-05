@@ -1,0 +1,89 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+/* Theme-aテーマ固有の変数 （ CSS変数で定義 ） */
+/* Theme-aテーマ固有のスタイル */
+.theme-a-theme {
+  // テーマカラー
+  --theme-primary: #ec4111;
+  // テーマカラー（訪問済み）
+  --theme-primary-visited: rgba(236, 65, 17, 0.6);
+  // 背景カラー
+  --theme-bg-primary: var(--theme-primary);
+  --theme-bg-1: #f4f4f5;
+  // カテゴリータグカラー
+  --theme-category-1: #e5e2e2;
+  --theme-category-2: #014a74;
+  --theme-category-3: #726f63;
+  --theme-category-4: #6a7d8c;
+  --theme-category-5: #c13333;
+  --theme-category-6: #737373;
+  // ランキングカラー
+  --theme-ranking-1: #bea870;
+  --theme-ranking-2: #aeaeaa;
+  --theme-ranking-3: #997a5c;
+  --theme-ranking-4: #ffffff;
+  --theme-ranking-5: #ffffff;
+  --theme-ranking-6: #ffffff;
+  --theme-ranking-7: #ffffff;
+  --theme-ranking-8: #ffffff;
+  --theme-ranking-9: #ffffff;
+  --theme-ranking-10: #ffffff;
+  // 角丸
+  --theme-border-radius-header: 100px;
+  --theme-border-radius-card: 16px;
+  // セクションタイトルの装飾(正円)
+  .prj-title-component {
+    position: relative;
+    padding-left: 27px;
+    &::before {
+      content: "";
+      left: 0;
+      top: 50%;
+      transform: translateY(-42%);
+      position: absolute;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: var(--theme-primary);
+    }
+  }
+  // タグコンポーネント
+  .prj-tag-component {
+    .prj-tag-link {
+      box-shadow: none !important;
+      border-radius: 9999px !important;
+      background-color: #e4e4e7 !important;
+      padding: 6px 10px !important;
+      border: 1px solid transparent;
+      &:hover {
+        border: 1px solid var(--theme-primary);
+        color: var(--theme-primary);
+        background-color: #ffffff !important;
+        transition: all 0.3s;
+        .prj-tag-name {
+          &::before {
+            transition: all 0.3s;
+            color: var(--theme-primary) !important;
+          }
+        }
+      }
+      .prj-tag-name {
+        &::before {
+          content: "#" !important;
+          color: var(--text-primary) !important;
+          margin-right: 0px !important;
+        }
+      }
+      .prj-tag-count {
+        display: none;
+      }
+    }
+  }
+  // フッター
+  .footer.prj-section-component {
+    @include xs {
+      padding-bottom: calc(var(--footer-padding-bottom-add) + 64px);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- HEAD -->
+<%- include ('./components/sections/theme-d-top/theme-d-top-head.ejs') %>
+
+  <body>
+    <div id="app">
+      <div class="theme-d-theme">
+        <!-- HEADER -->
+        <%- include ('./components/header.ejs') %>
+          <!-- ボトムメニュー -->
+          <%- include ('./components/bottom-menu.ejs') %>
+            <!-- モーダルメニュー -->
+            <%- include ('./components/modal-menu.ejs') %>
+              <!-- アクセシビリティのためのmain要素 -->
+              <main id="main-content">
+                <!-- FV -->
+                <%- include ('./components/sections/theme-d-top/theme-d-top-fv.ejs') %>
+                  <!-- COMMUNITY -->
+                  <%- include ('./components/sections/theme-d-top/theme-d-top-community.ejs') %>
+                    <!-- コンテンツ + サイドメニュー（メイン） -->
+                    <div class="flex flex-col lg:flex-row-reverse justify-center">
+                      <!-- コンテンツ -->
+                      <div>
+                        <!-- NEWS -->
+                        <%- include ('./components/sections/theme-d-top/theme-d-top-news.ejs') %>
+                          <!-- FOLLOW -->
+                          <%- include ('./components/sections/theme-d-top/theme-d-top-follow.ejs') %>
+                            <!-- NEW -->
+                            <%- include ('./components/sections/theme-d-top/theme-d-top-new.ejs') %>
+                              <!-- RANKING -->
+                              <%- include ('./components/sections/theme-d-top/theme-d-top-ranking.ejs') %>
+                                <!-- PICKUP -->
+                                <%- include ('./components/sections/theme-d-top/theme-d-top-pickup.ejs') %>
+                                  <!-- 区切り線 -->
+                                  <div class="prj-section-component !py-0 hidden sm:block translate-y-[1px]">
+                                    <div class="prj-section-container w-full h-[1px] bg-[var(--theme-text-primary)]">
+                                    </div>
+                                  </div>
+                                  <!-- AD-2 -->
+                                  <%- include ('./components/sections/theme-d-top/theme-d-top-ad-2.ejs') %>
+                                    <!-- 区切り線 -->
+                                    <div class="prj-section-component !p-0 sm:hidden translate-y-[-1px]">
+                                      <div class="prj-section-container w-full h-[1px] bg-[var(--theme-text-primary)]">
+                                      </div>
+                                    </div>
+                                    <!-- SPECIAL THANKS -->
+                                    <%- include ('./components/sections/theme-d-top/theme-d-top-special-thanks.ejs') %>
+                                      <!-- MEMBERSHIP -->
+                                      <%- include ('./components/sections/theme-d-top/theme-d-top-membership.ejs') %>
+
+                                        <!-- FOOTER -->
+                                        <%- include ('./components/sections/theme-d-top/theme-d-top-footer.ejs') %>
+                      </div>
+                      <!-- サイドメニュー（メイン） -->
+                      <%- include ('./components/sections/theme-d-top/theme-d-top-sidemenu-main.ejs') %>
+                    </div>
+              </main>
+      </div>
+    </div>
+  </body>
+
+</html>

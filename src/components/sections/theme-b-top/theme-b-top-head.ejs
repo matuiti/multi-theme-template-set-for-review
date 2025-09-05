@@ -1,0 +1,708 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO向けのメタタグ ============ -->
+  <!-- タイトルタグ: ブラウザのタブやブックマーク、検索結果に表示される重要要素
+       テーマ名と簡潔な説明を含め、60文字以内が推奨
+       ページ内容を端的に表現し、ユーザーの興味を引くキーワードを前方に配置 -->
+  <title>トップページ | Theme-bテーマ</title>
+  <!-- 説明文: 検索結果に表示される説明文で150〜160文字程度が推奨
+       ユーザーの興味を引く魅力的な説明を入力
+       ページの内容を正確に要約し、クリック率を高める重要な要素 -->
+  <meta name="description" content="テーマ名のTheme-b公式サイトです。最新の商品情報、特集、ランキングなどをご紹介します。" />
+  <!-- キーワード: 現在のSEOでの重要性は低下しているが、関連キーワードをカンマ区切りで記述
+       過剰なキーワード詰め込みは逆効果になるため、本当に関連性の高いキーワードのみを5-7個程度使用 -->
+  <meta name="keywords" content="Theme-b, テーマ名, 商品, 特集, ランキング" />
+  <!-- サイト運営者情報: サイトの著者や運営会社名を記述
+       Googleなどの検索エンジンによる信頼性評価の参考になる要素 -->
+  <meta name="author" content="運営会社名" />
+
+  <!-- canonicalリンク: 同一コンテンツが複数URLで閲覧可能な場合に正規URLを指定
+       重複コンテンツの問題を防ぎ、SEOを最適化する重要な要素
+       URLパラメータ違いやwww有無、httpとhttpsなど似たURLが存在する場合に特に重要 -->
+  <link rel="canonical" href="https://example.com/theme-b.html" />
+
+  <!-- ============ ファビコン設定 ============ -->
+  <!-- 標準ファビコン: ブラウザのタブやブックマークに表示される16×16pxの小さなアイコン
+       通常は.ico形式を使用（32×32pxなど複数サイズを含む.icoファイルが理想的）
+       Theme-aの視認性と記憶性を高める重要な要素 -->
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <!-- Apple Touch Icon: iOSデバイスでサイトをホーム画面に追加した時のアイコン
+       推奨サイズは180×180px、PNG形式
+       背景色と影の自動追加を防ぐにはprecomposedを指定するとよい -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- ============ OGP (Open Graph Protocol) 設定 ============ -->
+  <!-- FacebookなどのSNSでURLシェア時の表示を制御する重要な要素
+         設定が不十分だと、SNSシェア時に不適切な情報や画像が表示される原因になる -->
+  <!-- og:title: シェア時に表示されるタイトル、40文字程度が推奨
+         HTMLのtitleタグと類似させつつ、SNSに最適化した表現を使用するとよい -->
+  <meta property="og:title" content="Theme-bトップ | テーマ名公式サイト" />
+  <!-- og:description: シェア時の説明文、80〜90文字程度が推奨
+         メタディスクリプションより短めで、SNSユーザーの関心を引く内容にする -->
+  <meta property="og:description" content="テーマ名のTheme-b公式サイトです。最新の商品情報、特集、ランキングなどをご紹介します。" />
+  <!-- og:type: コンテンツタイプを指定（website, article, productなど）
+         トップページや一般ページはwebsite、ブログ記事はarticle、商品ページはproductなど
+         正しいタイプを設定することでSNSでの表示が最適化される -->
+  <meta property="og:type" content="website" />
+  <!-- og:url: シェアされるページの正規URLを指定（canonicalと一致させる）
+         これによりSNSプラットフォーム上でコンテンツの重複が防止される -->
+  <meta property="og:url" content="https://example.com/theme-b.html" />
+  <!-- og:image: シェア時に表示される画像のURL
+       推奨サイズは1200×630px、最小でも600×315pxが必要
+       高品質で視認性の高い画像を使用し、テキストは最小限にする -->
+  <meta property="og:image" content="https://example.com/images/theme-b/theme-b-ogp.jpg" />
+  <!-- og:site_name: ウェブサイト全体の名前を指定
+         テーマ名やサイト名を一貫して使用することで認知度向上につながる -->
+  <meta property="og:site_name" content="テーマ名公式サイト" />
+  <!-- og:locale: コンテンツの言語と地域を指定（日本語の場合は通常ja_JP）
+         多言語サイトの場合は各言語版ページで適切に設定する必要がある -->
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ============ Twitterカード設定 ============ -->
+  <!-- TwitterでのURLシェア表示を制御（OGPと似た役割だがTwitter専用）
+         Twitter特有の表示形式を最適化するための設定 -->
+  <!-- twitter:card: カードの種類を指定
+       summary: 小さな画像付きカード、summary_large_image: 大きな画像付きカード
+       コンテンツタイプに応じて適切なカードタイプを選択する -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- twitter:site: 関連するTwitterアカウントを@ユーザー名で指定
+         Theme-aの公式アカウントを設定することで信頼性と認知度が向上する -->
+  <meta name="twitter:site" content="@theme-aname" />
+  <!-- twitter:title: Twitterカードのタイトル
+         og:titleと一致させるのが一般的だが、Twitter向けに最適化することも可能 -->
+  <meta name="twitter:title" content="Theme-bトップ | テーマ名公式サイト" />
+  <!-- twitter:description: Twitterカードの説明文
+         og:descriptionと一致させるのが一般的 -->
+  <meta name="twitter:description" content="テーマ名のTheme-b公式サイトです。最新の商品情報、特集、ランキングなどをご紹介します。" />
+  <!-- twitter:image: カードに表示される画像のURL
+       summary_large_imageの場合、最小サイズは300×157px、
+       最適な比率は2:1（例: 1200×600px）
+       Twitterでの視認性を考慮した画像を使用する -->
+  <meta name="twitter:image" content="https://example.com/images/theme-b/theme-b-ogp.jpg" />
+
+  <!-- ============ フォント読み込み ============ -->
+  <!-- GoogleフォントなどWebフォントの読み込み設定
+         パフォーマンスを考慮したフォント読み込み方法を採用 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" />
+  <!-- フォントをパフォーマンス重視で読み込むための非同期読み込み処理
+         onload="this.media='all'"でフォントの読み込みが完了したらすぐに適用される -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <!-- JavaScript無効時のフォールバック
+         noscriptタグ内に通常のフォント読み込みコードを配置 -->
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" />
+  </noscript>
+  <!-- ============ マテリアルアイコン ============ -->
+  <!-- Google Material Symbolsのアイコンフォントを読み込み
+         アイコンの太さ、サイズ、スタイルをカスタマイズするためのパラメータを含む -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- ============ 構造化データ（JSON-LD） ============ -->
+  <!-- 検索エンジンがウェブページの内容を理解しやすくするための標準化されたデータ形式
+         Googleのリッチリザルト表示やナレッジパネル表示などに活用される重要な要素 -->
+
+  <!-- WebSiteスキーマ: サイト全体の情報とサイト内検索機能の実装
+    検索エンジンの結果にサイト内検索ボックスが表示される可能性がある
+
+    注意点:
+    1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+    2. 実際のサイト名とURLを必ず設定すること
+    3. 検索機能が実際に動作することを確認すること
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+         すべての構造化データに必要な基本プロパティ */
+      "@context": "https://schema.org",
+
+      /* このエンティティがWebサイトであることを示す（必須）
+         WebSiteタイプはサイト全体の情報を表現する際に使用 */
+      "@type": "WebSite",
+
+      /* サイト名 - 実際のテーマ名に置き換えること
+         サイトのタイトルと一致させることが望ましい */
+      "name": "テーマ名公式Theme-bサイト",
+
+      /* サイトのURL - canonicalタグのURLと一致させること
+         絶対URLを使用し、実際のドメインをここに設定 */
+      "url": "https://example.com/theme-b.html",
+
+      /* potentialActionはサイトで可能なアクションを定義
+         ここではサイト内検索機能を実装している */
+      "potentialAction": {
+        /* 検索アクションであることを示す
+           これにより検索エンジンが検索機能を理解できる */
+        "@type": "SearchAction",
+
+        /* 検索結果ページのURL形式 - 実際の検索URLパターンと一致させること
+           {search_term_string}はプレースホルダーで、実際の検索語に置き換えられる
+           必ず動作確認を行うこと */
+        "target": "https://example.com/search?q={search_term_string}",
+
+        /* 検索クエリパラメータ名の指定
+           search_term_stringは上記targetのプレースホルダーと一致させる必要がある */
+        "query-input": "required name=search_term_string"
+      },
+
+      /* サイトの簡潔な説明文
+         メタディスクリプションと一致させると良い */
+      "description": "テーマ名のTheme-b公式サイトです。最新の商品情報、特集、ランキングなどをご紹介します。",
+
+      /* サイトの言語コード
+         HTMLのlang属性と一致させる */
+      "inLanguage": "ja",
+
+      /* 発行者情報
+         組織名とロゴ情報を提供することでTheme-a認知につながる */
+      "publisher": {
+        "@type": "Organization",
+        "name": "運営会社名",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/images/theme-a/theme-a-logo.png"
+        }
+      }
+    }
+  </script>
+
+  <!-- Organizationスキーマ: 運営会社に関する情報
+    Googleナレッジパネルなどに表示される可能性がある
+
+    注意点:
+    1. JSON-LD内ではJavaScript形式のコメント(/* */)を使用する（HTMLコメント形式は構文エラーの原因になる）
+    2. 会社名、URL、ロゴは正確に設定すること
+    3. SNSアカウントは実際に存在し、正式なアカウントであることを確認すること
+    4. 電話番号は国際形式で記述すること
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+         すべての構造化データで最初に定義する必要がある */
+      "@context": "https://schema.org",
+
+      /* このエンティティが組織であることを示す（必須）
+         企業情報を表すための基本タイプ */
+      "@type": "Organization",
+
+      /* 会社名 - 正確な法人名称を使用すること
+         公式な会社名をそのまま記載する */
+      "name": "運営会社名",
+
+      /* 会社またはTheme-aの公式サイトURL - 実際のURLに置き換えること
+         会社のホームページのURLを絶対URL形式で指定 */
+      "url": "https://example.com",
+
+      /* 会社ロゴのURL - 絶対URLを使用し、推奨サイズ(112x112px以上、512x512px未満)に適合させること
+         SVGよりもPNG/JPG形式が推奨される
+         GoogleのロゴガイドラインにはSquare format logoが推奨されている */
+      "logo": "https://example.com/images/theme-a/theme-a-logo.png",
+
+      /* 関連するソーシャルメディアアカウント - すべて実際のアカウントURLに置き換えること
+         sameAsプロパティは企業の公式アカウントであることを検索エンジンに伝える重要な要素
+         実際に存在する公式アカウントのみを記載すること */
+      "sameAs": [
+        /* FacebookページのURL - 完全なURLを記載 */
+        "https://www.facebook.com/theme-aname",
+
+        /* TwitterアカウントのURL - 完全なURLを記載 */
+        "https://twitter.com/theme-aname",
+
+        /* InstagramアカウントのURL - 完全なURLを記載 */
+        "https://www.instagram.com/theme-aname"
+      ],
+
+      /* 問い合わせ先情報
+         顧客サポート窓口の詳細情報を提供する */
+      "contactPoint": {
+        /* 連絡先情報であることを示す
+           ContactPointタイプで問い合わせ先の詳細を構造化 */
+        "@type": "ContactPoint",
+
+        /* 国際形式の電話番号 - 実際の電話番号に置き換えること（日本の場合は+81から始まる）
+           国コード付きの形式で記載（半角数字、ハイフン区切り） */
+        "telephone": "+81-03-1234-5678",
+
+        /* 連絡先の種類 - 適切な種類を選択
+           一般的な種類: "customer service"（顧客サービス）, "technical support"（技術サポート）,
+           "sales"（営業）, "billing support"（請求サポート）, "reservation"（予約）など */
+        "contactType": "customer service",
+
+        /* 対応言語 - 実際に対応可能な言語のみを記載すること
+           ISO 639-1言語コードではなく、言語の完全名を使用 */
+        "availableLanguage": ["Japanese", "English"]
+      },
+
+      /* 住所情報 - 実際の所在地情報を追加することで地域SEOの強化につながる
+         特に実店舗や来客対応をする企業には重要な情報 */
+      "address": {
+        /* 住所であることを示す
+           PostalAddressタイプで住所情報を構造化 */
+        "@type": "PostalAddress",
+
+        /* 番地・建物名など - 実際の住所に合わせて記載 */
+        "streetAddress": "〇〇町1-2-3",
+
+        /* 市区町村 - 実際の住所に合わせて記載 */
+        "addressLocality": "〇〇市",
+
+        /* 都道府県 - 実際の住所に合わせて記載 */
+        "addressRegion": "〇〇県",
+
+        /* 郵便番号 - ハイフン付きで記載 */
+        "postalCode": "123-4567",
+
+        /* 国コード - 日本の場合は"JP"
+           ISO 3166-1 alpha-2国コードを使用 */
+        "addressCountry": "JP"
+      }
+    }
+  </script>
+
+  <!-- Theme-bページ固有のスキーマ: カルーセル商品リスト
+    目的: このマークアップはトップページのカルーセル商品リストを検索エンジンに伝えるためのもので、
+    Googleのリッチリザルトとしてカルーセル表示される可能性があります。
+
+    注意点:
+    1. 各商品の情報は実際のコンテンツと一致させること
+    2. position値は必ず連番で設定し、欠番や重複がないようにすること
+    3. 画像URLは実在する画像へのリンクであること
+    4. 価格情報や在庫状況など、追加可能なプロパティも検討するとよい
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプはカルーセルやコレクションなど複数アイテムの
+         リスト表現に適している（必須） */
+      "@type": "ItemList",
+
+      /* itemListElementはリスト内の各アイテムを配列形式で格納（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の個々の項目を表す（必須） */
+          "@type": "ListItem",
+
+          /* positionは必ず1から始まる連番で設定（必須） */
+          "position": 1,
+
+          /* itemプロパティには実際の商品情報を格納（必須） */
+          "item": {
+            /* Productタイプは商品情報を表現するのに適している */
+            "@type": "Product",
+
+            /* 商品名 - 実際の商品名と一致させること */
+            "name": "モデルハウス特集",
+
+            /* 商品の説明 - 簡潔で分かりやすい説明文を提供 */
+            "description": "コンテンツ概要文が入ります。コンテンツ概要文が入ります。",
+
+            /* 商品画像 - 高品質な画像URLを絶対パスで指定 */
+            "image": "https://example.com/images/theme-b/theme-b-mv-slide-1.jpg",
+
+            /* 商品ページURL - 実際に存在するURLを指定 */
+            "url": "https://example.com/theme-b/item1"
+
+            /* 改善提案: 以下のプロパティも追加するとより効果的
+               "offers": {
+                 "@type": "Offer",
+                 "price": "12800",
+                 "priceCurrency": "JPY",
+                 "availability": "https://schema.org/InStock"
+               },
+               "theme-a": {
+                 "@type": "Brand",
+                 "name": "テーマ名"
+               }
+              */
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "モデルハウス特集",
+            "description": "コンテンツ概要文が入ります。コンテンツ概要文が入ります。",
+            "image": "https://example.com/images/theme-b/theme-b-mv-slide-2.jpg",
+            "url": "https://example.com/theme-b/item2"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "モデルハウス特集",
+            "description": "コンテンツ概要文が入ります。コンテンツ概要文が入ります。",
+            "image": "https://example.com/images/theme-b/theme-b-mv-slide-3.jpg",
+            "url": "https://example.com/theme-b/item3"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- ランキングセクション用のスキーマ
+    目的: このマークアップは人気記事ランキングを検索エンジンに伝えるためのものです。
+    記事タイトル、画像、著者情報などを構造化し、リッチリザルト表示の可能性を高めます。
+
+    注意点:
+    1. ランキング順位（position）は必ず連番で設定すること
+    2. 各記事情報は実際のコンテンツと一致させること
+    3. 発行者情報（publisher）は全記事で統一すること
+    4. 日付形式はISO 8601形式（YYYY-MM-DD）を厳守すること
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプはランキングリストの表現に適している（必須） */
+      "@type": "ItemList",
+
+      /* リスト全体のタイトル - ページ上の見出しと一致させると良い */
+      "name": "人気ランキング",
+
+      /* リストの説明 - リストの目的や内容を簡潔に説明 */
+      "description": "当サイトで人気の商品・記事ランキング",
+
+      /* リスト内のアイテム総数 - 実際のアイテム数と一致させる */
+      "numberOfItems": 10,
+
+      /* リストの順序タイプ - 人気順など降順の場合はDescending */
+      "itemListOrder": "Descending",
+
+      /* リスト内の各アイテムを配列形式で格納（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の個々の項目を表す（必須） */
+          "@type": "ListItem",
+
+          /* positionは順位を表し、必ず1から始まる連番で設定（必須） */
+          "position": 1,
+
+          /* itemプロパティには実際の記事情報を格納（必須） */
+          "item": {
+            /* Articleタイプは記事コンテンツの表現に適している */
+            "@type": "Article",
+
+            /* 記事タイトル - 実際のタイトルと一致させる（必須） */
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。",
+
+            /* 記事のメイン画像 - 高品質な画像URLを絶対パスで指定 */
+            "image": "https://example.com/images/theme-b/theme-b-ranking-1.jpg",
+
+            /* 著者情報 - 実在する著者名を指定 */
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります"
+            },
+
+            /* 公開日 - ISO 8601形式（YYYY-MM-DD）で指定 */
+            "datePublished": "2025-05-05",
+
+            /* 発行者情報 - サイト運営組織の情報（必須） */
+            "publisher": {
+              "@type": "Organization",
+              "name": "テーマ名",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-b/theme-b-logo.png",
+                "width": "199",
+                "height": "152"
+              }
+            }
+
+            /* 改善提案: 以下のプロパティも追加するとより効果的
+               "url": "https://example.com/articles/article1",
+               "description": "記事の簡潔な説明文をここに入れます",
+               "dateModified": "2025-05-10",
+               "articleSection": "特集"
+              */
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "headline": "記事タイトルが入ります。記事タイトルが入ります。",
+            "image": "https://example.com/images/theme-b/theme-b-ranking-2.jpg",
+            "author": {
+              "@type": "Person",
+              "name": "ここにアカウント名が入ります"
+            },
+            "datePublished": "2025-05-05",
+            "publisher": {
+              "@type": "Organization",
+              "name": "テーマ名",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-b/theme-b-logo.png",
+                "width": "199",
+                "height": "152"
+              }
+            }
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- コミュニティセクション用のスキーマ
+    目的: このマークアップはコミュニティ情報を検索エンジンに伝えるためのものです。
+    コミュニティ名、説明、メンバー数などを構造化し、コミュニティ検索での露出向上を図ります。
+
+    注意点:
+    1. 各コミュニティの情報は実際のコンテンツと一致させること
+    2. position値は必ず連番で設定すること
+    3. メンバー数は定期的に更新するとよい
+    4. 可能であれば地域情報や活動内容も追加するとよい
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプはコミュニティリストの表現に適している（必須） */
+      "@type": "ItemList",
+
+      /* リスト全体のタイトル - ページ上の見出しと一致させると良い */
+      "name": "コミュニティ一覧",
+
+      /* リスト内の各コミュニティを配列形式で格納（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の個々の項目を表す（必須） */
+          "@type": "ListItem",
+
+          /* positionは必ず1から始まる連番で設定（必須） */
+          "position": 1,
+
+          /* itemプロパティには実際のコミュニティ情報を格納（必須） */
+          "item": {
+            /* Organizationタイプはコミュニティ団体の表現に適している */
+            "@type": "Organization",
+
+            /* コミュニティ名 - 実際の名称と一致させる */
+            "name": "九州キャンプ&九州キャンパーの集い",
+
+            /* コミュニティの説明 - 活動内容や目的を簡潔に説明 */
+            "description": "九州地方のキャンプ愛好家のためのコミュニティ",
+
+            /* コミュニティのイメージ画像 - 代表的な活動の様子など */
+            "image": "https://example.com/images/theme-b/theme-b-community-1.jpg",
+
+            /* メンバー情報 - 役割や人数を構造化 */
+            "member": {
+              /* OrganizationRoleタイプで役割を定義 */
+              "@type": "OrganizationRole",
+
+              /* 役割名 - コミュニティ内での立場や役割 */
+              "roleName": "コミュニティメンバー",
+
+              /* メンバー数 - 実際の人数と定期的に同期させる */
+              "numberOfMembers": 10
+            }
+
+            /* 改善提案: 以下のプロパティも追加するとより効果的
+               "url": "https://example.com/communities/tohoku-camp",
+               "foundingDate": "2022-01-01",
+               "location": {
+                 "@type": "Place",
+                 "address": {
+                   "@type": "PostalAddress",
+                   "addressRegion": "九州地方",
+                   "addressCountry": "JP"
+                 }
+               }
+              */
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Organization",
+            "name": "九州キャンプ&九州キャンパーの集い",
+            "description": "九州地方のキャンプ愛好家のためのコミュニティ",
+            "image": "https://example.com/images/theme-b/theme-b-community-2.jpg",
+            "member": {
+              "@type": "OrganizationRole",
+              "roleName": "コミュニティメンバー",
+              "numberOfMembers": 10
+            }
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- ニュースセクション用のスキーマ
+    目的: このマークアップはニュース記事のリストを検索エンジンに伝えるためのものです。
+    NewsArticleタイプを使用することで、通常の記事よりもニュース性の高いコンテンツとして
+    認識され、ニュース検索結果への表示可能性が高まります。
+
+    注意点:
+    1. 各ニュース記事の情報は実際のコンテンツと一致させること
+    2. position値は必ず連番で設定すること
+    3. 日付形式はISO 8601形式（YYYY-MM-DDThh:mm:ss+TZ）を厳守すること
+    4. 発行者情報（publisher）は全記事で統一すること
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須） */
+      "@context": "https://schema.org",
+
+      /* ItemListタイプはニュースリストの表現に適している（必須） */
+      "@type": "ItemList",
+
+      /* リスト全体のタイトル - ページ上の見出しと一致させると良い */
+      "name": "NEWS",
+
+      /* リスト内の各ニュース記事を配列形式で格納（必須） */
+      "itemListElement": [
+        {
+          /* ListItemタイプはリスト内の個々の項目を表す（必須） */
+          "@type": "ListItem",
+
+          /* positionは必ず1から始まる連番で設定（必須） */
+          "position": 1,
+
+          /* itemプロパティには実際のニュース記事情報を格納（必須） */
+          "item": {
+            /* NewsArticleタイプはニュース記事の表現に特化している
+                 通常のArticleよりもニュース検索での表示可能性が高まる */
+            "@type": "NewsArticle",
+
+            /* 記事のタイトル - 実際のタイトルと一致させる（必須） */
+            "headline": "お知らせのタイトルが入ります",
+
+            /* 公開日時 - ISO 8601形式で時刻まで含めると理想的（必須） */
+            "datePublished": "2024-01-01T00:00:00+09:00",
+
+            /* 発行者情報 - サイト運営組織の情報（必須） */
+            "publisher": {
+              "@type": "Organization",
+              "name": "テーマ名",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-b/theme-b-logo.png",
+                "width": "199",
+                "height": "152"
+              }
+            }
+
+            /* 改善提案: 以下のプロパティも追加するとより効果的
+               "url": "https://example.com/news/article1",
+               "description": "ニュース記事の簡潔な説明文をここに入れます",
+               "dateModified": "2024-01-02T10:30:00+09:00",
+               "author": {
+                 "@type": "Person",
+                 "name": "広報担当"
+               },
+               "image": "https://example.com/images/theme-b/theme-b-news1.jpg"
+              */
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "NewsArticle",
+            "headline": "お知らせのタイトルが入ります",
+            "datePublished": "2024-01-01T00:00:00+09:00",
+            "publisher": {
+              "@type": "Organization",
+              "name": "テーマ名",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/theme-b/theme-b-logo.png",
+                "width": "199",
+                "height": "152"
+              }
+            }
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- フッター組織情報スキーマ
+    目的: このマークアップはWebサイトを運営している組織の基本情報を検索エンジンに伝えるためのものです。
+    サイト名、ロゴ、URLとソーシャルメディアアカウントの関連付けを行い、
+    検索エンジンでのTheme-a認識を強化します。
+
+    注意点:
+    1. ロゴは相対パスではなく絶対URLを使用してください
+    2. 実際のサイト名、URL、ソーシャルメディアアカウントに置き換えてください
+    3. 可能であれば連絡先情報も追加するとよいでしょう
+    -->
+  <script type="application/ld+json">
+    {
+      /* Schema.orgの名前空間を指定（必須）
+           すべての構造化データで最初に定義する必要がある */
+      "@context": "https://schema.org",
+
+      /* Organizationタイプは企業、団体、Theme-aなどの
+           組織情報を表現するのに適している（必須） */
+      "@type": "Organization",
+
+      /* 組織の正式名称 - サイト名やテーマ名と一致させる（必須） */
+      "name": "テーマ名",
+
+      /* 組織のロゴ画像URL - 必ず絶対パスで指定すること
+           相対パスは検索エンジンが正しく解釈できない可能性がある */
+      "logo": "https://example.com/images/theme-b/theme-b-logo.png",
+
+      /* 組織の公式ウェブサイトURL - 必ず絶対パスで指定（必須） */
+      "url": "https://example.com",
+
+      /* ソーシャルメディアアカウント等の関連Webプレゼンス
+           GoogleのナレッジグラフでTheme-aの各種アカウントが
+           正しく関連付けられるための重要な要素 */
+      "sameAs": [
+        /* InstagramアカウントのURL - 完全なURLを指定 */
+        "https://www.instagram.com/example",
+
+        /* FacebookページのURL - ページIDではなく完全なURLを指定 */
+        "https://www.facebook.com/example",
+
+        /* X（旧Twitter）アカウントのURL - 現在はx.comドメインを推奨 */
+        "https://x.com/example"
+      ]
+
+      /* 改善提案: 以下のプロパティも追加するとより効果的
+         "address": {
+           "@type": "PostalAddress",
+           "streetAddress": "〇〇町1-2-3",
+           "addressLocality": "〇〇市",
+           "addressRegion": "〇〇県",
+           "postalCode": "123-4567",
+           "addressCountry": "JP"
+         },
+         "contactPoint": {
+           "@type": "ContactPoint",
+           "telephone": "+81-03-1234-5678",
+           "contactType": "customer service"
+         },
+         "email": "contact@example.com"
+        */
+    }
+  </script>
+
+  <script type="module" src="./assets/js/main.js"></script>
+  <script type="module" src="./assets/js/theme-b-top.js"></script>
+</head>

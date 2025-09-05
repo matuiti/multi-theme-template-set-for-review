@@ -1,0 +1,3335 @@
+<!-- 記事一覧ヘッダー（モバイル） -->
+<div class="prj-section-head-sp flex md:hidden flex-col items-center">
+  <!-- ページタイトル+カテゴリ選択ボタン -->
+  <div class="w-full flex justify-between items-center min-h-[44px]">
+    <!-- ページタイトル -->
+    <h2 id="article-list-section-title" class="prj-title-component text-xl leading-7 font-semibold">
+      記事一覧
+    </h2>
+    <!-- カテゴリ選択ボタン -->
+    <button type="button" class="prj-button-category-component" aria-haspopup="true" aria-expanded="false"
+      aria-controls="category-menu" aria-label="カテゴリー選択メニューを開く">
+      カテゴリ選択
+    </button>
+  </div>
+  <!-- 3カラム（月間・週間・累計）ソートスイッチボタン（タブボタン） -->
+  <div
+    class="prj-content-sort-switch-button-component prj-time-filter-switch-button-tab-component sm:w-[80%] sm:min-w-[380px]"
+    role="tablist" aria-label="ランキング期間切り替え">
+    <button type="button" id="tab-monthly-sp" class="prj-time-filter-switch-button-tab-item is-active" role="tab"
+      aria-selected="true" aria-controls="ranking-monthly">
+      <span>月間</span>
+    </button>
+    <button type="button" id="tab-weekly-sp" class="prj-time-filter-switch-button-tab-item" role="tab"
+      aria-selected="false" aria-controls="ranking-weekly">
+      <span>週間</span>
+    </button>
+    <button type="button" id="tab-total-sp" class="prj-time-filter-switch-button-tab-item" role="tab"
+      aria-selected="false" aria-controls="ranking-total">
+      <span>累計</span>
+    </button>
+  </div>
+  <!-- 4カラム（新着・ビュー・いいね・コメント）ソートスイッチボタン -->
+  <div
+    class="prj-content-sort-switch-button-component prj-content-sort-switch-button-4col-component sm:w-[80%] sm:min-w-[380px]"
+    role="tablist" aria-label="記事ソート方法切り替え">
+    <button type="button" id="tab-new-sp" class="prj-content-sort-switch-button-4col-item is-active" role="tab"
+      aria-selected="true" aria-controls="sort-by-new">
+      <span>新着</span>
+    </button>
+    <button type="button" id="tab-view-sp" class="prj-content-sort-switch-button-4col-item" role="tab"
+      aria-selected="false" aria-controls="sort-by-view">
+      <span>ビュー</span>
+    </button>
+    <button type="button" id="tab-like-sp" class="prj-content-sort-switch-button-4col-item" role="tab"
+      aria-selected="false" aria-controls="sort-by-like">
+      <span>いいね</span>
+    </button>
+    <button type="button" id="tab-comment-sp" class="prj-content-sort-switch-button-4col-item" role="tab"
+      aria-selected="false" aria-controls="sort-by-comment">
+      <span>コメント</span>
+    </button>
+  </div>
+</div>
+<!-- 記事一覧ヘッダー（タブレット） -->
+<div class="prj-section-head-pc hidden md:block">
+  <!-- パンくずリスト -->
+  <nav class="prj-breadcrumb-component mb-5" aria-label="パンくずリスト">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="#" itemprop="item"><span itemprop="name">TOP</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="#" class="current" aria-current="page" itemprop="item">
+          <span itemprop="name">記事一覧</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </nav>
+  <!-- ページタイトル -->
+  <h2 id="article-list-section-title-pc" class="prj-title-component text-3xl leading-9 font-bold self-start">
+    記事一覧
+  </h2>
+  <div class="flex gap-5 mt-10">
+    <!-- 4カラム（新着・ビュー・いいね・コメント）ソートスイッチボタン（アイコン付き） -->
+    <div class="prj-content-sort-switch-button-component prj-content-sort-switch-button-4col-icon-component"
+      role="tablist" aria-label="記事ソート方法切り替え">
+      <button type="button" id="tab-new-pc" class="prj-content-sort-switch-button-4col-item is-active" role="tab"
+        aria-selected="true" aria-controls="article-list-by-new">
+        <span>新着</span>
+      </button>
+      <button type="button" id="tab-view-pc" class="prj-content-sort-switch-button-4col-item" role="tab"
+        aria-selected="false" aria-controls="article-list-by-view">
+        <span class="prj-content-sort-switch-button-icon mb-[-1px] material-symbols-outlined icon-visibility-md"
+          aria-hidden="true">
+          visibility
+        </span>
+        <span>ビュー</span>
+      </button>
+      <button type="button" id="tab-like-pc" class="prj-content-sort-switch-button-4col-item" role="tab"
+        aria-selected="false" aria-controls="article-list-by-like">
+        <span class="prj-content-sort-switch-button-icon mb-[-1px] material-symbols-outlined icon-favorite-md"
+          aria-hidden="true">
+          favorite
+        </span>
+        <span>いいね</span>
+      </button>
+      <button type="button" id="tab-comment-pc" class="prj-content-sort-switch-button-4col-item" role="tab"
+        aria-selected="false" aria-controls="article-list-by-comment">
+        <span class="prj-content-sort-switch-button-icon mb-[-2px] material-symbols-outlined icon-comment-md"
+          aria-hidden="true">
+          chat
+        </span>
+        <span>コメント</span>
+      </button>
+    </div>
+    <!-- 3カラム（月間・週間・累計）ソートスイッチボタン -->
+    <div class="prj-content-sort-switch-button-component prj-time-filter-switch-button-component" role="tablist"
+      aria-label="ランキング期間切り替え">
+      <button type="button" id="tab-monthly-pc" class="prj-time-filter-switch-button-item is-active" role="tab"
+        aria-selected="true" aria-controls="ranking-monthly-pc">
+        <span>月間</span>
+      </button>
+      <button type="button" id="tab-weekly-pc" class="prj-time-filter-switch-button-item" role="tab"
+        aria-selected="false" aria-controls="ranking-weekly-pc">
+        <span>週間</span>
+      </button>
+      <button type="button" id="tab-total-pc" class="prj-time-filter-switch-button-item" role="tab"
+        aria-selected="false" aria-controls="ranking-total-pc">
+        <span>累計</span>
+      </button>
+    </div>
+    <!-- カテゴリ選択ボタン -->
+    <button type="button" class="prj-button-category-component" aria-haspopup="true" aria-expanded="false"
+      aria-controls="category-menu-pc" aria-label="カテゴリー選択メニューを開く">
+      カテゴリ選択
+    </button>
+  </div>
+</div>
+<!-- カテゴリモーダル -->
+<div class="prj-modal-category-component hidden">
+  <!-- コンテナ -->
+  <div class="prj-modal-category-container">
+    <!-- コンテンツ -->
+    <div class="prj-modal-category-content">
+      <!-- ヘッダー -->
+      <div class="prj-modal-category-head">
+        <button class="prj-modal-category-close" aria-label="カテゴリモーダルを閉じる">
+          <span class="material-symbols-rounded icon-close-lg" aria-hidden="true"> close </span>
+        </button>
+      </div>
+      <!-- ヘッダー〆 -->
+      <!-- ボディ -->
+      <div class="prj-modal-category-body">
+        <!-- フィルターメニュー -->
+        <div class="prj-filter-menu-component">
+          <div class="prj-filter-menu-container">
+            <!-- カテゴリから探す -->
+            <section class="category-search-section prj-filter-menu-section">
+              <div class="prj-filter-menu-section-head">
+                <h2 class="prj-title-component">カテゴリから探す</h2>
+              </div>
+              <div class="prj-filter-menu-section-body">
+                <ul class="prj-filter-menu-section-list">
+                  <li class="prj-filter-menu-section-item">
+                    <!-- アコーディオンのヘッダー（PC/SP共通）
+              - data-toggle="main": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+              - data-icon: アイコン要素を参照するためのマーカー
+            -->
+                    <div class="prj-filter-menu-accordion-header" data-toggle="main">
+                      <h3 class="prj-filter-menu-accordion-header-title">メイン</h3>
+                      <div class="icon-box">
+                        <span class="material-symbols-outlined" data-icon>expand_more</span>
+                      </div>
+                    </div>
+                    <!-- data-content="main": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                    <!-- フィルターカテゴリーコンポーネント -->
+                    <div class="prj-filter-menu-accordion-body prj-filter-category-component" data-content="main">
+                      <!--
+                PC向けカテゴリフィルターカテゴリ
+                - prj-filter-category-pc-component: PCサイズでのみ表示される要素
+                PC版の構造:
+                1. 親カテゴリは行(row)単位で管理され、各行に複数の親カテゴリを配置
+                2. 各行内では一度に1つの親カテゴリのみ展開可能
+                3. 各親カテゴリの下には子カテゴリがあり、子カテゴリをクリックすると孫カテゴリが表示される
+                4. 子カテゴリ行内でも、同じ行の中では1つの子カテゴリの孫カテゴリのみ表示可能
+              -->
+                      <div class="prj-filter-category-pc-component">
+                        <!-- 親カテゴリ行1 - 最初の行のカテゴリグループ -->
+                        <div class="prj-filter-category-pc-parent-row" data-pc-row-id="1">
+                          <!-- 親カテゴリのグリッド - 4列に分割された親カテゴリのコンテナ -->
+                          <div class="prj-filter-category-pc-parent-row-grid">
+                            <!--
+                      親カテゴリA
+                      - data-pc-toggle="parent-A": このカテゴリの識別子
+                      - data-pc-row="1": このカテゴリが属する行番号
+                      - data-pc-col="1": このカテゴリが属する列番号
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <a class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-A" data-pc-row="1"
+                                data-pc-col="1">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリA</span>
+                                </div>
+                                <!--
+                          開閉状態を表すアイコン
+                          - data-pc-icon: JavaScriptで状態変更時に参照するためのマーカー
+                          - transform, transition-transform: 回転アニメーションを設定
+                        -->
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </a>
+                            </div>
+
+                            <!--
+                      親カテゴリB
+                      - データ属性とクラス構造は親カテゴリAと同様
+                      - カラム位置が異なる (data-pc-col="2")
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-B"
+                                data-pc-row="1" data-pc-col="2">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリB</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      親カテゴリC
+                      - カラム位置: data-pc-col="3"
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-C"
+                                data-pc-row="1" data-pc-col="3">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリC</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      親カテゴリD
+                      - カラム位置: data-pc-col="4"
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-D"
+                                data-pc-row="1" data-pc-col="4">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリD</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリAの子カテゴリ展開エリア (静的HTML)
+                    - hidden: 初期状態では非表示
+                    - data-pc-expanded-content="parent-A": 親カテゴリAと関連付け
+                    - data-pc-expanded-row="1": この展開エリアが属する行番号
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-A"
+                            data-pc-expanded-row="1">
+                            <!--
+                      子カテゴリの1行目
+                      - data-pc-child-row="1": 子カテゴリ行の識別子
+                    -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!--
+                          子カテゴリA-1
+                          - data-pc-child="parent-A-1": この子カテゴリの識別子（親カテゴリAの子カテゴリ1）
+                          - data-pc-row="1": この子カテゴリが属する行
+                          - hover:bg-gray-100: ホバー時の背景色変更
+                        -->
+                                <div data-pc-child="parent-A-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                  <!-- 子カテゴリの開閉状態を表すアイコン -->
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-2 -->
+                                <div data-pc-child="parent-A-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-3 -->
+                                <div data-pc-child="parent-A-3" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-3</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリエリア - A-1の孫カテゴリ
+                        - hidden: 初期状態では非表示
+                        - data-pc-grandchild-content="parent-A-1": 子カテゴリA-1と関連付け
+                        - data-pc-grandchild-row="parent-A-row1": 親カテゴリAの子カテゴリ行1と関連付け
+                      -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-1" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリのグリッドレイアウト - 1行目 -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                  </a>
+                                </div>
+                                <!-- 孫カテゴリの2行目 -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-4</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-5</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-6</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-7</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリエリア - A-2の孫カテゴリ
+                        - 構造はA-1と同様だが、表示内容と関連付けが異なる
+                      -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-2" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリA-2のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-3</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-3の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-3" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリA-3のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      子カテゴリの2行目
+                      - data-pc-child-row="2": 2行目の子カテゴリ行
+                    -->
+                            <div class="child-row" data-pc-child-row="2">
+                              <div class="child-row-grid">
+                                <!-- 子カテゴリA-4 -->
+                                <div data-pc-child="parent-A-4" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-4</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-5 -->
+                                <div data-pc-child="parent-A-5" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-5</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-6 -->
+                                <div data-pc-child="parent-A-6" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-6</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-7 -->
+                                <div data-pc-child="parent-A-7" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-7</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-4の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-4" data-pc-grandchild-row="parent-A-row2">
+                                <!-- 孫カテゴリA-4のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-5の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-5" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-6の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-6" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-7の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-7" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリBの子カテゴリ展開エリア (静的)
+                    - 構造はAと同様だが、コンテンツとデータ属性の値が異なる
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-B"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリB-1 -->
+                                <div data-pc-child="parent-B-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリB-2 -->
+                                <div data-pc-child="parent-B-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリB-3 -->
+                                <div data-pc-child="parent-B-3" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-3</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- B-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-1" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-1-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-2の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-2" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-2一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-2-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-2-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-3の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-3" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-3一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-3-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-3-2</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 子カテゴリの2行目 -->
+                            <div class="child-row" data-pc-child-row="2">
+                              <div class="child-row-grid">
+                                <!-- 子カテゴリB-4 -->
+                                <div data-pc-child="parent-B-4" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリB-4</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!--
+                          子カテゴリB-5
+                          - 同様の構造
+                        -->
+                                <div data-pc-child="parent-B-5" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリB-5</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!--
+                          子カテゴリB-6と子カテゴリB-7
+                          - テキストリンクで孫カテゴリなし（アイコンなし）
+                        -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリB-6</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリB-7</span></a>
+                              </div>
+
+                              <!-- B-4の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-4" data-pc-grandchild-row="parent-B-row2">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-4一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-4-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-4-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-5の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-5" data-pc-grandchild-row="parent-B-row2">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-5一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-5-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-5-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリCの子カテゴリ展開エリア (静的)
+                    - 他の親カテゴリと同様の構造
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-C"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリC-1 -->
+                                <div data-pc-child="parent-C-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリC-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリC-2 -->
+                                <div data-pc-child="parent-C-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリC-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリC-3（テキストリンク） -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリC-3</span></a>
+                              </div>
+
+                              <!-- C-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-C-1" data-pc-grandchild-row="parent-C-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリC-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-1-2</div>
+                                </div>
+                              </div>
+
+                              <!-- C-2の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-C-2" data-pc-grandchild-row="parent-C-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリC-2一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-2-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-2-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリDの子カテゴリ展開エリア (静的)
+                    - シンプルな構造（孫カテゴリ展開機能なし）
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-D"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- テキストリンクの子カテゴリD-1〜D-3 -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-1</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-2</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-3</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリ行2 - 2行目のカテゴリグループ
+                  - 構造は1行目と同様
+                -->
+                        <div class="prj-filter-category-pc-parent-row" data-pc-row-id="2">
+                          <!-- 親カテゴリのグリッド -->
+                          <div class="prj-filter-category-pc-parent-row-grid">
+                            <!-- 親カテゴリE -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-E"
+                                data-pc-row="2" data-pc-col="1">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリE</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリF -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-F"
+                                data-pc-row="2" data-pc-col="2">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリF</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリG -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-G"
+                                data-pc-row="2" data-pc-col="3">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリG</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリH -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-H"
+                                data-pc-row="2" data-pc-col="4">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリH</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリEの子カテゴリ展開エリア (静的)
+                    - 構造は他の親カテゴリと同様
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-E"
+                            data-pc-expanded-row="2">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリE-1 -->
+                                <div data-pc-child="parent-E-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリE-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- テキストリンクの子カテゴリ -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリE-2</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリE-3</span></a>
+                              </div>
+
+                              <!-- E-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-E-1" data-pc-grandchild-row="parent-E-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリE-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリE-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリE-1-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                      親カテゴリF-Hの子カテゴリ展開エリア - シンプルな実装
+                      - 子カテゴリや孫カテゴリの詳細構造なし
+                    -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-F"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリFの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリFの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-G"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリGの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリGの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-H"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリHの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリHの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--
+                SP向けカテゴリフィルターカテゴリ
+                - prj-filter-category-sp-component: SPサイズでのみ表示される要素
+                SP版の構造:
+                1. 親カテゴリは縦に一列で並ぶ（グリッドではなくスタック配置）
+                2. 親カテゴリをクリックすると子カテゴリが展開
+                3. 子カテゴリをクリックすると孫カテゴリが展開
+                4. PCとは異なり、複数の親カテゴリを同時に開くことが可能
+              -->
+                      <div class="prj-filter-category-sp-component">
+                        <!--
+                  親カテゴリA（SP用）
+                  - prj-filter-category-sp-parent-item: SP用の親カテゴリコンテナ
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <!--
+                    親カテゴリヘッダー
+                    - data-sp-toggle="parent-A": このカテゴリの識別子
+                    - data-sp-icon: SP用アイコンのマーカー
+                  -->
+                          <div class="prj-filter-category-sp-parent-header" data-sp-toggle="parent-A">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリA</span>
+                            </div>
+                            <!-- SP用開閉アイコン -->
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリAの子カテゴリコンテンツ
+                    - hidden: 初期状態では非表示
+                    - data-sp-content="parent-A": 親カテゴリAと関連付け
+                    -: 表示/非表示のアニメーション効果
+                  -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-A">
+                            <!-- 子カテゴリタイトル -->
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリAの子カテゴリ一覧</span>
+                              <span class="icon-box"></span>
+                            </a>
+                            <!-- 子カテゴリリスト -->
+                            <!--
+                      子カテゴリA-1
+                      - data-sp-toggle="child-A1": この子カテゴリの識別子
+                      - プレフィックスにparent-ではなくchild-を使用している点に注意
+                    -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A1">
+                                <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリのコンテナ
+                        - hidden: 初期状態では非表示
+                        - data-sp-content="child-A1": 子カテゴリA1と関連付け
+                        - bg-gray-100: 階層を視覚的に表現するための背景色
+                      -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-A1">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      子カテゴリA-2
+                      - 構造は子カテゴリA-1と同様
+                    -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A2">
+                                <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリのコンテナ -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-A2">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリB（SP用）
+                  - 構造は親カテゴリAと同様
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <div
+                            class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                            data-sp-toggle="parent-B">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリB</span>
+                            </div>
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+
+                          <!-- 親カテゴリBの子カテゴリコンテンツ -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-B">
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリBの子カテゴリ一覧</span>
+                            </a>
+                            <!-- 子カテゴリリスト -->
+                            <!-- 子カテゴリB-1 -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-B1">
+                                <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリのコンテナ -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-B1">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリB-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリB-1-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリC（SP用）
+                  - 構造は他の親カテゴリと同様だが、孫カテゴリはなく子カテゴリのみを表示
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <div
+                            class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                            data-sp-toggle="parent-C">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリC</span>
+                            </div>
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+                          <!--
+                    親カテゴリCの子カテゴリコンテンツ
+                    - 孫カテゴリなしのシンプルな構造
+                  -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-C">
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリCの子カテゴリ一覧</span>
+                            </a>
+                            <a href="#">
+                              <span class="prj-filter-category-text">子カテゴリC-1</span>
+                            </a>
+                            <a href="#">
+                              <span class="prj-filter-category-text">子カテゴリC-2</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <!-- アコーディオンのヘッダー（PC/SP共通）
+              - data-toggle="sub1": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+              - data-icon: アイコン要素を参照するためのマーカー
+            -->
+                    <div class="prj-filter-menu-accordion-header" data-toggle="sub1">
+                      <h3 class="prj-filter-menu-accordion-header-title">サブ1</h3>
+                      <div class="icon-box">
+                        <span class="material-symbols-outlined" data-icon>expand_more</span>
+                      </div>
+                    </div>
+                    <!-- data-content="sub1": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                    <!-- フィルターカテゴリーコンポーネント -->
+                    <div class="prj-filter-menu-accordion-body prj-filter-category-component" data-content="sub1">
+                      <!--
+                PC向けカテゴリフィルターカテゴリ
+                - prj-filter-category-pc-component: PCサイズでのみ表示される要素
+                PC版の構造:
+                1. 親カテゴリは行(row)単位で管理され、各行に複数の親カテゴリを配置
+                2. 各行内では一度に1つの親カテゴリのみ展開可能
+                3. 各親カテゴリの下には子カテゴリがあり、子カテゴリをクリックすると孫カテゴリが表示される
+                4. 子カテゴリ行内でも、同じ行の中では1つの子カテゴリの孫カテゴリのみ表示可能
+              -->
+                      <div class="prj-filter-category-pc-component">
+                        <!-- 親カテゴリ行1 - 最初の行のカテゴリグループ -->
+                        <div class="prj-filter-category-pc-parent-row" data-pc-row-id="1">
+                          <!-- 親カテゴリのグリッド - 4列に分割された親カテゴリのコンテナ -->
+                          <div class="prj-filter-category-pc-parent-row-grid">
+                            <!--
+                      親カテゴリA
+                      - data-pc-toggle="parent-A": このカテゴリの識別子
+                      - data-pc-row="1": このカテゴリが属する行番号
+                      - data-pc-col="1": このカテゴリが属する列番号
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <a class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-A" data-pc-row="1"
+                                data-pc-col="1">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリA</span>
+                                </div>
+                                <!--
+                          開閉状態を表すアイコン
+                          - data-pc-icon: JavaScriptで状態変更時に参照するためのマーカー
+                          - transform, transition-transform: 回転アニメーションを設定
+                        -->
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </a>
+                            </div>
+
+                            <!--
+                      親カテゴリB
+                      - データ属性とクラス構造は親カテゴリAと同様
+                      - カラム位置が異なる (data-pc-col="2")
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-B"
+                                data-pc-row="1" data-pc-col="2">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリB</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      親カテゴリC
+                      - カラム位置: data-pc-col="3"
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-C"
+                                data-pc-row="1" data-pc-col="3">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリC</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      親カテゴリD
+                      - カラム位置: data-pc-col="4"
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-D"
+                                data-pc-row="1" data-pc-col="4">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリD</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリAの子カテゴリ展開エリア (静的HTML)
+                    - hidden: 初期状態では非表示
+                    - data-pc-expanded-content="parent-A": 親カテゴリAと関連付け
+                    - data-pc-expanded-row="1": この展開エリアが属する行番号
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-A"
+                            data-pc-expanded-row="1">
+                            <!--
+                      子カテゴリの1行目
+                      - data-pc-child-row="1": 子カテゴリ行の識別子
+                    -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!--
+                          子カテゴリA-1
+                          - data-pc-child="parent-A-1": この子カテゴリの識別子（親カテゴリAの子カテゴリ1）
+                          - data-pc-row="1": この子カテゴリが属する行
+                          - hover:bg-gray-100: ホバー時の背景色変更
+                        -->
+                                <div data-pc-child="parent-A-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                  <!-- 子カテゴリの開閉状態を表すアイコン -->
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-2 -->
+                                <div data-pc-child="parent-A-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-3 -->
+                                <div data-pc-child="parent-A-3" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-3</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリエリア - A-1の孫カテゴリ
+                        - hidden: 初期状態では非表示
+                        - data-pc-grandchild-content="parent-A-1": 子カテゴリA-1と関連付け
+                        - data-pc-grandchild-row="parent-A-row1": 親カテゴリAの子カテゴリ行1と関連付け
+                      -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-1" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリのグリッドレイアウト - 1行目 -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                  </a>
+                                </div>
+                                <!-- 孫カテゴリの2行目 -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-4</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-5</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-6</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-7</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリエリア - A-2の孫カテゴリ
+                        - 構造はA-1と同様だが、表示内容と関連付けが異なる
+                      -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-2" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリA-2のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-3</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-3の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-3" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリA-3のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      子カテゴリの2行目
+                      - data-pc-child-row="2": 2行目の子カテゴリ行
+                    -->
+                            <div class="child-row" data-pc-child-row="2">
+                              <div class="child-row-grid">
+                                <!-- 子カテゴリA-4 -->
+                                <div data-pc-child="parent-A-4" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-4</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-5 -->
+                                <div data-pc-child="parent-A-5" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-5</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-6 -->
+                                <div data-pc-child="parent-A-6" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-6</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-7 -->
+                                <div data-pc-child="parent-A-7" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-7</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-4の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-4" data-pc-grandchild-row="parent-A-row2">
+                                <!-- 孫カテゴリA-4のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-5の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-5" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-6の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-6" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-7の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-7" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリBの子カテゴリ展開エリア (静的)
+                    - 構造はAと同様だが、コンテンツとデータ属性の値が異なる
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-B"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリB-1 -->
+                                <div data-pc-child="parent-B-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリB-2 -->
+                                <div data-pc-child="parent-B-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリB-3 -->
+                                <div data-pc-child="parent-B-3" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-3</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- B-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-1" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-1-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-2の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-2" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-2一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-2-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-2-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-3の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-3" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-3一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-3-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-3-2</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 子カテゴリの2行目 -->
+                            <div class="child-row" data-pc-child-row="2">
+                              <div class="child-row-grid">
+                                <!-- 子カテゴリB-4 -->
+                                <div data-pc-child="parent-B-4" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリB-4</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!--
+                          子カテゴリB-5
+                          - 同様の構造
+                        -->
+                                <div data-pc-child="parent-B-5" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリB-5</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!--
+                          子カテゴリB-6と子カテゴリB-7
+                          - テキストリンクで孫カテゴリなし（アイコンなし）
+                        -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリB-6</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリB-7</span></a>
+                              </div>
+
+                              <!-- B-4の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-4" data-pc-grandchild-row="parent-B-row2">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-4一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-4-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-4-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-5の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-5" data-pc-grandchild-row="parent-B-row2">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-5一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-5-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-5-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリCの子カテゴリ展開エリア (静的)
+                    - 他の親カテゴリと同様の構造
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-C"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリC-1 -->
+                                <div data-pc-child="parent-C-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリC-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリC-2 -->
+                                <div data-pc-child="parent-C-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリC-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリC-3（テキストリンク） -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリC-3</span></a>
+                              </div>
+
+                              <!-- C-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-C-1" data-pc-grandchild-row="parent-C-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリC-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-1-2</div>
+                                </div>
+                              </div>
+
+                              <!-- C-2の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-C-2" data-pc-grandchild-row="parent-C-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリC-2一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-2-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-2-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリDの子カテゴリ展開エリア (静的)
+                    - シンプルな構造（孫カテゴリ展開機能なし）
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-D"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- テキストリンクの子カテゴリD-1〜D-3 -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-1</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-2</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-3</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリ行2 - 2行目のカテゴリグループ
+                  - 構造は1行目と同様
+                -->
+                        <div class="prj-filter-category-pc-parent-row" data-pc-row-id="2">
+                          <!-- 親カテゴリのグリッド -->
+                          <div class="prj-filter-category-pc-parent-row-grid">
+                            <!-- 親カテゴリE -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-E"
+                                data-pc-row="2" data-pc-col="1">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリE</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリF -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-F"
+                                data-pc-row="2" data-pc-col="2">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリF</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリG -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-G"
+                                data-pc-row="2" data-pc-col="3">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリG</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリH -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-H"
+                                data-pc-row="2" data-pc-col="4">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリH</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリEの子カテゴリ展開エリア (静的)
+                    - 構造は他の親カテゴリと同様
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-E"
+                            data-pc-expanded-row="2">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリE-1 -->
+                                <div data-pc-child="parent-E-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリE-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- テキストリンクの子カテゴリ -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリE-2</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリE-3</span></a>
+                              </div>
+
+                              <!-- E-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-E-1" data-pc-grandchild-row="parent-E-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリE-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリE-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリE-1-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                      親カテゴリF-Hの子カテゴリ展開エリア - シンプルな実装
+                      - 子カテゴリや孫カテゴリの詳細構造なし
+                    -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-F"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリFの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリFの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-G"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリGの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリGの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-H"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリHの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリHの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--
+                SP向けカテゴリフィルターカテゴリ
+                - prj-filter-category-sp-component: SPサイズでのみ表示される要素
+                SP版の構造:
+                1. 親カテゴリは縦に一列で並ぶ（グリッドではなくスタック配置）
+                2. 親カテゴリをクリックすると子カテゴリが展開
+                3. 子カテゴリをクリックすると孫カテゴリが展開
+                4. PCとは異なり、複数の親カテゴリを同時に開くことが可能
+              -->
+                      <div class="prj-filter-category-sp-component">
+                        <!--
+                  親カテゴリA（SP用）
+                  - prj-filter-category-sp-parent-item: SP用の親カテゴリコンテナ
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <!--
+                    親カテゴリヘッダー
+                    - data-sp-toggle="parent-A": このカテゴリの識別子
+                    - data-sp-icon: SP用アイコンのマーカー
+                  -->
+                          <div class="prj-filter-category-sp-parent-header" data-sp-toggle="parent-A">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリA</span>
+                            </div>
+                            <!-- SP用開閉アイコン -->
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリAの子カテゴリコンテンツ
+                    - hidden: 初期状態では非表示
+                    - data-sp-content="parent-A": 親カテゴリAと関連付け
+                    -: 表示/非表示のアニメーション効果
+                  -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-A">
+                            <!-- 子カテゴリタイトル -->
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリAの子カテゴリ一覧</span>
+                              <span class="icon-box"></span>
+                            </a>
+                            <!-- 子カテゴリリスト -->
+                            <!--
+                      子カテゴリA-1
+                      - data-sp-toggle="child-A1": この子カテゴリの識別子
+                      - プレフィックスにparent-ではなくchild-を使用している点に注意
+                    -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A1">
+                                <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリのコンテナ
+                        - hidden: 初期状態では非表示
+                        - data-sp-content="child-A1": 子カテゴリA1と関連付け
+                        - bg-gray-100: 階層を視覚的に表現するための背景色
+                      -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-A1">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      子カテゴリA-2
+                      - 構造は子カテゴリA-1と同様
+                    -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A2">
+                                <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリのコンテナ -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-A2">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリB（SP用）
+                  - 構造は親カテゴリAと同様
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <div
+                            class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                            data-sp-toggle="parent-B">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリB</span>
+                            </div>
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+
+                          <!-- 親カテゴリBの子カテゴリコンテンツ -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-B">
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリBの子カテゴリ一覧</span>
+                            </a>
+                            <!-- 子カテゴリリスト -->
+                            <!-- 子カテゴリB-1 -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-B1">
+                                <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリのコンテナ -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-B1">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリB-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリB-1-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリC（SP用）
+                  - 構造は他の親カテゴリと同様だが、孫カテゴリはなく子カテゴリのみを表示
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <div
+                            class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                            data-sp-toggle="parent-C">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリC</span>
+                            </div>
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+                          <!--
+                    親カテゴリCの子カテゴリコンテンツ
+                    - 孫カテゴリなしのシンプルな構造
+                  -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-C">
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリCの子カテゴリ一覧</span>
+                            </a>
+                            <a href="#">
+                              <span class="prj-filter-category-text">子カテゴリC-1</span>
+                            </a>
+                            <a href="#">
+                              <span class="prj-filter-category-text">子カテゴリC-2</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <!-- アコーディオンのヘッダー（PC/SP共通）
+              - data-toggle="sub2": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+              - data-icon: アイコン要素を参照するためのマーカー
+            -->
+                    <div class="prj-filter-menu-accordion-header" data-toggle="sub2">
+                      <h3 class="prj-filter-menu-accordion-header-title">サブ2</h3>
+                      <div class="icon-box">
+                        <span class="material-symbols-outlined" data-icon>expand_more</span>
+                      </div>
+                    </div>
+                    <!-- data-content="sub2": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                    <!-- フィルターカテゴリーコンポーネント -->
+                    <div class="prj-filter-menu-accordion-body prj-filter-category-component" data-content="sub2">
+                      <!--
+                PC向けカテゴリフィルターカテゴリ
+                - prj-filter-category-pc-component: PCサイズでのみ表示される要素
+                PC版の構造:
+                1. 親カテゴリは行(row)単位で管理され、各行に複数の親カテゴリを配置
+                2. 各行内では一度に1つの親カテゴリのみ展開可能
+                3. 各親カテゴリの下には子カテゴリがあり、子カテゴリをクリックすると孫カテゴリが表示される
+                4. 子カテゴリ行内でも、同じ行の中では1つの子カテゴリの孫カテゴリのみ表示可能
+              -->
+                      <div class="prj-filter-category-pc-component">
+                        <!-- 親カテゴリ行1 - 最初の行のカテゴリグループ -->
+                        <div class="prj-filter-category-pc-parent-row" data-pc-row-id="1">
+                          <!-- 親カテゴリのグリッド - 4列に分割された親カテゴリのコンテナ -->
+                          <div class="prj-filter-category-pc-parent-row-grid">
+                            <!--
+                      親カテゴリA
+                      - data-pc-toggle="parent-A": このカテゴリの識別子
+                      - data-pc-row="1": このカテゴリが属する行番号
+                      - data-pc-col="1": このカテゴリが属する列番号
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <a class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-A" data-pc-row="1"
+                                data-pc-col="1">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリA</span>
+                                </div>
+                                <!--
+                          開閉状態を表すアイコン
+                          - data-pc-icon: JavaScriptで状態変更時に参照するためのマーカー
+                          - transform, transition-transform: 回転アニメーションを設定
+                        -->
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </a>
+                            </div>
+
+                            <!--
+                      親カテゴリB
+                      - データ属性とクラス構造は親カテゴリAと同様
+                      - カラム位置が異なる (data-pc-col="2")
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-B"
+                                data-pc-row="1" data-pc-col="2">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリB</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      親カテゴリC
+                      - カラム位置: data-pc-col="3"
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-C"
+                                data-pc-row="1" data-pc-col="3">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリC</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      親カテゴリD
+                      - カラム位置: data-pc-col="4"
+                    -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-D"
+                                data-pc-row="1" data-pc-col="4">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリD</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリAの子カテゴリ展開エリア (静的HTML)
+                    - hidden: 初期状態では非表示
+                    - data-pc-expanded-content="parent-A": 親カテゴリAと関連付け
+                    - data-pc-expanded-row="1": この展開エリアが属する行番号
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-A"
+                            data-pc-expanded-row="1">
+                            <!--
+                      子カテゴリの1行目
+                      - data-pc-child-row="1": 子カテゴリ行の識別子
+                    -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!--
+                          子カテゴリA-1
+                          - data-pc-child="parent-A-1": この子カテゴリの識別子（親カテゴリAの子カテゴリ1）
+                          - data-pc-row="1": この子カテゴリが属する行
+                          - hover:bg-gray-100: ホバー時の背景色変更
+                        -->
+                                <div data-pc-child="parent-A-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                  <!-- 子カテゴリの開閉状態を表すアイコン -->
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-2 -->
+                                <div data-pc-child="parent-A-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-3 -->
+                                <div data-pc-child="parent-A-3" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリA-3</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリエリア - A-1の孫カテゴリ
+                        - hidden: 初期状態では非表示
+                        - data-pc-grandchild-content="parent-A-1": 子カテゴリA-1と関連付け
+                        - data-pc-grandchild-row="parent-A-row1": 親カテゴリAの子カテゴリ行1と関連付け
+                      -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-1" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリのグリッドレイアウト - 1行目 -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                  </a>
+                                </div>
+                                <!-- 孫カテゴリの2行目 -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-4</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-5</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-6</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-7</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリエリア - A-2の孫カテゴリ
+                        - 構造はA-1と同様だが、表示内容と関連付けが異なる
+                      -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-2" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリA-2のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-3</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-3の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-3" data-pc-grandchild-row="parent-A-row1">
+                                <!-- 孫カテゴリA-3のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-3-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      子カテゴリの2行目
+                      - data-pc-child-row="2": 2行目の子カテゴリ行
+                    -->
+                            <div class="child-row" data-pc-child-row="2">
+                              <div class="child-row-grid">
+                                <!-- 子カテゴリA-4 -->
+                                <div data-pc-child="parent-A-4" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-4</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-5 -->
+                                <div data-pc-child="parent-A-5" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-5</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-6 -->
+                                <div data-pc-child="parent-A-6" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-6</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリA-7 -->
+                                <div data-pc-child="parent-A-7" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリA-7</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-4の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-4" data-pc-grandchild-row="parent-A-row2">
+                                <!-- 孫カテゴリA-4のグリッドレイアウト -->
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-4-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-5の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-5" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-5-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-6の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-6" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-6-2</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリエリア - A-7の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-A-7" data-pc-grandchild-row="parent-A-row2">
+                                <div class="grandchild-grid">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7一覧</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-7-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリBの子カテゴリ展開エリア (静的)
+                    - 構造はAと同様だが、コンテンツとデータ属性の値が異なる
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-B"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリB-1 -->
+                                <div data-pc-child="parent-B-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリB-2 -->
+                                <div data-pc-child="parent-B-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリB-3 -->
+                                <div data-pc-child="parent-B-3" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリB-3</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- B-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-1" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-1-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-2の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-2" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-2一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-2-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-2-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-3の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-3" data-pc-grandchild-row="parent-B-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-3一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-3-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-3-2</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 子カテゴリの2行目 -->
+                            <div class="child-row" data-pc-child-row="2">
+                              <div class="child-row-grid">
+                                <!-- 子カテゴリB-4 -->
+                                <div data-pc-child="parent-B-4" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリB-4</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!--
+                          子カテゴリB-5
+                          - 同様の構造
+                        -->
+                                <div data-pc-child="parent-B-5" data-pc-row="2">
+                                  <span class="prj-filter-category-text">子カテゴリB-5</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!--
+                          子カテゴリB-6と子カテゴリB-7
+                          - テキストリンクで孫カテゴリなし（アイコンなし）
+                        -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリB-6</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリB-7</span></a>
+                              </div>
+
+                              <!-- B-4の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-4" data-pc-grandchild-row="parent-B-row2">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-4一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-4-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-4-2</div>
+                                </div>
+                              </div>
+
+                              <!-- B-5の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-B-5" data-pc-grandchild-row="parent-B-row2">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリB-5一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-5-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリB-5-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリCの子カテゴリ展開エリア (静的)
+                    - 他の親カテゴリと同様の構造
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-C"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリC-1 -->
+                                <div data-pc-child="parent-C-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリC-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリC-2 -->
+                                <div data-pc-child="parent-C-2" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリC-2</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- 子カテゴリC-3（テキストリンク） -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリC-3</span></a>
+                              </div>
+
+                              <!-- C-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-C-1" data-pc-grandchild-row="parent-C-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリC-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-1-2</div>
+                                </div>
+                              </div>
+
+                              <!-- C-2の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-C-2" data-pc-grandchild-row="parent-C-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリC-2一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-2-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリC-2-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリDの子カテゴリ展開エリア (静的)
+                    - シンプルな構造（孫カテゴリ展開機能なし）
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-D"
+                            data-pc-expanded-row="1">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- テキストリンクの子カテゴリD-1〜D-3 -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-1</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-2</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリD-3</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリ行2 - 2行目のカテゴリグループ
+                  - 構造は1行目と同様
+                -->
+                        <div class="prj-filter-category-pc-parent-row" data-pc-row-id="2">
+                          <!-- 親カテゴリのグリッド -->
+                          <div class="prj-filter-category-pc-parent-row-grid">
+                            <!-- 親カテゴリE -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-E"
+                                data-pc-row="2" data-pc-col="1">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリE</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリF -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-F"
+                                data-pc-row="2" data-pc-col="2">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリF</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリG -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-G"
+                                data-pc-row="2" data-pc-col="3">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリG</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 親カテゴリH -->
+                            <div class="prj-filter-category-pc-parent-group">
+                              <div class="prj-filter-category-pc-parent-header" data-pc-toggle="parent-H"
+                                data-pc-row="2" data-pc-col="4">
+                                <div class="prj-filter-category-center">
+                                  <div class="prj-filter-category-thumbnail">
+                                    <span></span>
+                                  </div>
+                                  <span class="prj-filter-category-text">親カテゴリH</span>
+                                </div>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-pc-icon>expand_more</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリEの子カテゴリ展開エリア (静的)
+                    - 構造は他の親カテゴリと同様
+                  -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-E"
+                            data-pc-expanded-row="2">
+                            <!-- 子カテゴリの1行目 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">すべての親カテゴリ一覧</span>
+                                </a>
+                                <!-- 子カテゴリE-1 -->
+                                <div data-pc-child="parent-E-1" data-pc-row="1">
+                                  <span class="prj-filter-category-text">子カテゴリE-1</span>
+                                  <div class="icon-box">
+                                    <span class="material-symbols-outlined" data-pc-child-icon>expand_more</span>
+                                  </div>
+                                </div>
+                                <!-- テキストリンクの子カテゴリ -->
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリE-2</span></a>
+                                <a href="#"><span class="prj-filter-category-text">子カテゴリE-3</span></a>
+                              </div>
+
+                              <!-- E-1の孫カテゴリ -->
+                              <div class="hidden prj-filter-category-pc-grandchild-area"
+                                data-pc-grandchild-content="parent-E-1" data-pc-grandchild-row="parent-E-row1">
+                                <div class="grandchild-grid">
+                                  <div class="prj-filter-category-text">孫カテゴリE-1一覧</div>
+                                  <div class="prj-filter-category-text">孫カテゴリE-1-1</div>
+                                  <div class="prj-filter-category-text">孫カテゴリE-1-2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--
+                      親カテゴリF-Hの子カテゴリ展開エリア - シンプルな実装
+                      - 子カテゴリや孫カテゴリの詳細構造なし
+                    -->
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-F"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリFの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリFの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-G"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリGの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリGの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hidden prj-filter-category-pc-expanded-area" data-pc-expanded-content="parent-H"
+                            data-pc-expanded-row="2">
+                            <!-- 親カテゴリHの子カテゴリ内容 - シンプル表示 -->
+                            <div class="child-row" data-pc-child-row="1">
+                              <div class="child-row-grid">
+                                <a href="#">
+                                  <span class="prj-filter-category-text">
+                                    親カテゴリHの子カテゴリ内容
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--
+                SP向けカテゴリフィルターカテゴリ
+                - prj-filter-category-sp-component: SPサイズでのみ表示される要素
+                SP版の構造:
+                1. 親カテゴリは縦に一列で並ぶ（グリッドではなくスタック配置）
+                2. 親カテゴリをクリックすると子カテゴリが展開
+                3. 子カテゴリをクリックすると孫カテゴリが展開
+                4. PCとは異なり、複数の親カテゴリを同時に開くことが可能
+              -->
+                      <div class="prj-filter-category-sp-component">
+                        <!--
+                  親カテゴリA（SP用）
+                  - prj-filter-category-sp-parent-item: SP用の親カテゴリコンテナ
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <!--
+                    親カテゴリヘッダー
+                    - data-sp-toggle="parent-A": このカテゴリの識別子
+                    - data-sp-icon: SP用アイコンのマーカー
+                  -->
+                          <div class="prj-filter-category-sp-parent-header" data-sp-toggle="parent-A">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリA</span>
+                            </div>
+                            <!-- SP用開閉アイコン -->
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+
+                          <!--
+                    親カテゴリAの子カテゴリコンテンツ
+                    - hidden: 初期状態では非表示
+                    - data-sp-content="parent-A": 親カテゴリAと関連付け
+                    -: 表示/非表示のアニメーション効果
+                  -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-A">
+                            <!-- 子カテゴリタイトル -->
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリAの子カテゴリ一覧</span>
+                              <span class="icon-box"></span>
+                            </a>
+                            <!-- 子カテゴリリスト -->
+                            <!--
+                      子カテゴリA-1
+                      - data-sp-toggle="child-A1": この子カテゴリの識別子
+                      - プレフィックスにparent-ではなくchild-を使用している点に注意
+                    -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A1">
+                                <span class="prj-filter-category-text">子カテゴリA-1</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!--
+                        孫カテゴリのコンテナ
+                        - hidden: 初期状態では非表示
+                        - data-sp-content="child-A1": 子カテゴリA1と関連付け
+                        - bg-gray-100: 階層を視覚的に表現するための背景色
+                      -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-A1">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-2</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-1-3</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--
+                      子カテゴリA-2
+                      - 構造は子カテゴリA-1と同様
+                    -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-A2">
+                                <span class="prj-filter-category-text">子カテゴリA-2</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリのコンテナ -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-A2">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリA-2-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリB（SP用）
+                  - 構造は親カテゴリAと同様
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <div
+                            class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                            data-sp-toggle="parent-B">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリB</span>
+                            </div>
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+
+                          <!-- 親カテゴリBの子カテゴリコンテンツ -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-B">
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリBの子カテゴリ一覧</span>
+                            </a>
+                            <!-- 子カテゴリリスト -->
+                            <!-- 子カテゴリB-1 -->
+                            <div class="prj-filter-category-sp-child-item">
+                              <div class="prj-filter-category-sp-child-header" data-sp-toggle="child-B1">
+                                <span class="prj-filter-category-text">子カテゴリB-1</span>
+                                <div class="icon-box">
+                                  <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                                </div>
+                              </div>
+
+                              <!-- 孫カテゴリのコンテナ -->
+                              <div class="prj-filter-category-sp-grandchild-content hidden" data-sp-content="child-B1">
+                                <div class="prj-filter-category-sp-grandchild-flex">
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリB-1-1</span>
+                                  </a>
+                                  <a href="#">
+                                    <span class="prj-filter-category-text">孫カテゴリB-1-2</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
+                  親カテゴリC（SP用）
+                  - 構造は他の親カテゴリと同様だが、孫カテゴリはなく子カテゴリのみを表示
+                -->
+                        <div class="prj-filter-category-sp-parent-item">
+                          <div
+                            class="prj-filter-category-sp-parent-header flex justify-between items-center p-3 cursor-pointer"
+                            data-sp-toggle="parent-C">
+                            <div class="prj-filter-category-centerr">
+                              <div class="prj-filter-category-thumbnail">
+                                <span></span>
+                              </div>
+                              <span class="prj-filter-category-text">親カテゴリC</span>
+                            </div>
+                            <div class="icon-box">
+                              <span class="material-symbols-outlined" data-sp-icon>expand_more</span>
+                            </div>
+                          </div>
+                          <!--
+                    親カテゴリCの子カテゴリコンテンツ
+                    - 孫カテゴリなしのシンプルな構造
+                  -->
+                          <div class="prj-filter-category-sp-child-content hidden" data-sp-content="parent-C">
+                            <a href="#" class="prj-filter-category-sp-child-content-title">
+                              <span class="prj-filter-category-text">親カテゴリCの子カテゴリ一覧</span>
+                            </a>
+                            <a href="#">
+                              <span class="prj-filter-category-text">子カテゴリC-1</span>
+                            </a>
+                            <a href="#">
+                              <span class="prj-filter-category-text">子カテゴリC-2</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- カテゴリから探す〆 -->
+            <!-- アイキャッチから探す -->
+            <section class="eyecatch-search-section prj-filter-menu-section">
+              <div class="prj-filter-menu-section-head">
+                <h2 class="prj-title-component">アイキャッチから探す</h2>
+              </div>
+              <div class="prj-filter-menu-section-body">
+                <ul class="prj-filter-menu-section-list">
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#">
+                      <div class="prj-filter-menu-thumbnail">
+                        <span class="material-symbols-outlined"> image </span>
+                      </div>
+                      <span class="prj-filter-menu-text">単一画像</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#">
+                      <div class="prj-filter-menu-thumbnail">
+                        <span class="material-symbols-outlined"> switch_right </span>
+                      </div>
+                      <span class="prj-filter-menu-text">スライドショー</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#">
+                      <div class="prj-filter-menu-thumbnail">
+                        <img src="assets/images/common/youtube.png" alt="動画" width="24" height="24" />
+                      </div>
+                      <span class="prj-filter-menu-text">動画</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- アイキャッチから探す〆 -->
+            <!-- アカウントから探す -->
+            <section class="account-search-section prj-filter-menu-section">
+              <div class="prj-filter-menu-section-head">
+                <h2 class="prj-title-component">アカウントから探す</h2>
+              </div>
+              <div class="prj-filter-menu-section-body">
+                <ul class="prj-filter-menu-section-list">
+                  <li class="prj-filter-menu-section-item">
+                    <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="main": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                    <div class="prj-filter-menu-accordion-header" data-toggle="main">
+                      <h3 class="prj-filter-menu-accordion-header-title">メイン</h3>
+                      <div class="icon-box">
+                        <span class="material-symbols-outlined" data-icon>expand_more</span>
+                      </div>
+                    </div>
+                    <!-- data-content="main": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                    <div class="prj-filter-menu-accordion-body hidden" data-content="main">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="sub1": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                    <div class="prj-filter-menu-accordion-header" data-toggle="sub1">
+                      <h3 class="prj-filter-menu-accordion-header-title">サブ1</h3>
+                      <div class="icon-box">
+                        <span class="material-symbols-outlined" data-icon>expand_more</span>
+                      </div>
+                    </div>
+                    <!-- data-content="sub1": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                    <div class="prj-filter-menu-accordion-body hidden" data-content="sub1">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <!-- アコーディオンのヘッダー（PC/SP共通）
+                                      - data-toggle="sub2": このヘッダーがクリックされると、内包コンテンツを開閉するトリガーとなる
+                                      - data-icon: アイコン要素を参照するためのマーカー
+                                    -->
+                    <div class="prj-filter-menu-accordion-header" data-toggle="sub2">
+                      <h3 class="prj-filter-menu-accordion-header-title">サブ2</h3>
+                      <div class="icon-box">
+                        <span class="material-symbols-outlined" data-icon>expand_more</span>
+                      </div>
+                    </div>
+                    <!-- data-content="main": ヘッダーと関連付け、開閉の対象となるコンテンツ -->
+                    <div class="prj-filter-menu-accordion-body hidden" data-content="sub2">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="prj-filter-menu-text">アカウント</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- アカウントから探す〆 -->
+            <!-- タグから探す -->
+            <section class="tag-search-section prj-filter-menu-section">
+              <div class="prj-filter-menu-section-head">
+                <h2 class="prj-title-component">タグから探す</h2>
+              </div>
+              <div class="prj-filter-menu-section-body">
+                <ul class="prj-filter-menu-section-list">
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item prj-tag-component">
+                    <a href="#" class="prj-tag-link"><span class="prj-tag-name">tagtagtag</span><span
+                        class="prj-tag-count"><span class="sr-only">関連記事数: </span>(123)</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="prj-filter-menu-section-foot">
+                <a href="#" class="prj-text-link-more-component" aria-label="コミュニティの一覧ページへ">
+                  もっと見る
+                  <span class="material-symbols-outlined icon-expand-circle-right-md" aria-hidden="true">
+                    expand_circle_right
+                  </span>
+                </a>
+              </div>
+            </section>
+            <!-- タグから探す〆 -->
+            <!-- コミュニティから探す -->
+            <section class="community-search-section prj-filter-menu-section">
+              <div class="prj-filter-menu-section-head">
+                <h2 class="prj-title-component">コミュニティから探す</h2>
+              </div>
+              <div class="prj-filter-menu-section-body">
+                <ul class="prj-filter-menu-section-list">
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#">
+                      <div class="prj-filter-menu-thumbnail">
+                        <span></span>
+                      </div>
+                      <span class="prj-filter-menu-text">コミュニティ一覧</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- コミュニティから探す〆 -->
+            <!-- フッター（フィルターメニュー） -->
+            <section class="footer-filter-menu-section prj-filter-menu-section">
+              <div class="prj-filter-menu-section-body">
+                <!-- リストボックス1 -->
+                <ul class="prj-filter-menu-section-list">
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ">
+                      ダミーテキストです。
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ"> ダミーテキストです。 </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ">
+                      ダミーテキストです。
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ"> ダミーテキストです。 </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ"> ダミーテキストです。 </a>
+                  </li>
+                </ul>
+                <ul class="prj-filter-menu-section-list">
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ">
+                      ダミーテキストです。
+                    </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ"> ダミーテキストです。 </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ"> ダミーテキストです。 </a>
+                  </li>
+                  <li class="prj-filter-menu-section-item">
+                    <a href="#" aria-label="ダミーテキストです。のページへ"> ダミーテキストです。 </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="prj-filter-menu-section-foot">
+                <!-- sns -->
+                <nav aria-label="SNSリンク">
+                  <ul class="flex gap-5">
+                    <li class="w-[44px] h-[44px] flex justify-center items-center">
+                      <a href="#" aria-label="Instagramページへ">
+                        <img class="w-[26.43px] h-[26.43px]" src="assets/images/common/sns-menu-instagram.png" alt=""
+                          aria-hidden="true" width="26.43" height="26.43" loading="lazy" />
+                        <span class="sr-only">Instagram</span>
+                      </a>
+                    </li>
+                    <li class="w-[44px] h-[44px] flex justify-center items-center">
+                      <a href="#" aria-label="Facebookページへ">
+                        <img class="w-[26.43px] h-[26.43px]" src="assets/images/common/sns-menu-facebook.png" alt=""
+                          aria-hidden="true" width="26.43" height="26.43" loading="lazy" />
+                        <span class="sr-only">Facebook</span>
+                      </a>
+                    </li>
+                    <li class="w-[44px] h-[44px] flex justify-center items-center">
+                      <a href="#" aria-label="Xページへ">
+                        <img class="w-[26.43px] h-[23.87px]" src="assets/images/common/sns-menu-x.png" alt=""
+                          aria-hidden="true" width="26.43" height="23.87" loading="lazy" />
+                        <span class="sr-only">X</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </section>
+            <!-- フッター（フィルターメニュー）〆 -->
+          </div>
+        </div>
+        <!-- フィルターメニュー〆 -->
+      </div>
+      <!-- ボディ〆 -->
+      <!-- フッター -->
+      <div class="prj-modal-category-foot">
+        <!-- キャンセルボタン -->
+        <button class="prj-modal-category-cancel" aria-label="キャンセル">
+          <span class="material-symbols-rounded icon-close-md" aria-hidden="true"> close </span>
+          <span>閉じる</span>
+        </button>
+      </div>
+      <!-- フッター〆 -->
+    </div>
+    <!-- コンテンツ〆 -->
+  </div>
+  <!-- コンテナ〆 -->
+  <!-- オーバーレイ -->
+  <div class="prj-modal-category-overlay"></div>
+</div>

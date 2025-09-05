@@ -1,0 +1,47 @@
+<div class="bg-bg-primary relative">
+  <!-- 背景画像、スライドコンテナ -->
+  <div class="bg-slide-container absolute top-0 left-0 w-full h-full sm:pt-[var(--header-height-md)]">
+    <!-- 背景画像が1枚の場合 -->
+    <div class="single-image-container w-full h-full hidden">
+      <img src="assets/images/theme-b/theme-b-mv-bg-1.jpg" alt="背景画像"
+        class="absolute inset-0 w-full h-full object-cover" />
+    </div>
+    <!-- 背景画像が複数の場合（Swiper使用） -->
+    <div class="multiple-images-container relative w-full h-full">
+      <div class="swiper mv-bg-swiper w-full h-full">
+        <div class="swiper-wrapper">
+          <!-- スライド1 -->
+          <div class="swiper-slide w-full h-full">
+            <img src="assets/images/theme-b/theme-b-mv-bg-1.jpg" alt="スライド1背景"
+              class="relative inset-0 w-screen h-full object-cover" />
+          </div>
+
+          <!-- スライド2 -->
+          <div class="swiper-slide w-full h-full">
+            <img src="assets/images/theme-b/theme-b-mv-bg-2.jpg" alt="スライド2背景"
+              class="relative inset-0 w-screen h-full object-cover" />
+          </div>
+
+          <!-- スライド3 -->
+          <div class="swiper-slide w-full h-full">
+            <img src="assets/images/theme-b/theme-b-mv-bg-3.jpg" alt="スライド3背景"
+              class="relative inset-0 w-screen h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 背景画像、スライドコンテナ〆 -->
+
+  <!-- 共通の背景色とパディングを持つラッパー -->
+  <div class="visual-wrapper relative overflow-hidden sm:pt-[var(--header-height-md)]">
+    <!-- MV -->
+    <section class="mv flex flex-col justify-center"></section>
+    <!-- MV〆 -->
+
+    <!-- Swiperカルーセル -->
+    <%- include ('./theme-b-top-mv-carousel.ejs') %>
+  </div>
+  <!-- AD-1 -->
+  <%- include ('./theme-b-top-ad-1.ejs') %>
+</div>

@@ -1,0 +1,53 @@
+@use "../mixins" as *;
+.prj-cta-registration-component {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  @include sm {
+    padding: 32px 40px;
+  }
+  @include md {
+    padding: 32px 40px;
+  }
+  @include lg {
+    padding: 32px 40px;
+  }
+  @include xl {
+    padding: 32px 40px;
+  }
+  .prj-cta-registration-title {
+    font-size: 24px;
+    line-height: 1.33; // 24/32
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .prj-cta-registration-text {
+    font-size: 16px;
+    line-height: 1.5; // 16/24
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-top: 10px;
+  }
+  .prj-cta-registration-button {
+    margin: 25px auto 0;
+    transition: scale 0.2s;
+    &:hover {
+      scale: 1.05;
+      transition: scale 0.2s;
+    }
+    @include sm {
+      margin: 25px 0 0 auto;
+    }
+    @include md {
+      margin: 25px 0 0 auto;
+    }
+    @include lg {
+      margin: 25px 0 0 auto;
+    }
+    @include xl {
+      margin: 25px 0 0 auto;
+    }
+  }
+}

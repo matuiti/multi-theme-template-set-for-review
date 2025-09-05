@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- HEAD -->
+<%- include ('./components/sections/theme-c-top/theme-c-top-head.ejs') %>
+
+  <body>
+    <div id="app">
+      <div class="theme-c-theme">
+        <!-- HEADER -->
+        <%- include ('./components/header.ejs') %>
+          <!-- ボトムメニュー -->
+          <%- include ('./components/bottom-menu.ejs') %>
+            <!-- モーダルメニュー -->
+            <%- include ('./components/modal-menu.ejs') %>
+              <!-- アクセシビリティのためのmain要素 -->
+              <main id="main-content">
+                <!-- FV -->
+                <%- include ('./components/sections/theme-c-top/theme-c-top-fv.ejs') %>
+                  <!-- FOLLOW -->
+                  <%- include ('./components/sections/theme-c-top/theme-c-top-follow.ejs') %>
+                    <!-- NEW -->
+                    <%- include ('./components/sections/theme-c-top/theme-c-top-new.ejs') %>
+                      <!-- RANKING -->
+                      <%- include ('./components/sections/theme-c-top/theme-c-top-ranking.ejs') %>
+                        <!-- AD-2 -->
+                        <%- include ('./components/sections/theme-c-top/theme-c-top-ad-2.ejs') %>
+                          <!-- SPECIAL THANKS -->
+                          <%- include ('./components/sections/theme-c-top/theme-c-top-special-thanks.ejs') %>
+                            <!-- NEWS -->
+                            <%- include ('./components/sections/theme-c-top/theme-c-top-news.ejs') %>
+                              <!-- COMMUNITY -->
+                              <%- include ('./components/sections/theme-c-top/theme-c-top-community.ejs') %>
+              </main>
+              <!-- FOOTER -->
+              <%- include ('./components/sections/theme-c-top/theme-c-top-footer.ejs') %>
+      </div>
+    </div>
+  </body>
+
+</html>

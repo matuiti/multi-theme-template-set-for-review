@@ -1,0 +1,214 @@
+@use "../mixins" as *;
+.prj-bottom-menu-component {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 98;
+  @include xs {
+    display: block;
+  }
+  .prj-bottom-menu-container {
+    width: 100%;
+    height: 100%;
+    .prj-bottom-menu-content {
+      .prj-bottom-menu-body {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px 16px 0 0;
+        overflow: hidden;
+        background-color: #fff;
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        &.active {
+          padding: 40px 20px 0px;
+          transform: translateY(0);
+          opacity: 1;
+        }
+        .prj-bottom-menu-body-list {
+          // スクロール可能にする（高さの設定必須）
+          overflow: auto;
+          max-height: 60vh;
+          .prj-bottom-menu-body-item {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .prj-bottom-menu-filter-section {
+          display: none;
+          &.active {
+            display: block;
+          }
+          .footer-filter-menu-section {
+            margin-bottom: 64px;
+          }
+        }
+        .prj-bottom-menu-stats-section {
+          display: none;
+          &.active {
+            display: block;
+          }
+          .prj-bottom-menu-section-body {
+            // ここからサイドメニュー（統計）のスタイル
+            .prj-bottom-menu-stats {
+              display: flex;
+              flex-direction: column;
+              gap: 48px;
+              .prj-bottom-menu-stats-list-container {
+                .prj-bottom-menu-stats-list-head {
+                  border-bottom: 1px solid var(--text-primary);
+                  .prj-bottom-menu-stats-list-title {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    font-weight: 700;
+                    padding: 10px 0px;
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                    span {
+                      transform: translateY(2px);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .prj-bottom-menu-account-section {
+          display: none;
+          &.active {
+            display: block;
+            padding-bottom: 20px;
+          }
+          .prj-bottom-menu-section-head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              background-color: var(--theme-primary);
+              border-radius: 99px;
+              color: #fff;
+              gap: 5px;
+              padding: 12.5px;
+              span {
+                color: #fff;
+                transform: translateY(3px);
+              }
+            }
+          }
+          .prj-bottom-menu-section-body,
+          .prj-bottom-menu-section-foot {
+            width: 100%;
+            height: 100%;
+            .prj-bottom-menu-account-list {
+              .prj-bottom-menu-account-item {
+                a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                  width: 100%;
+                  height: 100%;
+                  gap: 10px;
+                  padding: 12px 0px;
+                  span {
+                    color: #333333;
+                  }
+                }
+              }
+            }
+          }
+          .prj-bottom-menu-section-body {
+            margin-top: 20px;
+          }
+          .prj-bottom-menu-section-foot {
+            border-top: 1px solid #dedede;
+          }
+        }
+      }
+      .prj-bottom-menu-footer {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        border-top: 1px solid #aeaeae;
+        background-color: #fff;
+
+        .prj-bottom-menu-footer-list {
+          display: flex;
+          align-items: center;
+          .prj-bottom-menu-footer-item {
+            width: 25%;
+            height: var(--bottom-menu-height);
+            .prj-bottom-menu-footer-button {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              .open {
+                display: block !important;
+              }
+              .close {
+                display: none !important;
+              }
+              &.active {
+                .open {
+                  display: none !important;
+                }
+                .close {
+                  display: block !important;
+                }
+                .prj-bottom-menu-footer-icon {
+                  span {
+                    color: var(--theme-primary);
+                  }
+                }
+                .prj-bottom-menu-footer-text {
+                  color: var(--theme-primary);
+                }
+              }
+              .prj-bottom-menu-footer-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 32px;
+                height: 32px;
+                span {
+                  color: #333333;
+                }
+              }
+              .prj-bottom-menu-footer-text {
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                color: #333333;
+              }
+            }
+          }
+        }
+      }
+    }
+    .prj-bottom-menu-overlay {
+      &.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}

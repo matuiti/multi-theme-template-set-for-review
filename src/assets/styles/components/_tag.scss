@@ -1,0 +1,25 @@
+.prj-tag-component {
+  display: inline-block;
+  .prj-tag-link {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    color: var(--text-primary);
+    padding: 6px 8px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px #0000001a;
+    .prj-tag-name {
+      &::before {
+        content: "＃";
+        font-size: 14px;
+        color: var(--theme-primary);
+        margin-right: 2px;
+        vertical-align: bottom;
+      }
+    }
+  }
+}

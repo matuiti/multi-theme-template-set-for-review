@@ -1,0 +1,153 @@
+/** 子カテゴリの表示アニメーション */
+
+/* 開いている場合 */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area {
+    margin-bottom: 12px;
+    padding: 0;
+    transition: max-height 0.5s, opacity 0.5s, visibility 0.5s, box-shadow 0.5s;
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 0px 3px 6px #0003;
+    border-radius: 0 0 4px 4px;
+    max-height: 500px;
+    display: inherit;
+}
+
+/* 閉じている場合 */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area.hidden {
+    margin-bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    box-shadow: none;
+    display: inherit;
+}
+
+/* 子カテゴリの行間のスタイル (中間) */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area
+.child-row {
+    padding: 0 10px;
+}
+
+/* 子カテゴリの行間のスタイル (最上部) */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area
+.child-row:first-child {
+    padding: 16px 10px 0;
+}
+
+/* 子カテゴリの行間のスタイル (最下部) */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area
+.child-row:last-child {
+    padding: 0 10px 16px;
+}
+
+/* 子カテゴリの行間のスタイル (1つしかない場合) */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area
+.child-row:only-child {
+    padding: 16px 10px;
+}
+
+/* 子カテゴリーがない場合の高さ対策 */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area
+.child-row > .child-row-grid > a {
+    min-height: 54px;
+}
+
+/** 孫カテゴリーの表示アニメーション */
+
+/* 開いている場合 */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-grandchild-area {
+    margin-top: 13px;
+    padding: 0;
+    transition: margin-top 0.4s, max-height 0.4s, opacity 0.4s, visibility 0.4s;
+    visibility: visible;
+    opacity: 1;
+    max-height: 500px;
+    display: inherit;
+}
+
+/* 閉じている場合 */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-grandchild-area.hidden {
+    margin-top: 0;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    display: inherit;
+}
+
+/* 孫カテゴリの行間のスタイル (最上部) */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-grandchild-area
+.grandchild-grid:first-child {
+    padding: 16px 16px 0;
+}
+
+/* 孫カテゴリの行間のスタイル (最下部) */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-grandchild-area
+.grandchild-grid:last-child {
+    padding: 0 16px 16px;
+}
+
+/* 孫カテゴリの行間のスタイル (1つしかない場合) */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-grandchild-area
+.grandchild-grid:only-child {
+    padding: 16px 16px;
+}
+
+/* 孫カテゴリの行間のスタイル (アイテム) */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-grandchild-area
+.grandchild-grid > a {
+    padding: 18px 0 18px 10px
+}
+
+/** 子・孫カテゴリのバルーンアロー */
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-parent-row
+.prj-filter-category-pc-parent-row-grid
+.prj-filter-category-pc-parent-group
+.prj-filter-category-pc-parent-header.active:after {
+    filter: drop-shadow(0px -5px 3px rgba(0,0,0,.075));
+}
+
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area
+.child-row
+.child-row-grid>*.active:after {
+    border-color: transparent transparent #fff transparent;
+    filter: drop-shadow(0px -5px 2px rgba(0,0,0,.05));
+}
+.prj-filter-category-component
+.prj-filter-category-pc-component
+.prj-filter-category-pc-expanded-area
+.child-row
+.child-row-grid>*.active:before {
+    width: 16px;
+    background-color: #fff;
+}

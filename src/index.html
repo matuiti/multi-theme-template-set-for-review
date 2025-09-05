@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>テーマプレビュー</title>
+  <style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    body {
+      font-family: 'Noto Sans JP', system-ui, sans-serif;
+      background-color: #f5f5f5;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-item {
+      transition: all 0.2s ease;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-item:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ドット配置用のスタイル */
+    .dot-container {
+      display: inline-flex;
+      width: 24px;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.5rem;
+    }
+
+    /* 色を強調するためのカスタムスタイル */
+    .Theme-a-color {
+      background-color: #fee2e2 !important;
+      color: #b91c1c !important;
+      border: 1px solid #ef4444;
+      padding: 0.625rem 1rem !important;
+      width: 100% !important;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .Theme-a-color:hover {
+      background-color: #fecaca !important;
+    }
+
+    .Theme-a-dot {
+      background-color: #dc2626 !important;
+    }
+
+    .Theme-b-color {
+      background-color: #dbeafe !important;
+      color: #1e40af !important;
+      border: 1px solid #3b82f6;
+      padding: 0.625rem 1rem !important;
+      width: 100% !important;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .Theme-b-color:hover {
+      background-color: #bfdbfe !important;
+    }
+
+    .Theme-b-dot {
+      background-color: #2563eb !important;
+    }
+
+    .Theme-c-color {
+      background-color: #dcfce7 !important;
+      color: #166534 !important;
+      border: 1px solid #22c55e;
+      padding: 0.625rem 1rem !important;
+      width: 100% !important;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .Theme-c-color:hover {
+      background-color: #bbf7d0 !important;
+    }
+
+    .Theme-c-dot {
+      background-color: #16a34a !important;
+    }
+
+    .theme-d-color {
+      background-color: #f3e8ff !important;
+      color: #6b21a8 !important;
+      border: 1px solid #a855f7;
+      padding: 0.625rem 1rem !important;
+      width: 100% !important;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .theme-d-color:hover {
+      background-color: #e9d5ff !important;
+    }
+
+    .theme-d-dot {
+      background-color: #9333ea !important;
+    }
+
+    .header-enhanced {
+      background: #1f2937 !important;
+      border-bottom: 3px solid #60a5fa;
+      padding: 1.5rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+
+    .card-enhanced {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 1.25rem !important;
+      margin-bottom: 1rem;
+      height: 100%;
+    }
+
+    .container-spacing {
+      padding: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      font-size: 1.25rem !important;
+    }
+
+    .button-grid {
+      gap: 0.5rem !important;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .theme-button {
+      padding: 0.625rem 0.75rem !important;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      font-size: 0.875rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .theme-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .footer-enhanced {
+      padding: 1.5rem 0;
+      margin-top: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 768px) {
+      .grid-cols-1 {
+        grid-template-columns: 1fr;
+      }
+
+      .button-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+  <script>
+    // 開発環境とプロダクション環境でパスを切り替える
+    function getPageUrl(devPath, prodPath) {
+      // より正確な環境判定
+      // 1. URLにdistが含まれる場合は本番環境
+      // 2. URLにdistが含まれない場合でも、srcが含まれない場合は本番環境
+      // 3. localhost:4173 (vite preview用ポート) の場合も本番環境
+      const href = window.location.href;
+      const isProduction =
+        href.includes('/dist/') ||
+        (!href.includes('./') && !href.includes('localhost:3000')) ||
+        href.includes('localhost:4173');
+
+      return isProduction ? prodPath : devPath;
+    }
+
+    // ページ読み込み完了時に実行
+    document.addEventListener('DOMContentLoaded', function () {
+      // 全てのリンク要素にクラスを追加してスタイルを適用
+      const links = document.querySelectorAll('a[data-link-type]');
+
+      // URLパスを確認
+      const isPreviewMode =
+        window.location.href.includes('/dist/') ||
+        window.location.href.includes('localhost:4173');
+
+      // プレビューモードの場合は直接リンクに変更
+      if (isPreviewMode) {
+        // ベースパスを取得（絶対パスではなく相対パスで動作するように）
+        const basePath = '';
+
+        links.forEach((link) => {
+          const linkType = link.getAttribute('data-link-type');
+          if (linkType === 'Theme-a') {
+            link.href = basePath + 'Theme-a-top.html';
+          } else if (linkType === 'Theme-b') {
+            link.href = basePath + 'Theme-b-top.html';
+          } else if (linkType === 'Theme-c') {
+            link.href = basePath + 'Theme-c-top.html';
+          } else if (linkType === 'theme-d') {
+            link.href = basePath + 'theme-d-top.html';
+          } else if (linkType === 'article-list') {
+            link.href = basePath + 'article-list.html';
+          } else if (linkType === 'article-detail') {
+            link.href = basePath + 'article-detail.html';
+          }
+
+          // クリックイベントは不要になるので削除
+          link.removeAttribute('onclick');
+        });
+      }
+
+      // カスタムクラスを追加して色を強調
+      document
+        .querySelectorAll('a[data-link-type="Theme-a"], button[onclick*="Theme-a"]')
+        .forEach((el) => {
+          el.classList.add('Theme-a-color');
+          const dot = el.querySelector('span');
+          if (dot) dot.classList.add('Theme-a-dot');
+        });
+
+      document
+        .querySelectorAll('a[data-link-type="Theme-b"], button[onclick*="Theme-b"]')
+        .forEach((el) => {
+          el.classList.add('Theme-b-color');
+          const dot = el.querySelector('span');
+          if (dot) dot.classList.add('Theme-b-dot');
+        });
+
+      document
+        .querySelectorAll('a[data-link-type="Theme-c"], button[onclick*="Theme-c"]')
+        .forEach((el) => {
+          el.classList.add('Theme-c-color');
+          const dot = el.querySelector('span');
+          if (dot) dot.classList.add('Theme-c-dot');
+        });
+
+      document
+        .querySelectorAll('a[data-link-type="theme-d"], button[onclick*="theme-d"]')
+        .forEach((el) => {
+          el.classList.add('theme-d-color');
+          const dot = el.querySelector('span');
+          if (dot) dot.classList.add('theme-d-dot');
+        });
+
+      // ヘッダーとカードのスタイル強化
+      document.querySelector('header').classList.add('header-enhanced');
+      document.querySelectorAll('.bg-white').forEach((el) => {
+        el.classList.add('card-enhanced');
+      });
+
+      // ボタングリッドのクラス追加
+      document.querySelectorAll('.grid-cols-2').forEach((el) => {
+        el.classList.add('button-grid');
+      });
+
+      // テーマボタンのクラス追加
+      document.querySelectorAll('button[onclick*="Theme"]').forEach((el) => {
+        el.classList.add('theme-button');
+      });
+
+      // フッターのクラス追加
+      document.querySelector('footer').classList.add('footer-enhanced');
+
+      // セクションタイトルのクラス追加
+      document.querySelectorAll('h2, h3').forEach((el) => {
+        el.classList.add('section-title');
+      });
+
+      // ドットコンテナの追加
+      document.querySelectorAll('.nav-item a span').forEach((dot) => {
+        const dotContainer = document.createElement('div');
+        dotContainer.className = 'dot-container';
+        dot.parentNode.insertBefore(dotContainer, dot);
+        dotContainer.appendChild(dot);
+      });
+    });
+
+    // ページロード時にURLパラメータからテーマを取得し、bodyにクラスを追加する
+    // 全ページ共通のスクリプト
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const theme = urlParams.get('theme');
+
+      if (theme) {
+        // bodyにテーマクラスを追加
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.classList.add(theme + '-theme');
+        });
+      }
+    })();
+
+    /**
+     * テーマ付きページへの遷移を行う関数
+     * @param {string} pageType - 遷移先のページタイプ（例：'article-list', 'article-detail'）
+     * @param {string} theme - 適用するテーマ（例：'theme-a', 'theme-b', 'theme-c', 'theme-d'）
+     * @returns {boolean} - 常にfalseを返し、デフォルトのリンク動作を防止
+     */
+    function navigateWithTheme(pageType, theme) {
+      // 本番環境かどうかを判定
+      const isProduction =
+        // 1. URLに/dist/が含まれる場合（ビルド後のファイルにアクセス）
+        window.location.href.includes('/dist/') ||
+        // 2. URLに./が含まれず、かつlocalhost:3000（開発サーバー）でもない場合
+        (!window.location.href.includes('./') &&
+          !window.location.href.includes('localhost:3000')) ||
+        // 3. localhost:4173（Viteのプレビューサーバー）の場合
+        window.location.href.includes('localhost:4173');
+
+      let url;
+      if (isProduction) {
+        // 本番環境の場合：
+        // 例：article-list.html?theme=Theme-a
+        // ビルド後のファイルはルートディレクトリに配置されるため、相対パスで直接指定
+        url = pageType + '.html?theme=' + theme;
+      } else {
+        // 開発環境の場合：
+        // 例：src/article-list.html?theme=Theme-a
+        // 開発時はsrc/ディレクトリ内のファイルを参照
+        url = '/' + pageType + '.html?theme=' + theme;
+      }
+
+      // ページ遷移を実行
+      window.location.href = url;
+      // falseを返して、デフォルトのリンク動作を防止
+      return false;
+    }
+  </script>
+</head>
+
+<body class="py-4">
+  <div class="container-spacing">
+    <header class="bg-gray-800 text-white rounded-lg shadow-sm">
+      <h1 class="text-xl font-bold">テーマ切り替えサイト - プレビュー</h1>
+      <p class="text-gray-300 mt-2 text-sm">各ページに直接アクセスできます</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-white shadow-sm">
+        <h2 class="text-lg font-bold border-b border-gray-200 pb-2">テーマ別トップページ</h2>
+        <ul class="mt-3">
+          <li class="nav-item">
+            <a href="#" data-link-type="Theme-a"
+              onclick="window.location=getPageUrl('/Theme-a-top.html', '/Theme-a-top.html'); return false;"
+              class="rounded-md text-sm">
+              <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+              Theme-a テーマ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-link-type="Theme-b"
+              onclick="window.location=getPageUrl('/Theme-b-top.html', '/Theme-b-top.html'); return false;"
+              class="rounded-md text-sm">
+              <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+              Theme-b テーマ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-link-type="Theme-c"
+              onclick="window.location=getPageUrl('/Theme-c-top.html', '/Theme-c-top.html'); return false;"
+              class="rounded-md text-sm">
+              <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+              Theme-c テーマ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-link-type="theme-d"
+              onclick="window.location=getPageUrl('/theme-d-top.html', '/theme-d-top.html'); return false;"
+              class="rounded-md text-sm">
+              <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+              theme-d テーマ
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-white shadow-sm">
+        <h2 class="text-lg font-bold border-b border-gray-200 pb-2">共通ページ</h2>
+
+        <div class="mb-4 mt-3">
+          <h3 class="text-base font-semibold mb-2">記事一覧ページ</h3>
+          <div class="grid grid-cols-2 gap-2">
+            <button onclick="navigateWithTheme('article-list', 'Theme-a')" class="rounded-md text-sm">
+              Theme-a テーマ
+            </button>
+            <button onclick="navigateWithTheme('article-list', 'Theme-b')" class="rounded-md text-sm">
+              Theme-b テーマ
+            </button>
+            <button onclick="navigateWithTheme('article-list', 'Theme-c')" class="rounded-md text-sm">
+              Theme-c テーマ
+            </button>
+            <button onclick="navigateWithTheme('article-list', 'theme-d')" class="rounded-md text-sm">
+              theme-d テーマ
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="text-base font-semibold mb-2">記事詳細ページ</h3>
+          <div class="grid grid-cols-2 gap-2">
+            <button onclick="navigateWithTheme('article-detail', 'Theme-a')" class="rounded-md text-sm">
+              Theme-a テーマ
+            </button>
+            <button onclick="navigateWithTheme('article-detail', 'Theme-b')" class="rounded-md text-sm">
+              Theme-b テーマ
+            </button>
+            <button onclick="navigateWithTheme('article-detail', 'Theme-c')" class="rounded-md text-sm">
+              Theme-c テーマ
+            </button>
+            <button onclick="navigateWithTheme('article-detail', 'theme-d')" class="rounded-md text-sm">
+              theme-d テーマ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-4 text-gray-500">
+    <p class="text-sm">テーマ切り替え対応ウェブサイト開発プロジェクト</p>
+  </footer>
+</body>
+
+</html>
