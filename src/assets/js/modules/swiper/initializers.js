@@ -10,7 +10,7 @@ const initializeMvSliders = () => {
     centeredSlides: true,
   });
 
-  // Theme-aMVスライダー
+  // theme-aMVスライダー
   SwiperFactory.createHorizontalSwiper('.theme-a-mv-swiper', {
     speed: 400,
     autoplay: { delay: 4000, disableOnInteraction: false },
@@ -26,7 +26,7 @@ const initializeMvSliders = () => {
     }
   });
 
-  // Theme-bMVスライダー
+  // theme-bMVスライダー
   SwiperFactory.createHorizontalSwiper('.theme-b-mv-swiper', {
     speed: 400,
     autoplay: { delay: 4000, disableOnInteraction: false },
@@ -58,7 +58,7 @@ const initializeMvSliders = () => {
 
 // コミュニティ関連のスライダー初期化
 const initializeCommunitySliders = () => {
-  // Theme-bコミュニティスライダー
+  // theme-bコミュニティスライダー
   SwiperFactory.createSimpleSwiper('.theme-b-community-swiper', {
     speed: 600,
     autoplay: { delay: 3000, disableOnInteraction: false },
@@ -79,7 +79,7 @@ const initializeCommunitySliders = () => {
     }
   });
 
-  // Theme-cコミュニティスライダー
+  // theme-cコミュニティスライダー
   SwiperFactory.createSimpleSwiper('.theme-c-community-swiper', {
     speed: 600,
     autoplay: { delay: 3000, disableOnInteraction: false },
@@ -90,23 +90,23 @@ const initializeCommunitySliders = () => {
   });
 };
 
-// Theme-c関連のスライダー初期化
+// theme-c関連のスライダー初期化
 const initializeCurationSliders = () => {
-  // Theme-cトップスライダー
+  // theme-cトップスライダー
   SwiperFactory.createPaginationSwiper('.theme-c-top-swiper', {
     speed: 400,
     autoplay: { delay: 4000, disableOnInteraction: false },
     spaceBetween: 2
   });
 
-  // Theme-cトップ水平スライダー
+  // theme-cトップ水平スライダー
   SwiperFactory.createHorizontalSwiper('.theme-c-top-horizontal-swiper', {
     centeredSlides: true,
     initialSlide: 3,
     spaceBetween: 0
   });
 
-  // Theme-cトップ垂直スライダー
+  // theme-cトップ垂直スライダー
   SwiperFactory.createVerticalSwiper('.theme-c-top-vertical-swiper', {
     loop: true,
     slidesPerView: 5,
@@ -122,7 +122,7 @@ const initializeOtherSliders = () => {
     keyboard: { enabled: true, onlyInViewport: true }
   });
 
-  // Theme-aランキングスライダー
+  // theme-aランキングスライダー
   SwiperFactory.createHorizontalSwiper('.theme-a-ranking-swiper', {
     loop: false,
     initialSlide: 0,

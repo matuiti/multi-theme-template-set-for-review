@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new SwitchButtonManager();// スイッチボタンの初期化
   new ToggleButtonManager();// トグルボタンの初期化
   new RankingNumberHoverMove();// ランキング番号のホバー時の移動の初期化
-  new DynamicHeightManager({// Theme-bMVセクションの高さを動的に調整
+  new DynamicHeightManager({// theme-bMVセクションの高さを動的に調整
     sourceSelector: '.theme-b-mv-swiper',
     targetSelector: '.mv',
     sourceContainerSelector: '.absolute',

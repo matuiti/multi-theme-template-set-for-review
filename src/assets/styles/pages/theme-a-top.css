@@ -5,7 +5,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Noto Sans JP Regular"), url("/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
+  src: local("Noto Sans JP Regular"),
+    url("/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* Medium (500) ウェイト */
@@ -14,7 +15,8 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local("Noto Sans JP Medium"), url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2");
+  src: local("Noto Sans JP Medium"),
+    url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* SemiBold (600) ウェイト */
@@ -23,7 +25,8 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("Noto Sans JP SemiBold"), url("/assets/fonts/NotoSansJP-SemiBold.woff2") format("woff2");
+  src: local("Noto Sans JP SemiBold"),
+    url("/assets/fonts/NotoSansJP-SemiBold.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* Bold (700) ウェイト */
@@ -32,7 +35,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Noto Sans JP Bold"), url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2");
+  src: local("Noto Sans JP Bold"),
+    url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 .theme-a-theme,
@@ -133,8 +137,8 @@
  *   @include debug(rgba(0, 0, 255, 0.1)); // 青色の背景で可視化
  * }
  */
-/* Theme-aテーマ固有の変数 （ CSS変数で定義 ） */
-/* Theme-aテーマ固有のスタイル */
+/* theme-aテーマ固有の変数 （ CSS変数で定義 ） */
+/* theme-aテーマ固有のスタイル */
 .theme-a-theme {
   --theme-primary: #ec4111;
   --theme-primary-visited: rgba(236, 65, 17, 0.6);
@@ -257,7 +261,8 @@
 .theme-a-theme .ranking .swiper-slide {
   flex-basis: fit-content !important;
 }
-.theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+.theme-a-theme .ranking .section-swiper-button-prev,
+.theme-a-theme .ranking .section-swiper-button-next {
   top: auto;
   bottom: -100px;
   width: 46px;
@@ -270,29 +275,35 @@
   z-index: 10;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+  .theme-a-theme .ranking .section-swiper-button-prev,
+  .theme-a-theme .ranking .section-swiper-button-next {
     display: flex;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+  .theme-a-theme .ranking .section-swiper-button-prev,
+  .theme-a-theme .ranking .section-swiper-button-next {
     display: flex;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+  .theme-a-theme .ranking .section-swiper-button-prev,
+  .theme-a-theme .ranking .section-swiper-button-next {
     display: flex;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-a-theme .ranking .section-swiper-button-prev, .theme-a-theme .ranking .section-swiper-button-next {
+  .theme-a-theme .ranking .section-swiper-button-prev,
+  .theme-a-theme .ranking .section-swiper-button-next {
     display: flex;
   }
 }
-.theme-a-theme .ranking .section-swiper-button-prev:hover, .theme-a-theme .ranking .section-swiper-button-next:hover {
+.theme-a-theme .ranking .section-swiper-button-prev:hover,
+.theme-a-theme .ranking .section-swiper-button-next:hover {
   background-color: #fff;
 }
-.theme-a-theme .ranking .section-swiper-button-prev > img, .theme-a-theme .ranking .section-swiper-button-next > img {
+.theme-a-theme .ranking .section-swiper-button-prev > img,
+.theme-a-theme .ranking .section-swiper-button-next > img {
   width: 8.4px;
   height: 14px;
   position: absolute;
@@ -300,7 +311,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.theme-a-theme .ranking .section-swiper-button-prev::after, .theme-a-theme .ranking .section-swiper-button-next::after {
+.theme-a-theme .ranking .section-swiper-button-prev::after,
+.theme-a-theme .ranking .section-swiper-button-next::after {
   content: "";
 }
 .theme-a-theme .ranking .section-swiper-button-prev {
@@ -411,7 +423,12 @@
 .theme-a-theme .ranking .prj-card-component .prj-card-head .prj-card-thumbnail {
   border-radius: 0;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-head
+  .prj-card-image-link
+  .prj-card-image {
   width: 250px;
   height: 250px;
 }
@@ -441,7 +458,12 @@
     line-height: 27px;
   }
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-body
+  .prj-card-author-info
+  .prj-card-actions {
   display: none;
 }
 .theme-a-theme .ranking .prj-card-component .prj-card-foot {
@@ -460,47 +482,93 @@
   justify-content: space-between;
   gap: 8px;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-foot
+  .prj-card-stats
+  .prj-card-views {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3px;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views .prj-card-views-icon {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-foot
+  .prj-card-stats
+  .prj-card-views
+  .prj-card-views-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 14px;
   height: 14px;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views .prj-card-views-icon img {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-foot
+  .prj-card-stats
+  .prj-card-views
+  .prj-card-views-icon
+  img {
   margin-bottom: -2px;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-foot
+  .prj-card-stats
+  .prj-card-likes {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3px;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes .prj-card-likes-icon {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-foot
+  .prj-card-stats
+  .prj-card-likes
+  .prj-card-likes-icon {
   display: flex;
   justify-content: center;
   width: 14px;
   height: 14px;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-foot
+  .prj-card-stats
+  .prj-card-comments {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3px;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments .prj-card-comments-icon {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-foot
+  .prj-card-stats
+  .prj-card-comments
+  .prj-card-comments-icon {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   width: 14px;
   height: 14px;
 }
-.theme-a-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments img {
+.theme-a-theme
+  .ranking
+  .prj-card-component
+  .prj-card-foot
+  .prj-card-stats
+  .prj-card-comments
+  img {
   margin-bottom: -3px;
-}/*# sourceMappingURL=theme-a-top.css.map */
+} /*# sourceMappingURL=theme-a-top.css.map */

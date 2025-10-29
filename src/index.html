@@ -36,7 +36,7 @@
     }
 
     /* 色を強調するためのカスタムスタイル */
-    .Theme-a-color {
+    .theme-a-color {
       background-color: #fee2e2 !important;
       color: #b91c1c !important;
       border: 1px solid #ef4444;
@@ -48,15 +48,15 @@
       justify-content: flex-start;
     }
 
-    .Theme-a-color:hover {
+    .theme-a-color:hover {
       background-color: #fecaca !important;
     }
 
-    .Theme-a-dot {
+    .theme-a-dot {
       background-color: #dc2626 !important;
     }
 
-    .Theme-b-color {
+    .theme-b-color {
       background-color: #dbeafe !important;
       color: #1e40af !important;
       border: 1px solid #3b82f6;
@@ -68,15 +68,15 @@
       justify-content: flex-start;
     }
 
-    .Theme-b-color:hover {
+    .theme-b-color:hover {
       background-color: #bfdbfe !important;
     }
 
-    .Theme-b-dot {
+    .theme-b-dot {
       background-color: #2563eb !important;
     }
 
-    .Theme-c-color {
+    .theme-c-color {
       background-color: #dcfce7 !important;
       color: #166534 !important;
       border: 1px solid #22c55e;
@@ -88,11 +88,11 @@
       justify-content: flex-start;
     }
 
-    .Theme-c-color:hover {
+    .theme-c-color:hover {
       background-color: #bbf7d0 !important;
     }
 
-    .Theme-c-dot {
+    .theme-c-dot {
       background-color: #16a34a !important;
     }
 
@@ -212,12 +212,12 @@
 
         links.forEach((link) => {
           const linkType = link.getAttribute('data-link-type');
-          if (linkType === 'Theme-a') {
-            link.href = basePath + 'Theme-a-top.html';
-          } else if (linkType === 'Theme-b') {
-            link.href = basePath + 'Theme-b-top.html';
-          } else if (linkType === 'Theme-c') {
-            link.href = basePath + 'Theme-c-top.html';
+          if (linkType === 'theme-a') {
+            link.href = basePath + 'theme-a-top.html';
+          } else if (linkType === 'theme-b') {
+            link.href = basePath + 'theme-b-top.html';
+          } else if (linkType === 'theme-c') {
+            link.href = basePath + 'theme-c-top.html';
           } else if (linkType === 'theme-d') {
             link.href = basePath + 'theme-d-top.html';
           } else if (linkType === 'article-list') {
@@ -233,27 +233,27 @@
 
       // カスタムクラスを追加して色を強調
       document
-        .querySelectorAll('a[data-link-type="Theme-a"], button[onclick*="Theme-a"]')
+        .querySelectorAll('a[data-link-type="theme-a"], button[onclick*="theme-a"]')
         .forEach((el) => {
-          el.classList.add('Theme-a-color');
+          el.classList.add('theme-a-color');
           const dot = el.querySelector('span');
-          if (dot) dot.classList.add('Theme-a-dot');
+          if (dot) dot.classList.add('theme-a-dot');
         });
 
       document
-        .querySelectorAll('a[data-link-type="Theme-b"], button[onclick*="Theme-b"]')
+        .querySelectorAll('a[data-link-type="theme-b"], button[onclick*="theme-b"]')
         .forEach((el) => {
-          el.classList.add('Theme-b-color');
+          el.classList.add('theme-b-color');
           const dot = el.querySelector('span');
-          if (dot) dot.classList.add('Theme-b-dot');
+          if (dot) dot.classList.add('theme-b-dot');
         });
 
       document
-        .querySelectorAll('a[data-link-type="Theme-c"], button[onclick*="Theme-c"]')
+        .querySelectorAll('a[data-link-type="theme-c"], button[onclick*="theme-c"]')
         .forEach((el) => {
-          el.classList.add('Theme-c-color');
+          el.classList.add('theme-c-color');
           const dot = el.querySelector('span');
-          if (dot) dot.classList.add('Theme-c-dot');
+          if (dot) dot.classList.add('theme-c-dot');
         });
 
       document
@@ -331,12 +331,12 @@
       let url;
       if (isProduction) {
         // 本番環境の場合：
-        // 例：article-list.html?theme=Theme-a
+        // 例：article-list.html?theme=theme-a
         // ビルド後のファイルはルートディレクトリに配置されるため、相対パスで直接指定
         url = pageType + '.html?theme=' + theme;
       } else {
         // 開発環境の場合：
-        // 例：src/article-list.html?theme=Theme-a
+        // 例：src/article-list.html?theme=theme-a
         // 開発時はsrc/ディレクトリ内のファイルを参照
         url = '/' + pageType + '.html?theme=' + theme;
       }
@@ -361,27 +361,27 @@
         <h2 class="text-lg font-bold border-b border-gray-200 pb-2">テーマ別トップページ</h2>
         <ul class="mt-3">
           <li class="nav-item">
-            <a href="#" data-link-type="Theme-a"
-              onclick="window.location=getPageUrl('/Theme-a-top.html', '/Theme-a-top.html'); return false;"
+            <a href="#" data-link-type="theme-a"
+              onclick="window.location=getPageUrl('/theme-a-top.html', '/theme-a-top.html'); return false;"
               class="rounded-md text-sm">
               <span class="w-3 h-3 bg-red-500 rounded-full"></span>
-              Theme-a テーマ
+              theme-a テーマ
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" data-link-type="Theme-b"
-              onclick="window.location=getPageUrl('/Theme-b-top.html', '/Theme-b-top.html'); return false;"
+            <a href="#" data-link-type="theme-b"
+              onclick="window.location=getPageUrl('/theme-b-top.html', '/theme-b-top.html'); return false;"
               class="rounded-md text-sm">
               <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
-              Theme-b テーマ
+              theme-b テーマ
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" data-link-type="Theme-c"
-              onclick="window.location=getPageUrl('/Theme-c-top.html', '/Theme-c-top.html'); return false;"
+            <a href="#" data-link-type="theme-c"
+              onclick="window.location=getPageUrl('/theme-c-top.html', '/theme-c-top.html'); return false;"
               class="rounded-md text-sm">
               <span class="w-3 h-3 bg-green-500 rounded-full"></span>
-              Theme-c テーマ
+              theme-c テーマ
             </a>
           </li>
           <li class="nav-item">
@@ -401,14 +401,14 @@
         <div class="mb-4 mt-3">
           <h3 class="text-base font-semibold mb-2">記事一覧ページ</h3>
           <div class="grid grid-cols-2 gap-2">
-            <button onclick="navigateWithTheme('article-list', 'Theme-a')" class="rounded-md text-sm">
-              Theme-a テーマ
+            <button onclick="navigateWithTheme('article-list', 'theme-a')" class="rounded-md text-sm">
+              theme-a テーマ
             </button>
-            <button onclick="navigateWithTheme('article-list', 'Theme-b')" class="rounded-md text-sm">
-              Theme-b テーマ
+            <button onclick="navigateWithTheme('article-list', 'theme-b')" class="rounded-md text-sm">
+              theme-b テーマ
             </button>
-            <button onclick="navigateWithTheme('article-list', 'Theme-c')" class="rounded-md text-sm">
-              Theme-c テーマ
+            <button onclick="navigateWithTheme('article-list', 'theme-c')" class="rounded-md text-sm">
+              theme-c テーマ
             </button>
             <button onclick="navigateWithTheme('article-list', 'theme-d')" class="rounded-md text-sm">
               theme-d テーマ
@@ -419,14 +419,14 @@
         <div class="mt-6">
           <h3 class="text-base font-semibold mb-2">記事詳細ページ</h3>
           <div class="grid grid-cols-2 gap-2">
-            <button onclick="navigateWithTheme('article-detail', 'Theme-a')" class="rounded-md text-sm">
-              Theme-a テーマ
+            <button onclick="navigateWithTheme('article-detail', 'theme-a')" class="rounded-md text-sm">
+              theme-a テーマ
             </button>
-            <button onclick="navigateWithTheme('article-detail', 'Theme-b')" class="rounded-md text-sm">
-              Theme-b テーマ
+            <button onclick="navigateWithTheme('article-detail', 'theme-b')" class="rounded-md text-sm">
+              theme-b テーマ
             </button>
-            <button onclick="navigateWithTheme('article-detail', 'Theme-c')" class="rounded-md text-sm">
-              Theme-c テーマ
+            <button onclick="navigateWithTheme('article-detail', 'theme-c')" class="rounded-md text-sm">
+              theme-c テーマ
             </button>
             <button onclick="navigateWithTheme('article-detail', 'theme-d')" class="rounded-md text-sm">
               theme-d テーマ
