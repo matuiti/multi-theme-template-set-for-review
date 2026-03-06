@@ -14,7 +14,7 @@ const initializeMvSliders = () => {
   SwiperFactory.createHorizontalSwiper('.theme-a-mv-swiper', {
     speed: 400,
     autoplay: { delay: 4000, disableOnInteraction: false },
-    slidesPerView: 1.8,
+    // slidesPerView: 1,
     centeredSlides: true,
     initialSlide: 2,
     spaceBetween: 20,
