@@ -5,8 +5,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Noto Sans JP Regular"),
-    url("/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
+  src: local("Noto Sans JP Regular"), url("/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* Medium (500) ウェイト */
@@ -15,8 +14,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local("Noto Sans JP Medium"),
-    url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2");
+  src: local("Noto Sans JP Medium"), url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* SemiBold (600) ウェイト */
@@ -25,8 +23,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("Noto Sans JP SemiBold"),
-    url("/assets/fonts/NotoSansJP-SemiBold.woff2") format("woff2");
+  src: local("Noto Sans JP SemiBold"), url("/assets/fonts/NotoSansJP-SemiBold.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* Bold (700) ウェイト */
@@ -35,8 +32,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Noto Sans JP Bold"),
-    url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2");
+  src: local("Noto Sans JP Bold"), url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 .theme-a-theme,
@@ -140,7 +136,7 @@
 /* theme-dテーマ固有の変数 （ CSS変数で定義 ） */
 /* theme-dテーマ固有のスタイル */
 .theme-d-theme {
-  --theme-primary: #81b278;
+  --theme-primary: #40a12f;
   --theme-primary-visited: rgba(129, 178, 120, 0.6);
   --theme-text-primary: #333333;
   --theme-bg-primary: var(--theme-primary);
@@ -372,114 +368,56 @@
     max-width: 100%;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-head
-  .prj-card-thumbnail {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-thumbnail {
   border-radius: 6px;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-thumbnail {
-    border-radius: var(--theme-border-radius-card)
-      var(--theme-border-radius-card) 0 0;
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-thumbnail {
+    border-radius: var(--theme-border-radius-card) var(--theme-border-radius-card) 0 0;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-thumbnail {
-    border-radius: var(--theme-border-radius-card)
-      var(--theme-border-radius-card) 0 0;
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-thumbnail {
+    border-radius: var(--theme-border-radius-card) var(--theme-border-radius-card) 0 0;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-thumbnail {
-    border-radius: var(--theme-border-radius-card)
-      var(--theme-border-radius-card) 0 0;
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-thumbnail {
+    border-radius: var(--theme-border-radius-card) var(--theme-border-radius-card) 0 0;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-thumbnail {
-    border-radius: var(--theme-border-radius-card)
-      var(--theme-border-radius-card) 0 0;
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-thumbnail {
+    border-radius: var(--theme-border-radius-card) var(--theme-border-radius-card) 0 0;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-head
-  .prj-card-image-link
-  .prj-card-image
-  img {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-image-link .prj-card-image img {
   aspect-ratio: 1/1;
   display: block;
   width: 100%;
   max-width: 100%;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-image-link .prj-card-image img {
     aspect-ratio: 290/196;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-image-link .prj-card-image img {
     aspect-ratio: 290/196;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-image-link .prj-card-image img {
     aspect-ratio: 290/196;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-image-link .prj-card-image img {
     aspect-ratio: 290/196;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-head
-  .prj-card-category {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-category {
   position: absolute;
   top: -10px;
   right: 0;
@@ -493,11 +431,7 @@
   color: white;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-category {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-category {
     position: static;
     margin-top: 20px;
     margin-left: 14px;
@@ -510,11 +444,7 @@
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-category {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-category {
     position: static;
     margin-top: 20px;
     margin-left: 14px;
@@ -527,11 +457,7 @@
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-category {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-category {
     position: static;
     margin-top: 20px;
     margin-left: 14px;
@@ -544,11 +470,7 @@
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .prj-card-category {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-category {
     position: static;
     margin-top: 20px;
     margin-left: 14px;
@@ -560,12 +482,7 @@
     background: #737373;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-head
-  .prj-card-category
-  span {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .prj-card-category span {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   line-clamp: 1;
@@ -573,77 +490,35 @@
   overflow: hidden;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .swiper-button-prev,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .swiper-button-next {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-prev,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-next {
     width: 20.71px;
     height: 20.71px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .swiper-button-prev,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .swiper-button-next {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-prev,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-next {
     width: 20.71px;
     height: 20.71px;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .swiper-button-prev,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .swiper-button-next {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-prev,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-next {
     width: 20.71px;
     height: 20.71px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .swiper-button-prev,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-head
-    .swiper-button-next {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-prev,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-next {
     width: 20.71px;
     height: 20.71px;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-head
-  .swiper-button-prev
-  .icon-chevron-lg,
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-head
-  .swiper-button-next
-  .icon-chevron-lg {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-prev .icon-chevron-lg,
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-head .swiper-button-next .icon-chevron-lg {
   font-size: 22px;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
@@ -666,22 +541,14 @@
     margin: 0 14px;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-body
-  .prj-card-title {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-title {
   margin: 0 0 1px;
   font-size: 14px;
   line-height: 1.4;
   font-weight: 900;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-title {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-title {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.5;
@@ -689,11 +556,7 @@
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-title {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-title {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.5;
@@ -701,11 +564,7 @@
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-title {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-title {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.5;
@@ -713,11 +572,7 @@
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-title {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-title {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.5;
@@ -725,255 +580,115 @@
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-author-info {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-author-info {
     margin-bottom: 14px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-author-info {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-author-info {
     margin-bottom: 14px;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-author-info {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-author-info {
     margin-bottom: 14px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-author-info {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-author-info {
     margin-bottom: 14px;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author-name {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-author-info .prj-card-author-name {
   font-size: 12px;
   line-height: 1.33;
   font-weight: 500;
   color: var(--text-primary);
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-body
-  .prj-card-follow {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-follow {
   margin-right: auto !important;
   margin-top: 5px !important;
   display: flex;
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-body
-  .prj-card-follow
-  .material-symbols-outlined {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-follow .material-symbols-outlined {
   font-size: 20px;
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-flex
-  .prj-card-body
-  .prj-card-follow
-  .prj-card-follow-text
-  .prj-card-follow-count {
+.theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-follow .prj-card-follow-text .prj-card-follow-count {
   display: inline-block;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions {
     gap: 8px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions {
     gap: 8px;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions {
     gap: 8px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions {
     gap: 8px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-bookmark-button {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-bookmark-button {
     color: #9ba3af;
     border: 1px solid #9ba3af;
     border-radius: 50%;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-bookmark-button {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-bookmark-button {
     color: #9ba3af;
     border: 1px solid #9ba3af;
     border-radius: 50%;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-bookmark-button {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-bookmark-button {
     color: #9ba3af;
     border: 1px solid #9ba3af;
     border-radius: 50%;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-bookmark-button {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-bookmark-button {
     color: #9ba3af;
     border: 1px solid #9ba3af;
     border-radius: 50%;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .prj-card-component
-    .prj-card-flex
-    .prj-card-body
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined {
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .prj-card-component .prj-card-flex .prj-card-body .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined {
     color: #9ba3af;
   }
 }
@@ -1034,11 +749,7 @@
     font-size: 12px;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-date
-  .material-symbols-outlined {
+.theme-d-theme .prj-card-component .prj-card-foot .prj-card-date .material-symbols-outlined {
   transform: translateY(2.4px) !important;
 }
 .theme-d-theme .prj-card-component .prj-card-foot .prj-card-stats {
@@ -1067,34 +778,19 @@
     font-size: 12px;
   }
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .icon-visibility-sm {
+.theme-d-theme .prj-card-component .prj-card-foot .prj-card-stats .icon-visibility-sm {
   transform: translate(1px, 2px) !important;
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .icon-favorite-sm {
+.theme-d-theme .prj-card-component .prj-card-foot .prj-card-stats .icon-favorite-sm {
   transform: translateY(2px) !important;
 }
-.theme-d-theme
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .icon-comment-sm {
+.theme-d-theme .prj-card-component .prj-card-foot .prj-card-stats .icon-comment-sm {
   transform: translateY(2px) !important;
 }
 .theme-d-theme .article-list .prj-section-head-sp .prj-title-component::after {
   content: none;
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-sp
-  .prj-button-category-component {
+.theme-d-theme .article-list .prj-section-head-sp .prj-button-category-component {
   font-size: 12px;
   line-height: 1.33;
   font-weight: 800;
@@ -1105,75 +801,44 @@
   padding: 14px 14px;
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-sp
-  .prj-content-sort-switch-button-4col-component {
+.theme-d-theme .article-list .prj-section-head-sp .prj-content-sort-switch-button-4col-component {
   margin-top: 24px;
   background-color: white;
   border-radius: 4px;
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-sp
-  .prj-content-sort-switch-button-4col-component
-  .prj-content-sort-switch-button-4col-item {
+.theme-d-theme .article-list .prj-section-head-sp .prj-content-sort-switch-button-4col-component .prj-content-sort-switch-button-4col-item {
   padding: 12px 5px;
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-sp
-  .prj-time-filter-switch-button-tab-component {
+.theme-d-theme .article-list .prj-section-head-sp .prj-time-filter-switch-button-tab-component {
   margin-top: 20px;
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-pc
-  .prj-content-sort-switch-button-4col-icon-component {
+.theme-d-theme .article-list .prj-section-head-pc .prj-content-sort-switch-button-4col-icon-component {
   max-height: 36px;
   background-color: white;
   border-radius: 4px;
   border: none;
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-pc
-  .prj-content-sort-switch-button-4col-icon-component
-  .prj-content-sort-switch-button-4col-item {
+.theme-d-theme .article-list .prj-section-head-pc .prj-content-sort-switch-button-4col-icon-component .prj-content-sort-switch-button-4col-item {
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2509803922);
   padding: 8px 14px;
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-pc
-  .prj-content-sort-switch-button-4col-icon-component
-  .prj-content-sort-switch-button-4col-item:first-child {
+.theme-d-theme .article-list .prj-section-head-pc .prj-content-sort-switch-button-4col-icon-component .prj-content-sort-switch-button-4col-item:first-child {
   width: 120px;
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-pc
-  .prj-time-filter-switch-button-component {
+.theme-d-theme .article-list .prj-section-head-pc .prj-time-filter-switch-button-component {
   max-height: 36px;
   border-radius: 4px;
   background-color: white;
   border: none;
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-pc
-  .prj-time-filter-switch-button-component
-  .prj-time-filter-switch-button-item {
+.theme-d-theme .article-list .prj-section-head-pc .prj-time-filter-switch-button-component .prj-time-filter-switch-button-item {
   padding: 8px 14px;
 }
-.theme-d-theme
-  .article-list
-  .prj-section-head-pc
-  .prj-button-category-component {
+.theme-d-theme .article-list .prj-section-head-pc .prj-button-category-component {
   max-height: 36px;
   font-size: 12px;
   line-height: 1.33;
@@ -1195,7 +860,7 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     row-gap: 30px;
     -moz-column-gap: 5%;
-    column-gap: 5%;
+         column-gap: 5%;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
@@ -1203,7 +868,7 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 30px;
     -moz-column-gap: 5%;
-    column-gap: 5%;
+         column-gap: 5%;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
@@ -1211,7 +876,7 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 30px;
     -moz-column-gap: 4%;
-    column-gap: 4%;
+         column-gap: 4%;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1219,14 +884,10 @@
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     row-gap: 30px;
     -moz-column-gap: 3%;
-    column-gap: 3%;
+         column-gap: 3%;
   }
 }
-.theme-d-theme
-  .article-list
-  .prj-section-foot
-  .prj-pagination-component
-  .prj-pagination-item {
+.theme-d-theme .article-list .prj-section-foot .prj-pagination-component .prj-pagination-item {
   border-radius: 5px;
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
@@ -1391,16 +1052,10 @@
 .theme-d-theme .prj-side-menu-main-component {
   padding: 20px;
 }
-.theme-d-theme
-  .prj-side-menu-main-component
-  .prj-side-menu-main-tag
-  .prj-side-menu-main-item
-  a {
+.theme-d-theme .prj-side-menu-main-component .prj-side-menu-main-tag .prj-side-menu-main-item a {
   box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.0509803922) !important;
   border: none !important;
 }
-.theme-d-theme
-  .prj-side-menu-main-component
-  .prj-side-menu-main-tag-name::before {
+.theme-d-theme .prj-side-menu-main-component .prj-side-menu-main-tag-name::before {
   color: var(--theme-primary) !important;
-} /*# sourceMappingURL=theme-d-list.css.map */
+}/*# sourceMappingURL=theme-d-list.css.map */

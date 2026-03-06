@@ -5,8 +5,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Noto Sans JP Regular"),
-    url("/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
+  src: local("Noto Sans JP Regular"), url("/assets/fonts/NotoSansJP-Regular.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* Medium (500) ウェイト */
@@ -15,8 +14,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local("Noto Sans JP Medium"),
-    url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2");
+  src: local("Noto Sans JP Medium"), url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* SemiBold (600) ウェイト */
@@ -25,8 +23,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("Noto Sans JP SemiBold"),
-    url("/assets/fonts/NotoSansJP-SemiBold.woff2") format("woff2");
+  src: local("Noto Sans JP SemiBold"), url("/assets/fonts/NotoSansJP-SemiBold.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 /* Bold (700) ウェイト */
@@ -35,8 +32,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Noto Sans JP Bold"),
-    url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2");
+  src: local("Noto Sans JP Bold"), url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2");
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 .theme-a-theme,
@@ -140,7 +136,7 @@
 /* theme-dテーマ固有の変数 （ CSS変数で定義 ） */
 /* theme-dテーマ固有のスタイル */
 .theme-d-theme {
-  --theme-primary: #81b278;
+  --theme-primary: #40a12f;
   --theme-primary-visited: rgba(129, 178, 120, 0.6);
   --theme-text-primary: #333333;
   --theme-bg-primary: var(--theme-primary);
@@ -405,229 +401,73 @@
 @media screen and (min-width: 600px) and (max-width: 1023px) {
   .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-thumbnail,
   .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-thumbnail,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .prj-card-thumbnail,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .prj-card-thumbnail {
-    border-radius: var(--theme-border-radius-card)
-      var(--theme-border-radius-card) 0 0;
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-thumbnail,
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-thumbnail {
+    border-radius: var(--theme-border-radius-card) var(--theme-border-radius-card) 0 0;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-thumbnail,
   .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-thumbnail,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .prj-card-thumbnail,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .prj-card-thumbnail {
-    border-radius: var(--theme-border-radius-card)
-      var(--theme-border-radius-card) 0 0;
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-thumbnail,
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-thumbnail {
+    border-radius: var(--theme-border-radius-card) var(--theme-border-radius-card) 0 0;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
   .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-thumbnail,
   .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-thumbnail,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .prj-card-thumbnail,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .prj-card-thumbnail {
-    border-radius: var(--theme-border-radius-card)
-      var(--theme-border-radius-card) 0 0;
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-thumbnail,
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-thumbnail {
+    border-radius: var(--theme-border-radius-card) var(--theme-border-radius-card) 0 0;
   }
 }
 @media screen and (min-width: 1920px) {
   .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-thumbnail,
   .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-thumbnail,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .prj-card-thumbnail,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .prj-card-thumbnail {
-    border-radius: var(--theme-border-radius-card)
-      var(--theme-border-radius-card) 0 0;
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-thumbnail,
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-thumbnail {
+    border-radius: var(--theme-border-radius-card) var(--theme-border-radius-card) 0 0;
   }
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-head
-  .prj-card-image-link
-  .prj-card-image
-  img,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-head
-  .prj-card-image-link
-  .prj-card-image
-  img,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-head
-  .prj-card-image-link
-  .prj-card-image
-  img,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-head
-  .prj-card-image-link
-  .prj-card-image
-  img {
+.theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+.theme-d-theme .new .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+.theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+.theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img {
   aspect-ratio: 1/1;
   display: block;
   width: 100%;
   max-width: 100%;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img {
+  .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img {
     aspect-ratio: 300/206;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img {
+  .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img {
     aspect-ratio: 300/206;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img {
+  .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img {
     aspect-ratio: 354.5/260.14;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .prj-card-image-link
-    .prj-card-image
-    img {
+  .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img,
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-image-link .prj-card-image img {
     aspect-ratio: 354.5/260.14;
   }
 }
@@ -648,22 +488,10 @@
   .theme-d-theme .follow .prj-card-component .prj-card-head .swiper-button-next,
   .theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-prev,
   .theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-next,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-prev,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-next,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-prev,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-next,
   .theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-prev,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-next {
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-next {
     width: 32.58px;
     height: 32.58px;
   }
@@ -673,22 +501,10 @@
   .theme-d-theme .follow .prj-card-component .prj-card-head .swiper-button-next,
   .theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-prev,
   .theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-next,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-prev,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-next,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-prev,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-next,
   .theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-prev,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-next {
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-next {
     width: 32.58px;
     height: 32.58px;
   }
@@ -698,22 +514,10 @@
   .theme-d-theme .follow .prj-card-component .prj-card-head .swiper-button-next,
   .theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-prev,
   .theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-next,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-prev,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-next,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-prev,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-next,
   .theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-prev,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-next {
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-next {
     width: 32.58px;
     height: 32.58px;
   }
@@ -723,74 +527,22 @@
   .theme-d-theme .follow .prj-card-component .prj-card-head .swiper-button-next,
   .theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-prev,
   .theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-next,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-prev,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-next,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-prev,
+  .theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-next,
   .theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-prev,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-head
-    .swiper-button-next {
+  .theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-next {
     width: 32.58px;
     height: 32.58px;
   }
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-head
-  .swiper-button-prev
-  .icon-chevron-lg,
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-head
-  .swiper-button-next
-  .icon-chevron-lg,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-head
-  .swiper-button-prev
-  .icon-chevron-lg,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-head
-  .swiper-button-next
-  .icon-chevron-lg,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-head
-  .swiper-button-prev
-  .icon-chevron-lg,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-head
-  .swiper-button-next
-  .icon-chevron-lg,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-head
-  .swiper-button-prev
-  .icon-chevron-lg,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-head
-  .swiper-button-next
-  .icon-chevron-lg {
+.theme-d-theme .follow .prj-card-component .prj-card-head .swiper-button-prev .icon-chevron-lg,
+.theme-d-theme .follow .prj-card-component .prj-card-head .swiper-button-next .icon-chevron-lg,
+.theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-prev .icon-chevron-lg,
+.theme-d-theme .new .prj-card-component .prj-card-head .swiper-button-next .icon-chevron-lg,
+.theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-prev .icon-chevron-lg,
+.theme-d-theme .ranking .prj-card-component .prj-card-head .swiper-button-next .icon-chevron-lg,
+.theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-prev .icon-chevron-lg,
+.theme-d-theme .pickup .prj-card-component .prj-card-head .swiper-button-next .icon-chevron-lg {
   font-size: 30px;
 }
 .theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-category,
@@ -860,25 +612,10 @@
     border-radius: 0 0 0 16px;
   }
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-head
-  .prj-card-category
-  span,
+.theme-d-theme .follow .prj-card-component .prj-card-head .prj-card-category span,
 .theme-d-theme .new .prj-card-component .prj-card-head .prj-card-category span,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-head
-  .prj-card-category
-  span,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-head
-  .prj-card-category
-  span {
+.theme-d-theme .ranking .prj-card-component .prj-card-head .prj-card-category span,
+.theme-d-theme .pickup .prj-card-component .prj-card-head .prj-card-category span {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   line-clamp: 1;
@@ -1045,915 +782,203 @@
 }
 .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info,
 .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info {
+.theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info,
+.theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info {
   align-items: flex-end;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info,
   .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info {
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info {
     border-bottom: 0.5px solid #7c7c7c;
     padding-bottom: 13px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info,
   .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info {
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info {
     border-bottom: 0.5px solid #7c7c7c;
     padding-bottom: 13px;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info,
   .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info {
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info {
     border-bottom: 0.5px solid #7c7c7c;
     padding-bottom: 13px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info,
   .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info {
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info {
     border-bottom: 0.5px solid #7c7c7c;
     padding-bottom: 13px;
   }
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author {
+.theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author,
+.theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author,
+.theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author,
+.theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author {
   align-items: flex-start;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow {
+.theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow,
+.theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow,
+.theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow,
+.theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow {
   gap: 5px;
   margin-top: 5px;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-text,
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-count,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-text,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-count,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-text,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-count,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-text,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-count {
+.theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-text,
+.theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-count,
+.theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-text,
+.theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-count,
+.theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-text,
+.theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-count,
+.theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-text,
+.theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-count {
   font-size: 12px;
   line-height: 15px;
   font-weight: 500;
   color: var(--text-primary);
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-text,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-text,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-text,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-body
-  .prj-card-author-info
-  .prj-card-author
-  .prj-card-follow
-  .prj-card-follow-text {
+.theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-text,
+.theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-text,
+.theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-text,
+.theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .prj-card-follow-text {
   margin-right: -4px;
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md {
     transform: translateY(0px);
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md {
     transform: translateY(0px);
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md {
     transform: translateY(0px);
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-author
-    .prj-card-follow
-    .icon-add-circle-md {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-author .prj-card-follow .icon-add-circle-md {
     transform: translateY(0px);
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined {
     color: #9ba3af;
   }
 }
 @media screen and (min-width: 1920px) {
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .follow
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .new
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .ranking
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-like-button
-    .material-symbols-outlined,
-  .theme-d-theme
-    .pickup
-    .prj-card-component
-    .prj-card-body
-    .prj-card-author-info
-    .prj-card-actions
-    .prj-card-bookmark-button
-    .material-symbols-outlined {
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .follow .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .new .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .ranking .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-like-button .material-symbols-outlined,
+  .theme-d-theme .pickup .prj-card-component .prj-card-body .prj-card-author-info .prj-card-actions .prj-card-bookmark-button .material-symbols-outlined {
     color: #9ba3af;
   }
 }
@@ -2007,30 +1032,10 @@
   align-items: center;
   gap: 4px;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-date
-  .icon-schedule-sm,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-date
-  .icon-schedule-sm,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-date
-  .icon-schedule-sm,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-date
-  .icon-schedule-sm {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-date .icon-schedule-sm,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-date .icon-schedule-sm,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-date .icon-schedule-sm,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-date .icon-schedule-sm {
   transform: translateY(0px);
 }
 .theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats,
@@ -2041,265 +1046,61 @@
   line-height: 16px;
   font-weight: 500;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views {
   gap: 4px;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views
-  .prj-card-views-icon,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views
-  .prj-card-views-icon,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views
-  .prj-card-views-icon,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views
-  .prj-card-views-icon {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views .prj-card-views-icon,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views .prj-card-views-icon,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views .prj-card-views-icon,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views .prj-card-views-icon {
   width: 14px;
   height: 14px;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views
-  span,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views
-  span,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views
-  span,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-views
-  span {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views span,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views span,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views span,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-views span {
   transform: translateY(1.2px);
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes {
   gap: 4px;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes
-  .prj-card-likes-icon,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes
-  .prj-card-likes-icon,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes
-  .prj-card-likes-icon,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes
-  .prj-card-likes-icon {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes .prj-card-likes-icon,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes .prj-card-likes-icon,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes .prj-card-likes-icon,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes .prj-card-likes-icon {
   width: 14px;
   height: 14px;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes
-  span,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes
-  span,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes
-  span,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-likes
-  span {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes span,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes span,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes span,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-likes span {
   transform: translateY(1.2px);
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments {
   gap: 4px;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments
-  .prj-card-comments-icon,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments
-  .prj-card-comments-icon,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments
-  .prj-card-comments-icon,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments
-  .prj-card-comments-icon {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments .prj-card-comments-icon,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments .prj-card-comments-icon,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments .prj-card-comments-icon,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments .prj-card-comments-icon {
   width: 14px;
   height: 14px;
 }
-.theme-d-theme
-  .follow
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments
-  span,
-.theme-d-theme
-  .new
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments
-  span,
-.theme-d-theme
-  .ranking
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments
-  span,
-.theme-d-theme
-  .pickup
-  .prj-card-component
-  .prj-card-foot
-  .prj-card-stats
-  .prj-card-comments
-  span {
+.theme-d-theme .follow .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments span,
+.theme-d-theme .new .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments span,
+.theme-d-theme .ranking .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments span,
+.theme-d-theme .pickup .prj-card-component .prj-card-foot .prj-card-stats .prj-card-comments span {
   transform: translateY(1.3px);
 }
 .theme-d-theme .ranking .prj-card-thumbnail {
@@ -2474,4 +1275,4 @@
   .theme-d-theme .ranking li .prj-card-category {
     font-size: 14px;
   }
-} /*# sourceMappingURL=theme-d-top.css.map */
+}/*# sourceMappingURL=theme-d-top.css.map */
